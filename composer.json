@@ -1,0 +1,50 @@
+{
+    "name": "ulthon/ulthon_admin",
+    "description": "quick start a project with management background using thinkphp6",
+    "type": "project",
+    "keywords": [
+        "framework",
+        "thinkphp",
+        "ORM",
+        "ulthon",
+        "admin"
+    ],
+    "homepage": "http://ulthon-admin.ulthon.com/",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "ulthon",
+            "email": "ulthon@163.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "topthink/framework": "6.0.*",
+        "topthink/think-orm": "2.0.*",
+        "topthink/think-view": "^1.0",
+        "topthink/think-migration": "^3.0",
+        "topthink/think-helper": "^3.1",
+        "topthink/think-captcha": "^3.0",
+        "topthink/think-multi-app": "^1.0"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^4.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "app"
+        },
+        "psr-0": {
+            "": "extend/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@php think service:discover",
+            "@php think vendor:publish"
+        ]
+    }
+}
