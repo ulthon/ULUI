@@ -139,57 +139,7 @@
                         <input type="radio" name="status" value="0" title="不发布" checked>
                       </div>
                     </div>
-                    <div class="layui-form-item">
-                      <div class="layui-form-label">发表时间</div>
-                      <div class="layui-input-block">
-                        <input type="text" name="publish_time" class="layui-input publish-time">
-                      </div>
-                    </div>
-                    <div class="layui-form-item">
-                      <div class="layui-form-label">分类</div>
-                      <div class="layui-input-block ">
-                        <div class="category-list"></div>
-
-
-                        <div class="quick-input-item sm-quick-input-item">
-                          <div class="new-category-option-list">
-                            <select name="" lay-verify="">
-                              <option value="0">选择父分类</option>
-
-                            </select>
-                          </div>
-                          <div class="">
-
-                            <input type="text" name="" placeholder="输入新分类名称" id="new-category" class="layui-input">
-                            <div class="layui-btn create-category">新增</div>
-                          </div>
-                        </div>
-
-                      </div>
-                    </div>
-                    <div class="layui-form-item">
-                      <div class="layui-form-label">标签</div>
-                      <div class="layui-input-block ">
-                        <div class="tag-list">
-
-                        </div>
-                        <div class="quick-input-item sm-quick-input-item" title="输入新标签,使用空格分隔可一次添加多个标签">
-                          <div class="">
-                            <input type="text" name="" placeholder="输入新标签" autocomplete="off" id="new-tags"
-                              class="layui-input">
-                            <div class="layui-btn create-tags">新增</div>
-                          </div>
-                        </div>
-
-                      </div>
-                    </div>
-                    <div class="layui-form-item">
-                      <div class="layui-form-label">是否置顶</div>
-                      <div class="layui-input-block">
-                        <input type="radio" name="is_top" value="1" title="置顶">
-                        <input type="radio" name="is_top" value="0" title="不置顶" checked>
-                      </div>
-                    </div>
+                    
                     <div class="layui-form-item">
                       <div class="layui-form-label">跳转链接</div>
                       <div class="layui-input-block">
@@ -216,11 +166,7 @@
                     <div class="layui-form-item">
                       <div class="layui-form-label">模板</div>
                       <div class="layui-input-block">
-                        <select name="tpl_name">
-                          {volist name=':config("view_type.post")' id='tpl_name'}
-                          <option value="{$key}">{$tpl_name}</option>
-                          {/volist}
-                        </select>
+                        <input type="text" name="tpl_name" class="layui-input" value="{$post->tpl_name}" id="">
                       </div>
                     </div>
                   </div>

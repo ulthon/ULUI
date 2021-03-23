@@ -16,9 +16,22 @@ class Index extends Common
    *
    * @return \think\Response
    */
-  public function index()
+  public function index($post_id = 0)
   {
     //
+
+    $list_post = Post::where('status', 1)->order('sort desc')->select();
+
+    if (empty($post_id)) {
+      $model_post = $list_post->first();
+    } else {
+      $model_post = $list_post->where('id', $post_id)->first();
+    }
+
+
+    View::assign('model_post', $model_post);
+
+    View::assign('list_post', $list_post);
 
     return View::fetch();
   }

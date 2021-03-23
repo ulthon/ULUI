@@ -2,32 +2,68 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{:get_system_config('site_name')}</title>
-    {:get_system_config('site_tongji')}
-        
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{:get_system_config('site_name')}</title>
+  {include file='common/_require'/}
+  <link rel="stylesheet" href="/static/lib/quill/quill.snow.css">
+
+  <style>
+    .ql-editor {
+      padding: 15px 0;
+    }
+  </style>
 </head>
 
 <body>
-    <textarea id="README" style="display: none">
-        {:file_get_contents(app()->getRootPath().'README.md')}
-    </textarea>
 
-    <div id="README-PRE" style="max-width: 800px;margin: 0 auto">
-
+  <div class="layui-container">
+    <div class="layui-row ul-padding-md">
+      <div style="font-size: 22px;">
+        {:get_system_config('site_name')}
+      </div>
+      <div style="font-size: 18px;">
+        {:get_system_config('site_desc')}
+      </div>
     </div>
-    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/markdown-it/9.1.0/markdown-it.min.js"></script>
-    <script>
-        var md = window.markdownit();
-        var result = md.render($('#README').val());
-        $('#README-PRE').html(result)
-        
-    </script>
+    <div class="layui-row layui-col-space6 " style="margin-top: 15px;">
+      <div class="layui-col-md3">
+        <div class="ul-nav-tree ul-padding-md">
+          {volist name='list_post' id='post'}
+          <a href="{:url('Index/index',['post_id'=>$post.id])}" class="ul-nav-tree-item">
+            <div class="ul-nav-tree-item-title">
+              {$post.title}
+            </div>
+            <div class="ul-nav-tree-item-desc">
+              {$post.desc}
+            </div>
+          </a>
+          {/volist}
 
-    
+        </div>
+      </div>
+      <div class="layui-col-md9">
+        <div class="main-content ul-padding-md">
+          <div class="">
+            <span class="layui-breadcrumb" lay-separator="/">
+              <a href="{:url('Index/index')}">首页</a>
+              <a><cite>{$model_post->title}</cite></a>
+            </span>
+          </div>
+          <div class="ql-editor">{$model_post->content_html|raw}</div>
+          <div class="demo-page">
+            {$model_post->demo_page|raw}
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    layui.use(['element'])
+  </script>
 </body>
 
 </html>

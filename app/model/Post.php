@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace app\model;
 
+use think\facade\App;
 use think\Model;
 use think\model\concern\SoftDelete;
 
@@ -15,8 +16,8 @@ class Post extends Model
   //
 
   public static $stausNameList = [
-    0=>'不发布',
-    1=>'发布'
+    0 => '不发布',
+    1 => '发布'
   ];
 
   use SoftDelete;
@@ -25,12 +26,12 @@ class Post extends Model
 
   public function categorys()
   {
-    return $this->hasMany(PostCategory::class,'post_id');
+    return $this->hasMany(PostCategory::class, 'post_id');
   }
 
   public function tags()
   {
-    return $this->hasMany(PostTag::class,'post_id');
+    return $this->hasMany(PostTag::class, 'post_id');
   }
 
   public function setPublishTimeAttr($value)
@@ -41,22 +42,22 @@ class Post extends Model
   {
 
     $value = $this->getData('publish_time');
-    return date('Y-m-d',$value);
+    return date('Y-m-d', $value);
   }
   public function getPublishTimeDatetimeAttr()
   {
 
     $value = $this->getData('publish_time');
-    return date('Y-m-d H:i:s',$value);
+    return date('Y-m-d H:i:s', $value);
   }
 
   public function getCategorysListAttr()
   {
     $list_post_categorys = $this->getAttr('categorys');
 
-    $list = array_column($list_post_categorys->append(['category'])->toArray(),'category');
+    $list = array_column($list_post_categorys->append(['category'])->toArray(), 'category');
 
-    $list = array2level($list,0,0);
+    $list = array2level($list, 0, 0);
 
     return $list;
   }
@@ -65,7 +66,7 @@ class Post extends Model
   {
     $list_post_tags = $this->getAttr('tags');
 
-    $list = array_column($list_post_tags->append(['tag'])->toArray(),'tag');
+    $list = array_column($list_post_tags->append(['tag'])->toArray(), 'tag');
 
     return $list;
   }
@@ -74,8 +75,8 @@ class Post extends Model
   {
     $desc = $this->getData('desc');
 
-    if(strlen($desc) > 100){
-      $desc = mb_substr($desc,0,100).'...';
+    if (strlen($desc) > 100) {
+      $desc = mb_substr($desc, 0, 100) . '...';
     }
 
     return $desc;
@@ -85,7 +86,7 @@ class Post extends Model
   {
     $desc = $this->getData('desc');
 
-    if(empty($desc)){
+    if (empty($desc)) {
       return '';
     }
     $list = explode("\n", $desc);
@@ -97,11 +98,11 @@ class Post extends Model
   {
     $desc = $this->getData('desc');
 
-    if(empty($desc)){
+    if (empty($desc)) {
       return '';
     }
 
-    return str_replace("\n",'<br>',$desc);
+    return str_replace("\n", '<br>', $desc);
   }
 
   public function getStatusNameAttr()
@@ -125,15 +126,31 @@ class Post extends Model
 
   public function getContentAttr($value)
   {
-    return json_decode($value,true);
+    return json_decode($value, true);
   }
 
   public function getPosterAttr($value)
   {
-    if(empty($value)){
+    if (empty($value)) {
       $value = '/static/images/avatar.png';
     }
 
     return get_source_link($value);
+  }
+
+  public function getDemoPageAttr()
+  {
+    if (empty($this->getData('tpl_name'))) {
+      return '';
+    }
+
+    $base_dir = App::getRootPath() . '/demo/';
+
+    $file_path = $base_dir . $this->getData('tpl_name') . '.html';
+    if (!file_exists($file_path)) {
+      return '';
+    }
+
+    return file_get_contents($file_path);
   }
 }

@@ -1,0 +1,24 @@
+.ul-nav-tree{
+  border-right: 1px solid #bbb;
+}
+.ul-nav-tree-item{
+  display: flex;
+  align-items: baseline;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.ul-nav-tree-item-title{
+  font-size: 15px;
+  
+}
+
+.ul-nav-tree-item-desc{
+  font-size: 14px;
+  color: #999;
+  margin-left: 15px;
+}
+
+.ul-padding-md{
+  padding: 15px;
+}
