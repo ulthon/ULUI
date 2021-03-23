@@ -14,6 +14,14 @@ use think\Request;
 
 class Post extends Common
 {
+
+  public function initialize()
+  {
+    parent::initialize();
+
+    ModelPost::quickSelect(true);
+  }
+
   /**
    * 显示资源列表
    *

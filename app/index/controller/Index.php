@@ -20,7 +20,9 @@ class Index extends Common
   {
     //
 
-    $list_post = Post::where('status', 1)->order('sort desc')->select();
+
+
+    $list_post = Post::quickSelect();
 
     if (empty($post_id)) {
       $model_post = $list_post->first();

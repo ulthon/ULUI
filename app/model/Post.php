@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace app\model;
 
 use think\facade\App;
+use think\facade\Cache;
 use think\Model;
 use think\model\concern\SoftDelete;
 
@@ -153,4 +154,19 @@ class Post extends Model
 
     return file_get_contents($file_path);
   }
+
+  public static function quickSelect($clear = false)
+  {
+    $cacke_key = 'post_list';
+
+    $list_post = Cache::get($cacke_key);
+
+    if (empty($list_post) || $clear) {
+      $list_post = Post::where('status', 1)->order('sort desc')->select();
+      Cache::set($cacke_key, $list_post,600);
+    }
+
+    return $list_post;
+  }
+
 }
