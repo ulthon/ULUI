@@ -79,6 +79,9 @@
   display: flex;
 }
 
+.ql-snow .ql-editor pre.ql-syntax{
+  line-height: 1.4;
+}
 
 @media screen and (max-width: 768px){
   .layui-body{
