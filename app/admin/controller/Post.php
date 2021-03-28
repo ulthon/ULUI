@@ -31,10 +31,10 @@ class Post extends Common
   {
     //
 
-    $list = ModelPost::with(['categorys.category','tags.tag'])
-    ->where('type',$this->request->param('type',1))
-    ->order('id desc')
-    ->paginate();
+    $list = ModelPost::with(['categorys.category', 'tags.tag'])
+      ->where('type', $this->request->param('type', 1))
+      ->order('id desc')
+      ->paginate();
 
     View::assign('list', $list);
 
@@ -50,6 +50,9 @@ class Post extends Common
   {
     //
 
+    $list_category = Category::where('status', 1)->order('sort asc')->select();
+
+    View::assign('list_category', $list_category);
     return View::fetch();
   }
 
@@ -90,7 +93,7 @@ class Post extends Common
       ]);
     }
 
-    return $this->success('添加成功',url('index',['type'=>$this->request->param('type')]));
+    return $this->success('添加成功', url('index', ['type' => $this->request->param('type')]));
   }
 
   /**
@@ -188,7 +191,7 @@ class Post extends Common
       }
     }
 
-    return $this->success('保存成功', url('index',['type'=>$model_post->getData('type')]));
+    return $this->success('保存成功', url('index', ['type' => $model_post->getData('type')]));
   }
 
   /**
@@ -205,9 +208,9 @@ class Post extends Common
 
     $model_post->delete();
 
-    PostCategory::where('post_id',$id)->delete();
+    PostCategory::where('post_id', $id)->delete();
 
-    PostTag::where('post_id',$id)->delete();
+    PostTag::where('post_id', $id)->delete();
 
     return json_message();
   }

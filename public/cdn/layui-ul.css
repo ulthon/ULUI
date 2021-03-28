@@ -1,3 +1,4 @@
+/* 列表开始 */
 .ul-nav-tree {
   border-right: 1px solid #bbb;
 }
@@ -20,13 +21,31 @@
   margin-left: 15px;
 }
 
+/* 列表结束 */
+
+/* 通用类开始 */
 .ul-padding-md {
   padding: 15px;
 }
 
-.ul-avatar-list {
-  
+.ul-section {
+  margin-bottom: 15px;
 }
+
+.ul-icon-exit {
+  display            : inline-block;
+  width              : 16px;
+  height             : 16px;
+  background-image   : url('img/exit.png');
+  background-size    : cover;
+  background-position: center;
+}
+
+/* 通用类结束 */
+
+/* 用户头像开始 */
+
+.ul-avatar-list {}
 
 .ul-avatar-list-item {
   display         : flex;
@@ -35,9 +54,11 @@
   padding         : 8px;
   background-color: #ddd;
 }
-.ul-avatar-list-item.current{
+
+.ul-avatar-list-item.current {
   background-color: #bbb;
 }
+
 .ul-avatar-list-item-img {
   height             : 48px;
   width              : 48px;
@@ -58,7 +79,7 @@
   position: absolute;
   right   : 0;
   top     : 0;
-  color: #999;
+  color   : #999;
 }
 
 .ul-avatar-list-item-tips {
@@ -70,3 +91,98 @@
   overflow     : hidden;
   text-overflow: ellipsis;
 }
+
+/* 头像结束 */
+
+
+/* 头部开始 */
+
+.ul-header {
+  background-color: #fff;
+  box-shadow      : 0 3px 5px #999;
+  padding         : 3px;
+}
+
+.ul-header-main {
+  display        : flex;
+  justify-content: space-between;
+  align-items    : center;
+  margin         : 0 auto;
+}
+
+.ul-header-logo {
+  max-height: 48px;
+}
+
+.ul-header-user {
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+}
+
+.ul-header-user-avatar {
+  background-image   : url('/static/images/avatar.png');
+  width              : 45px;
+  height             : 45px;
+  background-size    : cover;
+  background-position: center;
+}
+
+.ul-header-user-options {
+  display    : flex;
+  align-items: center;
+  color      : #999;
+  font-size  : 12px;
+  cursor     : pointer;
+}
+
+.ul-header-user-info {
+  margin-left: 10px;
+}
+
+/* 头部结束 */
+
+
+/* 导航开始 */
+.layui-nav.ul-nav-white {
+  background-color: #f0f0f0;
+}
+
+.layui-nav.ul-nav-white .layui-nav-child a {
+  color: #666;
+}
+
+.layui-nav.ul-nav-white .layui-nav-item a {
+  color: #666;
+}
+
+.layui-nav.ul-nav-white .layui-nav-itemed>.layui-nav-child {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.layui-nav-tree.ul-nav-white .layui-nav-item a:hover {
+  background-color: #9cf;
+  color           : #fff !important;
+}
+
+
+.layui-nav.ul-nav-white .layui-nav-itemed>a,
+.layui-nav-tree.ul-nav-white .layui-nav-title a,
+.layui-nav-tree.ul-nav-white .layui-nav-title a:hover {
+  color: #666 !important;
+}
+
+.layui-nav-tree.ul-nav-white .layui-nav-bar {
+  background-color: #6cf;
+}
+
+.layui-nav-tree.ul-nav-white .layui-nav-child dd.layui-this,
+.layui-nav-tree.ul-nav-white .layui-nav-child dd.layui-this a,
+.layui-nav-tree.ul-nav-white .layui-this,
+.layui-nav-tree.ul-nav-white .layui-this>a,
+.layui-nav-tree.ul-nav-white .layui-this>a:hover {
+  background-color: #9cf;
+  color           : #fff;
+}
+
+/* 导航结束 */

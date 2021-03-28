@@ -18,10 +18,6 @@ class Index extends Common
    */
   public function index($post_id = 0)
   {
-    //
-
-
-
     $list_post = Post::quickSelect();
 
     if (empty($post_id)) {
@@ -29,7 +25,6 @@ class Index extends Common
     } else {
       $model_post = $list_post->where('id', $post_id)->first();
     }
-
 
     View::assign('model_post', $model_post);
 
