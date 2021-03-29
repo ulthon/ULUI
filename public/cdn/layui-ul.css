@@ -1,6 +1,6 @@
 /* 列表开始 */
 .ul-nav-tree {
-  border-right: 1px solid #bbb;
+ 
 }
 
 .ul-nav-tree-group-title{
@@ -15,6 +15,10 @@
   cursor     : pointer;
   padding    : 5px;
   white-space: nowrap;
+}
+
+.ul-nav-tree-item.current .ul-nav-tree-item-title{
+  color: #6cf;
 }
 
 .ul-nav-tree-item-title {
@@ -46,6 +50,10 @@
   background-image   : url('img/exit.png');
   background-size    : cover;
   background-position: center;
+}
+
+.ul-border-right{
+  border-right: 1px solid #bbb;
 }
 
 /* 通用类结束 */

@@ -28,8 +28,8 @@
       </div>
     </div>
     <div class="layui-row layui-col-space6 " style="margin-top: 15px;">
-      <div class="layui-col-md3">
-        <div class="ul-nav-tree ul-padding-md">
+      <div class="layui-col-md3 ul-border-right">
+        <div class="ul-nav-tree ul-padding-md ">
 
           {volist name='list_post' id='category'}
           <div class="ul-nav-tree-group">
@@ -38,7 +38,7 @@
             </div>
             <div class="ul-nav-tree-group-main">
               {volist name='category.post' id='post'}
-              <a href="{:url('Index/index',['post_id'=>$post.id])}" class="ul-nav-tree-item">
+              <a href="{:url('Index/index',['post_id'=>$post.id])}" class="ul-nav-tree-item {eq name='post.id' value='$Request.param.post_id'}current{/eq}">
                 <div class="ul-nav-tree-item-title">
                   {$post.title}
                 </div>
