@@ -43,6 +43,7 @@
   margin-bottom: 15px;
 }
 
+
 .ul-icon-exit {
   display            : inline-block;
   width              : 16px;
@@ -201,3 +202,36 @@
 }
 
 /* 导航结束 */
+
+
+/* 链接导航开始 */
+
+.ul-link-select{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start
+}
+.ul-link-title{
+  
+}
+.ul-link-list{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-left: 15px;
+}
+
+.ul-link-item{
+  padding: 0px 10px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.ul-link-item.current{
+  border-radius: 15px;
+  border: 1px solid #6cf;
+  color: #6cf;
+}
+
+/* 链接导航结束 */
