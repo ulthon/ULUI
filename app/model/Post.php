@@ -25,6 +25,11 @@ class Post extends Model
 
   protected $defaultSoftDelete = 0;
 
+  public function category()
+  {
+    return $this->belongsTo(Category::class, 'category_id');
+  }
+
   public function categorys()
   {
     return $this->hasMany(PostCategory::class, 'post_id');
@@ -162,11 +167,15 @@ class Post extends Model
     $list_post = Cache::get($cacke_key);
 
     if (empty($list_post) || $clear) {
-      $list_post = Post::where('status', 1)->order('sort desc')->select();
-      Cache::set($cacke_key, $list_post,600);
+
+      $list_post = Category::with(['post'])->where('type', 'default')
+        ->where('status', 1)
+        ->order('sort asc')
+        ->select();
+
+      Cache::set($cacke_key, $list_post, 600);
     }
 
     return $list_post;
   }
-
 }

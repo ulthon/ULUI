@@ -3,6 +3,12 @@
   border-right: 1px solid #bbb;
 }
 
+.ul-nav-tree-group-title{
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 2;
+}
+
 .ul-nav-tree-item {
   display    : flex;
   align-items: baseline;

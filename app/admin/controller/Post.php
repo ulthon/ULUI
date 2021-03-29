@@ -19,7 +19,8 @@ class Post extends Common
   {
     parent::initialize();
 
-    ModelPost::quickSelect(true);
+    $list_post = ModelPost::quickSelect(true);
+
   }
 
   /**
@@ -118,7 +119,9 @@ class Post extends Common
     //
 
     $model_post = ModelPost::find($id);
+    $list_category = Category::where('status', 1)->order('sort asc')->select();
 
+    View::assign('list_category', $list_category);
 
     View::assign('post', $model_post);
 

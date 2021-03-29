@@ -30,15 +30,25 @@
     <div class="layui-row layui-col-space6 " style="margin-top: 15px;">
       <div class="layui-col-md3">
         <div class="ul-nav-tree ul-padding-md">
-          {volist name='list_post' id='post'}
-          <a href="{:url('Index/index',['post_id'=>$post.id])}" class="ul-nav-tree-item">
-            <div class="ul-nav-tree-item-title">
-              {$post.title}
+
+          {volist name='list_post' id='category'}
+          <div class="ul-nav-tree-group">
+            <div class="ul-nav-tree-group-title">
+              {$category.title}
             </div>
-            <div class="ul-nav-tree-item-desc">
-              {$post.desc}
+            <div class="ul-nav-tree-group-main">
+              {volist name='category.post' id='post'}
+              <a href="{:url('Index/index',['post_id'=>$post.id,'category_id'=>$post.category_id])}" class="ul-nav-tree-item">
+                <div class="ul-nav-tree-item-title">
+                  {$post.title}
+                </div>
+                <div class="ul-nav-tree-item-desc">
+                  {$post.desc}
+                </div>
+              </a>
+              {/volist}
             </div>
-          </a>
+          </div>
           {/volist}
 
         </div>

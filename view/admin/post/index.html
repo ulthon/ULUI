@@ -40,9 +40,9 @@
             <thead>
               <tr>
                 <th>ID</th>
-                <th >名称</th>
+                <th>名称</th>
                 <th>封面</th>
-                <th >简介</th>
+                <th>简介</th>
                 <th>排序</th>
                 <th>状态</th>
                 <th>分类</th>
@@ -62,9 +62,7 @@
                 <td>{$vo.sort}</td>
                 <td>{$vo.status_name}</td>
                 <td>
-                  {volist name='vo.categorys_list' id='category'}
-                    <p>{:str_repeat('|--',$category.level)}{$category.title}</p>
-                  {/volist}
+                  {$vo.category.title|default="未分类"}
                 </td>
                 <td>
                   {volist name='vo.tags_list' id='tag'}

@@ -17,26 +17,32 @@ class Category extends Model
   public static $allCategory = [];
 
 
+
+  public function post()
+  {
+    return $this->hasMany(Post::class, 'category_id');
+  }
+
   /**
    * 获取指定id下的所有分类
    *
    * @param string $id
    * @return void
    */
-  public static function getListLevel($id = '',$type = 1)
+  public static function getListLevel($id = '', $type = 1)
   {
 
-    if(empty(self::$allCategory)){
+    if (empty(self::$allCategory)) {
 
-      $model_list = Category::where('type',$type)->order('sort asc')->select();
-      self::$allCategory = array2level($model_list,0,0);
+      $model_list = Category::where('type', $type)->order('sort asc')->select();
+      self::$allCategory = array2level($model_list, 0, 0);
     }
 
-    if(!empty($id)){
+    if (!empty($id)) {
       $list = [];
       $in_category = [$id];
       foreach (self::$allCategory as $category) {
-        if(in_array($category->pid,$in_category)){
+        if (in_array($category->pid, $in_category)) {
           $list[] = $category;
           $in_category[] = $category->id;
         }
@@ -51,13 +57,13 @@ class Category extends Model
 
   public function getTitleImgAttr($value)
   {
-    
+
     return get_source_link($value);
   }
 
   public function posts()
   {
-    return $this->hasMany(PostCategory::class,'category_id');
+    return $this->hasMany(PostCategory::class, 'category_id');
   }
 
   /**
@@ -72,7 +78,7 @@ class Category extends Model
     $list_post = [];
 
     foreach ($list_post_category as $list_post_category) {
-      array_push($list_post,$list_post_category->post);
+      array_push($list_post, $list_post_category->post);
     }
 
     return $list_post;
@@ -86,34 +92,34 @@ class Category extends Model
   public function getPostsListAttr()
   {
     $list_post_category = $this->getAttr('posts');
-    
-    $list_post = array_column($list_post_category->append(['post'])->toArray(),'post');
+
+    $list_post = array_column($list_post_category->append(['post'])->toArray(), 'post');
 
     return $list_post;
   }
 
   public function getTplNameAttr($value)
   {
-    return Config::get('view_type.category.'.$value);
+    return Config::get('view_type.category.' . $value);
   }
 
   public function getModelParentAttr()
   {
     $pid = $this->getData('pid');
 
-    if($pid == 0){
+    if ($pid == 0) {
       return $this;
     }
-    return Category::where('id',$pid)->find();
+    return Category::where('id', $pid)->find();
   }
 
   // 返回除自身以外的其他的同级同类的分类
   public function getModelSiblingsAttr()
   {
-    return Category::where('pid',$this->getData('pid'))
-    ->where('level',$this->getData('level'))
-    ->where('id','<>',$this->getData('id'))
-    ->select();
+    return Category::where('pid', $this->getData('pid'))
+      ->where('level', $this->getData('level'))
+      ->where('id', '<>', $this->getData('id'))
+      ->select();
   }
 
   /**
@@ -123,9 +129,8 @@ class Category extends Model
    */
   public function getModelSameParentAttr()
   {
-    return Category::where('pid',$this->getData('pid'))
-    ->where('level',$this->getData('level'))
-    ->select();
+    return Category::where('pid', $this->getData('pid'))
+      ->where('level', $this->getData('level'))
+      ->select();
   }
-
 }

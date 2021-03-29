@@ -140,7 +140,17 @@
                         <input type="radio" name="status" value="0" title="不发布">
                       </div>
                     </div>
-
+                    <div class="layui-form-item">
+                      <div class="layui-form-label">分类</div>
+                      <div class="layui-input-block">
+                        <select name="category_id" lay-verify="">
+                          <option value="0">请选择一个分类</option>
+                          {volist name='list_category' id='vo'}
+                          <option value="{$vo.id}">{$vo.title}</option>
+                          {/volist}
+                        </select>
+                      </div>
+                    </div>
                     <div class="layui-form-item">
                       <div class="layui-form-label">跳转链接</div>
                       <div class="layui-input-block">
@@ -315,6 +325,7 @@
         is_top: '{$post->getData("is_top")}',
         jump_to_url_status: '{$post->getData("jump_to_url_status")}',
         tpl_name: '{$post->getData("tpl_name")}',
+        category_id: '{$post->getData("category_id")}',
       })
 
       form.on('submit(save)', function (data) {
