@@ -21,6 +21,9 @@ class Post extends Common
 
     $list_post = ModelPost::quickSelect(true);
 
+    if (!empty($this->request->param('id'))) {
+      ModelPost::quickFind($this->request->param('id'), true);
+    }
   }
 
   /**

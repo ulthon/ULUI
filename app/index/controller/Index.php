@@ -16,14 +16,14 @@ class Index extends Common
    *
    * @return \think\Response
    */
-  public function index($post_id = 0,$category_id = 0)
+  public function index($post_id = 0)
   {
 
     $list_post = Post::quickSelect();
     if (empty($post_id)) {
       $model_post = $list_post->first()->post->first();
     } else {
-      $model_post = $list_post->where('id',$category_id)->column('post')[0]->where('id', $post_id)->first();
+      $model_post = Post::quickFind($post_id);
     }
 
     View::assign('model_post', $model_post);

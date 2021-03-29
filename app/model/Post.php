@@ -178,4 +178,18 @@ class Post extends Model
 
     return $list_post;
   }
+
+  public static function quickFind($id,$clear = false)
+  {
+    $cache_key = 'post_'.$id;
+
+    $model_post = Cache::get($cache_key);
+
+    if(empty($model_post) || $clear){
+      $model_post = Post::find($id);
+      Cache::set($cache_key,$model_post,600);
+    }
+
+    return $model_post;
+  }
 }
