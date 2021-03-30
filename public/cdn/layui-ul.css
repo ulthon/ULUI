@@ -343,3 +343,21 @@
 .ul-card-list .layui-card:last-child {
   margin-bottom: 15px;
 }
+
+.ul-title{
+  text-align: center;
+  line-height: 1.5;
+}
+
+.ul-title-main{
+  font-size: 16px;
+}
+
+.ul-title-plus{
+  color: #999;
+}
+
+.ul-title-line{
+  border-top: 2px solid #666;
+  margin-top: 8px;
+}
