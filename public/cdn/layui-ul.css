@@ -55,6 +55,10 @@
   border-right: 1px solid #bbb;
 }
 
+.ul-bg-white {
+  background-color: #fff;
+}
+
 /* 通用类结束 */
 
 /* 用户头像开始 */
@@ -282,12 +286,12 @@
   width     : 200px;
   margin    : 15px;
   box-shadow: 0 5px 10px #999;
-  
+
 }
 
 .ul-photo-card-poster {
-  width : 100%;
-  height: 140px;
+  width              : 100%;
+  height             : 140px;
   background-size    : cover;
   background-position: center;
 }
@@ -322,6 +326,10 @@
   cursor: pointer;
 }
 
+.data-item {
+  margin-right: 15px;
+}
+
 .data-img .data-img-main {
   max-width: 120px;
   margin   : 5px;
@@ -344,20 +352,88 @@
   margin-bottom: 15px;
 }
 
-.ul-title{
-  text-align: center;
+.ul-title {
+  text-align : center;
   line-height: 1.5;
 }
 
-.ul-title-main{
+.ul-title-main {
   font-size: 16px;
 }
 
-.ul-title-plus{
+.ul-title-plus {
   color: #999;
 }
 
-.ul-title-line{
+.ul-title-line {
   border-top: 2px solid #666;
   margin-top: 8px;
+}
+
+.ul-message-list {}
+
+.ul-message-item {
+  margin-bottom  : 15px;
+  display        : flex;
+  justify-content: flex-start;
+  align-items    : flex-start;
+  padding        : 15px;
+}
+
+.ul-message-item-left {
+  width: 120px;
+}
+
+.ul-message-item-right {
+  width: calc(100% - 120px);
+}
+.ul-message-item-info{
+  position: relative;
+}
+.ul-message-item-options{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.ul-message-item-avatar {
+  background-size    : cover;
+  background-position: center;
+  width              : 100px;
+  height             : 100px;
+  border-radius      : 50%;
+}
+
+.ul-message-item-name {
+  display  : flex;
+  color    : #6cf;
+  font-size: 16px;
+}
+
+.ul-message-item-data {
+  display   : flex;
+  font-size : 14px;
+  color     : #999;
+  margin-top: 10px;
+}
+
+.ul-message-item-content {
+  background-color: #f0f0f0;
+  padding         : 15px;
+  margin-top      : 10px;
+}
+
+.ul-message-item-img-list{
+  
+  margin-top: 10px;
+  
+}
+
+.ul-message-item-img {
+  width              : 160px;
+  height             : 120px;
+  background-size    : cover;
+  background-position: center;
+  margin-right: 10px;
+  display: inline-block;
+  
 }

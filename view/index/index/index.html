@@ -74,7 +74,19 @@
     </div>
   </div>
   <script>
-    layui.use(['element','form'])
+    function renderRepeat(elem) {
+      $(elem).find('[data-repeat]').each(function () {
+        for (let index = 1; index < $(this).data('repeat'); index++) {
+          var clone = $(this).clone()
+          clone.insertAfter(this)
+          renderRepeat(clone)
+        }
+      })
+    }
+    renderRepeat('body')
+    layui.use(['element', 'form'])
+
+
   </script>
 </body>
 
