@@ -387,14 +387,17 @@
 .ul-message-item-right {
   width: calc(100% - 120px);
 }
-.ul-message-item-info{
+
+.ul-message-item-info {
   position: relative;
 }
-.ul-message-item-options{
+
+.ul-message-item-options {
   position: absolute;
-  right: 0;
-  top: 0;
+  right   : 0;
+  top     : 0;
 }
+
 .ul-message-item-avatar {
   background-size    : cover;
   background-position: center;
@@ -422,10 +425,10 @@
   margin-top      : 10px;
 }
 
-.ul-message-item-img-list{
-  
+.ul-message-item-img-list {
+
   margin-top: 10px;
-  
+
 }
 
 .ul-message-item-img {
@@ -433,7 +436,36 @@
   height             : 120px;
   background-size    : cover;
   background-position: center;
-  margin-right: 10px;
-  display: inline-block;
-  
+  margin-right       : 10px;
+  display            : inline-block;
+
+}
+
+.ul-nav-easy {
+  background-color: transparent;
+}
+
+
+.layui-nav-tree.ul-nav-easy .layui-nav-item>a {
+  color: #666;
+}
+
+.layui-nav-tree.ul-nav-easy .layui-this {
+  background-color: transparent;
+}
+
+.layui-nav-tree.ul-nav-easy .layui-this>a {
+  background-color: transparent;
+  color           : #6cf;
+}
+.layui-nav-tree.ul-nav-easy .layui-nav-item.layui-this a:hover{
+  color: #6cf;
+}
+.layui-nav-tree.ul-nav-easy .layui-nav-item a:hover {
+  color: #fff;
+}
+
+.layui-nav-tree.ul-nav-easy .layui-nav-item a {
+  height     : 45px;
+  line-height: 45px;
 }
