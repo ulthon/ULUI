@@ -67,6 +67,9 @@
 .layui-form-radio > i:hover, .layui-form-radioed > i{
     color: #66CCFF;
 }
+.layui-form-radio:hover *, .layui-form-radioed, .layui-form-radioed > i{
+  color: #66CCFF;
+}
 
 .layui-elem-quote{
     border-color: #66CCFF;
@@ -88,6 +91,15 @@
   background-color: #66CCFF;
 }
 
+
+.layui-btn-primary:hover{
+  color: #fff;
+  border-color: #66CCFF;
+}
+.layui-btn-primary{
+  color: #fff;
+  border-color: transparent;
+}
 
 .layui-form-label{
   width: unset;
