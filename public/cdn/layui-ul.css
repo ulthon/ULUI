@@ -458,9 +458,11 @@
   background-color: transparent;
   color           : #6cf;
 }
-.layui-nav-tree.ul-nav-easy .layui-nav-item.layui-this a:hover{
+
+.layui-nav-tree.ul-nav-easy .layui-nav-item.layui-this a:hover {
   color: #6cf;
 }
+
 .layui-nav-tree.ul-nav-easy .layui-nav-item a:hover {
   color: #fff;
 }
@@ -468,4 +470,44 @@
 .layui-nav-tree.ul-nav-easy .layui-nav-item a {
   height     : 45px;
   line-height: 45px;
+}
+
+.search-item {
+  margin-bottom: 15px;
+}
+
+.ul-upload-photo-list {}
+
+.ul-upload-photo-item {
+  display         : inline-block;
+  width           : 120px;
+  height          : 120px;
+  margin          : 5px;
+  background-color: #ddd;
+  cursor    : pointer;
+  box-shadow: 0 3px 5px #999;
+  position  : relative;
+}
+
+.ul-upload-photo-main {
+  background-size    : cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.ul-upload-photo-delete {
+  position: absolute;
+  right   : 5px;
+  top     : 5px;
+  z-index: 999;
+  font-size: 20px;
+  color: #fff;
+  text-shadow: 0 0 2px #000;
+}
+
+.ul-upload-photo-button {
+  background-image: url('img/upload.png');
+  background-size    : cover;
+  background-position: center;
 }
