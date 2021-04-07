@@ -6,6 +6,7 @@ namespace app\model;
 
 use think\facade\App;
 use think\facade\Cache;
+use think\facade\View;
 use think\Model;
 use think\model\concern\SoftDelete;
 
@@ -157,7 +158,7 @@ class Post extends Model
       return '';
     }
 
-    return file_get_contents($file_path);
+    return View::fetch($file_path);
   }
 
   public static function quickSelect($clear = false)
@@ -179,15 +180,15 @@ class Post extends Model
     return $list_post;
   }
 
-  public static function quickFind($id,$clear = false)
+  public static function quickFind($id, $clear = false)
   {
-    $cache_key = 'post_'.$id;
+    $cache_key = 'post_' . $id;
 
     $model_post = Cache::get($cache_key);
 
-    if(empty($model_post) || $clear){
+    if (empty($model_post) || $clear) {
       $model_post = Post::find($id);
-      Cache::set($cache_key,$model_post,600);
+      Cache::set($cache_key, $model_post, 600);
     }
 
     return $model_post;

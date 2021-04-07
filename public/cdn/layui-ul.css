@@ -251,6 +251,7 @@
   margin    : 15px;
   text-align: center;
   min-width : 220px;
+
 }
 
 .ul-photo-poster {
@@ -260,6 +261,7 @@
   background-size    : cover;
   background-position: center;
   margin             : 0 auto;
+  box-shadow         : 1px 1px 3px #999;
 }
 
 .ul-photo-info {
@@ -313,7 +315,7 @@
 
 .ul-info-tips {
   padding         : 15px;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .ul-card-status {
@@ -484,30 +486,61 @@
   height          : 120px;
   margin          : 5px;
   background-color: #ddd;
-  cursor    : pointer;
-  box-shadow: 0 3px 5px #999;
-  position  : relative;
+  cursor          : pointer;
+  box-shadow      : 0 3px 5px #999;
+  position        : relative;
 }
 
 .ul-upload-photo-main {
   background-size    : cover;
   background-position: center;
-  width: 100%;
-  height: 100%;
+  width              : 100%;
+  height             : 100%;
 }
 
 .ul-upload-photo-delete {
-  position: absolute;
-  right   : 5px;
-  top     : 5px;
-  z-index: 999;
-  font-size: 20px;
-  color: #fff;
+  position   : absolute;
+  right      : 5px;
+  top        : 5px;
+  z-index    : 999;
+  font-size  : 20px;
+  color      : #fff;
   text-shadow: 0 0 2px #000;
 }
 
 .ul-upload-photo-button {
-  background-image: url('img/upload.png');
+  background-image   : url('img/upload.png');
   background-size    : cover;
   background-position: center;
+}
+
+.ul-form-group-title {
+  color        : #999;
+  border-bottom: 1px solid #bbb;
+  padding      : 5px 0;
+  margin-bottom: 15px;
+}
+
+.ul-tree-item {
+  padding         : 8px;
+  background-color: #fbfbfb;
+  position        : relative;
+  border-left     : 3px solid transparent;
+  cursor          : pointer;
+}
+
+.ul-tree-item:hover,
+.ul-tree-item.current {
+  background-color: #9cf;
+  border-color    : #6699CC;
+}
+
+.ul-tree-item-title {
+  margin-left: 15px;
+}
+
+.ul-tree-item-icon {
+  position: absolute;
+  left    : 5px;
+  top     : 10px;
 }

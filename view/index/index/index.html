@@ -84,8 +84,36 @@
       })
     }
     renderRepeat('body')
+
+    $('.demo-js-src').each(function () {
+      var html = $(this).html();
+      var htmlList = html.split(/[\n]/g);
+      var htmlListNew = []
+      var baseLineBlankNums = -1;
+      htmlList.forEach(function (htmlLine, htmlIndex) {
+        if (htmlIndex == 0 && htmlLine.length == 0) {
+          return true
+        }
+        if (baseLineBlankNums < 0) {
+          var kong = htmlLine.match(/^ */g) //筛选
+          if (kong != null) {
+            baseLineBlankNums = kong[0].length
+          } else {
+            baseLineBlankNums = 0
+          }
+        }
+
+        htmlListNew.push(htmlLine.slice(baseLineBlankNums))
+      });
+
+      $(this).siblings('pre.demo-js').html(htmlListNew.join("\n"))
+    })
     layui.form.render()
     layui.element.render()
+    layui.code({
+      encode: true
+    })
+
 
   </script>
 </body>
