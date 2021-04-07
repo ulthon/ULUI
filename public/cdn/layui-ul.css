@@ -522,21 +522,28 @@
 }
 
 .ul-tree-item {
-  padding         : 8px;
   background-color: #fbfbfb;
-  position        : relative;
-  border-left     : 3px solid transparent;
-  cursor          : pointer;
+  cursor: pointer;
 }
 
-.ul-tree-item:hover,
-.ul-tree-item.current {
+.ul-tree-item-info {
+  border-left: 3px solid transparent;
+  padding         : 8px 0;
+  position        : relative;
+}
+
+
+.ul-tree-item-info.current {
   background-color: #9cf;
+  border-color    : #6699CC;
+}
+.ul-tree-item-info:hover{
+  background-color: rgb(190, 222, 255);
   border-color    : #6699CC;
 }
 
 .ul-tree-item-title {
-  margin-left: 15px;
+  margin-left: 25px;
 }
 
 .ul-tree-item-icon {

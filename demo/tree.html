@@ -7,179 +7,191 @@
       需要自己写出目录收缩逻辑
     </div>
     <div class="ul-tree">
-      <div class="ul-tree-item" data-level="0">
-        <i class="ul-tree-item-icon layui-icon layui-icon-triangle-d"></i>
-        <span class="ul-tree-item-title">读书笔记</span>
+      <div class="ul-tree-item">
+        <div class="ul-tree-item-info">
+          <i class="ul-tree-item-icon layui-icon layui-icon-triangle-d"></i>
+          <span class="ul-tree-item-title">读书笔记</span>
+        </div>
+        <div class="ul-tree-item-children">
+          <div class="ul-tree-item">
+            <div class="ul-tree-item-info current">
+              <i class="ul-tree-item-icon layui-icon layui-icon-triangle-d"></i>
+              <span class="ul-tree-item-title">小说</span>
+            </div>
+            <div class="ul-tree-item-children">
+
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="ul-tree-item current" data-level="1">
-        <span class="ul-tree-item-title">小说</span>
-      </div>
-      <div class="ul-tree-item" data-level="0">
-        <i class="ul-tree-item-icon layui-icon layui-icon-triangle-d"></i>
-        <span class="ul-tree-item-title">技术笔记</span>
-      </div>
-      <div class="ul-tree-item" data-level="1">
-        <span class="ul-tree-item-title">Mysql</span>
-      </div>
-      <div class="ul-tree-item" data-level="1">
-        <i class="ul-tree-item-icon layui-icon layui-icon-triangle-d"></i>
-        <span class="ul-tree-item-title">PHP</span>
-      </div>
-      <div class="ul-tree-item" data-level="2">
-        <span class="ul-tree-item-title">扩展</span>
-      </div>
-      <div class="ul-tree-item" data-level="2">
-        <span class="ul-tree-item-title">框架</span>
-      </div>
-      <div class="ul-tree-item" data-level="2">
-        <span class="ul-tree-item-title">库</span>
+      <div class="ul-tree-item">
+        <div class="ul-tree-item-info">
+          <i class="ul-tree-item-icon layui-icon layui-icon-triangle-d"></i>
+          <span class="ul-tree-item-title">技术笔记</span>
+        </div>
+        <div class="ul-tree-item-children">
+          <div class="ul-tree-item">
+            <div class="ul-tree-item-info">
+              <i class="ul-tree-item-icon layui-icon layui-icon-triangle-d"></i>
+              <span class="ul-tree-item-title">Mysql</span>
+            </div>
+            <div class="ul-tree-item-children">
+
+            </div>
+          </div>
+          <div class="ul-tree-item">
+            <div class="ul-tree-item-info">
+              <i class="ul-tree-item-icon layui-icon layui-icon-triangle-d"></i>
+              <span class="ul-tree-item-title">PHP</span>
+            </div>
+            <div class="ul-tree-item-children">
+              <div class="ul-tree-item">
+                <div class="ul-tree-item-info">
+                  <i class="ul-tree-item-icon layui-icon layui-icon-triangle-d"></i>
+                  <span class="ul-tree-item-title">扩展</span>
+                </div>
+                <div class="ul-tree-item-children">
+
+                </div>
+              </div>
+              <div class="ul-tree-item">
+                <div class="ul-tree-item-info">
+                  <i class="ul-tree-item-icon layui-icon layui-icon-triangle-d"></i>
+                  <span class="ul-tree-item-title">框架</span>
+                </div>
+                <div class="ul-tree-item-children">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div>
       <pre class="layui-code demo-js"></pre>
       <script class="demo-js-src">
-        // 需要用以下代码整理缩进
+        // 可以用以下代码整理元素
         $('.ul-tree-item').each(function () {
-          $(this).find('.ul-tree-item-title').css('margin-left', ($(this).data('level') + 1) * 15 + 'px')
-          $(this).find('.ul-tree-item-icon').css('left', ($(this).data('level') + 1) * 15 - 10 + 'px')
+          var itemTree = this
+          var parents = $(itemTree).parents('.ul-tree-item')
+          var level = parents.length
+          $(itemTree).find('.ul-tree-item-title').css('margin-left', (level + 1) * 15 + 5 + 'px')
+          $(itemTree).find('.ul-tree-item-icon').css('left', (level + 1) * 15 - 15 + 'px')
+
+          if ($(itemTree).children('.ul-tree-item-children').children().length == 0) {
+            $(itemTree).children('.ul-tree-item-info').find('.ul-tree-item-icon').remove()
+          }
+
+          $(itemTree).children('.ul-tree-item-info').click(function (e) {
+            if ($(e.target).hasClass('ul-tree-item-icon')) {
+              var iconItem = e.target
+              if ($(iconItem).hasClass('layui-icon-triangle-d')) {
+                // 收缩
+                $(iconItem).removeClass('layui-icon-triangle-d')
+                $(iconItem).addClass('layui-icon-triangle-r')
+
+                $(itemTree).children('.ul-tree-item-children').hide()
+              } else {
+                // 展开
+                $(iconItem).addClass('layui-icon-triangle-d')
+                $(iconItem).removeClass('layui-icon-triangle-r')
+
+                $(itemTree).children('.ul-tree-item-children').show()
+              }
+              console.log('点击收缩目录');
+              // 一般不用写这个逻辑
+            }else{
+              console.log('点击目录项');
+              // 在这里写点击逻辑
+            }
+          })
+
         })
+
+
       </script>
     </div>
   </div>
 </fieldset>
 <fieldset class="layui-elem-field layui-field-title">
-  <legend>动态生成</legend>
+  <legend>基本组件</legend>
   <div class="layui-field-box">
     <div>
-      其实在生成目录时,只需要一个简单地上下级关系和正确的level层级,很容易写出收缩逻辑.
-      <br>
-      但是如果不愿意写更多的js逻辑,那么你可以生成一个多层级关系的json,然后把js的逻辑复制走,就像下面的代码一样
+      最基本的组件,ul-tree-item-icon的按钮会在执行js后进行相应的移除,缩进样式也许需要执行js
     </div>
-    <div class="ul-tree" id="js-tree">
-
+    <div class="ul-section">
+      <div class="ul-tree">
+        <div class="ul-tree-item">
+          <div class="ul-tree-item-info">
+            <i class="ul-tree-item-icon layui-icon layui-icon-triangle-d"></i>
+            <span class="ul-tree-item-title">读书笔记</span>
+          </div>
+          <div class="ul-tree-item-children">
+  
+          </div>
+        </div>
+  
+      </div>
     </div>
-
-    <div>
-      <pre class="layui-code demo-js"></pre>
-      <script class="demo-js-src">
-        var tree = [
-          {
-            title: '读书笔记',
-            children: [
-              {
-                title: '小说'
-              }
-            ],
-            data: {}
-          },
-          {
-            title: '技术笔记',
-            children: [
-              {
-                title: 'MYSQL',
-              },
-              {
-                title: 'PHP',
-                children: [
-                  {
-                    title: '扩展'
-                  },
-                  {
-                    title: '框架'
-                  },
-                  {
-                    title: '库'
-                  },
-                  {
-                    title: '文档'
-                  },
-                ]
-              }
-            ]
-          }
-        ]
-        function toggleTree(iconItem, isShow) {
-          if (isShow) {
-            $('.ul-tree-item-pkey-' + $(iconItem).closest('.ul-tree-item').data('key')).show()
-          } else {
-            $('.ul-tree-item-pkey-' + $(iconItem).closest('.ul-tree-item').data('key')).hide()
-          }
-          $('.ul-tree-item-pkey-' + $(iconItem).closest('.ul-tree-item').data('key')).each(function () {
-            toggleTree($(this).find('.ul-tree-item-icon'), isShow)
-          })
-
-        }
-        function renderTree(tree, target, level) {
-
-          if (typeof level == 'undefined') {
-            level = 0
-          }
-          tree.forEach(function (treeItem, index) {
-            // console.log(treeItem);
-            var treeHtml = '<div class="ul-tree-item">' +
-              '<i class="ul-tree-item-icon layui-icon layui-icon-triangle-d"></i>' +
-              '<span class="ul-tree-item-title"></span>' +
-              '</div>'
-            var treeHtmlDom = $(treeHtml)
-
-            treeItem.key = Math.random().toString(36).slice(-6);
-            treeHtmlDom.data(treeItem)
-            treeHtmlDom.addClass('ul-tree-item-key-' + treeItem.key)
-
-            if (level == 0) {
-              treeHtmlDom.appendTo(target)
-            } else {
-              var pItemKey = 'ul-tree-item-pkey-' + target.data('key')
-              treeHtmlDom.addClass(pItemKey)
-              if ($('.' + pItemKey).length > 0) {
-                treeHtmlDom.insertAfter($('.' + pItemKey).last())
-              } else {
-                treeHtmlDom.insertAfter(target)
-              }
-            }
-
-            treeHtmlDom.find('.ul-tree-item-title').text(treeItem.title)
-
-            treeHtmlDom.find('.ul-tree-item-title').css('margin-left', (level + 1) * 15 + 'px')
-            treeHtmlDom.find('.ul-tree-item-icon').css('left', (level + 1) * 15 - 10 + 'px')
-
-            treeHtmlDom.click(function (e) {
-
-              if ($(e.target).hasClass('ul-tree-item-icon')) {
-                console.log('点击收缩');
-
-                if ($(e.target).hasClass('layui-icon-triangle-d')) {
-                  // 收缩
-                  $(e.target).removeClass('layui-icon-triangle-d')
-                  $(e.target).addClass('layui-icon-triangle-r')
-                  toggleTree(e.target, false)
-
-
-                } else {
-                  // 展开
-                  $(e.target).addClass('layui-icon-triangle-d')
-                  $(e.target).removeClass('layui-icon-triangle-r')
-                  toggleTree(e.target, true)
-
-                }
-
-              } else {
-                console.log('点击');
-                console.log($(this).data())
-              }
-            })
-            if (typeof treeItem.children != "undefined") {
-              renderTree(treeItem.children, treeHtmlDom, level + 1)
-            } else {
-              treeHtmlDom.find('.ul-tree-item-icon').remove()
-            }
-
-          })
-        }
-
-        renderTree(tree, '#js-tree')
-      </script>
+    <div class="ul-section">
+      <div class="ul-tree">
+        <div class="ul-tree-item">
+          <div class="ul-tree-item-info">
+            <i class="ul-tree-item-icon layui-icon layui-icon-triangle-d"></i>
+            <span class="ul-tree-item-title">读书笔记</span>
+          </div>
+          <div class="ul-tree-item-children">
+            <div class="ul-tree-item">
+              <div class="ul-tree-item-info">
+                <i class="ul-tree-item-icon layui-icon layui-icon-triangle-d"></i>
+                <span class="ul-tree-item-title">小说</span>
+              </div>
+              <div class="ul-tree-item-children">
+  
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
     </div>
+    <pre class="layui-code demo-js"></pre>
+    <div class="demo-js-src">
+      <!-- 基本组件 -->
+      <div class="ul-tree">
+        <div class="ul-tree-item">
+          <div class="ul-tree-item-info">
+            <i class="ul-tree-item-icon layui-icon layui-icon-triangle-d"></i>
+            <span class="ul-tree-item-title">读书笔记</span>
+          </div>
+          <div class="ul-tree-item-children">
 
+          </div>
+        </div>
+
+      </div>
+      <!-- 子目录只需要将ul-tree-item嵌套在ul-tree-item-children即可 -->
+      <div class="ul-tree">
+        <div class="ul-tree-item">
+          <div class="ul-tree-item-info">
+            <i class="ul-tree-item-icon layui-icon layui-icon-triangle-d"></i>
+            <span class="ul-tree-item-title">读书笔记</span>
+          </div>
+          <div class="ul-tree-item-children">
+            <div class="ul-tree-item">
+              <div class="ul-tree-item-info">
+                <i class="ul-tree-item-icon layui-icon layui-icon-triangle-d"></i>
+                <span class="ul-tree-item-title">小说</span>
+              </div>
+              <div class="ul-tree-item-children">
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
 </fieldset>
