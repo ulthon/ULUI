@@ -523,13 +523,13 @@
 
 .ul-tree-item {
   background-color: #fbfbfb;
-  cursor: pointer;
+  cursor          : pointer;
 }
 
 .ul-tree-item-info {
   border-left: 3px solid transparent;
-  padding         : 8px 0;
-  position        : relative;
+  padding    : 8px 0;
+  position   : relative;
 }
 
 
@@ -537,7 +537,8 @@
   background-color: #9cf;
   border-color    : #6699CC;
 }
-.ul-tree-item-info:hover{
+
+.ul-tree-item-info:hover {
   background-color: rgb(190, 222, 255);
   border-color    : #6699CC;
 }
@@ -550,4 +551,41 @@
   position: absolute;
   left    : 5px;
   top     : 10px;
+}
+
+
+.ul-note-item {
+  display        : flex;
+  justify-content: flex-start;
+  align-items    : flex-start;
+  cursor         : pointer;
+  padding        : 15px;
+}
+
+.ul-note-item.current,
+.ul-note-item:hover {
+  background-color: #eee;
+}
+
+.ul-note-item .ul-note-item-icon {
+  margin-right: 10px;
+  ;
+}
+
+.ul-note-item .ul-note-item-desc {
+  color    : #999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.ul-note-item .ul-note-item-time {
+  color     : #bbb;
+  font-size : 12px;
+  margin-top: 5px;
+}
+
+.ul-note-item .ul-note-item-tree {
+  font-size : 12px;
+  color     : #bbb;
+  margin-top: 5px;
 }
