@@ -564,7 +564,7 @@
 
 .ul-note-item.current,
 .ul-note-item:hover {
-  background-color: #eee;
+  background-color: #dedede;
 }
 
 .ul-note-item .ul-note-item-icon {
@@ -573,8 +573,8 @@
 }
 
 .ul-note-item .ul-note-item-desc {
-  color    : #999;
-  font-size: 12px;
+  color     : #999;
+  font-size : 12px;
   margin-top: 5px;
 }
 
@@ -588,4 +588,18 @@
   font-size : 12px;
   color     : #bbb;
   margin-top: 5px;
+}
+
+
+.ul-input-table {
+  text-align: center;
+}
+
+.ul-input-table td,
+.ul-input-table th {
+  padding: 2px 4px;
+}
+
+.ul-input-table .layui-form-checkbox[lay-skin="primary"] {
+  margin-top: 0px;
 }
