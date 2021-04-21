@@ -106,7 +106,7 @@
         htmlListNew.push(htmlLine.slice(baseLineBlankNums))
       });
 
-      $(this).siblings('pre.demo-js').html(htmlListNew.join("\n"))
+      $(this).siblings('pre.demo-js').text(htmlListNew.join("\n"))
     })
     layui.form.render()
     layui.element.render()

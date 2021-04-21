@@ -1,57 +1,60 @@
 <fieldset class="layui-elem-field layui-field-title">
   <legend>表格输入</legend>
   <div class="layui-field-box">
-    <div class="layui-form">
-      <div class="layui-form-item">
-        <table class="layui-table ul-input-table">
-          <tbody>
-            <tr>
-              <td>输入</td>
-              <td>
-                <input type="text" name="input-1" placeholder="请输入" class="layui-input" id="">
-              </td>
-
-              <td>选择框</td>
-              <td>
-                <select name="city" lay-verify="required">
-                  <option value=""></option>
-                  <option value="0">北京</option>
-                  <option value="1">上海</option>
-                  <option value="2">广州</option>
-                  <option value="3">深圳</option>
-                  <option value="4">杭州</option>
-                </select>
-              </td>
-              <td>复选框</td>
-              <td>
-                <input type="checkbox" name="like[write]" lay-skin="primary" title="写作">
-                <input type="checkbox" name="like[read]" lay-skin="primary" title="阅读" checked>
-                <input type="checkbox" name="like[dai]" lay-skin="primary" title="发呆">
-              </td>
-
-            </tr>
-            <tr>
-              <td>单选框</td>
-              <td colspan="5">
-                <input type="radio" name="sex" value="男" title="国产">
-                <input type="radio" name="sex" value="男" title="日韩">
-                <input type="radio" name="sex" value="男" title="欧洲">
-                <input type="radio" name="sex" value="男" title="美国">
-                <input type="radio" name="sex" value="女" title="俄罗斯" checked>
-
-              </td>
-            </tr>
-            <tr>
-              <td>文本域</td>
-              <td colspan="5">
-                <textarea name="" class="layui-textarea" rows="3"></textarea>
-
-              </td>
-            </tr>
-
-          </tbody>
-        </table>
+    <div class="demo-js-src" style="display: block;">
+      <div class="layui-form">
+        <div class="layui-form-item">
+          <table class="layui-table ul-input-table" lay-even>
+            <tbody>
+              <tr>
+                <td>输入</td>
+                <td>
+                  <input type="text" name="input-1" placeholder="请输入" class="layui-input" id="">
+                </td>
+  
+                <td>选择框</td>
+                <td>
+                  <select name="city" lay-verify="required">
+                    <option value=""></option>
+                    <option value="0">北京</option>
+                    <option value="1">上海</option>
+                    <option value="2">广州</option>
+                    <option value="3">深圳</option>
+                    <option value="4">杭州</option>
+                  </select>
+                </td>
+                <td>复选框</td>
+                <td>
+                  <input type="checkbox" name="like[write]" lay-skin="primary" title="写作">
+                  <input type="checkbox" name="like[read]" lay-skin="primary" title="阅读" checked>
+                  <input type="checkbox" name="like[dai]" lay-skin="primary" title="发呆">
+                </td>
+  
+              </tr>
+              <tr>
+                <td>单选框</td>
+                <td colspan="5">
+                  <input type="radio" name="sex" value="男" title="国产">
+                  <input type="radio" name="sex" value="男" title="日韩">
+                  <input type="radio" name="sex" value="男" title="欧洲">
+                  <input type="radio" name="sex" value="男" title="美国">
+                  <input type="radio" name="sex" value="女" title="俄罗斯" checked>
+  
+                </td>
+              </tr>
+              <tr>
+                <td>文本域</td>
+                <td colspan="5">
+                  <textarea name="" class="layui-textarea" rows="3"></textarea>
+  
+                </td>
+              </tr>
+  
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
+    <pre  class="layui-code demo-js"></pre>
   </div>
 </fieldset>

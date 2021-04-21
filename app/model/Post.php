@@ -158,6 +158,8 @@ class Post extends Model
       return '';
     }
 
+    View::assign('site_logo_src', get_source_link(get_system_config('site_logo')));
+
     return View::fetch($file_path);
   }
 
