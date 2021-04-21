@@ -58,6 +58,16 @@
   background-color: #fff;
 }
 
+.ul-common-flex-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.ul-common-flex-sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 /* 通用类结束 */
 
 /* 用户头像开始 */
@@ -709,6 +719,8 @@
   color: #516073;
   padding: 15px;
   cursor: pointer;
+  margin-right: 15px;
+  margin-bottom: 15px;
 }
 .ul-card-a-left {
   width: 40%;
@@ -782,11 +794,6 @@
   border-bottom: 1px dotted #d9d9d9;
 }
 
-.ul-common-flex-sb {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 .ul-card-bank-body {
   height: 40px;
   padding: 10px 10px 20px 0;
