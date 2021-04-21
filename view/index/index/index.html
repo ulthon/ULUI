@@ -73,6 +73,16 @@
       </div>
     </div>
   </div>
+  <div class="right-tips-container" style="display: none;">
+    <div class="ul-nav-min right-tips-nav" style="width: 160px;">
+
+    </div>
+  </div>
+  <div class="tpl" style="display: none;">
+    <a class="ul-nav-min-item">
+      个人中心
+    </a>
+  </div>
   <script>
     function renderRepeat(elem) {
       $(elem).find('[data-repeat]').each(function () {
@@ -114,6 +124,32 @@
       encode: true
     })
     layui.util.fixbar()
+
+
+    $('.main-content h2,.main-content>.demo-page>fieldset>legend').each(function (index, elem) {
+
+      var id = 'title' + index;
+      $(elem).attr('id', id)
+
+      var navItem = $('.tpl .ul-nav-min-item').clone()
+      navItem.attr('href', '#' + id)
+      navItem.text($(elem).text())
+      navItem.appendTo('.right-tips-nav')
+    })
+
+    if ($('.right-tips-nav').children().length > 0) {
+      layer.open({
+        type: 1,
+        content: $('.right-tips-container'),
+        title: '目录',
+        offset: 'r',
+        closeBtn: 0,
+        shade: 0,
+        success(layero){
+          $(layero).css('margin-left','-15px')
+        }
+      })
+    }
 
 
   </script>
