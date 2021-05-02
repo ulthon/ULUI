@@ -1,18 +1,17 @@
 /* 列表开始 */
-.ul-nav-tree {
-}
+.ul-nav-tree {}
 
 .ul-nav-tree-group-title {
-  font-size: 16px;
+  font-size  : 16px;
   font-weight: 600;
   line-height: 2;
 }
 
 .ul-nav-tree-item {
-  display: flex;
+  display    : flex;
   align-items: baseline;
-  cursor: pointer;
-  padding: 5px;
+  cursor     : pointer;
+  padding    : 5px;
   white-space: nowrap;
 }
 
@@ -25,8 +24,8 @@
 }
 
 .ul-nav-tree-item-desc {
-  font-size: 14px;
-  color: #999;
+  font-size  : 14px;
+  color      : #999;
   margin-left: 15px;
 }
 
@@ -42,11 +41,11 @@
 }
 
 .ul-icon-exit {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  background-image: url("img/exit.png");
-  background-size: cover;
+  display            : inline-block;
+  width              : 16px;
+  height             : 16px;
+  background-image   : url("img/exit.png");
+  background-size    : cover;
   background-position: center;
 }
 
@@ -59,12 +58,13 @@
 }
 
 .ul-common-flex-list {
-  display: flex;
+  display  : flex;
   flex-wrap: wrap;
 }
+
 .ul-common-flex-sb {
-  display: flex;
-  align-items: center;
+  display        : flex;
+  align-items    : center;
   justify-content: space-between;
 }
 
@@ -72,14 +72,13 @@
 
 /* 用户头像开始 */
 
-.ul-avatar-list {
-}
+.ul-avatar-list {}
 
 .ul-avatar-list-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8px;
+  display         : flex;
+  align-items     : center;
+  justify-content : space-between;
+  padding         : 8px;
   background-color: #ddd;
 }
 
@@ -88,35 +87,35 @@
 }
 
 .ul-avatar-list-item-img {
-  height: 48px;
-  width: 48px;
-  background-image: url("/static/images/avatar.png");
-  background-size: cover;
+  height             : 48px;
+  width              : 48px;
+  background-image   : url("/static/images/avatar.png");
+  background-size    : cover;
   background-position: center;
-  border-radius: 3px;
-  background-color: #fff;
+  border-radius      : 3px;
+  background-color   : #fff;
 }
 
 .ul-avatar-list-item-info {
   margin-left: 10px;
-  position: relative;
-  width: calc(100% - 48px - 10px);
+  position   : relative;
+  width      : calc(100% - 48px - 10px);
 }
 
 .ul-avatar-list-item-time {
   position: absolute;
-  right: 0;
-  top: 0;
-  color: #999;
+  right   : 0;
+  top     : 0;
+  color   : #999;
 }
 
 .ul-avatar-list-item-tips {
-  color: #999;
-  font-size: 14px;
-  display: inline-block;
-  white-space: nowrap;
-  width: 100%;
-  overflow: hidden;
+  color        : #999;
+  font-size    : 14px;
+  display      : inline-block;
+  white-space  : nowrap;
+  width        : 100%;
+  overflow     : hidden;
   text-overflow: ellipsis;
 }
 
@@ -126,15 +125,15 @@
 
 .ul-header {
   background-color: #fff;
-  box-shadow: 0 3px 5px #999;
-  padding: 3px;
+  box-shadow      : 0 3px 5px #999;
+  padding         : 3px;
 }
 
 .ul-header-main {
-  display: flex;
+  display        : flex;
   justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
+  align-items    : center;
+  margin         : 0 auto;
 }
 
 .ul-header-logo {
@@ -142,25 +141,25 @@
 }
 
 .ul-header-user {
-  display: flex;
-  align-items: center;
+  display        : flex;
+  align-items    : center;
   justify-content: center;
 }
 
 .ul-header-user-avatar {
-  background-image: url("/static/images/avatar.png");
-  width: 45px;
-  height: 45px;
-  background-size: cover;
+  background-image   : url("/static/images/avatar.png");
+  width              : 45px;
+  height             : 45px;
+  background-size    : cover;
   background-position: center;
 }
 
 .ul-header-user-options {
-  display: flex;
+  display    : flex;
   align-items: center;
-  color: #999;
-  font-size: 12px;
-  cursor: pointer;
+  color      : #999;
+  font-size  : 12px;
+  cursor     : pointer;
 }
 
 .ul-header-user-info {
@@ -182,16 +181,16 @@
   color: #666;
 }
 
-.layui-nav.ul-nav-white .layui-nav-itemed > .layui-nav-child {
+.layui-nav.ul-nav-white .layui-nav-itemed>.layui-nav-child {
   background-color: rgba(255, 255, 255, 0.6) !important;
 }
 
 .layui-nav-tree.ul-nav-white .layui-nav-item a:hover {
   background-color: #9cf;
-  color: #fff !important;
+  color           : #fff !important;
 }
 
-.layui-nav.ul-nav-white .layui-nav-itemed > a,
+.layui-nav.ul-nav-white .layui-nav-itemed>a,
 .layui-nav-tree.ul-nav-white .layui-nav-title a,
 .layui-nav-tree.ul-nav-white .layui-nav-title a:hover {
   color: #666 !important;
@@ -204,10 +203,10 @@
 .layui-nav-tree.ul-nav-white .layui-nav-child dd.layui-this,
 .layui-nav-tree.ul-nav-white .layui-nav-child dd.layui-this a,
 .layui-nav-tree.ul-nav-white .layui-this,
-.layui-nav-tree.ul-nav-white .layui-this > a,
-.layui-nav-tree.ul-nav-white .layui-this > a:hover {
+.layui-nav-tree.ul-nav-white .layui-this>a,
+.layui-nav-tree.ul-nav-white .layui-this>a:hover {
   background-color: #9cf;
-  color: #fff;
+  color           : #fff;
 }
 
 /* 导航结束 */
@@ -215,32 +214,31 @@
 /* 链接导航开始 */
 
 .ul-link-select {
-  display: flex;
-  align-items: flex-start;
+  display        : flex;
+  align-items    : flex-start;
   justify-content: flex-start;
 }
 
-.ul-link-title {
-}
+.ul-link-title {}
 
 .ul-link-list {
-  display: flex;
-  align-items: flex-start;
+  display        : flex;
+  align-items    : flex-start;
   justify-content: flex-start;
-  flex-wrap: wrap;
-  margin-left: 15px;
+  flex-wrap      : wrap;
+  margin-left    : 15px;
 }
 
 .ul-link-item {
-  padding: 0px 10px;
-  cursor: pointer;
+  padding     : 0px 10px;
+  cursor      : pointer;
   margin-right: 10px;
 }
 
 .ul-link-item.current {
   border-radius: 15px;
-  border: 1px solid #6cf;
-  color: #6cf;
+  border       : 1px solid #6cf;
+  color        : #6cf;
 }
 
 /* 链接导航结束 */
@@ -248,84 +246,84 @@
 /* 相册列表开始 */
 
 .ul-photo-list {
-  display: flex;
-  align-items: flex-start;
+  display        : flex;
+  align-items    : flex-start;
   justify-content: flex-start;
-  flex-wrap: wrap;
+  flex-wrap      : wrap;
 }
 
 .ul-photo-item {
-  margin: 15px;
+  margin    : 15px;
   text-align: center;
-  min-width: 220px;
+  min-width : 220px;
 }
 
 .ul-photo-poster {
-  width: 180px;
-  height: 140px;
-  background-image: url("../static/images/avatar.png");
-  background-size: cover;
+  width              : 180px;
+  height             : 140px;
+  background-image   : url("../static/images/avatar.png");
+  background-size    : cover;
   background-position: center;
-  margin: 0 auto;
-  box-shadow: 1px 1px 3px #999;
+  margin             : 0 auto;
+  box-shadow         : 1px 1px 3px #999;
 }
 
 .ul-photo-info {
-  margin-top: 10px;
-  font-size: 18px;
+  margin-top : 10px;
+  font-size  : 18px;
   line-height: 1.5;
 }
 
 .ul-photo-desc {
   font-size: 14px;
-  color: #999;
+  color    : #999;
 }
 
 .ul-photo-card-list {
-  display: flex;
-  align-items: flex-start;
+  display        : flex;
+  align-items    : flex-start;
   justify-content: flex-start;
-  flex-wrap: wrap;
+  flex-wrap      : wrap;
 }
 
 .ul-photo-card-item {
-  width: 200px;
-  margin: 15px;
+  width     : 200px;
+  margin    : 15px;
   box-shadow: 0 5px 10px #999;
 }
 
 .ul-photo-card-poster {
-  width: 100%;
-  height: 140px;
-  background-size: cover;
+  width              : 100%;
+  height             : 140px;
+  background-size    : cover;
   background-position: center;
 }
 
 .ul-photo-card-info {
-  padding: 5px;
-  font-size: 18px;
+  padding    : 5px;
+  font-size  : 18px;
   line-height: 1.5;
 }
 
 .ul-photo-card-desc {
   font-size: 14px;
-  color: #999;
+  color    : #999;
 }
 
 /* 相册列表结束 */
 
 .ul-info-tips {
-  padding: 15px;
+  padding         : 15px;
   background-color: rgba(255, 255, 255, 0.6);
 }
 
 .ul-card-status {
-  padding: 5px;
+  padding      : 5px;
   border-radius: 5px;
 }
 
 .ul-card-options {
-  float: right;
+  float : right;
   cursor: pointer;
 }
 
@@ -335,7 +333,7 @@
 
 .data-img .data-img-main {
   max-width: 120px;
-  margin: 5px;
+  margin   : 5px;
 }
 
 .data-img {
@@ -343,7 +341,7 @@
 }
 
 .ul-card-list {
-  display: flex;
+  display  : flex;
   flex-wrap: wrap;
 }
 
@@ -356,7 +354,7 @@
 }
 
 .ul-title {
-  text-align: center;
+  text-align : center;
   line-height: 1.5;
 }
 
@@ -373,15 +371,14 @@
   margin-top: 8px;
 }
 
-.ul-message-list {
-}
+.ul-message-list {}
 
 .ul-message-item {
-  margin-bottom: 15px;
-  display: flex;
+  margin-bottom  : 15px;
+  display        : flex;
   justify-content: flex-start;
-  align-items: flex-start;
-  padding: 15px;
+  align-items    : flex-start;
+  padding        : 15px;
 }
 
 .ul-message-item-left {
@@ -398,35 +395,35 @@
 
 .ul-message-item-options {
   position: absolute;
-  right: 0;
-  top: 0;
+  right   : 0;
+  top     : 0;
 }
 
 .ul-message-item-avatar {
-  background-size: cover;
+  background-size    : cover;
   background-position: center;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+  width              : 100px;
+  height             : 100px;
+  border-radius      : 50%;
 }
 
 .ul-message-item-name {
-  display: flex;
-  color: #6cf;
+  display  : flex;
+  color    : #6cf;
   font-size: 16px;
 }
 
 .ul-message-item-data {
-  display: flex;
-  font-size: 14px;
-  color: #999;
+  display   : flex;
+  font-size : 14px;
+  color     : #999;
   margin-top: 10px;
 }
 
 .ul-message-item-content {
   background-color: #f0f0f0;
-  padding: 15px;
-  margin-top: 10px;
+  padding         : 15px;
+  margin-top      : 10px;
 }
 
 .ul-message-item-img-list {
@@ -434,19 +431,19 @@
 }
 
 .ul-message-item-img {
-  width: 160px;
-  height: 120px;
-  background-size: cover;
+  width              : 160px;
+  height             : 120px;
+  background-size    : cover;
   background-position: center;
-  margin-right: 10px;
-  display: inline-block;
+  margin-right       : 10px;
+  display            : inline-block;
 }
 
 .ul-nav-easy {
   background-color: transparent;
 }
 
-.layui-nav-tree.ul-nav-easy .layui-nav-item > a {
+.layui-nav-tree.ul-nav-easy .layui-nav-item>a {
   color: #666;
 }
 
@@ -454,9 +451,9 @@
   background-color: transparent;
 }
 
-.layui-nav-tree.ul-nav-easy .layui-this > a {
+.layui-nav-tree.ul-nav-easy .layui-this>a {
   background-color: transparent;
-  color: #6cf;
+  color           : #6cf;
 }
 
 .layui-nav-tree.ul-nav-easy .layui-nav-item.layui-this a:hover {
@@ -468,7 +465,7 @@
 }
 
 .layui-nav-tree.ul-nav-easy .layui-nav-item a {
-  height: 45px;
+  height     : 45px;
   line-height: 45px;
 }
 
@@ -476,69 +473,68 @@
   margin-bottom: 15px;
 }
 
-.ul-upload-photo-list {
-}
+.ul-upload-photo-list {}
 
 .ul-upload-photo-item {
-  display: inline-block;
-  width: 120px;
-  height: 120px;
-  margin: 5px;
+  display         : inline-block;
+  width           : 120px;
+  height          : 120px;
+  margin          : 5px;
   background-color: #ddd;
-  cursor: pointer;
-  box-shadow: 0 3px 5px #999;
-  position: relative;
+  cursor          : pointer;
+  box-shadow      : 0 3px 5px #999;
+  position        : relative;
 }
 
 .ul-upload-photo-main {
-  background-size: cover;
+  background-size    : cover;
   background-position: center;
-  width: 100%;
-  height: 100%;
+  width              : 100%;
+  height             : 100%;
 }
 
 .ul-upload-photo-delete {
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  z-index: 999;
-  font-size: 20px;
-  color: #fff;
+  position   : absolute;
+  right      : 5px;
+  top        : 5px;
+  z-index    : 999;
+  font-size  : 20px;
+  color      : #fff;
   text-shadow: 0 0 2px #000;
 }
 
 .ul-upload-photo-button {
-  background-image: url("img/upload.png");
-  background-size: cover;
+  background-image   : url("img/upload.png");
+  background-size    : cover;
   background-position: center;
 }
 
-.ul-form-group-title {
-  color: #999;
+.ul-group-title {
+  color        : #999;
   border-bottom: 1px solid #bbb;
-  padding: 5px 0;
+  padding      : 5px 0;
   margin-bottom: 15px;
 }
 
 .ul-tree-item {
   background-color: #fbfbfb;
-  cursor: pointer;
+  cursor          : pointer;
 }
 
 .ul-tree-item-info {
   border-left: 3px solid transparent;
-  padding: 8px 0;
-  position: relative;
+  padding    : 8px 0;
+  position   : relative;
 }
 
 .ul-tree-item-info.current {
   background-color: #9cf;
-  border-color: #6699cc;
+  border-color    : #6699cc;
 }
 
 .ul-tree-item-info:hover {
   background-color: rgb(190, 222, 255);
-  border-color: #6699cc;
+  border-color    : #6699cc;
 }
 
 .ul-tree-item-title {
@@ -547,16 +543,16 @@
 
 .ul-tree-item-icon {
   position: absolute;
-  left: 5px;
-  top: 10px;
+  left    : 5px;
+  top     : 10px;
 }
 
 .ul-note-item {
-  display: flex;
+  display        : flex;
   justify-content: flex-start;
-  align-items: flex-start;
-  cursor: pointer;
-  padding: 15px;
+  align-items    : flex-start;
+  cursor         : pointer;
+  padding        : 15px;
 }
 
 .ul-note-item.current,
@@ -569,20 +565,20 @@
 }
 
 .ul-note-item .ul-note-item-desc {
-  color: #999;
-  font-size: 12px;
+  color     : #999;
+  font-size : 12px;
   margin-top: 5px;
 }
 
 .ul-note-item .ul-note-item-time {
-  color: #bbb;
-  font-size: 12px;
+  color     : #bbb;
+  font-size : 12px;
   margin-top: 5px;
 }
 
 .ul-note-item .ul-note-item-tree {
-  font-size: 12px;
-  color: #bbb;
+  font-size : 12px;
+  color     : #bbb;
   margin-top: 5px;
 }
 
@@ -605,14 +601,14 @@
 
 .ul-nav-min {
   box-shadow: 2px 2px 5px #999;
-  padding: 5px;
+  padding   : 5px;
   text-align: center;
 }
 
 .ul-nav-min-item {
   padding: 5px 0;
-  cursor: pointer;
-  color: #333;
+  cursor : pointer;
+  color  : #333;
   display: block;
 }
 
@@ -622,27 +618,27 @@
 
 .ul-header-a {
   background-color: #f8f8f8;
-  border-bottom: 1px solid #e8e8e8;
-  color: #666;
+  border-bottom   : 1px solid #e8e8e8;
+  color           : #666;
 }
 
 .ul-header-a-main {
-  display: flex;
-  align-items: center;
+  display        : flex;
+  align-items    : center;
   justify-content: space-between;
   /* border-width: 1px 0;
-  border-color: #bbb;
-  border-style: solid; */
-  padding: 5px;
-  margin: 0 auto;
+  border-color   : #bbb;
+  border-style   : solid; */
+  padding        : 5px;
+  margin         : 0 auto;
 }
 
 .ul-header-a-nav-item {
   margin-right: 15px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
+  position    : relative;
+  display     : flex;
+  align-items : center;
+  cursor      : pointer;
 }
 
 .ul-header-a-nav-item:hover .ul-header-a-nav-plus {
@@ -650,42 +646,44 @@
 }
 
 .ul-header-a-img {
-  height: 24px;
-  width: 24px;
-  background-size: cover;
+  height             : 24px;
+  width              : 24px;
+  background-size    : cover;
   background-position: center;
+  margin-right       : 10px;
 }
 
 .ul-header-a-right {
-  display: flex;
+  display    : flex;
   align-items: center;
 }
 
 .ul-header-a-nav-plus {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  display: none;
+  position        : absolute;
+  top             : 100%;
+  left            : 50%;
+  display         : none;
   background-color: #fff;
 }
 
 .ul-nav-header-main {
-  display: flex;
-  align-items: center;
+  display        : flex;
+  align-items    : center;
   justify-content: space-between;
-  padding: 5px 15px;
-  margin: 0 auto;
+  padding        : 5px 15px;
+  margin         : 0 auto;
 }
+
 .ul-nav-header-right {
   text-align: right;
 }
 
 .ul-nav-header-item {
-  display: inline-block;
+  display     : inline-block;
   margin-right: 15px;
-  cursor: pointer;
-  padding: 5px 15px;
-  color: #333;
+  cursor      : pointer;
+  padding     : 5px 15px;
+  color       : #333;
 }
 
 .ul-nav-header-item:hover {
@@ -699,9 +697,11 @@
 .ul-nav-header-red .ul-nav-header-item {
   color: #fff;
 }
+
 .ul-nav-header-red .ul-nav-header-item:hover {
   color: #fedf50;
 }
+
 .ul-nav-header-primary {
   background-color: #6cf;
 }
@@ -709,126 +709,220 @@
 .ul-nav-header-primary .ul-nav-header-item {
   color: #fff;
 }
+
 .ul-nav-header-primary .ul-nav-header-item:hover {
   color: #ccffff;
 }
 
 .ul-card-a {
-  width: 180px;
-  display: flex;
+  width          : 180px;
+  display        : flex;
   justify-content: space-between;
-  border: 1px solid #bbb;
-  box-shadow: 2px 2px 5px #999;
-  color: #516073;
-  padding: 15px;
-  cursor: pointer;
-  margin-right: 15px;
-  margin-bottom: 15px;
+  border         : 1px solid #bbb;
+  box-shadow     : 2px 2px 5px #999;
+  color          : #516073;
+  padding        : 15px;
+  cursor         : pointer;
+  margin-right   : 15px;
+  margin-bottom  : 15px;
+  position       : relative;
 }
+
 .ul-card-a-left {
   width: 40%;
 }
+
 .ul-card-a-right {
-  display: flex;
+  display    : flex;
   align-items: center;
-  text-align: center;
-  width: 50%;
+  text-align : center;
+  width      : 50%;
 }
+
 .ul-card-a-title {
   font-size: 18px;
 }
+
 .ul-card-a-desc {
   margin-top: 5px;
-  font-size: 14px;
+  font-size : 14px;
 }
 
 .ul-nav-poster {
-  padding: 5px;
-  border: 1px solid #ddd;
+  padding         : 5px;
+  border          : 1px solid #ddd;
   border-top-width: 3px;
 }
 
 .ul-nav-poster-item {
-  display: flex;
+  display        : flex;
   justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
+  align-items    : center;
+  cursor         : pointer;
 }
 
 .ul-nav-poster-left {
-  display: flex;
+  display    : flex;
   align-items: center;
 }
+
 .ul-nav-post-title {
-  color: #333;
+  color      : #333;
   font-weight: bold;
 }
+
 .ul-nav-poster-desc {
-  color: #999;
-  font-size: 12px;
+  color      : #999;
+  font-size  : 12px;
   font-weight: 100;
 }
+
 .ul-nav-poster-img {
-  width: 38px;
-  height: 38px;
-  margin: 5px;
-  background-size: cover;
+  width              : 38px;
+  height             : 38px;
+  margin             : 5px;
+  background-size    : cover;
   background-position: center;
 }
+
 .ul-nav-poster-item:not(:last-child) {
   border-bottom: 1px dashed #ddd;
 }
 
 .ul-card-bank {
-  width: 249px;
-  border: 1px solid #e4e4e4;
+  width        : 249px;
+  border       : 1px solid #e4e4e4;
   border-radius: 5px;
-  box-shadow: 0 1px 1px #e9e9e9;
-  float: left;
-  margin-right: 14px;
+  box-shadow   : 0 1px 1px #e9e9e9;
+  float        : left;
+  margin-right : 14px;
   margin-bottom: 10px;
-  color: #666666;
-  font-size: 12px;
-  cursor: pointer;
+  color        : #666666;
+  font-size    : 12px;
+  cursor       : pointer;
 }
 
 .ul-card-bank-header {
-  padding: 10px 0;
-  margin: 0 14px;
+  padding      : 10px 0;
+  margin       : 0 14px;
   border-bottom: 1px dotted #d9d9d9;
 }
 
 .ul-card-bank-body {
-  height: 40px;
+  height : 40px;
   padding: 10px 10px 20px 0;
 }
 
 .ul-card-bank-line {
-  width: 88px;
-  height: 23px;
-  font-weight: 100;
-  text-align: center;
-  background: #2e4158;
+  width        : 88px;
+  height       : 23px;
+  font-weight  : 100;
+  text-align   : center;
+  background   : #2e4158;
   border-radius: 0 3px 0 0;
-  font-size: 14px;
-  float: left;
+  font-size    : 14px;
+  float        : left;
 }
 
 .ul-card-bank-footer {
-  padding: 3px 14px;
+  padding   : 3px 14px;
   background: #f8f8f8;
   border-top: 1px solid #e7e7e7;
 }
 
 .ul-card-bank-line-triangle {
-  width: 0px;
-  height: 3px;
-  display: block;
-  float: right;
-  border-left: 9px solid transparent;
+  width        : 0px;
+  height       : 3px;
+  display      : block;
+  float        : right;
+  border-left  : 9px solid transparent;
   border-bottom: 20px solid #fff;
 }
+
 .ul-card-bank-tips {
-  color: #6cf;
+  color    : #6cf;
   font-size: 14px;
+}
+
+.ul-nav-link-item {
+  display    : inline-block;
+  margin     : 5px 0;
+  padding    : 0 10px;
+  border     : 1px solid transparent;
+  color      : #333;
+  white-space: nowrap;
+}
+
+.ul-nav-link-item:not(:last-child) {
+  border-right-color: #666;
+}
+
+.ul-group-title-2 {
+  background   : #d2dbe0;
+  width        : 84px;
+  height       : 28px;
+  line-height  : 28px;
+  font-size    : 14px;
+  font-weight  : bold;
+  text-align   : center;
+  position     : relative;
+  margin-top   : 30px;
+  margin-bottom: 14px;
+  color        : #666666;
+}
+
+.ul-group-title-2::after {
+  content      : "";
+  width        : 0;
+  height       : 0;
+  position     : absolute;
+  border-top   : 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left  : 15px solid #d2dbe0;
+  right        : -15px;
+  top          : 0px;
+
+}
+
+.ul-ad-list{
+
+}
+.ul-ad-item{
+  box-shadow: 1px 1px 8px  #666;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.ul-ad-left{
+  width: 68%;
+  height: 160px;
+}
+.ul-ad-img{
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.ul-ad-right{
+  width: 28%;
+}
+
+.ul-ad-title{
+  font-size: 28px;
+  font-weight: 100;
+  margin: 0;
+  color: #e4393c;
+
+}
+
+.ul-ad-desc{
+  font-size: 14px;
+color: #666666;
+margin: 26px 0;
+line-height: 24px;
 }
