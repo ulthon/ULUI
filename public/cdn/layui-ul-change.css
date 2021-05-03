@@ -64,6 +64,9 @@
 .layui-btn{
     background-color: #66CCFF;
 }
+.layui-btn.layui-btn-disabled{
+  background-color: #FBFBFB;
+}
 .layui-form-radio > i:hover, .layui-form-radioed > i{
     color: #66CCFF;
 }
