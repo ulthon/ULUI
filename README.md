@@ -14,6 +14,7 @@ ulthon扩展的layui样式库.
 - 收藏主流的JS插件
 - 使用了部分layui的样式,但是大部分组件不依赖layui.
 - 依赖layui的部分也很容易替换掉(使用layui的按钮/颜色之类样式).
+- 不限制开发终端,只要支持css的都可以使用
 
 ### 使用说明
 
@@ -26,7 +27,7 @@ ulthon扩展的layui样式库.
 <link rel="stylesheet" href="//layui.ulthon.com/cdn/layui-ul-change.css">
 <link rel="stylesheet" href="//layui.ulthon.com/cdn/layui-ul.css">
 ```
-
+> 最近刚刚做了一个vue+elementui的项目,使用了这个样式库,没有任何不适
 
 全部文档网站 http://layui.ulthon.com/
 
