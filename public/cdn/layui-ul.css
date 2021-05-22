@@ -568,6 +568,7 @@
   color     : #999;
   font-size : 12px;
   margin-top: 5px;
+  word-break: break-all;
 }
 
 .ul-note-item .ul-note-item-time {
@@ -605,7 +606,7 @@
   text-align: center;
 }
 
-.ul-nav-min-item {
+.ul-nav-min .ul-nav-min-item {
   padding: 5px 0;
   cursor : pointer;
   color  : #333;
@@ -663,7 +664,13 @@
   top             : 100%;
   left            : 50%;
   display         : none;
+  background-color: transparent;
+  z-index: 99999;
+}
+
+.ul-header-a-nav-plus>.ul-nav-min {
   background-color: #fff;
+  margin-top      : 15px;
 }
 
 .ul-nav-header-main {
@@ -746,6 +753,7 @@
 .ul-card-a-desc {
   margin-top: 5px;
   font-size : 14px;
+  white-space: nowrap;
 }
 
 .ul-nav-poster {
@@ -794,7 +802,7 @@
   border       : 1px solid #e4e4e4;
   border-radius: 5px;
   box-shadow   : 0 1px 1px #e9e9e9;
-  float        : left;
+  display      : inline-block;
   margin-right : 14px;
   margin-bottom: 10px;
   color        : #666666;
@@ -994,11 +1002,90 @@
 
 .ul-nav-card-item-desc {
   line-height: 28px;
-  color: #666;
-  font-size: 12px;
+  color      : #666;
+  font-size  : 12px;
 }
 
-.ul-nav-card-item.disabled .ul-nav-card-item-icon{
+.ul-nav-card-item.disabled .ul-nav-card-item-icon {
   background-color: #908b8b;
 
+}
+
+.ul-card-data-container {
+  display  : flex;
+  flex-wrap: wrap;
+}
+
+.ul-card-data {
+  display      : inline-block;
+  border       : 1px solid #eee;
+  border-radius: 5px;
+  padding      : 15px;
+  margin-right : 15px;
+  margin-bottom: 15px;
+  height       : 70px;
+}
+
+.ul-card-data-a-title {
+  padding-bottom: 15px;
+  color         : #6cf;
+  font-size     : 28px;
+}
+
+.ul-card-data-a-item {
+  display     : inline-block;
+  margin-right: 5px;
+}
+
+.ul-card-data-b-icon {
+  display         : inline-block;
+  margin-right    : 15px;
+  font-size       : 46px;
+  background-color: #6cf;
+  padding         : 8px;
+  color           : #fff;
+  border-radius   : 5px;
+}
+
+.ul-card-data-b-info {
+  display     : inline-block;
+  margin-right: 15px;
+
+}
+
+.ul-card-data-b-value {
+  font-size : 28px;
+  color     : #6cf;
+  margin-top: 5px;
+}
+
+.ul-card-data-b-main {
+  display    : flex;
+  align-items: center;
+}
+
+.ul-card-data-b-title {
+  line-height: 24px;
+}
+
+
+.ul-card-data-c-item {
+  display   : inline-block;
+  padding   : 10px 40px;
+  text-align: center;
+  color     : #999;
+}
+
+.ul-card-data-c-item:not(:last-child) {
+  border-right: 1px solid #ddd;
+
+}
+
+.ul-card-data-c-value {
+  font-size  : 18px;
+  line-height: 30px;
+}
+
+.ul-card-data-c-title {
+  font-size: 12px;
 }
