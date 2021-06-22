@@ -57,6 +57,14 @@
   background-color: #fff;
 }
 
+.ul-bg-gray {
+  background-color: #eee;
+}
+
+.ul-color-main {
+  color: #6cf !important;
+}
+
 .ul-common-flex-list {
   display  : flex;
   flex-wrap: wrap;
@@ -219,14 +227,16 @@
   justify-content: flex-start;
 }
 
-.ul-link-title {}
+.ul-link-title {
+  margin-right: 15px;
+}
 
 .ul-link-list {
   display        : flex;
   align-items    : flex-start;
   justify-content: flex-start;
   flex-wrap      : wrap;
-  margin-left    : 15px;
+
 }
 
 .ul-link-item {
@@ -665,7 +675,7 @@
   left            : 50%;
   display         : none;
   background-color: transparent;
-  z-index: 99999;
+  z-index         : 99999;
 }
 
 .ul-header-a-nav-plus>.ul-nav-min {
@@ -751,8 +761,8 @@
 }
 
 .ul-card-a-desc {
-  margin-top: 5px;
-  font-size : 14px;
+  margin-top : 5px;
+  font-size  : 14px;
   white-space: nowrap;
 }
 
@@ -1088,4 +1098,61 @@
 
 .ul-card-data-c-title {
   font-size: 12px;
+}
+
+.ul-course-list {
+  margin: -10px;
+}
+
+.ul-course-item {
+  display         : inline-block;
+  margin          : 10px;
+  width           : calc(25% - 20px);
+  background-color: #fff;
+  padding-bottom  : 12px;
+  cursor          : pointer;
+}
+
+.ul-course-item-poster {
+  background-position: center;
+  background-size    : cover;
+  height             : 140px;
+  transition         : all 0.6s;
+  position           : relative;
+}
+
+.ul-course-item-tag {
+  position: absolute;
+  right   : 8px;
+  top     : 8px;
+}
+
+.ul-course-item-info {
+  padding: 6px;
+}
+
+.ul-course-item-title {
+  padding      : 8px 0;
+  text-overflow: ellipsis;
+  white-space  : nowrap;
+  overflow     : hidden;
+}
+
+.ul-course-item-option-item {
+  display     : inline-block;
+  margin-right: 8px;
+  font-size   : 12px;
+  color       : #999;
+}
+
+.ul-course-item-poster:hover {
+  transform: scale(1.2)
+}
+
+.ul-course-item-poster:hover .ul-course-item-tag {
+  display: none;
+}
+
+.ul-course-item-poster-container {
+  overflow: hidden;
 }
