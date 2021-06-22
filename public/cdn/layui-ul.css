@@ -1156,3 +1156,65 @@
 .ul-course-item-poster-container {
   overflow: hidden;
 }
+
+.ul-avatar-sidebar-list-item{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 12px;
+}
+
+.ul-avatar-sidebar-list-item-img{
+  width: 58px;
+  height: 58px;
+  border-radius: 58px;
+  background-image: url("/static/images/avatar.png");
+  background-size: cover;
+  background-position: center;
+
+}
+
+.ul-avatar-sidebar-list-item-info{
+  margin-left: 10px;
+}
+
+.ul-avatar-sidebar-list-item-intro{
+  font-size: 12px;
+  color: #999;
+  line-height: 2;
+}
+
+.ul-course-sidebar-item{
+  display: flex;
+  padding: 8px 0;
+  align-items: center;
+  justify-content: flex-start;
+}
+.ul-course-sidebar-item:not(:last-child){
+  border-bottom: 1px dotted #999;
+}
+
+.ul-course-sidebar-item-poster{
+  height: 50px;
+  width: 80px;
+  background-size: cover;
+  background-position: center;
+  
+}
+
+.ul-course-sidebar-item-option-item{
+  display: inline-block;
+  font-size: 12px;
+  color: #999;
+}
+
+.ul-course-sidebar-item-info{
+  margin-left: 8px;
+}
+
+.ul-course-sidebar-item-title{
+  line-height: 2;
+  text-overflow: ellipsis;
+  white-space  : nowrap;
+  overflow     : hidden;
+}
