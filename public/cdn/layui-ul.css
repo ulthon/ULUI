@@ -531,6 +531,11 @@
   cursor          : pointer;
 }
 
+.ul-tree-item.disabled , .ul-tree-item.disabled .ul-tree-item{
+  background-color: #eee;
+  cursor: not-allowed;
+}
+
 .ul-tree-item-info {
   border-left: 3px solid transparent;
   padding    : 8px 0;
