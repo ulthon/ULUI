@@ -76,6 +76,8 @@
 
 .layui-elem-quote{
     border-color: #66CCFF;
+    background-color: #f0f0f0;
+    color: #666;
 }
 
 .layui-laydate td.layui-this{
