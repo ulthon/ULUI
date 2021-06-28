@@ -151,9 +151,10 @@ class Post extends Model
       return '';
     }
 
-    $base_dir = App::getRootPath() . '/demo/';
+    $base_dir = App::getRootPath() . '/demo/' . $this->getAttr('category')->getData('tpl_name') . '/';
 
     $file_path = $base_dir . $this->getData('tpl_name') . '.html';
+    
     if (!file_exists($file_path)) {
       return '';
     }
@@ -190,7 +191,7 @@ class Post extends Model
 
     if (empty($model_post) || $clear) {
       $model_post = Post::find($id);
-      Cache::set($cache_key, $model_post, 600);
+      Cache::set($cache_key, $model_post, get_system_config('cache_expire_time'));
     }
 
     return $model_post;

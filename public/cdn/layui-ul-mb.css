@@ -1,0 +1,49 @@
+.ul-mb-ui-container{
+  width: 300px;
+  max-height: 500px;
+  overflow: scroll;
+}
+
+.ul-mb-nav-group-card{
+
+}
+
+.ul-mb-nav-group-card-title{
+  font-weight: 600;
+  line-height: 2;
+  font-size: 16px;
+}
+.ul-mb-nav-group-card-list{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.ul-mb-nav-group-card-item{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 8px;
+  margin-bottom: 15px;
+  width: 42%;
+}
+
+.ul-mb-nav-group-card-item-icon{
+  width: 50px;
+  height: 50px;
+  background-position: center;
+  background-size: cover;
+  margin-right: 8px;
+  
+}
+.ul-mb-nav-group-card-item-title{
+  line-height: 2;
+  font-size: 14px;
+}
+
+.ul-mb-nav-group-card-item-desc{
+  color: #999;
+  font-size: 12px;
+}
