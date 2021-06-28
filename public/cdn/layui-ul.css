@@ -1224,7 +1224,7 @@
   overflow     : hidden;
 }
 
-.layui-quote-gray{
+body .layui-quote-gray{
   background-color: #f0f0f0;
   color: #666;
   border-left-color: #ddd;
