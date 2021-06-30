@@ -156,6 +156,10 @@
     background-color: #19B3FF;
 }
 
+.layui-nav-child{
+  padding: 0;
+}
+
 .layui-nav-tree .layui-nav-bar{
     background-color: #66CCFF;
 }
