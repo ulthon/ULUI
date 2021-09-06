@@ -61,7 +61,7 @@ function renderUlTree(options) {
     var itemSetting = $.extend({}, defaults, data);
 
     settings.list.push(itemSetting);
-    this.initList()
+
   }
 
   this.initList = function () {
@@ -124,6 +124,7 @@ function renderUlTree(options) {
     });
   }
   this.renderList = function () {
+    this.initList()
     thisDom.find('.ul-tree-item').each(function (index, elem) {
 
       tthis.renderItem(elem)
@@ -168,14 +169,14 @@ function renderUlTree(options) {
           $(itemTree).children('.ul-tree-item-children').show()
         }
 
-        settings.onItemToggle(itemTree,e)
+        settings.onItemToggle(itemTree, e)
 
       } else {
         if ($(e.target).closest('.ul-tree-item-options').length > 0) {
 
           settings.onOptionTrigger($(e.target).data('type'), itemTree, e)
         } else {
-          settings.onItemClick(itemTree,e)
+          settings.onItemClick(itemTree, e)
 
         }
 

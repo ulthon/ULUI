@@ -144,10 +144,10 @@
               <p>目录数据,示例:</p>
               <p>
                 [{
-                id: 0,
-                pid: 0,
-                title: 0,
-                options: 同列表设置,如果不需要请设置为空数组
+                id: 0, //必须 <br>
+                pid: 0, <br>
+                title: 0, <br>
+                options: 同列表设置,如果不需要请设置为空数组 <br>
                 }]
               </p>
             </td>
@@ -162,6 +162,21 @@
           </tr>
         </thead>
         <tbody>
+          <tr>
+            <td>appendItem(item)</td>
+            <td>
+              <p>将目录向上移动,没有返回值</p>
+              <p>参数:</p>
+              <p>item:list的其中一个目录数据,必须有id属性</p>
+            </td>
+          </tr>
+          <tr>
+            <td>renderList()</td>
+            <td>
+              <p>当调用了appendItem之后,必须调用renderList,才能显示,没有参数</p>
+              
+            </td>
+          </tr>
           <tr>
             <td>itemMoveUp(item)</td>
             <td>
