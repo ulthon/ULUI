@@ -568,7 +568,12 @@
   top     : 10px;
 }
 
-.ul-tree-item-option {
+.ul-tree-item-info:hover .ul-tree-item-options-item {
+  display: block;
+}
+
+.ul-tree-item-options {
+
   position   : absolute;
   right      : 15px;
   top        : 0;
@@ -576,9 +581,12 @@
   display    : flex;
   align-items: center;
 }
-.ul-tree-item-option-item{
+
+.ul-tree-item-options-item {
   margin-left: 10px;
+  display    : none;
 }
+
 .ul-note-item {
   display        : flex;
   justify-content: flex-start;

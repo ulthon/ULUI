@@ -6,201 +6,231 @@
       <br>
       需要自己写出目录收缩逻辑
     </div>
-    <div class="ul-tree">
-      <div class="ul-tree-item">
-        <div class="ul-tree-item-info">
-          <i class="ul-tree-item-icon layui-icon layui-icon-triangle-d"></i>
-          <span class="ul-tree-item-title">读书笔记</span>
-          <span class="ul-tree-item-option">
-            <i class="ul-tree-item-option-item layui-icon layui-icon-up"></i>
-            <i class="ul-tree-item-option-item layui-icon layui-icon-down"></i>
-            <i class="ul-tree-item-option-item layui-icon layui-icon-set"></i>
-            <i class="ul-tree-item-option-item layui-icon layui-icon-close"></i>
-          </span>
-        </div>
-        <div class="ul-tree-item-children">
-          <div class="ul-tree-item">
-            <div class="ul-tree-item-info current">
-              <i class="ul-tree-item-icon layui-icon layui-icon-triangle-d"></i>
-              <span class="ul-tree-item-title">小说</span>
-            </div>
-            <div class="ul-tree-item-children">
+    <div>
+      引用js: <a href="//layui.ulthon.com/cdn/js/tree.js" target="_blank">//layui.ulthon.com/cdn/js/tree.js</a>
+    </div>
+    <script src="/cdn/js/tree.js"></script>
+    <div class="ul-bg-gray ul-padding-md">
+      <div class="ul-tree">
 
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="ul-tree-item">
-        <div class="ul-tree-item-info">
-          <i class="ul-tree-item-icon layui-icon layui-icon-triangle-d"></i>
-          <span class="ul-tree-item-title">技术笔记</span>
-        </div>
-        <div class="ul-tree-item-children">
-          <div class="ul-tree-item">
-            <div class="ul-tree-item-info">
-              <i class="ul-tree-item-icon layui-icon layui-icon-triangle-d"></i>
-              <span class="ul-tree-item-title">Mysql</span>
-            </div>
-            <div class="ul-tree-item-children">
-
-            </div>
-          </div>
-          <div class="ul-tree-item">
-            <div class="ul-tree-item-info">
-              <i class="ul-tree-item-icon layui-icon layui-icon-triangle-d"></i>
-              <span class="ul-tree-item-title">PHP</span>
-            </div>
-            <div class="ul-tree-item-children">
-              <div class="ul-tree-item disabled">
-                <div class="ul-tree-item-info">
-                  <i class="ul-tree-item-icon layui-icon layui-icon-triangle-d"></i>
-                  <span class="ul-tree-item-title">扩展</span>
-                </div>
-                <div class="ul-tree-item-children">
-
-                </div>
-              </div>
-              <div class="ul-tree-item">
-                <div class="ul-tree-item-info">
-                  <i class="ul-tree-item-icon layui-icon layui-icon-triangle-d"></i>
-                  <span class="ul-tree-item-title">框架</span>
-                </div>
-                <div class="ul-tree-item-children">
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
     <div>
       <pre class="layui-code demo-js"></pre>
       <script class="demo-js-src">
-        // 可以用以下代码整理元素
-        $('.ul-tree-item').each(function () {
-          var itemTree = this
-          var parents = $(itemTree).parents('.ul-tree-item')
-          var level = parents.length
-          $(itemTree).find('.ul-tree-item-title').css('margin-left', (level + 1) * 15 + 5 + 'px')
-          $(itemTree).find('.ul-tree-item-icon').css('left', (level + 1) * 15 - 15 + 'px')
-
-          if ($(itemTree).children('.ul-tree-item-children').children().length == 0) {
-            $(itemTree).children('.ul-tree-item-info').find('.ul-tree-item-icon').remove()
-          }
-
-          $(itemTree).children('.ul-tree-item-info').click(function (e) {
-            if ($(e.target).hasClass('ul-tree-item-icon')) {
-              var iconItem = e.target
-              if ($(iconItem).hasClass('layui-icon-triangle-d')) {
-                // 收缩
-                $(iconItem).removeClass('layui-icon-triangle-d')
-                $(iconItem).addClass('layui-icon-triangle-r')
-
-                $(itemTree).children('.ul-tree-item-children').hide()
-              } else {
-                // 展开
-                $(iconItem).addClass('layui-icon-triangle-d')
-                $(iconItem).removeClass('layui-icon-triangle-r')
-
-                $(itemTree).children('.ul-tree-item-children').show()
-              }
-              console.log('点击收缩目录');
-              // 一般不用写这个逻辑
-            } else {
-              console.log('点击目录项');
-              // 在这里写点击逻辑
-            }
-          })
-
+        // 例子:
+        var tree = new renderUlTree({
+          elem: '.ul-tree',
+          list: [
+            {
+              id: 1,
+              title: '读书笔记',
+            },
+            {
+              id: 2,
+              title: '科幻小说',
+              pid: 1
+            },
+            {
+              id: 3,
+              title: '成功学',
+              pid: 1
+            },
+            {
+              id: 4,
+              title: '技术笔记',
+              pid: 0
+            },
+            {
+              id: 5,
+              title: 'Mysql',
+              pid: 4
+            },
+            {
+              id: 6,
+              title: 'PHP',
+              pid: 4
+            },
+            {
+              id: 7,
+              title: 'UlthonAdmin',
+              pid: 4
+            },
+          ]
         })
 
+        tree.itemUpdate({
+          id: 1,
+          title: '读书笔记改名'
+        })
+
+        var list = tree.getList();
+        console.log(list);
 
       </script>
     </div>
-  </div>
-</fieldset>
-<fieldset class="layui-elem-field layui-field-title">
-  <legend>基本组件</legend>
-  <div class="layui-field-box">
     <div>
-      最基本的组件,ul-tree-item-icon的按钮会在执行js后进行相应的移除,缩进样式也许需要执行js
-    </div>
-    <div class="ul-section">
-      <div class="ul-tree">
-        <div class="ul-tree-item">
-          <div class="ul-tree-item-info">
-            <i class="ul-tree-item-icon layui-icon layui-icon-triangle-d"></i>
-            <span class="ul-tree-item-title">读书笔记</span>
-          </div>
-          <div class="ul-tree-item-children">
 
-          </div>
-        </div>
+      <table class="layui-table">
+        <thead>
+          <tr>
+            <th>参数</th>
+            <th>说明</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>elem</td>
+            <td>必填,元素名</td>
+          </tr>
+          <tr>
+            <td>onItemClick</td>
+            <td>
+              <p>目录点击回调:function(item,e){},</p>
+              <p>item:目录的Dom,可以通过$(item).data()获取原始数据</p>
+              <p>e是点击的原始事件</p>
+            </td>
+          </tr>
+          <tr>
+            <td>onItemToggle</td>
+            <td>
+              <p>目录展开收缩回调:function(item,e){},</p>
+              <p>item:目录的Dom,可以通过$(item).data()获取原始数据</p>
+              <p>e是点击的原始事件</p>
+            </td>
+          </tr>
+          <tr>
+            <td>options</td>
+            <td>
+              <p>每个目录的设置项</p>
+              <p>
+                完整参数:
+                <br>
+                {
+                type: 'up', //必填
+                className:'layui-icon layui-icon-set',
+                html:'',
+                },
+              </p>
+              <p>未设置html时会自动根据className和Type自动生成</p>
+              <p>默认支持type:up,down/delete</p>
+              <p>不需要请设置空数组</p>
+            </td>
+          </tr>
+          <tr>
+            <td>onOptionTrigger</td>
+            <td>
+              <p>设置点击回调:function (type, item, e){}</p>
+              <p>
+                type:设置的类型
+              </p>
+              <p>
+                item:目录的Dom,可以通过$(item).data()获取原始数据
+              </p>
+              <p>
+                e:点击的原始事件
+              </p>
+              <p>
+                如果不设置回调,会自动调用上移/下移/删除操作
+              </p>
+              <p>
+                如果设置回调,需要自行调用
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>list</td>
+            <td>
+              <p>目录数据,示例:</p>
+              <p>
+                [{
+                id: 0,
+                pid: 0,
+                title: 0,
+                options: 同列表设置,如果不需要请设置为空数组
+                }]
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="layui-table">
+        <thead>
+          <tr>
+            <th>方法</th>
+            <th>说明</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>itemMoveUp(item)</td>
+            <td>
+              <p>将目录向上移动,没有返回值</p>
+              <p>参数:</p>
+              <p>item:目录的Dom,onOptionTrigger的第二个参数</p>
+            </td>
+          </tr>
+          <tr>
+            <td>itemMoveDown(item)</td>
+            <td>
+              <p>将目录向下移动,没有返回值</p>
+              <p>参数:</p>
+              <p>item:目录的Dom,onOptionTrigger的第二个参数</p>
+            </td>
+          </tr>
+          <tr>
+            <td>itemDelete(id)</td>
+            <td>
+              <p>将目录向下移动,没有返回值</p>
+              <p>
+                参数:
+              </p>
+              <p>
+                id:目录的id
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>itemUpdate(data)</td>
+            <td>
+              <p>将目录向下移动,没有返回值</p>
+              <p>
+                参数:
+              </p>
+              <p>
+                data:list的其中一个目录数据,必须有id属性
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>getList()</td>
+            <td>
+              <p>将目录向下移动,没有参数</p>
+              <p>
+                返回示例:
+              </p>
+              <p>
+                [
+                {
+                id: 0, <br>
+                pid: 0, <br>
+                title: 0, <br>
+                options: 同列表设置,如果不需要请设置为空数组, <br>
+                index:0 //多了一个index属性,是这个目录在当前分组中的排序 <br>
+                }
+                ]
+              </p>
+            </td>
+          </tr>
 
-      </div>
-    </div>
-    <div class="ul-section">
-      <div class="ul-tree">
-        <div class="ul-tree-item">
-          <div class="ul-tree-item-info">
-            <i class="ul-tree-item-icon layui-icon layui-icon-triangle-d"></i>
-            <span class="ul-tree-item-title">读书笔记</span>
-          </div>
-          <div class="ul-tree-item-children">
-            <div class="ul-tree-item">
-              <div class="ul-tree-item-info">
-                <i class="ul-tree-item-icon layui-icon layui-icon-triangle-d"></i>
-                <span class="ul-tree-item-title">小说</span>
-              </div>
-              <div class="ul-tree-item-children">
+        </tbody>
+      </table>
 
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    <pre class="layui-code demo-js"></pre>
-    <div class="demo-js-src">
-      <!-- 基本组件 -->
-      <div class="ul-tree">
-        <div class="ul-tree-item">
-          <div class="ul-tree-item-info">
-            <i class="ul-tree-item-icon layui-icon layui-icon-triangle-d"></i>
-            <span class="ul-tree-item-title">读书笔记</span>
-          </div>
-          <div class="ul-tree-item-children">
-
-          </div>
-        </div>
-
-      </div>
-      <!-- 子目录只需要将ul-tree-item嵌套在ul-tree-item-children即可 -->
-      <div class="ul-tree">
-        <div class="ul-tree-item">
-          <div class="ul-tree-item-info">
-            <i class="ul-tree-item-icon layui-icon layui-icon-triangle-d"></i>
-            <span class="ul-tree-item-title">读书笔记</span>
-          </div>
-          <div class="ul-tree-item-children">
-            <div class="ul-tree-item">
-              <div class="ul-tree-item-info">
-                <i class="ul-tree-item-icon layui-icon layui-icon-triangle-d"></i>
-                <span class="ul-tree-item-title">小说</span>
-              </div>
-              <div class="ul-tree-item-children">
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
     </div>
   </div>
+
 </fieldset>
+
 <fieldset class="layui-elem-field layui-field-title">
   <legend>文档目录</legend>
   <div class="layui-field-box">
