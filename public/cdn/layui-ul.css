@@ -61,6 +61,11 @@
   background-color: #eee;
 }
 
+.ul-bg-black{
+  
+  background-color: #393D49;
+}
+
 .ul-color-main {
   color: #6cf !important;
 }
@@ -1228,4 +1233,53 @@ body .layui-quote-gray{
   background-color: #f0f0f0;
   color: #666;
   border-left-color: #ddd;
+}
+
+
+.ul-doc-info-page-list {
+  padding: 15px;
+  color  : #999;
+
+}
+
+.ul-doc-info-page-item {
+  line-height: 2;
+  padding    : 0 15px;
+  position: relative;
+}
+
+.ul-doc-info-page-item.page {
+  cursor   : pointer;
+  font-size: 18px;
+}
+
+.ul-doc-info-page-item.group {
+  color    : #bbb;
+  font-size: 16px;
+}
+
+.ul-doc-info-page-item.point {
+  color    : #eee;
+  font-size: 14px;
+}
+
+.ul-doc-info-page-item.page:hover {
+  background-color: #555;
+}
+
+
+.ul-doc-info-page-item.level-0 {}
+
+.ul-doc-info-page-item.level-1 {
+  margin-left: 15px;
+}
+
+.ul-doc-info-page-item.level-2 {
+  margin-left: 30px;
+
+}
+
+.ul-doc-info-page-item.level-3 {
+  margin-left: 45px;
+
 }
