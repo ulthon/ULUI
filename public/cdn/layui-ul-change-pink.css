@@ -1,0 +1,166 @@
+@media screen and (max-width: 768px){
+
+}
+.layui-nav-tree .layui-nav-item a:hover{
+    background-color: #FFCCCC;
+}
+
+.layui-bg-black{
+    background-color: #CCCCFF !important; 
+}
+
+.layui-nav-tree .layui-nav-child dd.layui-this, 
+.layui-nav-tree .layui-nav-child dd.layui-this a, 
+.layui-nav-tree .layui-this, 
+.layui-nav-tree .layui-this > a, 
+.layui-nav-tree .layui-this > a:hover{
+    background-color: #FFCCCC;
+}
+
+.layui-layout-admin .layui-logo{
+    color: #fff;
+    line-height: 45px;
+}
+
+.layui-layout-admin .layui-header{
+    background-color: #CCCCFF;
+}
+
+.layui-nav {
+    background-color: #CCCCFF;
+}
+
+.layui-header{
+    height: 45px;
+}
+
+.layui-nav .layui-nav-item{
+    line-height: 45px;
+}
+
+.layui-nav .layui-nav-item a {
+    color: #FFFFFF;
+    
+}
+
+.layui-nav .layui-nav-child a {
+    color: #CCCCFF;
+}
+
+.layui-nav .layui-this::after,
+.layui-nav-bar,
+.layui-nav-tree .layui-nav-itemed::after {
+    background-color: #CCFFFF;
+}
+
+.layui-tab-brief > .layui-tab-title .layui-this{
+    color: #CCCCFF;
+}
+
+.layui-tab-brief > .layui-tab-more li.layui-this::after, .layui-tab-brief > .layui-tab-title .layui-this::after{
+    border-color: #CCCCFF;
+}
+
+.layui-btn{
+    background-color: #CCCCFF;
+}
+.layui-form-radio > i:hover, .layui-form-radioed > i{
+    color: #CCCCFF;
+}
+.layui-form-radio:hover *, .layui-form-radioed, .layui-form-radioed > i{
+  color: #CCCCFF;
+}
+
+.layui-elem-quote{
+    border-color: #CCCCFF;
+}
+
+.layui-laydate td.layui-this{
+    background-color: #CCCCFF !important;
+}
+
+.layui-form-checkbox[lay-skin="primary"]:hover i{
+    border-color: #CCCCFF;
+}
+.layui-form-checked[lay-skin="primary"] i{
+    border-color: #CCCCFF !important;
+    background-color: #CCCCFF !important;
+}
+
+.layui-form-select dl dd.layui-this{
+  background-color: #CCCCFF;
+}
+
+
+.layui-btn-primary:hover{
+  color: #fff;
+  border-color: #CCCCFF;
+}
+.layui-btn-primary{
+  color: #fff;
+  border-color: transparent;
+}
+
+.layui-form-label{
+  width: unset;
+  padding: 3px 3px;
+  float: unset;
+  text-align: left;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.layui-input-block{
+  margin-left: 0;
+}
+
+.layui-form-pane .layui-form-label{
+  float: left;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.layui-nav-tree .layui-nav-item a{
+    height: 35px;
+    line-height: 35px;
+}
+
+.layui-nav-tree{
+    width: 140px;
+}
+.layui-layout-admin .layui-side{
+    width: 140px;
+    top: 45px;
+}
+.layui-layout-admin .layui-footer{
+    left: 140px;
+    height: 35px;
+    line-height: 35px;
+}
+.layui-layout-admin .layui-body{
+    top: 45px;
+}
+
+.layui-side-scroll{
+    width: 140px;
+}
+
+.layui-body{
+    left: 140px;
+}
+
+.layui-nav .layui-nav-child dd.layui-this a, .layui-nav-child dd.layui-this{
+    background-color: #FFCCCC;
+}
+
+.layui-nav-tree .layui-nav-bar{
+    background-color: #CCCCFF;
+}
+
+.layui-form-label .layui-word-aux{
+  font-size: 12px;
+}
+
+body .layui-laydate .layui-this{
+  background-color: #FFCCCC !important;
+}
