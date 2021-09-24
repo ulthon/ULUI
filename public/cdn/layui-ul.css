@@ -2,83 +2,83 @@
 .ul-nav-tree {}
 
 .ul-nav-tree-group-title {
-  font-size  : 16px;
-  font-weight: 600;
-  line-height: 2;
+    font-size  : 16px;
+    font-weight: 600;
+    line-height: 2;
 }
 
 .ul-nav-tree-item {
-  display    : flex;
-  align-items: baseline;
-  cursor     : pointer;
-  padding    : 5px;
-  white-space: nowrap;
+    display    : flex;
+    align-items: baseline;
+    cursor     : pointer;
+    padding    : 5px;
+    white-space: nowrap;
 }
 
 .ul-nav-tree-item.current .ul-nav-tree-item-title {
-  color: #6cf;
+    color: #6cf;
 }
 
 .ul-nav-tree-item-title {
-  font-size: 15px;
+    font-size: 15px;
 }
 
 .ul-nav-tree-item-desc {
-  font-size  : 14px;
-  color      : #999;
-  margin-left: 15px;
+    font-size  : 14px;
+    color      : #999;
+    margin-left: 15px;
 }
 
 /* 列表结束 */
 
 /* 通用类开始 */
 .ul-padding-md {
-  padding: 15px;
+    padding: 15px;
 }
 
 .ul-section {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 .ul-icon-exit {
-  display            : inline-block;
-  width              : 16px;
-  height             : 16px;
-  background-image   : url("img/exit.png");
-  background-size    : cover;
-  background-position: center;
+    display            : inline-block;
+    width              : 16px;
+    height             : 16px;
+    background-image   : url("img/exit.png");
+    background-size    : cover;
+    background-position: center;
 }
 
 .ul-border-right {
-  border-right: 1px solid #bbb;
+    border-right: 1px solid #bbb;
 }
 
 .ul-bg-white {
-  background-color: #fff;
+    background-color: #fff;
 }
 
 .ul-bg-gray {
-  background-color: #eee;
+    background-color: #eee;
 }
 
 .ul-bg-black {
 
-  background-color: #393D49;
+    background-color: #393D49;
 }
 
 .ul-color-main {
-  color: #6cf !important;
+    color: #6cf !important;
 }
 
 .ul-common-flex-list {
-  display  : flex;
-  flex-wrap: wrap;
+    display  : flex;
+    flex-wrap: wrap;
 }
 
 .ul-common-flex-sb {
-  display        : flex;
-  align-items    : center;
-  justify-content: space-between;
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
 }
 
 /* 通用类结束 */
@@ -88,48 +88,48 @@
 .ul-avatar-list {}
 
 .ul-avatar-list-item {
-  display         : flex;
-  align-items     : center;
-  justify-content : space-between;
-  padding         : 8px;
-  background-color: #ddd;
+    display         : flex;
+    align-items     : center;
+    justify-content : space-between;
+    padding         : 8px;
+    background-color: #ddd;
 }
 
 .ul-avatar-list-item.current {
-  background-color: #bbb;
+    background-color: #bbb;
 }
 
 .ul-avatar-list-item-img {
-  height             : 48px;
-  width              : 48px;
-  background-image   : url("/static/images/avatar.png");
-  background-size    : cover;
-  background-position: center;
-  border-radius      : 3px;
-  background-color   : #fff;
+    height             : 48px;
+    width              : 48px;
+    background-image   : url("/static/images/avatar.png");
+    background-size    : cover;
+    background-position: center;
+    border-radius      : 3px;
+    background-color   : #fff;
 }
 
 .ul-avatar-list-item-info {
-  margin-left: 10px;
-  position   : relative;
-  width      : calc(100% - 48px - 10px);
+    margin-left: 10px;
+    position   : relative;
+    width      : calc(100% - 48px - 10px);
 }
 
 .ul-avatar-list-item-time {
-  position: absolute;
-  right   : 0;
-  top     : 0;
-  color   : #999;
+    position: absolute;
+    right   : 0;
+    top     : 0;
+    color   : #999;
 }
 
 .ul-avatar-list-item-tips {
-  color        : #999;
-  font-size    : 14px;
-  display      : inline-block;
-  white-space  : nowrap;
-  width        : 100%;
-  overflow     : hidden;
-  text-overflow: ellipsis;
+    color        : #999;
+    font-size    : 14px;
+    display      : inline-block;
+    white-space  : nowrap;
+    width        : 100%;
+    overflow     : hidden;
+    text-overflow: ellipsis;
 }
 
 /* 头像结束 */
@@ -137,80 +137,80 @@
 /* 头部开始 */
 
 .ul-header {
-  background-color: #fff;
-  box-shadow      : 0 3px 5px #999;
-  padding         : 3px;
+    background-color: #fff;
+    box-shadow      : 0 3px 5px #999;
+    padding         : 3px;
 }
 
 .ul-header-main {
-  display        : flex;
-  justify-content: space-between;
-  align-items    : center;
-  margin         : 0 auto;
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    margin         : 0 auto;
 }
 
 .ul-header-logo {
-  max-height: 48px;
+    max-height: 48px;
 }
 
 .ul-header-user {
-  display        : flex;
-  align-items    : center;
-  justify-content: center;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
 }
 
 .ul-header-user-avatar {
-  background-image   : url("/static/images/avatar.png");
-  width              : 45px;
-  height             : 45px;
-  background-size    : cover;
-  background-position: center;
+    background-image   : url("/static/images/avatar.png");
+    width              : 45px;
+    height             : 45px;
+    background-size    : cover;
+    background-position: center;
 }
 
 .ul-header-user-options {
-  display    : flex;
-  align-items: center;
-  color      : #999;
-  font-size  : 12px;
-  cursor     : pointer;
+    display    : flex;
+    align-items: center;
+    color      : #999;
+    font-size  : 12px;
+    cursor     : pointer;
 }
 
 .ul-header-user-info {
-  margin-left: 10px;
+    margin-left: 10px;
 }
 
 /* 头部结束 */
 
 /* 导航开始 */
 .layui-nav.ul-nav-white {
-  background-color: #f0f0f0;
+    background-color: #f0f0f0;
 }
 
 .layui-nav.ul-nav-white .layui-nav-child a {
-  color: #666;
+    color: #666;
 }
 
 .layui-nav.ul-nav-white .layui-nav-item a {
-  color: #666;
+    color: #666;
 }
 
 .layui-nav.ul-nav-white .layui-nav-itemed>.layui-nav-child {
-  background-color: rgba(255, 255, 255, 0.6) !important;
+    background-color: rgba(255, 255, 255, 0.6) !important;
 }
 
 .layui-nav-tree.ul-nav-white .layui-nav-item a:hover {
-  background-color: #9cf;
-  color           : #fff !important;
+    background-color: #9cf;
+    color           : #fff !important;
 }
 
 .layui-nav.ul-nav-white .layui-nav-itemed>a,
 .layui-nav-tree.ul-nav-white .layui-nav-title a,
 .layui-nav-tree.ul-nav-white .layui-nav-title a:hover {
-  color: #666 !important;
+    color: #666 !important;
 }
 
 .layui-nav-tree.ul-nav-white .layui-nav-bar {
-  background-color: #6cf;
+    background-color: #6cf;
 }
 
 .layui-nav-tree.ul-nav-white .layui-nav-child dd.layui-this,
@@ -218,8 +218,8 @@
 .layui-nav-tree.ul-nav-white .layui-this,
 .layui-nav-tree.ul-nav-white .layui-this>a,
 .layui-nav-tree.ul-nav-white .layui-this>a:hover {
-  background-color: #9cf;
-  color           : #fff;
+    background-color: #9cf;
+    color           : #fff;
 }
 
 /* 导航结束 */
@@ -227,33 +227,33 @@
 /* 链接导航开始 */
 
 .ul-link-select {
-  display        : flex;
-  align-items    : flex-start;
-  justify-content: flex-start;
+    display        : flex;
+    align-items    : flex-start;
+    justify-content: flex-start;
 }
 
 .ul-link-title {
-  margin-right: 15px;
+    margin-right: 15px;
 }
 
 .ul-link-list {
-  display        : flex;
-  align-items    : flex-start;
-  justify-content: flex-start;
-  flex-wrap      : wrap;
+    display        : flex;
+    align-items    : flex-start;
+    justify-content: flex-start;
+    flex-wrap      : wrap;
 
 }
 
 .ul-link-item {
-  padding     : 0px 10px;
-  cursor      : pointer;
-  margin-right: 10px;
+    padding     : 0px 10px;
+    cursor      : pointer;
+    margin-right: 10px;
 }
 
 .ul-link-item.current {
-  border-radius: 15px;
-  border       : 1px solid #6cf;
-  color        : #6cf;
+    border-radius: 15px;
+    border       : 1px solid #6cf;
+    color        : #6cf;
 }
 
 /* 链接导航结束 */
@@ -261,1046 +261,1116 @@
 /* 相册列表开始 */
 
 .ul-photo-list {
-  display        : flex;
-  align-items    : flex-start;
-  justify-content: flex-start;
-  flex-wrap      : wrap;
+    display        : flex;
+    align-items    : flex-start;
+    justify-content: flex-start;
+    flex-wrap      : wrap;
 }
 
 .ul-photo-item {
-  margin    : 15px;
-  text-align: center;
-  min-width : 220px;
+    margin    : 15px;
+    text-align: center;
+    min-width : 220px;
 }
 
 .ul-photo-poster {
-  width              : 180px;
-  height             : 140px;
-  background-image   : url("../static/images/avatar.png");
-  background-size    : cover;
-  background-position: center;
-  margin             : 0 auto;
-  box-shadow         : 1px 1px 3px #999;
+    width              : 180px;
+    height             : 140px;
+    background-image   : url("../static/images/avatar.png");
+    background-size    : cover;
+    background-position: center;
+    margin             : 0 auto;
+    box-shadow         : 1px 1px 3px #999;
 }
 
 .ul-photo-info {
-  margin-top : 10px;
-  font-size  : 18px;
-  line-height: 1.5;
+    margin-top : 10px;
+    font-size  : 18px;
+    line-height: 1.5;
 }
 
 .ul-photo-desc {
-  font-size: 14px;
-  color    : #999;
+    font-size: 14px;
+    color    : #999;
 }
 
 .ul-photo-card-list {
-  display        : flex;
-  align-items    : flex-start;
-  justify-content: flex-start;
-  flex-wrap      : wrap;
+    display        : flex;
+    align-items    : flex-start;
+    justify-content: flex-start;
+    flex-wrap      : wrap;
 }
 
 .ul-photo-card-item {
-  width     : 200px;
-  margin    : 15px;
-  box-shadow: 0 5px 10px #999;
+    width     : 200px;
+    margin    : 15px;
+    box-shadow: 0 5px 10px #999;
 }
 
 .ul-photo-card-poster {
-  width              : 100%;
-  height             : 140px;
-  background-size    : cover;
-  background-position: center;
+    width              : 100%;
+    height             : 140px;
+    background-size    : cover;
+    background-position: center;
 }
 
 .ul-photo-card-info {
-  padding    : 5px;
-  font-size  : 18px;
-  line-height: 1.5;
+    padding    : 5px;
+    font-size  : 18px;
+    line-height: 1.5;
 }
 
 .ul-photo-card-desc {
-  font-size: 14px;
-  color    : #999;
+    font-size: 14px;
+    color    : #999;
 }
 
 /* 相册列表结束 */
 
 .ul-info-tips {
-  padding         : 15px;
-  background-color: rgba(255, 255, 255, 0.6);
+    padding         : 15px;
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 .ul-card-status {
-  padding      : 5px;
-  border-radius: 5px;
+    padding      : 5px;
+    border-radius: 5px;
 }
 
 .ul-card-options {
-  float : right;
-  cursor: pointer;
+    float : right;
+    cursor: pointer;
 }
 
 .data-item {
-  margin-right: 15px;
+    margin-right: 15px;
 }
 
 .data-img .data-img-main {
-  max-width: 120px;
-  margin   : 5px;
+    max-width: 120px;
+    margin   : 5px;
 }
 
 .data-img {
-  display: block;
+    display: block;
 }
 
 .ul-card-list {
-  display  : flex;
-  flex-wrap: wrap;
+    display  : flex;
+    flex-wrap: wrap;
 }
 
 .ul-card-list .ul-card {
-  margin-right: 15px;
+    margin-right: 15px;
 }
 
 .ul-card-list .layui-card:last-child {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 .ul-title {
-  text-align : center;
-  line-height: 1.5;
+    text-align : center;
+    line-height: 1.5;
 }
 
 .ul-title-main {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 .ul-title-plus {
-  color: #999;
+    color: #999;
 }
 
 .ul-title-line {
-  border-top: 2px solid #666;
-  margin-top: 8px;
+    border-top: 2px solid #666;
+    margin-top: 8px;
 }
 
 .ul-message-list {}
 
 .ul-message-item {
-  margin-bottom  : 15px;
-  display        : flex;
-  justify-content: flex-start;
-  align-items    : flex-start;
-  padding        : 15px;
+    margin-bottom  : 15px;
+    display        : flex;
+    justify-content: flex-start;
+    align-items    : flex-start;
+    padding        : 15px;
 }
 
 .ul-message-item-left {
-  width: 120px;
+    width: 120px;
 }
 
 .ul-message-item-right {
-  width: calc(100% - 120px);
+    width: calc(100% - 120px);
 }
 
 .ul-message-item-info {
-  position: relative;
+    position: relative;
 }
 
 .ul-message-item-options {
-  position: absolute;
-  right   : 0;
-  top     : 0;
+    position: absolute;
+    right   : 0;
+    top     : 0;
 }
 
 .ul-message-item-avatar {
-  background-size    : cover;
-  background-position: center;
-  width              : 100px;
-  height             : 100px;
-  border-radius      : 50%;
+    background-size    : cover;
+    background-position: center;
+    width              : 100px;
+    height             : 100px;
+    border-radius      : 50%;
 }
 
 .ul-message-item-name {
-  display  : flex;
-  color    : #6cf;
-  font-size: 16px;
+    display  : flex;
+    color    : #6cf;
+    font-size: 16px;
 }
 
 .ul-message-item-data {
-  display   : flex;
-  font-size : 14px;
-  color     : #999;
-  margin-top: 10px;
+    display   : flex;
+    font-size : 14px;
+    color     : #999;
+    margin-top: 10px;
 }
 
 .ul-message-item-content {
-  background-color: #f0f0f0;
-  padding         : 15px;
-  margin-top      : 10px;
+    background-color: #f0f0f0;
+    padding         : 15px;
+    margin-top      : 10px;
 }
 
 .ul-message-item-img-list {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 .ul-message-item-img {
-  width              : 160px;
-  height             : 120px;
-  background-size    : cover;
-  background-position: center;
-  margin-right       : 10px;
-  display            : inline-block;
+    width              : 160px;
+    height             : 120px;
+    background-size    : cover;
+    background-position: center;
+    margin-right       : 10px;
+    display            : inline-block;
 }
 
 .ul-nav-easy {
-  background-color: transparent;
+    background-color: transparent;
 }
 
 .layui-nav-tree.ul-nav-easy .layui-nav-item>a {
-  color: #666;
+    color: #666;
 }
 
 .layui-nav-tree.ul-nav-easy .layui-this {
-  background-color: transparent;
+    background-color: transparent;
 }
 
 .layui-nav-tree.ul-nav-easy .layui-this>a {
-  background-color: transparent;
-  color           : #6cf;
+    background-color: transparent;
+    color           : #6cf;
 }
 
 .layui-nav-tree.ul-nav-easy .layui-nav-item.layui-this a:hover {
-  color: #6cf;
+    color: #6cf;
 }
 
 .layui-nav-tree.ul-nav-easy .layui-nav-item a:hover {
-  color: #fff;
+    color: #fff;
 }
 
 .layui-nav-tree.ul-nav-easy .layui-nav-item a {
-  height     : 45px;
-  line-height: 45px;
+    height     : 45px;
+    line-height: 45px;
 }
 
 .search-item {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 .ul-upload-photo-list {}
 
 .ul-upload-photo-item {
-  display         : inline-block;
-  width           : 120px;
-  height          : 120px;
-  margin          : 5px;
-  background-color: #ddd;
-  cursor          : pointer;
-  box-shadow      : 0 3px 5px #999;
-  position        : relative;
+    display         : inline-block;
+    width           : 120px;
+    height          : 120px;
+    margin          : 5px;
+    background-color: #ddd;
+    cursor          : pointer;
+    box-shadow      : 0 3px 5px #999;
+    position        : relative;
 }
 
 .ul-upload-photo-main {
-  background-size    : cover;
-  background-position: center;
-  width              : 100%;
-  height             : 100%;
+    background-size    : cover;
+    background-position: center;
+    width              : 100%;
+    height             : 100%;
 }
 
 .ul-upload-photo-delete {
-  position   : absolute;
-  right      : 5px;
-  top        : 5px;
-  z-index    : 999;
-  font-size  : 20px;
-  color      : #fff;
-  text-shadow: 0 0 2px #000;
+    position   : absolute;
+    right      : 5px;
+    top        : 5px;
+    z-index    : 999;
+    font-size  : 20px;
+    color      : #fff;
+    text-shadow: 0 0 2px #000;
 }
 
 .ul-upload-photo-button {
-  background-image   : url("img/upload.png");
-  background-size    : cover;
-  background-position: center;
+    background-image   : url("img/upload.png");
+    background-size    : cover;
+    background-position: center;
 }
 
 .ul-group-title {
-  color        : #999;
-  border-bottom: 1px solid #bbb;
-  padding      : 5px 0;
-  margin-bottom: 15px;
+    color        : #999;
+    border-bottom: 1px solid #bbb;
+    padding      : 5px 0;
+    margin-bottom: 15px;
 }
 
 .ul-tree-item {
-  background-color: #fbfbfb;
-  cursor          : pointer;
+    background-color: #fbfbfb;
+    cursor          : pointer;
 }
 
 .ul-tree-item.disabled,
 .ul-tree-item.disabled .ul-tree-item {
-  background-color: #eee;
-  cursor          : not-allowed;
+    background-color: #eee;
+    cursor          : not-allowed;
 }
 
 .ul-tree-item-info {
-  border-left: 3px solid transparent;
-  padding    : 8px 0;
-  position   : relative;
+    border-left: 3px solid transparent;
+    padding    : 0px 0;
+    position   : relative;
+    min-height : 35px;
+    line-height: 35px;
 }
 
 .ul-tree-item-info.current {
-  background-color: #9cf;
-  border-color    : #6699cc;
+    background-color: #9cf;
+    border-color    : #6699cc;
 }
 
 .ul-tree-item-info:hover {
-  background-color: rgb(190, 222, 255);
-  border-color    : #6699cc;
+    background-color: rgb(190, 222, 255);
+    border-color    : #6699cc;
 }
 
 .ul-tree-item-title {
-  margin-left: 25px;
+    margin-left: 25px;
 }
 
 .ul-tree-item-icon {
-  position: absolute;
-  left    : 5px;
-  top     : 10px;
+    position: absolute;
+    left    : 5px;
+    top     : 0;
 }
 
 .ul-tree-item-info:hover .ul-tree-item-options-item {
-  display: block;
+    display: block;
 }
 
 .ul-tree-item-options {
 
-  position   : absolute;
-  right      : 15px;
-  top        : 0;
-  height     : 100%;
-  display    : flex;
-  align-items: center;
+    position   : absolute;
+    right      : 15px;
+    top        : 0;
+    height     : 100%;
+    display    : flex;
+    align-items: center;
 }
 
 .ul-tree-item-options-item {
-  margin-left: 10px;
-  display    : none;
+    margin-left: 10px;
+    display    : none;
+    height     : 100%;
+    line-height: 35px;
 }
 
 .ul-note-item {
-  display        : flex;
-  justify-content: flex-start;
-  align-items    : flex-start;
-  cursor         : pointer;
-  padding        : 15px;
+    display        : flex;
+    justify-content: flex-start;
+    align-items    : flex-start;
+    cursor         : pointer;
+    padding        : 15px;
 }
 
 .ul-note-item.current,
 .ul-note-item:hover {
-  background-color: #dedede;
+    background-color: #dedede;
 }
 
 .ul-note-item .ul-note-item-icon {
-  margin-right: 10px;
+    margin-right: 10px;
 }
 
 .ul-note-item .ul-note-item-desc {
-  color     : #999;
-  font-size : 12px;
-  margin-top: 5px;
-  word-break: break-all;
+    color     : #999;
+    font-size : 12px;
+    margin-top: 5px;
+    word-break: break-all;
 }
 
 .ul-note-item .ul-note-item-time {
-  color     : #bbb;
-  font-size : 12px;
-  margin-top: 5px;
+    color     : #bbb;
+    font-size : 12px;
+    margin-top: 5px;
 }
 
 .ul-note-item .ul-note-item-tree {
-  font-size : 12px;
-  color     : #bbb;
-  margin-top: 5px;
+    font-size : 12px;
+    color     : #bbb;
+    margin-top: 5px;
 }
 
 .ul-input-table {
-  text-align: center;
+    text-align: center;
 }
 
 .ul-input-table tbody td,
 .ul-input-table tbody th {
-  padding: 2px 4px;
+    padding: 2px 4px;
 }
 
 .ul-input-table .layui-form-checkbox[lay-skin="primary"] {
-  margin-top: 0px;
+    margin-top: 0px;
 }
 
 .ul-input-table .layui-form-select dl dd {
-  text-align: left;
+    text-align: left;
 }
 
 .ul-nav-min {
-  box-shadow: 2px 2px 5px #999;
-  padding   : 5px;
-  text-align: center;
+    box-shadow: 2px 2px 5px #999;
+    padding   : 5px;
+    text-align: center;
 }
 
 .ul-nav-min .ul-nav-min-item {
-  padding: 5px 0;
-  cursor : pointer;
-  color  : #333;
-  display: block;
+    padding: 5px 0;
+    cursor : pointer;
+    color  : #333;
+    display: block;
 }
 
 .ul-nav-min-item:hover {
-  color: #6cf;
+    color: #6cf;
 }
 
 .ul-header-a {
-  background-color: #f8f8f8;
-  border-bottom   : 1px solid #e8e8e8;
-  color           : #666;
+    background-color: #f8f8f8;
+    border-bottom   : 1px solid #e8e8e8;
+    color           : #666;
 }
 
 .ul-header-a-main {
-  display        : flex;
-  align-items    : center;
-  justify-content: space-between;
-  /* border-width: 1px 0;
-  border-color   : #bbb;
-  border-style   : solid; */
-  padding        : 5px;
-  margin         : 0 auto;
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+    /* border-width: 1px 0;
+  border-color     : #bbb;
+  border-style     : solid; */
+    padding        : 5px;
+    margin         : 0 auto;
 }
 
 .ul-header-a-nav-item {
-  margin-right: 15px;
-  position    : relative;
-  display     : flex;
-  align-items : center;
-  cursor      : pointer;
+    margin-right: 15px;
+    position    : relative;
+    display     : flex;
+    align-items : center;
+    cursor      : pointer;
 }
 
 .ul-header-a-nav-item:hover .ul-header-a-nav-plus {
-  display: block;
+    display: block;
 }
 
 .ul-header-a-img {
-  height             : 24px;
-  width              : 24px;
-  background-size    : cover;
-  background-position: center;
-  margin-right       : 10px;
+    height             : 24px;
+    width              : 24px;
+    background-size    : cover;
+    background-position: center;
+    margin-right       : 10px;
 }
 
 .ul-header-a-right {
-  display    : flex;
-  align-items: center;
+    display    : flex;
+    align-items: center;
 }
 
 .ul-header-a-nav-plus {
-  position        : absolute;
-  top             : 100%;
-  left            : 50%;
-  display         : none;
-  background-color: transparent;
-  z-index         : 99999;
+    position        : absolute;
+    top             : 100%;
+    left            : 50%;
+    display         : none;
+    background-color: transparent;
+    z-index         : 99999;
 }
 
 .ul-header-a-nav-plus>.ul-nav-min {
-  background-color: #fff;
-  margin-top      : 15px;
+    background-color: #fff;
+    margin-top      : 15px;
 }
 
 .ul-nav-header-main {
-  display        : flex;
-  align-items    : center;
-  justify-content: space-between;
-  padding        : 5px 15px;
-  margin         : 0 auto;
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+    padding        : 5px 15px;
+    margin         : 0 auto;
 }
 
 .ul-nav-header-right {
-  text-align: right;
+    text-align: right;
 }
 
 .ul-nav-header-item {
-  display     : inline-block;
-  margin-right: 15px;
-  cursor      : pointer;
-  padding     : 5px 15px;
-  color       : #333;
+    display     : inline-block;
+    margin-right: 15px;
+    cursor      : pointer;
+    padding     : 5px 15px;
+    color       : #333;
 }
 
 .ul-nav-header-item:hover {
-  color: #6cf;
+    color: #6cf;
 }
 
 .ul-nav-header-red {
-  background-color: #f72222;
+    background-color: #f72222;
 }
 
 .ul-nav-header-red .ul-nav-header-item {
-  color: #fff;
+    color: #fff;
 }
 
 .ul-nav-header-red .ul-nav-header-item:hover {
-  color: #fedf50;
+    color: #fedf50;
 }
 
 .ul-nav-header-primary {
-  background-color: #6cf;
+    background-color: #6cf;
 }
 
 .ul-nav-header-primary .ul-nav-header-item {
-  color: #fff;
+    color: #fff;
 }
 
 .ul-nav-header-primary .ul-nav-header-item:hover {
-  color: #ccffff;
+    color: #ccffff;
 }
 
 .ul-card-a {
-  width          : 180px;
-  display        : flex;
-  justify-content: space-between;
-  border         : 1px solid #bbb;
-  box-shadow     : 2px 2px 5px #999;
-  color          : #516073;
-  padding        : 15px;
-  cursor         : pointer;
-  margin-right   : 15px;
-  margin-bottom  : 15px;
-  position       : relative;
+    width          : 180px;
+    display        : flex;
+    justify-content: space-between;
+    border         : 1px solid #bbb;
+    box-shadow     : 2px 2px 5px #999;
+    color          : #516073;
+    padding        : 15px;
+    cursor         : pointer;
+    margin-right   : 15px;
+    margin-bottom  : 15px;
+    position       : relative;
 }
 
 .ul-card-a-left {
-  width: 40%;
+    width: 40%;
 }
 
 .ul-card-a-right {
-  display    : flex;
-  align-items: center;
-  text-align : center;
-  width      : 50%;
+    display    : flex;
+    align-items: center;
+    text-align : center;
+    width      : 50%;
 }
 
 .ul-card-a-title {
-  font-size: 18px;
+    font-size: 18px;
 }
 
 .ul-card-a-desc {
-  margin-top : 5px;
-  font-size  : 14px;
-  white-space: nowrap;
+    margin-top : 5px;
+    font-size  : 14px;
+    white-space: nowrap;
 }
 
 .ul-nav-poster {
-  padding         : 5px;
-  border          : 1px solid #ddd;
-  border-top-width: 3px;
+    padding         : 5px;
+    border          : 1px solid #ddd;
+    border-top-width: 3px;
 }
 
 .ul-nav-poster-item {
-  display        : flex;
-  justify-content: space-between;
-  align-items    : center;
-  cursor         : pointer;
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    cursor         : pointer;
 }
 
 .ul-nav-poster-left {
-  display    : flex;
-  align-items: center;
+    display    : flex;
+    align-items: center;
 }
 
 .ul-nav-post-title {
-  color      : #333;
-  font-weight: bold;
+    color      : #333;
+    font-weight: bold;
 }
 
 .ul-nav-poster-desc {
-  color      : #999;
-  font-size  : 12px;
-  font-weight: 100;
+    color      : #999;
+    font-size  : 12px;
+    font-weight: 100;
 }
 
 .ul-nav-poster-img {
-  width              : 38px;
-  height             : 38px;
-  margin             : 5px;
-  background-size    : cover;
-  background-position: center;
+    width              : 38px;
+    height             : 38px;
+    margin             : 5px;
+    background-size    : cover;
+    background-position: center;
 }
 
 .ul-nav-poster-item:not(:last-child) {
-  border-bottom: 1px dashed #ddd;
+    border-bottom: 1px dashed #ddd;
 }
 
 .ul-card-bank {
-  width        : 249px;
-  border       : 1px solid #e4e4e4;
-  border-radius: 5px;
-  box-shadow   : 0 1px 1px #e9e9e9;
-  display      : inline-block;
-  margin-right : 14px;
-  margin-bottom: 10px;
-  color        : #666666;
-  font-size    : 12px;
-  cursor       : pointer;
+    width        : 249px;
+    border       : 1px solid #e4e4e4;
+    border-radius: 5px;
+    box-shadow   : 0 1px 1px #e9e9e9;
+    display      : inline-block;
+    margin-right : 14px;
+    margin-bottom: 10px;
+    color        : #666666;
+    font-size    : 12px;
+    cursor       : pointer;
 }
 
 .ul-card-bank-header {
-  padding      : 10px 0;
-  margin       : 0 14px;
-  border-bottom: 1px dotted #d9d9d9;
+    padding      : 10px 0;
+    margin       : 0 14px;
+    border-bottom: 1px dotted #d9d9d9;
 }
 
 .ul-card-bank-body {
-  height : 40px;
-  padding: 10px 10px 20px 0;
+    height : 40px;
+    padding: 10px 10px 20px 0;
 }
 
 .ul-card-bank-line {
-  width        : 88px;
-  height       : 23px;
-  font-weight  : 100;
-  text-align   : center;
-  background   : #2e4158;
-  border-radius: 0 3px 0 0;
-  font-size    : 14px;
-  float        : left;
+    width        : 88px;
+    height       : 23px;
+    font-weight  : 100;
+    text-align   : center;
+    background   : #2e4158;
+    border-radius: 0 3px 0 0;
+    font-size    : 14px;
+    float        : left;
 }
 
 .ul-card-bank-footer {
-  padding   : 3px 14px;
-  background: #f8f8f8;
-  border-top: 1px solid #e7e7e7;
+    padding   : 3px 14px;
+    background: #f8f8f8;
+    border-top: 1px solid #e7e7e7;
 }
 
 .ul-card-bank-line-triangle {
-  width        : 0px;
-  height       : 3px;
-  display      : block;
-  float        : right;
-  border-left  : 9px solid transparent;
-  border-bottom: 20px solid #fff;
+    width        : 0px;
+    height       : 3px;
+    display      : block;
+    float        : right;
+    border-left  : 9px solid transparent;
+    border-bottom: 20px solid #fff;
 }
 
 .ul-card-bank-tips {
-  color    : #6cf;
-  font-size: 14px;
+    color    : #6cf;
+    font-size: 14px;
 }
 
 .ul-nav-link-item {
-  display    : inline-block;
-  margin     : 5px 0;
-  padding    : 0 10px;
-  border     : 1px solid transparent;
-  color      : #333;
-  white-space: nowrap;
+    display    : inline-block;
+    margin     : 5px 0;
+    padding    : 0 10px;
+    border     : 1px solid transparent;
+    color      : #333;
+    white-space: nowrap;
 }
 
 .ul-nav-link-item:not(:last-child) {
-  border-right-color: #666;
+    border-right-color: #666;
 }
 
 .ul-group-title-2 {
-  background   : #d2dbe0;
-  width        : 84px;
-  height       : 28px;
-  line-height  : 28px;
-  font-size    : 14px;
-  font-weight  : bold;
-  text-align   : center;
-  position     : relative;
-  margin-top   : 30px;
-  margin-bottom: 14px;
-  color        : #666666;
+    background   : #d2dbe0;
+    width        : 84px;
+    height       : 28px;
+    line-height  : 28px;
+    font-size    : 14px;
+    font-weight  : bold;
+    text-align   : center;
+    position     : relative;
+    margin-top   : 30px;
+    margin-bottom: 14px;
+    color        : #666666;
 }
 
 .ul-group-title-2::after {
-  content      : "";
-  width        : 0;
-  height       : 0;
-  position     : absolute;
-  border-top   : 14px solid transparent;
-  border-bottom: 14px solid transparent;
-  border-left  : 15px solid #d2dbe0;
-  right        : -15px;
-  top          : 0px;
+    content      : "";
+    width        : 0;
+    height       : 0;
+    position     : absolute;
+    border-top   : 14px solid transparent;
+    border-bottom: 14px solid transparent;
+    border-left  : 15px solid #d2dbe0;
+    right        : -15px;
+    top          : 0px;
 
 }
 
 .ul-ad-list {}
 
 .ul-ad-item {
-  box-shadow      : 1px 1px 8px #666;
-  background-color: #fff;
-  display         : flex;
-  align-items     : center;
-  justify-content : space-between;
-  padding         : 15px;
-  margin-bottom   : 15px;
+    box-shadow      : 1px 1px 8px #666;
+    background-color: #fff;
+    display         : flex;
+    align-items     : center;
+    justify-content : space-between;
+    padding         : 15px;
+    margin-bottom   : 15px;
 }
 
 .ul-ad-left {
-  width : 72%;
-  height: 170px;
+    width : 72%;
+    height: 170px;
 }
 
 .ul-ad-img {
-  height             : 100%;
-  width              : 100%;
-  background-size    : cover;
-  background-position: center;
+    height             : 100%;
+    width              : 100%;
+    background-size    : cover;
+    background-position: center;
 }
 
 .ul-ad-right {
-  width: 25%;
+    width: 25%;
 }
 
 .ul-ad-title {
-  font-size  : 28px;
-  font-weight: 100;
-  margin     : 0;
-  color      : #e4393c;
+    font-size  : 28px;
+    font-weight: 100;
+    margin     : 0;
+    color      : #e4393c;
 
 }
 
 .ul-ad-desc {
-  font-size  : 14px;
-  color      : #666666;
-  margin     : 26px 0;
-  line-height: 24px;
+    font-size  : 14px;
+    color      : #666666;
+    margin     : 26px 0;
+    line-height: 24px;
 }
 
 .ul-nav-tree-2 {}
 
 .ul-nav-tree-2-group-title {
 
-  font-size  : 14px;
-  height     : 32px;
-  line-height: 32px;
-  color      : #253647;
-  font-weight: 600;
+    font-size  : 14px;
+    height     : 32px;
+    line-height: 32px;
+    color      : #253647;
+    font-weight: 600;
 
 }
 
 .ul-nav-tree-2-item-title {
-  font-size   : 14px;
-  color       : #999;
-  padding-left: 15px;
-  line-height : 24px;
+    font-size   : 14px;
+    color       : #999;
+    padding-left: 15px;
+    line-height : 24px;
 }
 
 .ul-nav-tree-2-item:hover .ul-nav-tree-2-item-title {
-  color          : #6cf;
-  text-decoration: underline;
+    color          : #6cf;
+    text-decoration: underline;
 }
 
 .ul-nav-card-item {
 
-  padding        : 0 15px;
-  border         : 1px solid #ddd;
-  border-radius  : 6px;
-  height         : 82px;
-  margin-bottom  : 10px;
-  display        : flex;
-  align-items    : center;
-  justify-content: space-between;
+    padding        : 0 15px;
+    border         : 1px solid #ddd;
+    border-radius  : 6px;
+    height         : 82px;
+    margin-bottom  : 10px;
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
 }
 
 .ul-nav-card-item-left {
-  display        : flex;
-  align-items    : center;
-  justify-content: flex-start;
+    display        : flex;
+    align-items    : center;
+    justify-content: flex-start;
 }
 
 .ul-nav-card-item-icon {
-  font-size     : 28px;
-  width         : 50px;
-  height        : 50px;
-  border-radius : 5px;
-  line-height   : 50px;
-  text-align    : center;
-  background    : #2E4158;
-  display       : inline-block;
-  color         : #fff;
-  vertical-align: bottom;
+    font-size     : 28px;
+    width         : 50px;
+    height        : 50px;
+    border-radius : 5px;
+    line-height   : 50px;
+    text-align    : center;
+    background    : #2E4158;
+    display       : inline-block;
+    color         : #fff;
+    vertical-align: bottom;
 }
 
 .ul-nav-card-item-info {
-  margin-left: 10px;
+    margin-left: 10px;
 }
 
 .ul-nav-card-item-title {
-  font-size  : 14px;
-  color      : #253647;
-  font-weight: 700;
+    font-size  : 14px;
+    color      : #253647;
+    font-weight: 700;
 }
 
 .ul-nav-card-item-desc {
-  line-height: 28px;
-  color      : #666;
-  font-size  : 12px;
+    line-height: 28px;
+    color      : #666;
+    font-size  : 12px;
 }
 
 .ul-nav-card-item.disabled .ul-nav-card-item-icon {
-  background-color: #908b8b;
+    background-color: #908b8b;
 
 }
 
 .ul-card-data-container {
-  display  : flex;
-  flex-wrap: wrap;
+    display  : flex;
+    flex-wrap: wrap;
 }
 
 .ul-card-data {
-  display      : inline-block;
-  border       : 1px solid #eee;
-  border-radius: 5px;
-  padding      : 15px;
-  margin-right : 15px;
-  margin-bottom: 15px;
-  height       : 70px;
+    display         : inline-block;
+    border          : 1px solid #eee;
+    border-radius   : 5px;
+    padding         : 15px;
+    margin-right    : 15px;
+    margin-bottom   : 15px;
+    /* height       : 70px; */
 }
 
 .ul-card-data-a-title {
-  padding-bottom: 15px;
-  color         : #6cf;
-  font-size     : 28px;
+    padding-bottom: 15px;
+    color         : #6cf;
+    font-size     : 28px;
 }
 
 .ul-card-data-a-item {
-  display     : inline-block;
-  margin-right: 5px;
+    display     : inline-block;
+    margin-right: 5px;
 }
 
 .ul-card-data-b-icon {
-  display         : inline-block;
-  margin-right    : 15px;
-  font-size       : 46px;
-  background-color: #6cf;
-  padding         : 8px;
-  color           : #fff;
-  border-radius   : 5px;
+    display         : inline-block;
+    margin-right    : 15px;
+    font-size       : 46px;
+    background-color: #6cf;
+    padding         : 8px;
+    color           : #fff;
+    border-radius   : 5px;
 }
 
 .ul-card-data-b-info {
-  display     : inline-block;
-  margin-right: 15px;
+    display     : inline-block;
+    margin-right: 15px;
 
 }
 
 .ul-card-data-b-value {
-  font-size : 28px;
-  color     : #6cf;
-  margin-top: 5px;
+    font-size : 28px;
+    color     : #6cf;
+    margin-top: 5px;
 }
 
 .ul-card-data-b-main {
-  display    : flex;
-  align-items: center;
+    display    : flex;
+    align-items: center;
 }
 
 .ul-card-data-b-title {
-  line-height: 24px;
+    line-height: 24px;
 }
 
 
 .ul-card-data-c-item {
-  display   : inline-block;
-  padding   : 10px 40px;
-  text-align: center;
-  color     : #999;
+    display   : inline-block;
+    padding   : 10px 40px;
+    text-align: center;
+    color     : #999;
 }
 
 .ul-card-data-c-item:not(:last-child) {
-  border-right: 1px solid #ddd;
+    border-right: 1px solid #ddd;
 
 }
 
 .ul-card-data-c-value {
-  font-size  : 18px;
-  line-height: 30px;
+    font-size  : 18px;
+    line-height: 30px;
 }
 
 .ul-card-data-c-title {
-  font-size: 12px;
+    font-size: 12px;
 }
 
 .ul-course-list {
-  margin: -10px;
+    margin: -10px;
 }
 
 .ul-course-item {
-  display         : inline-block;
-  margin          : 10px;
-  width           : calc(25% - 20px);
-  background-color: #fff;
-  padding-bottom  : 12px;
-  cursor          : pointer;
+    display         : inline-block;
+    margin          : 10px;
+    width           : calc(25% - 20px);
+    background-color: #fff;
+    padding-bottom  : 12px;
+    cursor          : pointer;
 }
 
 .ul-course-item-poster {
-  background-position: center;
-  background-size    : cover;
-  height             : 140px;
-  transition         : all 0.6s;
-  position           : relative;
+    background-position: center;
+    background-size    : cover;
+    height             : 140px;
+    transition         : all 0.6s;
+    position           : relative;
 }
 
 .ul-course-item-tag {
-  position: absolute;
-  right   : 8px;
-  top     : 8px;
+    position: absolute;
+    right   : 8px;
+    top     : 8px;
 }
 
 .ul-course-item-info {
-  padding: 6px;
+    padding: 6px;
 }
 
 .ul-course-item-title {
-  padding      : 8px 0;
-  text-overflow: ellipsis;
-  white-space  : nowrap;
-  overflow     : hidden;
+    padding      : 8px 0;
+    text-overflow: ellipsis;
+    white-space  : nowrap;
+    overflow     : hidden;
 }
 
 .ul-course-item-option-item {
-  display     : inline-block;
-  margin-right: 8px;
-  font-size   : 12px;
-  color       : #999;
+    display     : inline-block;
+    margin-right: 8px;
+    font-size   : 12px;
+    color       : #999;
 }
 
 .ul-course-item-poster:hover {
-  transform: scale(1.2)
+    transform: scale(1.2)
 }
 
 .ul-course-item-poster:hover .ul-course-item-tag {
-  display: none;
+    display: none;
 }
 
 .ul-course-item-poster-container {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .ul-avatar-sidebar-list-item {
-  display        : flex;
-  align-items    : center;
-  justify-content: flex-start;
-  margin-bottom  : 12px;
+    display        : flex;
+    align-items    : center;
+    justify-content: flex-start;
+    margin-bottom  : 12px;
 }
 
 .ul-avatar-sidebar-list-item-img {
-  width              : 58px;
-  height             : 58px;
-  border-radius      : 58px;
-  background-image   : url("/static/images/avatar.png");
-  background-size    : cover;
-  background-position: center;
+    width              : 58px;
+    height             : 58px;
+    border-radius      : 58px;
+    background-image   : url("/static/images/avatar.png");
+    background-size    : cover;
+    background-position: center;
 
 }
 
 .ul-avatar-sidebar-list-item-info {
-  margin-left: 10px;
+    margin-left: 10px;
 }
 
 .ul-avatar-sidebar-list-item-intro {
-  font-size  : 12px;
-  color      : #999;
-  line-height: 2;
+    font-size  : 12px;
+    color      : #999;
+    line-height: 2;
 }
 
 .ul-course-sidebar-item {
-  display        : flex;
-  padding        : 8px 0;
-  align-items    : center;
-  justify-content: flex-start;
+    display        : flex;
+    padding        : 8px 0;
+    align-items    : center;
+    justify-content: flex-start;
 }
 
 .ul-course-sidebar-item:not(:last-child) {
-  border-bottom: 1px dotted #999;
+    border-bottom: 1px dotted #999;
 }
 
 .ul-course-sidebar-item-poster {
-  height             : 50px;
-  width              : 80px;
-  background-size    : cover;
-  background-position: center;
+    height             : 50px;
+    width              : 80px;
+    background-size    : cover;
+    background-position: center;
 
 }
 
 .ul-course-sidebar-item-option-item {
-  display  : inline-block;
-  font-size: 12px;
-  color    : #999;
+    display  : inline-block;
+    font-size: 12px;
+    color    : #999;
 }
 
 .ul-course-sidebar-item-info {
-  margin-left: 8px;
+    margin-left: 8px;
 }
 
 .ul-course-sidebar-item-title {
-  line-height  : 2;
-  text-overflow: ellipsis;
-  white-space  : nowrap;
-  overflow     : hidden;
+    line-height  : 2;
+    text-overflow: ellipsis;
+    white-space  : nowrap;
+    overflow     : hidden;
 }
 
 body .layui-quote-gray {
-  background-color : #f0f0f0;
-  color            : #666;
-  border-left-color: #ddd;
+    background-color : #f0f0f0;
+    color            : #666;
+    border-left-color: #ddd;
 }
 
 
 .ul-doc-info-page-list {
-  padding: 15px;
-  color  : #999;
+    padding: 15px;
+    color  : #999;
 
 }
 
 .ul-doc-info-page-item {
-  line-height: 2;
-  padding    : 0 15px;
-  position   : relative;
+    line-height: 2;
+    padding    : 0 15px;
+    position   : relative;
 }
 
 .ul-doc-info-page-item.page {
-  cursor   : pointer;
-  font-size: 18px;
+    cursor   : pointer;
+    font-size: 18px;
 }
 
 .ul-doc-info-page-item.group {
-  color    : #bbb;
-  font-size: 16px;
+    color    : #bbb;
+    font-size: 16px;
 }
 
 .ul-doc-info-page-item.point {
-  color    : #eee;
-  font-size: 14px;
+    color    : #eee;
+    font-size: 14px;
 }
 
 .ul-doc-info-page-item.page:hover {
-  background-color: #555;
+    background-color: #555;
 }
 
 
 .ul-doc-info-page-item.level-0 {}
 
 .ul-doc-info-page-item.level-1 {
-  margin-left: 15px;
+    margin-left: 15px;
 }
 
 .ul-doc-info-page-item.level-2 {
-  margin-left: 30px;
+    margin-left: 30px;
 
 }
 
 .ul-doc-info-page-item.level-3 {
-  margin-left: 45px;
+    margin-left: 45px;
 
+}
+
+.ul-book-list {
+    display        : flex;
+    align-items    : flex-start;
+    justify-content: flex-start;
+    flex-wrap      : wrap;
+}
+
+.ul-book-item {
+    width          : 140px;
+    display        : flex;
+    align-items    : flex-start;
+    justify-content: space-between;
+    margin-bottom  : 15px;
+    margin-right   : 15px;
+    cursor         : pointer;
+}
+
+.ul-book-poster {
+    background-image      : url(../img/book-bg.png);
+    background-size       : cover;
+    background-position   : center;
+    width                 : 60px;
+    height                : 80px;
+    /* margin-right       : 15px; */
+}
+
+.ul-book-info {
+    position: relative;
+    height  : 80px;
+    width   : 75px;
+}
+
+.ul-book-title {
+    font-size    : 16px;
+    color        : #3e3a39;
+    margin-bottom: 6px;
+    font-weight  : 600;
+    line-height  : 1.5;
+}
+
+.ul-book-author {
+    font-size: 12px;
+    color    : #3e3a39;
+}
+
+.ul-book-status {
+    font-size: 12px;
+    color    : #99999a;
+    position : absolute;
+    bottom   : 0;
+    left     : 0;
+}
+
+.ul-book-list.big .ul-book-item {
+    width: 180px;
+}
+
+.ul-book-list.big .ul-book-poster {
+    width : 100px;
+    height: 140px;
+}
+
+.ul-book-list.big .ul-book-info {
+    height: 140px;
 }
