@@ -1324,6 +1324,11 @@ body .layui-quote-gray {
     margin-bottom  : 15px;
     margin-right   : 15px;
     cursor         : pointer;
+    border: 1px solid transparent;
+}
+
+.ul-book-item:hover{
+    border-color: #ddd;
 }
 
 .ul-book-poster {
@@ -1363,14 +1368,15 @@ body .layui-quote-gray {
 }
 
 .ul-book-list.big .ul-book-item {
-    width: 180px;
+    width: 240px;
 }
 
 .ul-book-list.big .ul-book-poster {
-    width : 100px;
-    height: 140px;
+    width : 120px;
+    height: 160px;
 }
 
 .ul-book-list.big .ul-book-info {
-    height: 140px;
+    height: 160px;
+    width: 110px;
 }
