@@ -1135,7 +1135,10 @@
 }
 
 .ul-course-list {
-    margin: -10px;
+    margin   : -10px;
+    font-size: 0;
+    display  : flex;
+    flex-wrap: wrap;
 }
 
 .ul-course-item {
@@ -1145,6 +1148,7 @@
     background-color: #fff;
     padding-bottom  : 12px;
     cursor          : pointer;
+    font-size       : 14px;
 }
 
 .ul-course-item-poster {
