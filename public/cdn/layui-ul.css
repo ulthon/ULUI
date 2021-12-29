@@ -234,6 +234,7 @@
 
 .ul-link-title {
     margin-right: 15px;
+    white-space : nowrap;
 }
 
 .ul-link-list {
@@ -245,9 +246,10 @@
 }
 
 .ul-link-item {
-    padding     : 0px 10px;
-    cursor      : pointer;
-    margin-right: 10px;
+    padding      : 0px 10px;
+    cursor       : pointer;
+    margin-right : 10px;
+    margin-bottom: 5px;
 }
 
 .ul-link-item.current {
@@ -1039,15 +1041,15 @@
 }
 
 .ul-nav-card-item-title {
-    font-size  : 14px;
-    color      : #253647;
-    font-weight: 700;
+    font-size    : 14px;
+    color        : #253647;
+    font-weight  : 700;
+    margin-bottom: 4px;
 }
 
 .ul-nav-card-item-desc {
-    line-height: 28px;
-    color      : #666;
-    font-size  : 12px;
+    color    : #666;
+    font-size: 12px;
 }
 
 .ul-nav-card-item.disabled .ul-nav-card-item-icon {
@@ -1163,6 +1165,7 @@
     position: absolute;
     right   : 8px;
     top     : 8px;
+    z-index : 9999;
 }
 
 .ul-course-item-info {
@@ -1187,12 +1190,13 @@
     transform: scale(1.2)
 }
 
-.ul-course-item-poster:hover .ul-course-item-tag {
+.ul-course-item-poster-container:hover .ul-course-item-tag {
     display: none;
 }
 
 .ul-course-item-poster-container {
     overflow: hidden;
+    position: relative;
 }
 
 .ul-avatar-sidebar-list-item {
@@ -1351,16 +1355,23 @@ body .layui-quote-gray {
 }
 
 .ul-book-title {
-    font-size    : 16px;
-    color        : #3e3a39;
-    margin-bottom: 6px;
-    font-weight  : 600;
-    line-height  : 1.5;
+    font-size         : 16px;
+    color             : #3e3a39;
+    margin-bottom     : 6px;
+    font-weight       : 600;
+    line-height       : 1.5;
+    word-break        : break-all;
+    text-overflow     : ellipsis;
+    display           : -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow          : hidden;
 }
 
 .ul-book-author {
-    font-size: 12px;
-    color    : #3e3a39;
+    font-size : 12px;
+    color     : #3e3a39;
+    word-break: break-all;
 }
 
 .ul-book-status {
@@ -1394,6 +1405,7 @@ body .layui-quote-gray {
     padding         : 10px;
     box-shadow      : 0px 1px 3px #bbb;
     background-color: #fff;
+    cursor          : pointer;
 }
 
 .ul-nav-button-icon {
