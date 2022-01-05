@@ -1427,3 +1427,50 @@ body .layui-quote-gray {
     color    : #666;
     font-size: 14px;
 }
+
+.ul-site-group {
+    margin-bottom: 4px;
+}
+
+.ul-site-list {
+    display        : flex;
+    align-items    : flex-start;
+    justify-content: flex-start;
+    flex-wrap      : wrap;
+    margin-top     : 8px;
+}
+
+.ul-site-item {
+    width          : 24%;
+    margin-right   : 1%;
+    display        : flex;
+    align-items    : flex-start;
+    justify-content: flex-start;
+    margin-bottom  : 14px;
+}
+
+.ul-site-item-logo {
+    width              : 24px;
+    height             : 24px;
+    margin-right       : 4px;
+    margin-top         : 4px;
+    background-size    : cover;
+    background-position: center;
+}
+
+
+.ul-site-item-info {
+    width: calc(100% - 34px);
+
+}
+
+.ul-site-item-title {
+    color          : #4662d9;
+    font-weight    : bold;
+    text-decoration: none;
+}
+
+.ul-site-item-desc {
+    font-size: 12px;
+    color    : #666;
+}
