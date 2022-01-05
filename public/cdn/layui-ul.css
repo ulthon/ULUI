@@ -1456,10 +1456,9 @@ body .layui-quote-gray {
 }
 
 .ul-site-item-logo {
-    width              : 24px;
-    height             : 24px;
+    width              : 30px;
+    height             : 30px;
     margin-right       : 4px;
-    margin-top         : 4px;
     background-size    : cover;
     background-position: center;
 }
