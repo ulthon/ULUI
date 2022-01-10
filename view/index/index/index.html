@@ -2,157 +2,186 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>{$model_post->title}-{:get_system_config('site_name')}</title>
-  {include file='common/_require'/}
-  <link rel="stylesheet" href="/static/lib/quill/quill.snow.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{$model_post->title}-{:get_system_config('site_name')}</title>
+    {include file='common/_require'/}
+    <link rel="stylesheet" href="/static/lib/quill/quill.snow.css">
 
-  <style>
-    .ql-editor {
-      padding: 15px 0;
-    }
-  </style>
+    <style>
+        .ql-editor {
+            padding: 15px 0;
+        }
+    </style>
 </head>
 
 <body>
 
-  <div class="layui-container">
-    <div class="layui-row ul-padding-md">
-      <div style="font-size: 22px;">
-        {:get_system_config('site_name')}
-      </div>
-      <div style="font-size: 18px;">
-        {:get_system_config('site_desc')}
-      </div>
-    </div>
-    <div class="layui-row layui-col-space6 " style="margin-top: 15px;">
-      <div class="layui-col-md3 ul-border-right">
-        <div class="ul-nav-tree ul-padding-md ">
+    <div class="layui-container">
+        <div class="layui-row ul-padding-md">
+            <div style="font-size: 22px;">
+                {:get_system_config('site_name')}
+            </div>
+            <div style="font-size: 18px;">
+                {:get_system_config('site_desc')}
+            </div>
+        </div>
+        <div class="layui-row layui-col-space6 " style="margin-top: 15px;">
+            <div class="layui-col-md3 ul-border-right">
+                <div class="ul-nav-tree ul-padding-md ">
 
-          {volist name='list_post' id='category'}
-          <div class="ul-nav-tree-group">
-            <div class="ul-nav-tree-group-title">
-              {$category.title}
-            </div>
-            <div class="ul-nav-tree-group-main">
-              {volist name='category.post' id='post'}
-              <a href="{:url('Index/index',['post_id'=>$post.id])}" class="ul-nav-tree-item {eq name='post.id' value='$Request.param.post_id'}current{/eq}">
-                <div class="ul-nav-tree-item-title">
-                  {$post.title}
+                    {volist name='list_post' id='category'}
+                    <div class="ul-nav-tree-group">
+                        <div class="ul-nav-tree-group-title">
+                            {$category.title}
+                        </div>
+                        <div class="ul-nav-tree-group-main">
+                            {volist name='category.post' id='post'}
+                            <a href="{:url('Index/index',['post_id'=>$post.id])}" class="ul-nav-tree-item {eq name='post.id' value='$Request.param.post_id'}current{/eq}">
+                                <div class="ul-nav-tree-item-title">
+                                    {$post.title}
+                                </div>
+                                <div class="ul-nav-tree-item-desc">
+                                    {$post.desc}
+                                </div>
+                            </a>
+                            {/volist}
+                        </div>
+                    </div>
+                    {/volist}
+
                 </div>
-                <div class="ul-nav-tree-item-desc">
-                  {$post.desc}
-                </div>
-              </a>
-              {/volist}
             </div>
-          </div>
-          {/volist}
+            <div class="layui-col-md9">
+                <div class="main-content ul-padding-md">
+                    <div class="">
+                        <span class="layui-breadcrumb" lay-separator="/">
+                            <a href="{:url('Index/index')}">首页</a>
+                            <a><cite>{$model_post->title}</cite></a>
+                        </span>
+                    </div>
+                    <div class="ql-snow">
+                        <div class="ql-editor">{$model_post->content_html|raw}</div>
+                    </div>
+                    <div class="demo-page">
+                        {$model_post->demo_page|raw}
+                    </div>
+
+
+                </div>
+                <div class="ul-padding-md">
+                    <script src='https://gitee.com/ulthon/layui-ul/widget_preview' async defer></script>
+                    <div id="osc-gitee-widget-tag"></div>
+                    <style>
+                        .osc_pro_color {
+                            color: #4183c4 !important;
+                        }
+
+                        .osc_panel_color {
+                            background-color: #ffffff !important;
+                        }
+
+                        .osc_background_color {
+                            background-color: #ffffff !important;
+                        }
+
+                        .osc_border_color {
+                            border-color: #e3e9ed !important;
+                        }
+
+                        .osc_desc_color {
+                            color: #666666 !important;
+                        }
+
+                        .osc_link_color * {
+                            color: #9b9b9b !important;
+                        }
+                    </style>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right-tips-container" style="display: none;">
+        <div class="ul-nav-min right-tips-nav" style="width: 160px;">
 
         </div>
-      </div>
-      <div class="layui-col-md9">
-        <div class="main-content ul-padding-md">
-          <div class="">
-            <span class="layui-breadcrumb" lay-separator="/">
-              <a href="{:url('Index/index')}">首页</a>
-              <a><cite>{$model_post->title}</cite></a>
-            </span>
-          </div>
-          <div class="ql-snow">
-            <div class="ql-editor">{$model_post->content_html|raw}</div>
-          </div>
-          <div class="demo-page">
-            {$model_post->demo_page|raw}
-          </div>
-
-
-        </div>
-      </div>
     </div>
-  </div>
-  <div class="right-tips-container" style="display: none;">
-    <div class="ul-nav-min right-tips-nav" style="width: 160px;">
-
+    <div class="tpl" style="display: none;">
+        <a class="ul-nav-min-item">
+            个人中心
+        </a>
     </div>
-  </div>
-  <div class="tpl" style="display: none;">
-    <a class="ul-nav-min-item">
-      个人中心
-    </a>
-  </div>
-  <script>
-    function renderRepeat(elem) {
-      $(elem).find('[data-repeat]').each(function () {
-        for (let index = 1; index < $(this).data('repeat'); index++) {
-          var clone = $(this).clone()
-          clone.insertAfter(this)
-          renderRepeat(clone)
+    <script>
+        function renderRepeat(elem) {
+            $(elem).find('[data-repeat]').each(function () {
+                for (let index = 1; index < $(this).data('repeat'); index++) {
+                    var clone = $(this).clone()
+                    clone.insertAfter(this)
+                    renderRepeat(clone)
+                }
+            })
         }
-      })
-    }
-    renderRepeat('body')
+        renderRepeat('body')
 
-    $('.demo-js-src').each(function () {
-      var html = $(this).html();
-      var htmlList = html.split(/[\n]/g);
-      var htmlListNew = []
-      var baseLineBlankNums = -1;
-      htmlList.forEach(function (htmlLine, htmlIndex) {
-        if (htmlIndex == 0 && htmlLine.length == 0) {
-          return true
+        $('.demo-js-src').each(function () {
+            var html = $(this).html();
+            var htmlList = html.split(/[\n]/g);
+            var htmlListNew = []
+            var baseLineBlankNums = -1;
+            htmlList.forEach(function (htmlLine, htmlIndex) {
+                if (htmlIndex == 0 && htmlLine.length == 0) {
+                    return true
+                }
+                if (baseLineBlankNums < 0) {
+                    var kong = htmlLine.match(/^ */g) //筛选
+                    if (kong != null) {
+                        baseLineBlankNums = kong[0].length
+                    } else {
+                        baseLineBlankNums = 0
+                    }
+                }
+
+                htmlListNew.push(htmlLine.slice(baseLineBlankNums))
+            });
+
+            $(this).siblings('pre.demo-js').text(htmlListNew.join("\n"))
+        })
+        layui.form.render()
+        layui.element.render()
+        layui.code({
+            encode: true
+        })
+        layui.util.fixbar()
+
+
+        $('.main-content h2,.main-content>.demo-page>fieldset>legend').each(function (index, elem) {
+
+            var id = 'title' + index;
+            $(elem).attr('id', id)
+
+            var navItem = $('.tpl .ul-nav-min-item').clone()
+            navItem.attr('href', '#' + id)
+            navItem.text($(elem).text())
+            navItem.appendTo('.right-tips-nav')
+        })
+
+        if ($('.right-tips-nav').children().length > 0) {
+            layer.open({
+                type: 1,
+                content: $('.right-tips-container'),
+                title: '目录',
+                offset: 'r',
+                closeBtn: 0,
+                shade: 0,
+                success(layero) {
+                    $(layero).css('margin-left', '-15px')
+                }
+            })
         }
-        if (baseLineBlankNums < 0) {
-          var kong = htmlLine.match(/^ */g) //筛选
-          if (kong != null) {
-            baseLineBlankNums = kong[0].length
-          } else {
-            baseLineBlankNums = 0
-          }
-        }
-
-        htmlListNew.push(htmlLine.slice(baseLineBlankNums))
-      });
-
-      $(this).siblings('pre.demo-js').text(htmlListNew.join("\n"))
-    })
-    layui.form.render()
-    layui.element.render()
-    layui.code({
-      encode: true
-    })
-    layui.util.fixbar()
 
 
-    $('.main-content h2,.main-content>.demo-page>fieldset>legend').each(function (index, elem) {
-
-      var id = 'title' + index;
-      $(elem).attr('id', id)
-
-      var navItem = $('.tpl .ul-nav-min-item').clone()
-      navItem.attr('href', '#' + id)
-      navItem.text($(elem).text())
-      navItem.appendTo('.right-tips-nav')
-    })
-
-    if ($('.right-tips-nav').children().length > 0) {
-      layer.open({
-        type: 1,
-        content: $('.right-tips-container'),
-        title: '目录',
-        offset: 'r',
-        closeBtn: 0,
-        shade: 0,
-        success(layero){
-          $(layero).css('margin-left','-15px')
-        }
-      })
-    }
-
-
-  </script>
+    </script>
 </body>
 
 </html>
