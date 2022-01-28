@@ -1480,6 +1480,16 @@ body .layui-quote-gray {
     color    : #666;
 }
 
+@media screen and (max-width:450px) {
+    .ul-site-item{
+        width: 49%;
+    }
+    .ul-site-item-desc{
+        font-size: 11px;
+        margin-top: 3px;
+    }
+}
+
 .ul-timeline-rowstyle {
     display   : flex;
     flex-wrap : nowrap;
