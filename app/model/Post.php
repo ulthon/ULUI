@@ -6,6 +6,7 @@ namespace app\model;
 
 use think\facade\App;
 use think\facade\Cache;
+use think\facade\Request;
 use think\facade\View;
 use think\Model;
 use think\model\concern\SoftDelete;
@@ -15,185 +16,207 @@ use think\model\concern\SoftDelete;
  */
 class Post extends Model
 {
-  //
+    //
 
-  public static $stausNameList = [
-    0 => '不发布',
-    1 => '发布'
-  ];
+    public static $stausNameList = [
+        0 => '不发布',
+        1 => '发布'
+    ];
 
-  use SoftDelete;
+    use SoftDelete;
 
-  protected $defaultSoftDelete = 0;
+    protected $defaultSoftDelete = 0;
 
-  public function category()
-  {
-    return $this->belongsTo(Category::class, 'category_id');
-  }
-
-  public function categorys()
-  {
-    return $this->hasMany(PostCategory::class, 'post_id');
-  }
-
-  public function tags()
-  {
-    return $this->hasMany(PostTag::class, 'post_id');
-  }
-
-  public function setPublishTimeAttr($value)
-  {
-    return strtotime($value);
-  }
-  public function getPublishTimeTextAttr()
-  {
-
-    $value = $this->getData('publish_time');
-    return date('Y-m-d', $value);
-  }
-  public function getPublishTimeDatetimeAttr()
-  {
-
-    $value = $this->getData('publish_time');
-    return date('Y-m-d H:i:s', $value);
-  }
-
-  public function getCategorysListAttr()
-  {
-    $list_post_categorys = $this->getAttr('categorys');
-
-    $list = array_column($list_post_categorys->append(['category'])->toArray(), 'category');
-
-    $list = array2level($list, 0, 0);
-
-    return $list;
-  }
-
-  public function getTagsListAttr()
-  {
-    $list_post_tags = $this->getAttr('tags');
-
-    $list = array_column($list_post_tags->append(['tag'])->toArray(), 'tag');
-
-    return $list;
-  }
-
-  public function getDescShortAttr()
-  {
-    $desc = $this->getData('desc');
-
-    if (strlen($desc) > 100) {
-      $desc = mb_substr($desc, 0, 100) . '...';
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'category_id');
     }
 
-    return $desc;
-  }
-
-  public function getDescListAttr()
-  {
-    $desc = $this->getData('desc');
-
-    if (empty($desc)) {
-      return '';
-    }
-    $list = explode("\n", $desc);
-
-    return $list;
-  }
-
-  public function getDescHtmlAttr()
-  {
-    $desc = $this->getData('desc');
-
-    if (empty($desc)) {
-      return '';
+    public function categorys()
+    {
+        return $this->hasMany(PostCategory::class, 'post_id');
     }
 
-    return str_replace("\n", '<br>', $desc);
-  }
-
-  public function getStatusNameAttr()
-  {
-    return self::$stausNameList[$this->getData('status')];
-  }
-
-  public function setPubishTimeAttr($value)
-  {
-    return strtotime($value);
-  }
-
-  public function setContentAttr($value)
-  {
-    return json_encode($value);
-  }
-  public function setContentHtmlAttr($value)
-  {
-    return trim($value);
-  }
-
-  public function getContentAttr($value)
-  {
-    return json_decode($value, true);
-  }
-
-  public function getPosterAttr($value)
-  {
-    if (empty($value)) {
-      $value = '/static/images/avatar.png';
+    public function tags()
+    {
+        return $this->hasMany(PostTag::class, 'post_id');
     }
 
-    return get_source_link($value);
-  }
+    public function setPublishTimeAttr($value)
+    {
+        return strtotime($value);
+    }
+    public function getPublishTimeTextAttr()
+    {
 
-  public function getDemoPageAttr()
-  {
-    if (empty($this->getData('tpl_name'))) {
-      return '';
+        $value = $this->getData('publish_time');
+        return date('Y-m-d', $value);
+    }
+    public function getPublishTimeDatetimeAttr()
+    {
+
+        $value = $this->getData('publish_time');
+        return date('Y-m-d H:i:s', $value);
     }
 
-    $base_dir = App::getRootPath() . '/demo/' . $this->getAttr('category')->getData('tpl_name') . '/';
+    public function getCategorysListAttr()
+    {
+        $list_post_categorys = $this->getAttr('categorys');
 
-    $file_path = $base_dir . $this->getData('tpl_name') . '.html';
-    
-    if (!file_exists($file_path)) {
-      return '';
+        $list = array_column($list_post_categorys->append(['category'])->toArray(), 'category');
+
+        $list = array2level($list, 0, 0);
+
+        return $list;
     }
 
-    View::assign('site_logo_src', get_source_link(get_system_config('site_logo')));
+    public function getTagsListAttr()
+    {
+        $list_post_tags = $this->getAttr('tags');
 
-    return View::fetch($file_path);
-  }
+        $list = array_column($list_post_tags->append(['tag'])->toArray(), 'tag');
 
-  public static function quickSelect($clear = false)
-  {
-    $cacke_key = 'post_list';
-
-    $list_post = Cache::get($cacke_key);
-
-    if (empty($list_post) || $clear) {
-
-      $list_post = Category::with(['post'])->where('type', 'default')
-        ->where('status', 1)
-        ->order('sort asc')
-        ->select();
-
-      Cache::set($cacke_key, $list_post, 600);
+        return $list;
     }
 
-    return $list_post;
-  }
+    public function getDescShortAttr()
+    {
+        $desc = $this->getData('desc');
 
-  public static function quickFind($id, $clear = false)
-  {
-    $cache_key = 'post_' . $id;
+        if (strlen($desc) > 100) {
+            $desc = mb_substr($desc, 0, 100) . '...';
+        }
 
-    $model_post = Cache::get($cache_key);
-
-    if (empty($model_post) || $clear) {
-      $model_post = Post::find($id);
-      Cache::set($cache_key, $model_post, get_system_config('cache_expire_time'));
+        return $desc;
     }
 
-    return $model_post;
-  }
+    public function getDescListAttr()
+    {
+        $desc = $this->getData('desc');
+
+        if (empty($desc)) {
+            return '';
+        }
+        $list = explode("\n", $desc);
+
+        return $list;
+    }
+
+    public function getDescHtmlAttr()
+    {
+        $desc = $this->getData('desc');
+
+        if (empty($desc)) {
+            return '';
+        }
+
+        return str_replace("\n", '<br>', $desc);
+    }
+
+    public function getStatusNameAttr()
+    {
+        return self::$stausNameList[$this->getData('status')];
+    }
+
+    public function setPubishTimeAttr($value)
+    {
+        return strtotime($value);
+    }
+
+    public function setContentAttr($value)
+    {
+        return json_encode($value);
+    }
+    public function setContentHtmlAttr($value)
+    {
+        return trim($value);
+    }
+
+    public function getContentAttr($value)
+    {
+        return json_decode($value, true);
+    }
+
+    public function getPosterAttr($value)
+    {
+        if (empty($value)) {
+            $value = '/static/images/avatar.png';
+        }
+
+        return get_source_link($value);
+    }
+
+    public function getDemoPageAttr()
+    {
+        if (empty($this->getData('tpl_name'))) {
+            return '';
+        }
+
+        $base_dir = App::getRootPath() . '/demo/' . $this->getAttr('category')->getData('tpl_name') . '/';
+
+        $file_path = $base_dir . $this->getData('tpl_name') . '.html';
+
+        if (!file_exists($file_path)) {
+            return '';
+        }
+
+        View::assign('site_logo_src', get_source_link(get_system_config('site_logo')));
+
+        return View::fetch($file_path);
+    }
+
+    public static function quickSelect($clear = false)
+    {
+        $cacke_key = 'post_list';
+
+        $list_post = Cache::get($cacke_key);
+
+        if (empty($list_post) || $clear) {
+
+            $list_post = Category::with(['post'])->where('type', 'default')
+                ->where('status', 1)
+                ->order('sort asc')
+                ->select();
+
+            Cache::set($cacke_key, $list_post, 600);
+        }
+
+        return $list_post;
+    }
+
+    public static function quickFind($id, $clear = false)
+    {
+        $cache_key = 'post_item_' . $id;
+
+        $model_post = Cache::get($cache_key);
+
+        if (empty($model_post) || $clear) {
+            $model_post = Post::find($id);
+            Cache::set($cache_key, $model_post, get_system_config('cache_expire_time'));
+        }
+
+        return $model_post;
+    }
+    public static function quickFindByTplName($tpl_name, $clear = false)
+    {
+        $cache_key = 'post_item_' . $tpl_name;
+
+        $model_post = Cache::get($cache_key);
+
+        if (empty($model_post) || $clear) {
+            $model_post = Post::where('tpl_name', $tpl_name)->find();
+
+            Cache::set($cache_key, $model_post, get_system_config('cache_expire_time'));
+        }
+        return $model_post;
+    }
+
+    public function getReadUrlAttr()
+    {
+        $domain = Request::domain();
+
+        $doc_name = $this->getData('tpl_name') ?: $this->getData('id');
+
+        return $domain . '/index/doc/' . $doc_name . '.html';
+    }
 }

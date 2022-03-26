@@ -38,7 +38,7 @@
                         </div>
                         <div class="ul-nav-tree-group-main">
                             {volist name='category.post' id='post'}
-                            <a href="{:url('Index/index',['post_id'=>$post.id])}" class="ul-nav-tree-item {eq name='post.id' value='$Request.param.post_id'}current{/eq}">
+                            <a href="{$post.read_url}" class="ul-nav-tree-item {eq name='post.id' value='$model_post.id'}current{/eq}">
                                 <div class="ul-nav-tree-item-title">
                                     {$post.title}
                                 </div>

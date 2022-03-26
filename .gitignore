@@ -6,3 +6,5 @@
 ul.db
 composer.lock
 public/upload/*
+/public/cdn/layui-ul.css
+/public/cdn/layui-ul.css.map

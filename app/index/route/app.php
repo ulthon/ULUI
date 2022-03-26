@@ -2,4 +2,4 @@
 
 use think\facade\Route;
 
-Route::rule('doc/[:post_id]','Index/index');
+Route::rule('doc/[:doc_name]','Index/index');
