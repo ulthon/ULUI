@@ -80,6 +80,6 @@ class System extends Common
     {
       Cache::clear();
 
-      return $this->success('清楚成功');
+      return $this->success('清除成功');
     }
 }

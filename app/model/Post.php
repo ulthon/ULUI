@@ -155,7 +155,6 @@ class Post extends Model
         $base_dir = App::getRootPath() . '/demo/' . $this->getAttr('category')->getData('tpl_name') . '/';
 
         $file_path = $base_dir . $this->getData('tpl_name') . '.html';
-
         if (!file_exists($file_path)) {
             return '';
         }
@@ -191,7 +190,7 @@ class Post extends Model
         $model_post = Cache::get($cache_key);
 
         if (empty($model_post) || $clear) {
-            $model_post = Post::find($id);
+            $model_post = Post::with(['category'], 'left')->find($id);
             Cache::set($cache_key, $model_post, get_system_config('cache_expire_time'));
         }
 
@@ -204,7 +203,7 @@ class Post extends Model
         $model_post = Cache::get($cache_key);
 
         if (empty($model_post) || $clear) {
-            $model_post = Post::where('tpl_name', $tpl_name)->find();
+            $model_post = Post::with(['category'], 'left')->where('tpl_name', $tpl_name)->find();
 
             Cache::set($cache_key, $model_post, get_system_config('cache_expire_time'));
         }
