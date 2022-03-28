@@ -1,0 +1,30 @@
+/* 附带说明垂直导航 */
+.ul-nav-tree {}
+
+.ul-nav-tree-group-title {
+    font-size  : 16px;
+    font-weight: 600;
+    line-height: 2;
+}
+
+.ul-nav-tree-item {
+    display    : flex;
+    align-items: baseline;
+    cursor     : pointer;
+    padding    : 5px;
+    white-space: nowrap;
+}
+
+.ul-nav-tree-item.current .ul-nav-tree-item-title {
+    color: #6cf;
+}
+
+.ul-nav-tree-item-title {
+    font-size: 15px;
+}
+
+.ul-nav-tree-item-desc {
+    font-size  : 14px;
+    color      : #999;
+    margin-left: 15px;
+}

@@ -8,3 +8,5 @@ composer.lock
 public/upload/*
 /public/cdn/layui-ul.css
 /public/cdn/layui-ul.css.map
+/public/cdn/layui-ul.min.css
+/public/cdn/layui-ul.min.css.map

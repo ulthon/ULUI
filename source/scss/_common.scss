@@ -1,0 +1,51 @@
+/* 通用类开始 */
+.ul-padding-md {
+    padding: 15px;
+}
+
+.ul-section {
+    margin-bottom: 15px;
+}
+
+.ul-icon-exit {
+    display            : inline-block;
+    width              : 16px;
+    height             : 16px;
+    background-image   : url("img/exit.png");
+    background-size    : cover;
+    background-position: center;
+}
+
+.ul-border-right {
+    border-right: 1px solid #bbb;
+}
+
+.ul-bg-white {
+    background-color: #fff;
+}
+
+.ul-bg-gray {
+    background-color: #eee;
+}
+
+.ul-bg-black {
+
+    background-color: #393D49;
+}
+
+.ul-color-main {
+    color: #6cf !important;
+}
+
+.ul-common-flex-list {
+    display  : flex;
+    flex-wrap: wrap;
+}
+
+.ul-common-flex-sb {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+}
+
+/* 通用类结束 */
