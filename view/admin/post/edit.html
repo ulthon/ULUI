@@ -240,25 +240,25 @@
       quill.on('selection-change', function (range, oldRange, source) {
         if (range) {
           if (range.length == 0) {
-            console.log('User cursor is on', range.index);
+            // console.log('User cursor is on', range.index);
           } else {
             var text = quill.getText(range.index, range.length);
-            console.log('User has highlighted', text);
+            // console.log('User has highlighted', text);
           }
           currentRange = range;
-          console.log(currentRange);
+        //   console.log(currentRange);
 
         } else {
-          console.log('Cursor not in the editor');
+        //   console.log('Cursor not in the editor');
         }
       });
 
       quill.on('text-change', function (delta, oldDelta, source) {
         currentRange.index = delta.ops[0].retain
         if (source == 'api') {
-          console.log("An API call triggered this change.");
+        //   console.log("An API call triggered this change.");
         } else if (source == 'user') {
-          console.log("A user action triggered this change.");
+        //   console.log("A user action triggered this change.");
         }
 
         if (currentSecond - lastUpdateSecond > 30) {
@@ -335,7 +335,7 @@
         formData.content = quill.getContents().ops
         formData.content_html = $('#editor .ql-editor').html()
 
-        console.log(formData);
+        // console.log(formData);
 
         $.post('{:url("update")}', formData, function (result) {
 

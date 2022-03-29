@@ -1,0 +1,38 @@
+/* 简约风格Form */
+.ul-form-basic {
+    .layui-form-item {
+        clear: unset;
+    }
+
+    .layui-form-label {
+        float     : unset;
+        width     : unset;
+        text-align: left;
+        padding   : 5px 0;
+        font-size : 14px;
+        color     : #000;
+    }
+
+    .layui-input-block {
+        margin-left: unset;
+    }
+
+    .layui-input {
+        padding: 4px 11px;
+        height : unset;
+    }
+
+    .layui-form-mid {
+        padding: 4px 0 !important
+    }
+
+    .layui-form-select dl {
+        top: 28px;
+    }
+
+    .layui-form-select dl dd,
+    .layui-form-select dl dt {
+        height: 30px
+    }
+
+}
