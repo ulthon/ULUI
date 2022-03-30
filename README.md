@@ -66,7 +66,7 @@ ulthon扩展的layui样式库.
 
 #### 运行站点
 
-本站是基于ulthon_admin开发的,它是ThinkPHP6的项目,你需要掌握相关基础才行.
+本站是基于ulthon_admin开发的,它是ThinkPHP6的项目,你需要掌握相关基础才行.实际上是一个CMS站点.
 
 > 如果你只希望修改组件样式的话,只关注`source/scss`目录下的文件就可以了
 
