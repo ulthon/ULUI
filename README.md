@@ -20,11 +20,9 @@ ulthon扩展的layui样式库.
 
 只需要引入文件即可:
 ```
-//layui.ulthon.com/cdn/layui-ul-change.css
 //layui.ulthon.com/cdn/layui-ul.css
 
 比如:
-<link rel="stylesheet" href="//layui.ulthon.com/cdn/layui-ul-change.css">
 <link rel="stylesheet" href="//layui.ulthon.com/cdn/layui-ul.css">
 ```
 > 最近刚刚做了一个vue+elementui的项目,使用了这个样式库,没有任何不适
@@ -40,6 +38,54 @@ ulthon扩展的layui样式库.
 ### 收藏组件
 
 [![gm6rqS.png](https://z3.ax1x.com/2021/05/03/gm6rqS.png)](https://imgtu.com/i/gm6rqS)
+
+### 开发说明
+
+本站是一个基于ulthon_admin的官网项目,有关样式的代码在`source/scss`目录下.
+
+关于样式组件,目前开始使用`scss`重构开发.
+
+推荐使用vscode开发,安装`Live Sass Compiler`扩展并启用以下配置:
+在项目目录下创建配置文件`.vscode/settings.json`;
+```
+{
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": "/public/cdn/"
+        },
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/public/cdn/"
+        },
+    ]
+}
+```
+
+#### 运行站点
+
+本站是基于ulthon_admin开发的,它是ThinkPHP6的项目,你需要掌握相关基础才行.
+
+> 如果你只希望修改组件样式的话,只关注`source/scss`目录下的文件就可以了
+
+```
+git clone https://gitee.com/ulthon/layui-ul.git
+
+cd layui-ul
+
+composer install
+
+php think migrate:run
+
+php think seed:run
+
+php think run
+
+```
+此时可以访问:127.0.0.1:8000
+
 
 
 ### 参与贡献
