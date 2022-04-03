@@ -1,7 +1,9 @@
 /* 简约风格Form */
 .ul-form-basic {
+
     .layui-form-item {
-        clear: unset;
+        clear        : unset;
+        margin-bottom: 5px;
     }
 
     .layui-form-label {
@@ -15,6 +17,7 @@
 
     .layui-input-block {
         margin-left: unset;
+        min-height : 30px;
     }
 
     .layui-input {
