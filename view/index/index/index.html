@@ -129,7 +129,7 @@
 
         $('.main-content h2,.main-content>.demo-page>fieldset').each(function (index, elem) {
             if ($(elem).find('.demo-js-src').length == 0) {
-                $(elem).find('.layui-field-box').addClass('demo-js-src').css('display', 'block');
+                $(elem).children('.layui-field-box').addClass('demo-js-src').css('display', 'block');
             }
         })
         $('.main-content h2,.main-content>.demo-page>fieldset>legend').each(function (index, elem) {
