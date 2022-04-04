@@ -123,48 +123,15 @@
         </a>
     </div>
     <script>
-        function renderRepeat(elem) {
-            $(elem).find('[data-repeat]').each(function () {
-                for (let index = 1; index < $(this).data('repeat'); index++) {
-                    var clone = $(this).clone()
-                    clone.insertAfter(this)
-                    renderRepeat(clone)
-                }
-            })
-        }
-        renderRepeat('body')
 
-        $('.demo-js-src').each(function () {
-            var html = $(this).html();
-            var htmlList = html.split(/[\n]/g);
-            var htmlListNew = []
-            var baseLineBlankNums = -1;
-            htmlList.forEach(function (htmlLine, htmlIndex) {
-                if (htmlIndex == 0 && htmlLine.length == 0) {
-                    return true
-                }
-                if (baseLineBlankNums < 0) {
-                    var kong = htmlLine.match(/^ */g) //筛选
-                    if (kong != null) {
-                        baseLineBlankNums = kong[0].length
-                    } else {
-                        baseLineBlankNums = 0
-                    }
-                }
 
-                htmlListNew.push(htmlLine.slice(baseLineBlankNums))
-            });
 
-            $(this).siblings('pre.demo-js').text(htmlListNew.join("\n"))
+
+        $('.main-content h2,.main-content>.demo-page>fieldset').each(function (index, elem) {
+            if ($(elem).find('.demo-js-src').length == 0) {
+                $(elem).find('.layui-field-box').addClass('demo-js-src').css('display', 'block');
+            }
         })
-        layui.form.render()
-        layui.element.render()
-        layui.code({
-            encode: true
-        })
-        layui.util.fixbar()
-
-
         $('.main-content h2,.main-content>.demo-page>fieldset>legend').each(function (index, elem) {
 
             var id = 'title' + index;
@@ -189,7 +156,54 @@
                 }
             })
         }
+        function renderRepeat(elem) {
+            $(elem).find('[data-repeat]').each(function () {
+                for (let index = 1; index < $(this).data('repeat'); index++) {
+                    var clone = $(this).clone()
+                    clone.insertAfter(this)
+                    renderRepeat(clone)
+                }
+            })
+        }
 
+
+
+
+        $('.demo-js-src').each(function () {
+            var html = $(this).html();
+            var htmlList = html.split(/[\n]/g);
+            var htmlListNew = []
+            var baseLineBlankNums = -1;
+            htmlList.forEach(function (htmlLine, htmlIndex) {
+                if (htmlIndex == 0 && htmlLine.length == 0) {
+                    return true
+                }
+                if (baseLineBlankNums < 0) {
+                    var kong = htmlLine.match(/^ */g) //筛选
+                    if (kong != null) {
+                        baseLineBlankNums = kong[0].length
+                    } else {
+                        baseLineBlankNums = 0
+                    }
+                }
+
+                htmlListNew.push(htmlLine.slice(baseLineBlankNums))
+            });
+            var contentCode = htmlListNew.join("\n");
+            if ($(this).siblings('pre.demo-js').length == 0) {
+                $('<pre class="layui-code demo-js"></pre>').insertAfter(this);
+            }
+            $(this).siblings('pre.demo-js').text(contentCode)
+        })
+
+        renderRepeat('body')
+
+        layui.form.render()
+        layui.element.render()
+        layui.code({
+            encode: true
+        })
+        layui.util.fixbar()
 
     </script>
 </body>
