@@ -1,0 +1,42 @@
+.ul-card-message {
+
+
+    border-radius   : 10px 10px 0 0;
+    background-color: #fff;
+
+    .header {
+        padding        : 15px;
+        display        : flex;
+        align-items    : center;
+        justify-content: space-between;
+        font-size      : 14px;
+        font-weight    : 600;
+        border-bottom  : 2px solid #eee;
+    }
+
+    .body {
+        padding: 15px;
+
+        .item {
+            display        : flex;
+            align-items    : flex-start;
+            justify-content: flex-start;
+            line-height    : 2;
+
+            .item-title {
+                width: 90px;
+                color: #999;
+            }
+
+            .item-value {
+                white-space: normal;
+                width      : calc(100% - 90px);
+            }
+        }
+    }
+
+    .footer {
+        text-align: right;
+        padding   : 15px
+    }
+}
