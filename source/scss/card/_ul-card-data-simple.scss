@@ -5,8 +5,8 @@
     background-color: #fff;
 
     .item {
-        padding: 15px;
-
+        margin    : 15px 0;
+        padding   : 0 15px;
         text-align: left;
 
         .item-title {
@@ -32,5 +32,9 @@
         .item-rate.down {
             color: #1E9FFF;
         }
+    }
+
+    .item.line {
+        border-right: 1px solid #eee;
     }
 }
