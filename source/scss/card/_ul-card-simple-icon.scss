@@ -1,0 +1,29 @@
+.ul-card-simple-icon {
+    display         : inline-block;
+    margin-right    : 15px;
+    margin-bottom   : 15px;
+    box-shadow      : 0 2px 12px 0 #bbb;
+    border-radius   : 4px;
+    border          : 1px solid #ebeef5;
+    background-color: #fff;
+    box-sizing      : border-box;
+    width           : 100px;
+    padding         : 10px;
+
+    text-align: center;
+
+    .ul-card-simple-icon-image {
+        width              : 80px;
+        height             : 80px;
+        background-size    : cover;
+        background-position: center;
+        display            : inline-block;
+    }
+
+    .ul-card-simple-icon-title {
+        border-top : 2px solid #ebeef5;
+        margin-top : 8px;
+        padding-top: 8px;
+    }
+
+}
