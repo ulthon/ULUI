@@ -129,7 +129,10 @@
 
         $('.main-content h2,.main-content>.demo-page>fieldset').each(function (index, elem) {
             if ($(elem).find('.demo-js-src').length == 0) {
-                $(elem).children('.layui-field-box').addClass('demo-js-src').css('display', 'block');
+                $(elem).children('.layui-field-box')
+                    .addClass('demo-js-src')
+                    .css('display', 'block')
+                    .data('title', $(elem).children('legend').text());
             }
         })
         $('.main-content h2,.main-content>.demo-page>fieldset>legend').each(function (index, elem) {
@@ -191,7 +194,8 @@
             });
             var contentCode = htmlListNew.join("\n");
             if ($(this).siblings('pre.demo-js').length == 0) {
-                $('<pre class="layui-code demo-js"></pre>').insertAfter(this);
+                var title = $(this).data('title');
+                $('<pre  class="layui-code demo-js" lay-title="' + title + '"></pre>').insertAfter(this);
             }
             $(this).siblings('pre.demo-js').text(contentCode)
         })
