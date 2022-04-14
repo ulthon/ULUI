@@ -1,0 +1,39 @@
+.ul-form-space-between {
+    .layui-form-item {
+        display        : flex;
+        align-items    : flex-start;
+        justify-content: space-between;
+        border-bottom  : 2px solid #eee;
+
+        &::after {
+            content: unset
+        }
+
+        &:last-child {
+            border: unset;
+        }
+
+        .layui-form-label {
+            text-align: left;
+            float     : unset;
+        }
+
+        .layui-input-block {
+            margin-left: unset;
+            width      : 60%;
+            text-align : right;
+
+        }
+
+        .layui-input {
+            border    : unset;
+            text-align: right;
+        }
+
+        .layui-form-mid {
+            text-align: right;
+            display   : block;
+            float     : unset
+        }
+    }
+}
