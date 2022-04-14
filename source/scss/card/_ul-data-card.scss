@@ -1,0 +1,51 @@
+.ul-data-card {
+    margin       : 15px;
+    padding      : 15px;
+    box-shadow   : 0 0 3px #bbb;
+    border-radius: 5px;
+
+    .header {
+        display        : flex;
+        align-items    : center;
+        justify-content: space-between;
+        padding-bottom : 10px;
+        border-bottom  : 1px solid #eee;
+
+    }
+
+    .body {
+        padding: 10px 0;
+
+        .main {
+            display        : flex;
+            align-items    : flex-start;
+            justify-content: flex-start;
+            flex-wrap      : wrap;
+
+            .item {
+                min-width    : 50%;
+                display      : flex;
+                align-items  : center;
+                margin-bottom: 10px;
+
+                .item-title {
+                    font-size  : 14px;
+                    font-weight: 600;
+                }
+
+                .item-value {
+                    font-size: 14px;
+                }
+            }
+        }
+
+    }
+
+    .footer {
+        border-top     : 1px solid #eee;
+        padding-top    : 10px;
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center
+    }
+}
