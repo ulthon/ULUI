@@ -1,0 +1,22 @@
+.jumbotron {
+    padding   : 15px;
+    text-align: center;
+
+    .main {
+        margin    : 20px auto;
+        max-width : 800px;
+        text-align: center;
+
+        .title {
+            font-size  : 32px;
+            font-weight: 600;
+
+        }
+
+        .desc {
+            font-size  : 18px;
+            line-height: 1.8;
+            margin     : 25px auto;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.jumbotron {
+    &.left {
+        .main {
+            text-align : left;
+            max-width  : auto;
+            margin-left: 30px;
+
+            .desc {
+                max-width: 60%;
+                margin: 25px auto 25px 0;
+            }
+        }
+    }
+
+}
