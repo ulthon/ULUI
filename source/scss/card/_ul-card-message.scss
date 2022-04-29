@@ -16,12 +16,13 @@
 
     .body {
         padding: 15px;
-
+        padding-bottom: 0;
         .item {
             display        : flex;
             align-items    : flex-start;
             justify-content: flex-start;
-            line-height    : 2;
+            line-height    : 1.8;
+            margin-bottom  : 10px;
 
             .item-title {
                 width: 90px;
