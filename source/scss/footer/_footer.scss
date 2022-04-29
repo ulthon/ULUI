@@ -1,0 +1,37 @@
+.ul-footer {
+    background-color: #333;
+    color           : #fff;
+}
+
+.ul-footer .container {
+    display: flex;
+    margin : 0 auto;
+    padding: 40px 0;
+}
+
+.ul-footer .logo {
+    width: 120px;
+}
+
+.ul-footer .container>div {
+    padding: 0 25px;
+}
+
+.ul-footer .container>div:not(:last-child) {
+    border-right: 1px solid #555;
+}
+
+.ul-footer .ul-footer-nav a {
+    color      : #fff;
+    margin     : 5px 10px;
+    font-weight: 600;
+}
+
+.ul-footer .ul-footer-link a {
+    color : #ddd;
+    margin: 5px 10px;
+}
+
+.ul-footer p {
+    margin-top: 5px;
+}
