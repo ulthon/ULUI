@@ -60,7 +60,8 @@ ulthon扩展的layui样式库.
             "extensionName": ".css",
             "savePath": "/public/cdn/"
         },
-    ]
+    ],
+    "liveSassCompile.settings.generateMap": false
 }
 ```
 
