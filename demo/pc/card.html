@@ -399,3 +399,85 @@
         </div>
     </div>
 </fieldset>
+
+<fieldset class="layui-elem-field layui-field-title">
+    <legend>文件预览卡片</legend>
+    <div class="layui-field-box">
+        <blockquote class="layui-elem-quote">注意：需要引入font awesome 字体文件</blockquote>
+        <div class="demo-js-src" style="display: block;">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+            {volist name='[
+            "file",
+            "excel",
+            "zip",
+            "word",
+            "pdf",
+            "powerpoint",
+            "audio",
+            "code",
+            "image",
+            "video",
+            "text",
+            ]' id='file'}<div class="ul-card-file ul-inline-block">
+                <div class="main">
+                    <div class="info">
+                        <div class="name">
+                            核弹制作与发射 从入门到精通
+                        </div>
+                        <div class="desc">
+                            75GB
+                        </div>
+                    </div>
+                    <div class="icon {$file}">
+                        <i class="fa fa-file-{$file}-o"></i>
+                    </div>
+                </div>
+                <div class="footer">
+                    <span>来自ulthon邮箱</span>
+                    <span>2022年6月24日</span>
+                </div>
+            </div>
+            {/volist}
+            <div class="ul-card-file ul-inline-block">
+                <div class="main">
+                    <div class="info">
+                        <div class="name">
+                            核弹制作与发射 从入门到精通
+                        </div>
+                        <div class="desc">
+                            75GB
+                        </div>
+                    </div>
+                    <div class="icon file">
+                        <i class="fa fa-file-o"></i>
+                    </div>
+                </div>
+                <div class="footer">
+                    <span>来自ulthon邮箱</span>
+                    <span>2022年6月24日</span>
+                </div>
+            </div>
+
+            <div class="ul-card-file ul-inline-block">
+                <div class="main">
+                    <div class="info">
+                        <div class="name">
+                            核弹制作与发射 从入门到精通
+                        </div>
+                        <div class="desc">
+                            75GB
+                        </div>
+                    </div>
+                    <div class="icon link">
+                        <i class="fa fa-link"></i>
+                    </div>
+                </div>
+                <div class="footer">
+                    <span>来自ulthon邮箱</span>
+                    <span>2022年6月24日</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</fieldset>

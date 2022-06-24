@@ -124,9 +124,6 @@
     </div>
     <script>
 
-
-
-
         $('.main-content h2,.main-content>.demo-page>fieldset').each(function (index, elem) {
             if ($(elem).find('.demo-js-src').length == 0) {
                 $(elem).children('.layui-field-box')
@@ -195,6 +192,10 @@
             var contentCode = htmlListNew.join("\n");
             if ($(this).siblings('pre.demo-js').length == 0) {
                 var title = $(this).data('title');
+
+                if (!title) {
+                    title = $(this).closest('fieldset').find('legend').text();
+                }
                 $('<pre  class="layui-code demo-js" lay-title="' + title + '"></pre>').insertAfter(this);
             }
             $(this).siblings('pre.demo-js').text(contentCode)

@@ -31,13 +31,14 @@ ulthon扩展的layui样式库.
 
 ### 部分组件展示
 
-[![gmyXDS.png](https://z3.ax1x.com/2021/05/03/gmyXDS.png)](https://imgtu.com/i/gmyXDS)
-[![gmyINd.png](https://z3.ax1x.com/2021/05/03/gmyINd.png)](https://imgtu.com/i/gmyINd)
-[![gmyH3t.png](https://z3.ax1x.com/2021/05/03/gmyH3t.png)](https://imgtu.com/i/gmyH3t)
+![gmyXDS.png](https://z3.ax1x.com/2021/05/03/gmyXDS.png)
+![gmyINd.png](https://z3.ax1x.com/2021/05/03/gmyINd.png)
+![gmyH3t.png](https://z3.ax1x.com/2021/05/03/gmyH3t.png)
+![ul-card-file](public/static/images/demo/ul-card-file.png)
 
 ### 收藏组件
 
-[![gm6rqS.png](https://z3.ax1x.com/2021/05/03/gm6rqS.png)](https://imgtu.com/i/gm6rqS)
+![gm6rqS.png](https://z3.ax1x.com/2021/05/03/gm6rqS.png)
 
 ### 开发说明
 
