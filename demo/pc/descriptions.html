@@ -1,7 +1,9 @@
+{volist name="[''=>'基本','table'=>'表格']" id='vo'}
+
 <fieldset class="layui-elem-field layui-field-title">
-    <legend>描述列表</legend>
+    <legend>描述列表-{$vo}</legend>
     <div class="layui-field-box">
-        <div class="ul-descriptions">
+        <div class="ul-descriptions {$key}">
             <div class="item">
                 <div class="label">
                     昵称
@@ -53,3 +55,4 @@
         </div>
     </div>
 </fieldset>
+{/volist}
