@@ -38,8 +38,6 @@ class InitPost extends Seeder
 
         $list_demo_file = scandir($demo_pc_dir);
 
-
-
         foreach ($list_demo_file as  $file_name) {
             $file_name = str_replace(['.html', '.', '..',], '', $file_name);
 
@@ -50,6 +48,7 @@ class InitPost extends Seeder
             $model_post = Post::where('tpl_name', $file_name)->find();
             if (empty($model_post)) {
                 $model_post = new Post();
+                $model_post->type = 'default';
                 $model_post->tpl_name = $file_name;
                 $model_post->title = Config::get("demo.{$file_name}.title", $file_name);
                 $model_post->desc = Config::get("demo.{$file_name}.desc", $file_name);

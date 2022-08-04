@@ -4,11 +4,13 @@
 // +----------------------------------------------------------------------
 
 use app\command\make\View;
+use app\command\ScanDemo;
 
 return [
     // 指令定义
     'commands' => [
         'app\command\ResetPassword',
-        View::class
+        View::class,
+        ScanDemo::class
     ],
 ];

@@ -1,20 +1,18 @@
 .ul-descriptions {
 
     // TODO:使用grid实现布局
+    display              : grid;
+    grid-template-columns: calc(1 / 3 * 100%) calc(1 / 3 * 100%) calc(1 / 3 * 100%);
 
-    display  : flex;
-    flex-wrap: wrap;
-
+    $labelWidth: 90px;
 
     .item {
-        display : inline-flex;
-        width   : 30%;
-        position: relative;
-        height  : 40px;
-
+        display   : inline-flex;
+        position  : relative;
+        min-height: 40px;
 
         .label {
-            width          : calc(40% - 12px);
+            width          : calc($labelWidth - 12px);
             padding-right  : 12px;
             position       : absolute;
             height         : 100%;
@@ -22,50 +20,146 @@
             align-items    : center;
             justify-content: flex-end;
             color          : #333;
+            min-width      : calc($labelWidth - 12px);
+            font-weight    : 400;
         }
 
         .value {
-            position       : absolute;
-            width          : calc(60% - 0px);
-            margin-left    : calc(40% + 0px);
+            width          : calc(100% - $labelWidth - 12px);
+            margin-left    : calc($labelWidth + 12px);
             display        : flex;
             align-items    : center;
             justify-content: left;
-            height         : 100%;
+            height         : auto;
             white-space    : break-all;
             word-break     : break-all;
             color          : #666;
         }
+
+        &.article {
+            grid-column-start: 1;
+            grid-column-end  : 4;
+
+            .label {
+                align-items: flex-start;
+                padding-top: 10px;
+                height     : calc(100% - 10px)
+            }
+
+            .value {
+                .article-item {
+                    white-space: break-spaces;
+                    padding    : 5px;
+                }
+            }
+        }
+
+        &.tag {
+            .value {
+                .tag-item {
+                    padding         : 3px 6px;
+                    border-radius   : 3px;
+                    background-color: #6cf;
+                    color           : #fff;
+                    margin-right    : 5px;
+                    font-size       : 12px;
+                }
+            }
+        }
+
+        &.poster {
+            grid-row: span 2;
+
+            .value {
+                .poster-item {
+                    max-width : 100%;
+                    max-height: 80px;
+                    margin    : 5px;
+                }
+            }
+        }
+
+        &.line {
+            grid-column-start: 1;
+            grid-column-end  : 4;
+        }
+
+        &.lines {
+            grid-column-start: 1;
+            grid-column-end  : 4;
+
+            .label {
+                align-items: flex-start;
+                padding-top: 10px;
+                height     : calc(100% - 10px)
+            }
+        }
+
+        &.short-line {
+            grid-column: span 2;
+        }
+
+        &.box {
+            grid-row: span 2;
+        }
     }
 
     &.table {
-        margin-left: 1px;
-        margin-top : 1px;
+        $borderColor : #000;
+        border-style : solid;
+        border-color : $borderColor;
+        border-width : 1px;
+        margin-right : 1px;
+        margin-bottom: 1px;
 
         .item {
-            border     : 1px solid #000;
-            margin-left: -1px;
-            margin-top : -1px;
+
+            border-style : solid;
+            border-color : $borderColor;
+            border-width : 0px 1px 1px 0;
+            margin-bottom: -1px;
+            margin-right : -1px;
 
             .label {
-                position: relative;
-
-                &::after {
-                    content         : '';
-                    position        : absolute;
-                    right           : 0;
-                    top             : 0;
-                    height          : 100%;
-                    width           : 1px;
-                    background-color: #000;
-                }
+                position    : absolute;
+                border-right: 1px solid $borderColor;
             }
 
+            &.line {
+                border-right: 0;
 
-            .value {
-                width      : calc(60% - 10px);
-                margin-left: calc(40% + 10px);
             }
+
         }
     }
+
+    &.border {
+        $borderColor : rgb(235, 238, 245);
+        border-style : solid;
+        border-color : $borderColor;
+        border-width : 1px;
+        margin-right : 1px;
+        margin-bottom: 0px;
+
+        .item {
+            border-style : solid;
+            border-color : $borderColor;
+            border-width : 0px 1px 1px 0;
+            margin-bottom: 0px;
+            margin-right : -1px;
+
+            .label {
+                position        : absolute;
+                border-right    : 1px solid $borderColor;
+                background-color: rgb(245, 247, 250);
+            }
+
+            &.line {
+                border-right: 0;
+
+            }
+
+        }
+    }
+
 }
