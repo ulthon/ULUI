@@ -50,6 +50,11 @@
                 .article-item {
                     white-space: break-spaces;
                     padding    : 5px;
+
+                    img {
+                        max-width: 100%;
+                    }
+                    
                 }
             }
         }
