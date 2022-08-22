@@ -11,7 +11,6 @@
 
 
 /* 头部开始 */
-
 .ul-header {
     background-color: #fff;
     box-shadow      : 0 3px 5px #999;
@@ -55,50 +54,7 @@
     margin-left: 10px;
 }
 
-/* 头部结束 */
 
-/* 导航开始 */
-.layui-nav.ul-nav-white {
-    background-color: #f0f0f0;
-}
-
-.layui-nav.ul-nav-white .layui-nav-child a {
-    color: #666;
-}
-
-.layui-nav.ul-nav-white .layui-nav-item a {
-    color: #666;
-}
-
-.layui-nav.ul-nav-white .layui-nav-itemed>.layui-nav-child {
-    background-color: rgba(255, 255, 255, 0.6) !important;
-}
-
-.layui-nav-tree.ul-nav-white .layui-nav-item a:hover {
-    background-color: #9cf;
-    color           : #fff !important;
-}
-
-.layui-nav.ul-nav-white .layui-nav-itemed>a,
-.layui-nav-tree.ul-nav-white .layui-nav-title a,
-.layui-nav-tree.ul-nav-white .layui-nav-title a:hover {
-    color: #666 !important;
-}
-
-.layui-nav-tree.ul-nav-white .layui-nav-bar {
-    background-color: #6cf;
-}
-
-.layui-nav-tree.ul-nav-white .layui-nav-child dd.layui-this,
-.layui-nav-tree.ul-nav-white .layui-nav-child dd.layui-this a,
-.layui-nav-tree.ul-nav-white .layui-this,
-.layui-nav-tree.ul-nav-white .layui-this>a,
-.layui-nav-tree.ul-nav-white .layui-this>a:hover {
-    background-color: #9cf;
-    color           : #fff;
-}
-
-/* 导航结束 */
 
 /* 链接导航开始 */
 
