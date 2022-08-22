@@ -1323,18 +1323,19 @@ body .layui-quote-gray {
 }
 
 .ul-site-item {
-    width          : 24%;
-    margin-right   : 1%;
+    width          : 20%;
+    margin-right   : 5%;
     display        : flex;
     align-items    : flex-start;
     justify-content: flex-start;
-    margin-bottom  : 14px;
+    margin-bottom  : 15px;
 }
 
 .ul-site-item-logo {
-    width              : 30px;
-    height             : 30px;
-    margin-right       : 4px;
+    width              : 24px;
+    height             : 24px;
+    margin-right       : 8px;
+    margin-top         : 4px;
     background-size    : cover;
     background-position: center;
 }
