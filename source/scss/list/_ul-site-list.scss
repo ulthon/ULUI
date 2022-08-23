@@ -23,6 +23,7 @@
     align-items    : flex-start;
     justify-content: flex-start;
     margin-bottom  : 15px;
+    align-self     : normal;
 
     &.card {
         background-color: #fff;
