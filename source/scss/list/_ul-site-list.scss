@@ -23,13 +23,17 @@
     align-items    : flex-start;
     justify-content: flex-start;
     margin-bottom  : 15px;
-    align-self     : normal;
+
 
     &.card {
         background-color: #fff;
         border-radius   : 5px;
         padding         : 10px;
         margin-right    : 15px;
+    }
+
+    &.same-height {
+        align-self: normal;
     }
 }
 
