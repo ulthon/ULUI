@@ -172,7 +172,8 @@
     &.padding {
         .item {
             .value {
-                padding: 10px;
+                padding    : 10px;
+                margin-left: calc($labelWidth + 2px);
             }
         }
     }
