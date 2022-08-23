@@ -1,10 +1,12 @@
 .ul-descriptions {
 
-    // TODO:使用grid实现布局
     display              : grid;
     grid-template-columns: calc(1 / 3 * 100%) calc(1 / 3 * 100%) calc(1 / 3 * 100%);
 
     $labelWidth: 90px;
+
+
+
 
     .item {
         display   : inline-flex;
@@ -54,7 +56,7 @@
                     img {
                         max-width: 100%;
                     }
-                    
+
                 }
             }
         }
@@ -164,6 +166,14 @@
 
             }
 
+        }
+    }
+
+    &.padding {
+        .item {
+            .value {
+                padding: 10px;
+            }
         }
     }
 
