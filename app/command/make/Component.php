@@ -82,7 +82,7 @@ class Component extends Command
         $index_scss = '';
 
         foreach ($dir_tpl as  $dir_name) {
-            if ($dir_name == '.' || $dir_name == '..') {
+            if ($dir_name == '.' || $dir_name == '..' || $dir_name == '_index.scss') {
                 continue;
             }
 
@@ -94,10 +94,10 @@ class Component extends Command
                     continue;
                 }
 
-                $index_scss .= "@import './{$dir_name}/{$component_name}/index';";
+                $index_scss .= "@import './{$dir_name}/{$component_name}/index';\n";
             }
         }
 
-        file_put_contents(App::getRootPath() . '/source/components/_index.scss');
+        file_put_contents(App::getRootPath() . '/source/components/_index.scss', $index_scss);
     }
 }
