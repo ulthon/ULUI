@@ -3,6 +3,11 @@
     padding: 15px;
 }
 
+.ul-margin-md {
+    margin: 15px;
+}
+
+
 .ul-section {
     margin-bottom: 15px;
 }
@@ -68,3 +73,9 @@
 }
 
 /* 通用类结束 */
+
+.ul-demo-img-bg {
+    background-image   : url("img/view.jpg");
+    background-size    : cover;
+    background-position: center;
+}

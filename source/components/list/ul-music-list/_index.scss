@@ -1,7 +1,39 @@
 .ul-music-list {
-    padding-left: 15px;
 
-    .item {
-        padding: 6px
+    .ul-music-list-item {
+
+        display        : flex;
+        align-items    : center;
+        justify-content: left;
+
+        padding: 10px;
+
+        &__image {
+            width        : 50px;
+            height       : 50px;
+            border-radius: 5px
+        }
+
+        &__number {
+            font-size  : 16px;
+            font-weight: bolder;
+            margin     : 12px;
+        }
+
+        &__title {
+            color    : #303133;
+            font-size: 16px;
+        }
+
+        &__dot {
+            color    : #303133;
+            font-size: 16px;
+            margin   : 8px
+        }
+
+        &__author {
+            color    : #999;
+            font-size: 13px;
+        }
     }
 }

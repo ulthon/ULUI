@@ -6,6 +6,7 @@ namespace app\model;
 
 use Parsedown;
 use ScssPhp\ScssPhp\Compiler;
+use think\Env as ThinkEnv;
 use think\facade\App;
 use think\facade\Cache;
 use think\facade\Env;
@@ -207,12 +208,25 @@ class Post extends Model
             }
             $components_path = $components_type_path . '/' . $components_name;
 
-            $list_components_data[$components_name]['title'] = file_get_contents($components_path . '/_title.txt');
+            // $list_components_data[$components_name]['title'] = file_get_contents($components_path . '/_title.txt');
+
+            $env_info = new ThinkEnv();
+
+            $env_info->load($components_path . '/_index.env');
+
+            $list_components_data[$components_name]['config'] = $env_info->get();
             $list_components_data[$components_name]['html'] = file_get_contents($components_path . '/_index.html');
             $list_components_data[$components_name]['scss'] = file_get_contents($components_path . '/_index.scss');
             $list_components_data[$components_name]['css'] = $scss_compiler->compileString($list_components_data[$components_name]['scss'])->getCss();
             $list_components_data[$components_name]['markdown'] = file_get_contents($components_path . '/_index.md');
             $list_components_data[$components_name]['desc'] = $markdown_parser->text($list_components_data[$components_name]['markdown']);
+
+            $uniapp_code = $list_components_data[$components_name]['html'];
+
+            $uniapp_code = str_replace('<div', '<view', $uniapp_code);
+            $uniapp_code = str_replace('div>', 'view>', $uniapp_code);
+
+            $list_components_data[$components_name]['uniapp'] = $uniapp_code;
         }
 
         Cache::set($cache_key, $list_components_data, 60);
