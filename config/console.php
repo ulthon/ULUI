@@ -3,6 +3,7 @@
 // | 控制台配置
 // +----------------------------------------------------------------------
 
+use app\command\make\Component;
 use app\command\make\View;
 use app\command\ScanDemo;
 
@@ -11,6 +12,7 @@ return [
     'commands' => [
         'app\command\ResetPassword',
         View::class,
-        ScanDemo::class
+        ScanDemo::class,
+        Component::class
     ],
 ];
