@@ -94,3 +94,27 @@ php think run
 
 1.  在issue提交你想要的样式截图,过段时间没准就有了
 
+### 创建组件命令
+
+新版本的组件支持独立的文件，更好的浏览体验，可以快捷单独复制每个文件，可以通过命令生成：
+
+```
+php think make:component tpl_name component_name component_title 
+```
+
+比如:
+
+```
+php think make:component list ul-user-list 用户列表
+```
+
+![新版组件效果](public/static/images/demo/new-component.png)
+
+新的组件代码结构：
+```
+ul-music-list   
+├─ _index.env   
+├─ _index.html  
+├─ _index.md    
+└─ _index.scss  
+```
