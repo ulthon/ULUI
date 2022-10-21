@@ -66,6 +66,39 @@
                     </div>
                     <div class="demo-page">
                         {$model_post->demo_page|raw}
+
+                        {volist name='model_post->components' id='vo'}
+                        <fieldset class="layui-elem-field layui-field-title no-parser">
+                            <legend>{$vo.title}</legend>
+                            <div class="layui-field-box">
+                                <div class="desc">
+                                    {$vo.desc|raw}
+                                </div>
+                                <div class="preview">{$vo.html|raw}</div>
+                                <div class="code">
+                                    <div class="layui-tab layui-tab-card">
+                                        <ul class="layui-tab-title">
+                                            <li class="layui-this">HTML</li>
+                                            <li>SCSS</li>
+                                            <li>CSS</li>
+                                        </ul>
+                                        <div class="layui-tab-content" style="padding:0">
+                                            <div class="layui-tab-item layui-show">
+                                                <pre class="layui-code" style="margin: 0;">{$vo.html}</pre>
+                                            </div>
+                                            <div class="layui-tab-item ">
+                                                {$vo.scss|raw}
+                                            </div>
+                                            <div class="layui-tab-item">
+                                                {$vo.css|raw}
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        {/volist}
                     </div>
 
 
@@ -73,7 +106,7 @@
 
                 <div class="ul-padding-md">
                     <div id="gitee-container">
-                        <fieldset class="layui-elem-field layui-field-title">
+                        <fieldset class="layui-elem-field layui-field-title ">
                             <legend>开源信息</legend>
                             <div class="layui-field-box">
                                 <script src='https://gitee.com/ulthon/layui-ul/widget_preview' async defer></script>
@@ -125,6 +158,9 @@
     <script>
 
         $('.main-content h2,.main-content>.demo-page>fieldset').each(function (index, elem) {
+            if ($(elem).hasClass('no-parser')) {
+                return;
+            }
             if ($(elem).find('.demo-js-src').length == 0) {
                 $(elem).children('.layui-field-box')
                     .addClass('demo-js-src')

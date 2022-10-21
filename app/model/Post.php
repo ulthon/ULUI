@@ -4,8 +4,11 @@ declare(strict_types=1);
 
 namespace app\model;
 
+use Parsedown;
+use ScssPhp\ScssPhp\Compiler;
 use think\facade\App;
 use think\facade\Cache;
+use think\facade\Env;
 use think\facade\Request;
 use think\facade\View;
 use think\Model;
@@ -163,6 +166,60 @@ class Post extends Model
 
         return View::fetch($file_path);
     }
+
+    public function getComponentsAttr()
+    {
+        if (empty($this->getData('tpl_name'))) {
+            return [];
+        }
+
+        $tpl_name = $this->getData('tpl_name');
+
+        $components_type_path = App::getRootPath() . '/source/components/' . $tpl_name;
+
+        if (!is_dir($components_type_path)) {
+            return [];
+        }
+
+
+        $cache_key = 'cache_components_data_' . $tpl_name;
+
+        $list_components_data = Cache::get($cache_key);
+
+        if (!is_null($list_components_data) && !Env::get('APP_DEBUG')) {
+            return $list_components_data;
+        }
+
+        $list_components = scandir($components_type_path);
+
+
+
+        $list_components_data = [];
+
+
+        $scss_compiler = new Compiler();
+
+        $markdown_parser = new Parsedown();
+
+        foreach ($list_components as  $components_name) {
+            if ($components_name == '.' || $components_name == '..') {
+                continue;
+            }
+            $components_path = $components_type_path . '/' . $components_name;
+
+            $list_components_data[$components_name]['title'] = file_get_contents($components_path . '/_title.txt');
+            $list_components_data[$components_name]['html'] = file_get_contents($components_path . '/_index.html');
+            $list_components_data[$components_name]['scss'] = file_get_contents($components_path . '/_index.scss');
+            $list_components_data[$components_name]['css'] = $scss_compiler->compileString($list_components_data[$components_name]['scss'])->getCss();
+            $list_components_data[$components_name]['markdown'] = file_get_contents($components_path . '/_index.md');
+            $list_components_data[$components_name]['desc'] = $markdown_parser->text($list_components_data[$components_name]['markdown']);
+        }
+
+        Cache::set($cache_key, $list_components_data, 60);
+
+        return $list_components_data;
+    }
+
 
     public static function quickSelect($clear = false)
     {
