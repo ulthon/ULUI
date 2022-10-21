@@ -64,7 +64,7 @@
                     <div class="ql-snow">
                         <div class="ql-editor">{$model_post->content_html|raw}</div>
                     </div>
-                    <div class="demo-page" id="app-demo-page">
+                    <div class="demo-page" id="app-demo-page" data-prismjs-copy="复制" data-prismjs-copy-error="复制失败" data-prismjs-copy-success="复制成功!">
                         {$model_post->demo_page|raw}
 
                         {volist name='model_post->components' id='vo'}
@@ -104,16 +104,16 @@
                                         </ul>
                                         <div class="layui-tab-content" style="padding:0">
                                             <div class="layui-tab-item layui-show">
-                                                <pre class="layui-code" style="margin: 0;">{$vo.html}</pre>
+                                                <pre style="margin: 0;max-height: 400px;" class="line-numbers code-preview"><code class="language-html">{$vo.html}</code></pre>
                                             </div>
                                             <div class="layui-tab-item ">
-                                                <pre class="layui-code" style="margin: 0;">{$vo.scss|raw}</pre>
+                                                <pre style="margin: 0;max-height: 400px;" class="line-numbers code-preview"><code class="language-scss">{$vo.scss}</code></pre>
                                             </div>
                                             <div class="layui-tab-item">
-                                                <pre class="layui-code" style="margin: 0;">{$vo.css|raw}</pre>
+                                                <pre style="margin: 0;max-height: 400px;" class="line-numbers code-preview"><code class="language-css">{$vo.css}</code></pre>
                                             </div>
                                             <div class="layui-tab-item">
-                                                <pre class="layui-code" style="margin: 0;">{$vo.uniapp|raw}</pre>
+                                                <pre style="margin: 0;max-height: 400px;" class="line-numbers code-preview"><code class="language-html">{$vo.uniapp}</code></pre>
                                             </div>
                                         </div>
                                     </div>
@@ -273,6 +273,8 @@
 
         $('.component-item').each(function (index, elem) {
 
+
+
             createApp({
                 data() {
                     return {
@@ -280,10 +282,12 @@
                         padding: $(elem).data('padding'),
                         gray: $(elem).data('gray'),
                     }
-                }
+                },
+
             }).mount(elem)
         })
 
+        $('.code-preview').css('width', $('.main-content').width() + 'px')
 
     </script>
 </body>
