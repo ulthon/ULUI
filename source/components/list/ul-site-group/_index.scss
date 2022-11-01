@@ -66,12 +66,24 @@
 }
 
 @media screen and (max-width:450px) {
-    .ul-site-item {
-        width: 49%;
-    }
 
-    .ul-site-item-desc {
-        font-size : 11px;
-        margin-top: 3px;
+    .ul-site-list {
+        display        : flex;
+        align-items    : flex-start;
+        justify-content: space-between;
+
+        .ul-site-item {
+            width       : calc(50% - 10px);
+            margin-right: 0;
+
+            &.card {
+                width: calc(50% - 30px);
+            }
+        }
+
+        .ul-site-item-desc {
+            font-size : 11px;
+            margin-top: 3px;
+        }
     }
 }

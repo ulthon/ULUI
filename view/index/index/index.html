@@ -95,7 +95,8 @@
                                         </div>
                                     </div>
                                     <div class="" style="margin-top: 10px;">
-                                        <div class="preview" :class="{'ul-bg-gray':gray,'ul-padding-md':padding,'ul-margin-md':margin,'ul-mobile-box':mobile}">{$vo.html|raw}</div>
+                                        <div class="preview content" :class="{'ul-bg-gray':gray,'ul-padding-md':padding,'ul-margin-md':margin}" :style="mobile== 1?'display:none':''">{$vo.html|raw}</div>
+                                        <iframe class="preview iframe ul-demo-mobile-page" :class="{'ul-bg-gray':gray,'ul-padding-md':padding,'ul-margin-md':margin}" :style="mobile== 0?'display:none':''"></iframe>
                                     </div>
                                 </div>
                                 <div class="code">
@@ -276,9 +277,6 @@
 
 
         $('.component-item').each(function (index, elem) {
-
-
-
             createApp({
                 data() {
                     return {
@@ -286,8 +284,40 @@
                         padding: $(elem).data('padding'),
                         gray: $(elem).data('gray'),
                         mobile: $(elem).data('mobile'),
+
                     }
                 },
+                mounted() {
+
+                    var html = $(elem).find('.preview.content').html();
+
+                    var iframe = $(elem).find('.preview.iframe')[0];
+                    var preview =
+                        iframe.contentDocument ||
+                        iframe.contentWindow.document;
+
+                    var iframeHtml = '<!DOCTYPE html>' +
+                        '<html lang="en">' +
+                        '<head>' +
+                        '<meta charset="UTF-8">' +
+                        '<meta http-equiv="X-UA-Compatible" content="IE=edge">' +
+                        '<meta name="viewport" content="width=device-width, initial-scale=1.0">' +
+                        '<title>演示</title>' +
+                        '<link rel="stylesheet" href="/static/css/reset.css">' +
+                        '<link rel="stylesheet" href="/static/css/pagination.css">' +
+                        '<link rel="stylesheet" href="/static/lib/layui/css/layui.css">' +
+                        '<link rel="stylesheet" href="/cdn/layui-ul.css">' +
+                        '<link rel="stylesheet" href="/cdn/layui-ul-mb.css">' +
+                        '</head>' +
+                        '<body>' +
+                        html +
+                        '</body>' +
+                        '</html>'
+
+                    preview.open();
+                    preview.write(iframeHtml);
+                    preview.close();
+                }
 
             }).mount(elem)
         })
