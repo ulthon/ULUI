@@ -19,15 +19,16 @@
     ],
     "require": {
         "php": ">=7.1.0",
-        "topthink/framework": "6.0.*",
-        "topthink/think-orm": "2.0.*",
+        "topthink/framework": "^6.0",
+        "topthink/think-orm": "^2.0",
         "topthink/think-view": "^1.0",
         "topthink/think-migration": "^3.0",
         "topthink/think-helper": "^3.1",
         "topthink/think-captcha": "^3.0",
         "topthink/think-multi-app": "^1.0",
         "scssphp/scssphp": "^1.11",
-        "erusev/parsedown": "^1.7"
+        "erusev/parsedown": "^1.7",
+        "topthink/think-filesystem": "^2.0"
     },
     "require-dev": {
         "symfony/var-dumper": "^4.2"
