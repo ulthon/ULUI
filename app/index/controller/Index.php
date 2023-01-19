@@ -14,7 +14,7 @@ class Index extends Common
     /**
      * 显示资源列表
      *
-     * @return \think\Response
+     * @return \think\Response|string
      */
     public function index($doc_name = '')
     {
