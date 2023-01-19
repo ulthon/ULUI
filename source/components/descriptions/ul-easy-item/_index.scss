@@ -1,0 +1,22 @@
+.ul-easy-item {
+    display        : flex;
+    align-items    : flex-start;
+    justify-content: flex-start;
+    padding        : 5px 0;
+
+    &__name {
+        min-width: 50px;
+        color    : #333;
+    }
+
+    &__desc {
+        color          : #777;
+        display        : flex;
+        align-items    : center;
+        justify-content: flex-start;
+
+        &__item {
+            margin: 0 8px;
+        }
+    }
+}
