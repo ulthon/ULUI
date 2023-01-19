@@ -1,0 +1,32 @@
+.ul-nav-info {
+    &__item {
+        display        : flex;
+        align-items    : center;
+        justify-content: space-between;
+        padding        : 15px;
+
+
+        &__main {
+            &__info {
+                display        : flex;
+                align-items    : center;
+                justify-content: flex-start;
+            }
+
+            &__icon {
+                margin-right: 10px;
+            }
+
+            &__title {
+                font-size  : 16px;
+                font-weight: 400;
+            }
+
+            &__content {
+                margin-top: 5px;
+                color     : #bbb;
+                font-size : 14px;
+            }
+        }
+    }
+}
