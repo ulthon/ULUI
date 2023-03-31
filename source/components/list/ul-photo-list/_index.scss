@@ -1,0 +1,33 @@
+.ul-photo-list {
+    display        : flex;
+    align-items    : flex-start;
+    justify-content: flex-start;
+    flex-wrap      : wrap;
+}
+
+.ul-photo-item {
+    margin    : 15px;
+    text-align: center;
+    min-width : 220px;
+}
+
+.ul-photo-poster {
+    width              : 180px;
+    height             : 140px;
+    background-image   : url("../static/images/avatar.png");
+    background-size    : cover;
+    background-position: center;
+    margin             : 0 auto;
+    box-shadow         : 1px 1px 3px #999;
+}
+
+.ul-photo-info {
+    margin-top : 10px;
+    font-size  : 18px;
+    line-height: 1.5;
+}
+
+.ul-photo-desc {
+    font-size: 14px;
+    color    : #999;
+}
