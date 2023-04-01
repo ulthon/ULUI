@@ -1391,6 +1391,25 @@
     margin-top: 3px;
   }
 }
+.ul-logo {
+  background-color: #1E9FFF;
+  border-radius: 13.3333333333px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  color: #fff;
+  white-space: nowrap;
+}
+.ul-logo .title {
+  font-size: 40px;
+}
+.ul-logo .plus {
+  font-size: clac(20px);
+}
+
 .ul-nav-info__item {
   display: flex;
   align-items: center;

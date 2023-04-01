@@ -1,0 +1,26 @@
+.ul-logo {
+
+
+    $baseSize: 40px;
+
+    background-color: #1E9FFF;
+
+    border-radius  : calc($baseSize / 3);
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+
+    width      : calc($baseSize * 2);
+    height     : calc($baseSize * 2);
+    text-align : center;
+    color      : #fff;
+    white-space: nowrap;
+
+    .title {
+        font-size: $baseSize;
+    }
+
+    .plus {
+        font-size: clac($baseSize / 2);
+    }
+}
