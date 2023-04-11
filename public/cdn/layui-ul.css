@@ -84,52 +84,6 @@
   box-shadow: 0 0 3px #bbb;
 }
 
-/* 用户头像开始 */
-.ul-avatar-list-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8px;
-  background-color: #ddd;
-}
-
-.ul-avatar-list-item.current {
-  background-color: #bbb;
-}
-
-.ul-avatar-list-item-img {
-  height: 48px;
-  width: 48px;
-  background-image: url("/static/images/avatar.png");
-  background-size: cover;
-  background-position: center;
-  border-radius: 3px;
-  background-color: #fff;
-}
-
-.ul-avatar-list-item-info {
-  margin-left: 10px;
-  position: relative;
-  width: calc(100% - 48px - 10px);
-}
-
-.ul-avatar-list-item-time {
-  position: absolute;
-  right: 0;
-  top: 0;
-  color: #999;
-}
-
-.ul-avatar-list-item-tips {
-  color: #999;
-  font-size: 14px;
-  display: inline-block;
-  white-space: nowrap;
-  width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 .ul-order-list-simple-card .item {
   box-shadow: 0 0 3px #ddd;
   border-radius: 2px;
@@ -1039,33 +993,47 @@
   margin-right: 3px;
 }
 
-.ul-list-record .item-record {
+.ul-avatar-list {
+  /* 用户头像开始 */
+}
+.ul-avatar-list .ul-avatar-list-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 8px;
+  background-color: rgb(229, 228, 228);
+}
+.ul-avatar-list .ul-avatar-list-item.current {
+  background-color: rgb(216, 215, 215);
+}
+.ul-avatar-list .ul-avatar-list-item-img {
+  height: 48px;
+  width: 48px;
+  background-image: url("/static/images/avatar.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 3px;
   background-color: #fff;
-  box-shadow: 0px 0px 4px rgba(77, 85, 114, 0.1);
-  padding: 12px;
-  margin-bottom: 9px;
-  border-radius: 12px;
 }
-.ul-list-record .item-record .right {
-  text-align: right;
+.ul-avatar-list .ul-avatar-list-item-info {
+  margin-left: 10px;
+  position: relative;
+  width: calc(100% - 48px - 10px);
 }
-.ul-list-record .item-record .item-name {
+.ul-avatar-list .ul-avatar-list-item-time {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: rgb(187, 187, 187);
+}
+.ul-avatar-list .ul-avatar-list-item-tips {
+  color: rgb(187, 187, 187);
   font-size: 14px;
-}
-.ul-list-record .item-record .item-desc {
-  font-size: 12px;
-  color: #999;
-  margin-top: 6px;
-}
-.ul-list-record .item-record .item-change {
-  font-weight: 600;
-  color: green;
-}
-.ul-list-record .item-record .item-change.status-2 {
-  color: orangered;
+  display: inline-block;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .ul-book-list {
@@ -1145,6 +1113,35 @@
 .ul-book-list.big .ul-book-info {
   height: 160px;
   width: 110px;
+}
+
+.ul-list-record .item-record {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0px 0px 4px rgba(77, 85, 114, 0.1);
+  padding: 12px;
+  margin-bottom: 9px;
+  border-radius: 12px;
+}
+.ul-list-record .item-record .right {
+  text-align: right;
+}
+.ul-list-record .item-record .item-name {
+  font-size: 14px;
+}
+.ul-list-record .item-record .item-desc {
+  font-size: 12px;
+  color: #999;
+  margin-top: 6px;
+}
+.ul-list-record .item-record .item-change {
+  font-weight: 600;
+  color: green;
+}
+.ul-list-record .item-record .item-change.status-2 {
+  color: orangered;
 }
 
 .ul-music-list .ul-music-list-item {
