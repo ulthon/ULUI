@@ -1,0 +1,29 @@
+.ul-avatar-sidebar-list {
+
+    .ul-avatar-sidebar-list-item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 12px;
+    }
+
+    .ul-avatar-sidebar-list-item-img {
+        width: 58px;
+        height: 58px;
+        border-radius: 58px;
+        background-image: url("/static/images/avatar.png");
+        background-size: cover;
+        background-position: center;
+
+    }
+
+    .ul-avatar-sidebar-list-item-info {
+        margin-left: 10px;
+    }
+
+    .ul-avatar-sidebar-list-item-intro {
+        font-size: 12px;
+        color: #999;
+        line-height: 2;
+    }
+}
