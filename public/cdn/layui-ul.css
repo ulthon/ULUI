@@ -1039,7 +1039,7 @@
   margin-right: 3px;
 }
 
-.list-record .item-record {
+.ul-list-record .item-record {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1049,22 +1049,22 @@
   margin-bottom: 9px;
   border-radius: 12px;
 }
-.list-record .item-record .right {
+.ul-list-record .item-record .right {
   text-align: right;
 }
-.list-record .item-record .item-name {
+.ul-list-record .item-record .item-name {
   font-size: 14px;
 }
-.list-record .item-record .item-desc {
+.ul-list-record .item-record .item-desc {
   font-size: 12px;
   color: #999;
   margin-top: 6px;
 }
-.list-record .item-record .item-change {
+.ul-list-record .item-record .item-change {
   font-weight: 600;
   color: green;
 }
-.list-record .item-record .item-change.status-2 {
+.ul-list-record .item-record .item-change.status-2 {
   color: orangered;
 }
 
