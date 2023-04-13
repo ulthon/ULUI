@@ -1,0 +1,77 @@
+.ul-nav-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    .item {
+        flex: 0 0 calc(100% / 3);
+        text-align: center;
+        margin-bottom: 12px;
+
+        .icon {
+            text-align: center;
+        }
+
+        .main {
+            display: inline-block;
+            padding: 6px;
+        }
+    }
+
+    // 将背景颜色值定义成变量
+
+    $colors:('red': #FF6961,
+        'orange': #FFA07A,
+        'yellow': #FF69B4,
+        'green': #2ECC71,
+        'bluegreen': #1ABC9C,
+        'blue': #3498DB,
+        'purple': #AF7AC5,
+    );
+
+
+
+    &.colord {
+
+        @each $colorKey,
+        $color in $colors {
+            .item.#{$colorKey} {
+                .icon {
+                    color: $color;
+                }
+            }
+
+        }
+
+    }
+
+    &.colord-bg {
+
+        @each $colorKey,
+        $color in $colors {
+            .item.#{$colorKey} {
+                .icon {
+                    color: #fff;
+
+                    .main {
+                        background-color: $color;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+
+    &.box {
+        background-color: #eee;
+        padding: 0.5px;
+
+        .item {
+            flex: 0 0 calc(100% / 3 - 1px - 24px);
+            margin: 0.5px;
+            background-color: #fff;
+            padding: 12px;
+        }
+    }
+}

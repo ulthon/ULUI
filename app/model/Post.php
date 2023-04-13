@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace app\model;
 
+use MallardDuck\HtmlFormatter\Formatter;
 use Parsedown;
 use ScssPhp\ScssPhp\Compiler;
 use think\Env as ThinkEnv;
@@ -20,14 +21,13 @@ use think\model\concern\SoftDelete;
  */
 class Post extends Model
 {
+    use SoftDelete;
     //
 
     public static $stausNameList = [
         0 => '不发布',
         1 => '发布'
     ];
-
-    use SoftDelete;
 
     protected $defaultSoftDelete = 0;
 
@@ -214,8 +214,21 @@ class Post extends Model
 
             $env_info->load($components_path . '/_index.env');
 
+            $php_path = $components_path . '/_index.php';
+
+            $components_data = [];
+
+            if(file_exists($php_path)) {
+                $components_data = require($php_path);
+            }
+
+            $html_content = View::display(file_get_contents($components_path . '/_index.html'), $components_data);
+
+            $formatter = new Formatter();
+            $html_content = $formatter->beautify($html_content);
+
             $list_components_data[$components_name]['config'] = $env_info->get();
-            $list_components_data[$components_name]['html'] = file_get_contents($components_path . '/_index.html');
+            $list_components_data[$components_name]['html'] = $html_content;
             $list_components_data[$components_name]['scss'] = file_get_contents($components_path . '/_index.scss');
             $list_components_data[$components_name]['css'] = $scss_compiler->compileString($list_components_data[$components_name]['scss'])->getCss();
             $list_components_data[$components_name]['markdown'] = file_get_contents($components_path . '/_index.md');

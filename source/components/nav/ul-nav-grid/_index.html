@@ -1,0 +1,75 @@
+<div class="ul-group-title">
+    基本
+</div>
+<div class="ul-nav-grid colord">
+    <div class="item red">
+        <div class="icon">
+            <div class="main">
+                <i class="layui-icon layui-icon-home"></i>
+            </div>
+        </div>
+        <div class="title">首页</div>
+    </div>
+</div>
+<div class="ul-group-title">
+    图标颜色
+</div>
+<div class="ul-nav-grid colord">
+    {for start='0' end='12'}
+    <div class="item {$colors[$i%7]}">
+        <div class="icon">
+            <div class="main">
+                <i class="layui-icon layui-icon-home"></i>
+            </div>
+        </div>
+        <div class="title">首页</div>
+    </div>
+    {/for}
+</div>
+<div class="ul-group-title">
+    图标背景
+</div>
+<div class="ul-nav-grid colord-bg">
+    {for start='0' end='12'}
+    <div class="item {$colors[$i%7]}">
+        <div class="icon">
+            <div class="main">
+                <i class="layui-icon layui-icon-home"></i>
+            </div>
+
+        </div>
+        <div class="title">首页</div>
+    </div>
+    {/for}
+</div>
+<div class="ul-group-title">
+    宫格边框+背景色
+</div>
+<div class="ul-nav-grid colord-bg box">
+    {for start='0' end='12'}
+    <div class="item {$colors[$i%7]}">
+        <div class="icon">
+            <div class="main">
+                <i class="layui-icon layui-icon-home"></i>
+            </div>
+
+        </div>
+        <div class="title">首页</div>
+    </div>
+    {/for}
+</div>
+<div class="ul-group-title">
+    宫格边框+图片
+</div>
+<div class="ul-nav-grid">
+    {for start='0' end='4'}
+    <div class="item {$colors[$i%7]}">
+        <div class="icon">
+            <div class="main">
+                <img style="width: 26px;height: 26px;" src="/static/images/view.jpg">
+            </div>
+        </div>
+        <div class="title">首页</div>
+    </div>
+    {/for}
+</div>

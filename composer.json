@@ -28,7 +28,8 @@
         "topthink/think-multi-app": "^1.0",
         "scssphp/scssphp": "^1.11",
         "erusev/parsedown": "^1.7",
-        "topthink/think-filesystem": "^2.0"
+        "topthink/think-filesystem": "^2.0",
+        "mallardduck/html-formatter": "^1.0"
     },
     "require-dev": {
         "symfony/var-dumper": "^4.2"

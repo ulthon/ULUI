@@ -1478,6 +1478,105 @@
   font-size: clac(20px);
 }
 
+.ul-nav-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.ul-nav-grid .item {
+  flex: 0 0 33.3333333333%;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.ul-nav-grid .item .icon {
+  text-align: center;
+}
+.ul-nav-grid .item .main {
+  display: inline-block;
+  padding: 6px;
+}
+.ul-nav-grid.colord .item.red .icon {
+  color: #FF6961;
+}
+.ul-nav-grid.colord .item.orange .icon {
+  color: #FFA07A;
+}
+.ul-nav-grid.colord .item.yellow .icon {
+  color: #FF69B4;
+}
+.ul-nav-grid.colord .item.green .icon {
+  color: #2ECC71;
+}
+.ul-nav-grid.colord .item.bluegreen .icon {
+  color: #1ABC9C;
+}
+.ul-nav-grid.colord .item.blue .icon {
+  color: #3498DB;
+}
+.ul-nav-grid.colord .item.purple .icon {
+  color: #AF7AC5;
+}
+.ul-nav-grid.colord-bg .item.red .icon {
+  color: #fff;
+}
+.ul-nav-grid.colord-bg .item.red .icon .main {
+  background-color: #FF6961;
+  border-radius: 50%;
+}
+.ul-nav-grid.colord-bg .item.orange .icon {
+  color: #fff;
+}
+.ul-nav-grid.colord-bg .item.orange .icon .main {
+  background-color: #FFA07A;
+  border-radius: 50%;
+}
+.ul-nav-grid.colord-bg .item.yellow .icon {
+  color: #fff;
+}
+.ul-nav-grid.colord-bg .item.yellow .icon .main {
+  background-color: #FF69B4;
+  border-radius: 50%;
+}
+.ul-nav-grid.colord-bg .item.green .icon {
+  color: #fff;
+}
+.ul-nav-grid.colord-bg .item.green .icon .main {
+  background-color: #2ECC71;
+  border-radius: 50%;
+}
+.ul-nav-grid.colord-bg .item.bluegreen .icon {
+  color: #fff;
+}
+.ul-nav-grid.colord-bg .item.bluegreen .icon .main {
+  background-color: #1ABC9C;
+  border-radius: 50%;
+}
+.ul-nav-grid.colord-bg .item.blue .icon {
+  color: #fff;
+}
+.ul-nav-grid.colord-bg .item.blue .icon .main {
+  background-color: #3498DB;
+  border-radius: 50%;
+}
+.ul-nav-grid.colord-bg .item.purple .icon {
+  color: #fff;
+}
+.ul-nav-grid.colord-bg .item.purple .icon .main {
+  background-color: #AF7AC5;
+  border-radius: 50%;
+}
+.ul-nav-grid.box {
+  background-color: #eee;
+  padding: 0.5px;
+}
+.ul-nav-grid.box .item {
+  flex: 0 0 calc(33.3333333333% - 1px - 24px);
+  margin: 0.5px;
+  background-color: #fff;
+  padding: 12px;
+}
+
 .ul-nav-info__item {
   display: flex;
   align-items: center;

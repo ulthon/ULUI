@@ -74,7 +74,7 @@
                                 <div class="desc">
                                     {$vo.desc|raw}
                                 </div>
-                                <div class="component-item" style="margin-top: 10px;" data-margin="{$vo.config.MARGIN|default='0'}" data-padding="{$vo.config.PADDING|default='0'}" data-gray="{$vo.config.GRAY|default='0'}" data-mobile="{$vo.config.MOBILE|default='0'}">
+                                <div class="component-item" style="margin-top: 10px;" data-margin="{$vo.config.MARGIN|default='0'}" data-padding="{$vo.config.PADDING|default='0'}" data-gray="{$vo.config.GRAY|default='0'}" data-mobile="{$vo.config.MOBILE|default='0'}" data-inner-margin="{$vo.config.INNER_MARGIN|default='0'}">
                                     <div class="">
                                         <span>预览效果</span>
                                         <div class="layui-btn-group" style="margin-left: 10px;">
@@ -284,6 +284,7 @@
                         padding: $(elem).data('padding'),
                         gray: $(elem).data('gray'),
                         mobile: $(elem).data('mobile'),
+                        innerMargin: $(elem).data('inner-margin'),
 
                     }
                 },
@@ -295,6 +296,12 @@
                     var preview =
                         iframe.contentDocument ||
                         iframe.contentWindow.document;
+
+                    var innerMarginStyle = '';
+
+                    if (this.innerMargin == 1) {
+                        innerMarginStyle = 'margin-right:15px';
+                    }
 
                     var iframeHtml = '<!DOCTYPE html>' +
                         '<html lang="en">' +
@@ -309,7 +316,7 @@
                         '<link rel="stylesheet" href="/cdn/layui-ul.css">' +
                         '<link rel="stylesheet" href="/cdn/layui-ul-mb.css">' +
                         '</head>' +
-                        '<body>' +
+                        '<body style="'+innerMarginStyle+'">' +
                         html +
                         '</body>' +
                         '</html>'
