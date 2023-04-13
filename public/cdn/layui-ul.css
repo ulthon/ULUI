@@ -936,6 +936,25 @@
   margin: 0 8px;
 }
 
+.ul-loading-pos {
+  background-color: #eee;
+  color: #999;
+  display: inline-block;
+}
+.ul-loading-pos .main {
+  padding: 15px;
+}
+.ul-loading-pos.lg .main {
+  padding: 25px 35px;
+}
+.ul-loading-pos.screen {
+  width: 100%;
+}
+.ul-loading-pos.screen .main {
+  padding: 60px 0;
+  text-align: center;
+}
+
 .ul-shop-header {
   padding: 15px;
 }

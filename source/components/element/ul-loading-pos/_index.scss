@@ -1,0 +1,24 @@
+.ul-loading-pos {
+    background-color: #eee;
+    color: #999;
+    display: inline-block;
+
+    .main {
+        padding: 15px;
+    }
+
+    &.lg {
+        .main {
+            padding: 25px 35px;
+        }
+    }
+
+    &.screen {
+        width: 100%;
+
+        .main {
+            padding: 60px 0;
+            text-align: center;
+        }
+    }
+}
