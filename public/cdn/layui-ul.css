@@ -872,7 +872,6 @@
 
 .ul-card-qrcode {
   position: relative;
-  min-width: 200px;
   min-height: 100px;
   display: inline-block;
   background-color: #E2DFDF;
@@ -888,7 +887,7 @@
   padding: 36px;
 }
 .ul-card-qrcode .body .main .img {
-  width: 300px;
+  width: 100%;
 }
 .ul-card-qrcode__main {
   background-color: #fff;

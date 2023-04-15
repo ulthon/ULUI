@@ -1,7 +1,6 @@
 .ul-card-qrcode {
 
     position: relative;
-    min-width: 200px;
     min-height: 100px;
     display: inline-block;
     background-color: #E2DFDF;
@@ -18,7 +17,7 @@
             padding: 36px;
 
             .img {
-                width: 300px;
+                width: 100%;
 
             }
 
