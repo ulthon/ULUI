@@ -870,6 +870,58 @@
   margin-left: 10px;
 }
 
+.ul-card-qrcode {
+  position: relative;
+  min-width: 200px;
+  min-height: 100px;
+  display: inline-block;
+  background-color: #E2DFDF;
+  padding: 10px;
+}
+.ul-card-qrcode .header {
+  padding: 20px;
+}
+.ul-card-qrcode .body {
+  position: relative;
+}
+.ul-card-qrcode .body .main {
+  padding: 36px;
+}
+.ul-card-qrcode .body .main .img {
+  width: 300px;
+}
+.ul-card-qrcode__main {
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.ul-card-qrcode__point-left {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: #E2DFDF;
+  left: -10px;
+  top: 0;
+}
+.ul-card-qrcode__point-right {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: #E2DFDF;
+  right: -10px;
+  top: 0;
+}
+.ul-card-qrcode__line {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  border-bottom: 2px dashed #E2DFDF;
+  top: 8px;
+  left: 0;
+}
+
 .ul-easy-image {
   margin: 5px;
   border-radius: 15px;

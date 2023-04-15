@@ -1,0 +1,62 @@
+.ul-card-qrcode {
+
+    position: relative;
+    min-width: 200px;
+    min-height: 100px;
+    display: inline-block;
+    background-color: #E2DFDF;
+    padding: 10px;
+
+    .header {
+        padding: 20px;
+    }
+
+    .body {
+        position: relative;
+
+        .main {
+            padding: 36px;
+
+            .img {
+                width: 300px;
+
+            }
+
+        }
+    }
+
+    &__main {
+        background-color: #fff;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    &__point-left {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+        background-color: #E2DFDF;
+        left: -10px;
+        top: 0;
+    }
+
+    &__point-right {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+        background-color: #E2DFDF;
+        right: -10px;
+        top: 0;
+    }
+
+    &__line {
+        position: absolute;
+        width: 100%;
+        height: 0;
+        border-bottom: 2px dashed #E2DFDF;
+        top: 8px;
+        left: 0;
+    }
+}
