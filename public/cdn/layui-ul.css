@@ -989,7 +989,7 @@
   position: relative;
   min-height: 100px;
   display: inline-block;
-  background-color: #E2DFDF;
+  background-color: #eee;
   padding: 10px;
 }
 .ul-card-qrcode .header {
@@ -1014,7 +1014,7 @@
   width: 20px;
   height: 20px;
   border-radius: 20px;
-  background-color: #E2DFDF;
+  background-color: #eee;
   left: -10px;
   top: 0;
 }
@@ -1023,7 +1023,7 @@
   width: 20px;
   height: 20px;
   border-radius: 20px;
-  background-color: #E2DFDF;
+  background-color: #eee;
   right: -10px;
   top: 0;
 }
@@ -1031,7 +1031,7 @@
   position: absolute;
   width: 100%;
   height: 0;
-  border-bottom: 2px dashed #E2DFDF;
+  border-bottom: 2px dashed #eee;
   top: 8px;
   left: 0;
 }

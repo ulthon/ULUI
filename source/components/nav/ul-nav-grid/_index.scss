@@ -4,8 +4,10 @@
     align-items: flex-start;
     justify-content: flex-start;
 
+    $gridCount: 3;
+
     .item {
-        flex: 0 0 calc(100% / 3);
+        flex: 0 0 calc(100% / $gridCount);
         text-align: center;
         margin-bottom: 12px;
 
@@ -72,7 +74,7 @@
         padding: 0.5px;
 
         .item {
-            flex: 0 0 calc(100% / 3 - 1px - 24px);
+            flex: 0 0 calc(100% / $gridCount - 1px - 24px);
             margin: 0.5px;
             background-color: #fff;
             padding: 12px;

@@ -1,9 +1,11 @@
 .ul-card-qrcode {
 
+    $borderColor: #eee;
+
     position: relative;
     min-height: 100px;
     display: inline-block;
-    background-color: #E2DFDF;
+    background-color: $borderColor;
     padding: 10px;
 
     .header {
@@ -35,7 +37,7 @@
         width: 20px;
         height: 20px;
         border-radius: 20px;
-        background-color: #E2DFDF;
+        background-color: $borderColor;
         left: -10px;
         top: 0;
     }
@@ -45,7 +47,7 @@
         width: 20px;
         height: 20px;
         border-radius: 20px;
-        background-color: #E2DFDF;
+        background-color: $borderColor;
         right: -10px;
         top: 0;
     }
@@ -54,7 +56,7 @@
         position: absolute;
         width: 100%;
         height: 0;
-        border-bottom: 2px dashed #E2DFDF;
+        border-bottom: 2px dashed $borderColor;
         top: 8px;
         left: 0;
     }
