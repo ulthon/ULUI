@@ -870,6 +870,45 @@
   margin-left: 10px;
 }
 
+.ul-card-money {
+  padding: 26px;
+  background-color: #1E9FFF;
+  border-radius: 16px;
+  color: #fff;
+}
+.ul-card-money .main .title {
+  font-weight: 600;
+  font-size: 12px;
+}
+.ul-card-money .main .option {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+.ul-card-money .main .option .value {
+  font-size: 26px;
+  font-weight: 600;
+}
+.ul-card-money .main .option .button {
+  margin-left: 16px;
+  padding-bottom: 6px;
+}
+.ul-card-money .footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 18px;
+}
+.ul-card-money .footer .label {
+  font-size: 12px;
+}
+.ul-card-money .footer .value {
+  margin-top: 8px;
+  font-size: 16px;
+}
+
 .ul-card-qrcode {
   position: relative;
   min-height: 100px;

@@ -61,6 +61,7 @@ class Component extends Command
             '_index.html',
             '_index.md',
             '_index.scss',
+            '_index.php',
         ];
 
         foreach ($files as  $file_name) {
