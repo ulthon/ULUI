@@ -1,0 +1,83 @@
+.ul-card-data-simple {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #fff;
+
+    .item {
+
+        margin: 15px 0;
+        padding: 0 15px;
+        text-align: left;
+
+        .item-title {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .item-value {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 30px;
+        }
+
+        .item-rate {
+            font-size: 12px;
+
+        }
+
+        .item-rate.up {
+            color: #FF5722;
+
+            &::after {
+                content: '  ↑';
+            }
+        }
+
+        .item-rate.down {
+            color: #1E9FFF;
+
+            &::after {
+                content: ' ↓';
+            }
+        }
+    }
+
+    .item.line {
+        border-right: 1px solid #eee;
+    }
+
+    &.bg-black {
+        background-color: #393D49;
+        color: #fff;
+        border-radius: 15px;
+        padding: 15px;
+        box-shadow: 0 0 4px #999;
+
+        .item {
+            padding: 15px;
+            margin: 0 10px 0 0;
+
+            .item-title {
+                color: #fff;
+            }
+
+            .item-value {
+                font-size: 20px;
+            }
+        }
+
+        .item.main {
+            background-color: #fff;
+            color: #393D49;
+            border-radius: 15px;
+
+            box-shadow: 1px 1px 3px #999;
+            margin-right: 25px;
+
+            .item-title {
+                color: #393D49;
+            }
+        }
+    }
+}
