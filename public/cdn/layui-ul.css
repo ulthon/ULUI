@@ -1227,6 +1227,9 @@
   justify-content: flex-start;
   margin-bottom: 12px;
 }
+.ul-avatar-sidebar-list .ul-avatar-sidebar-list-item:not(:last-child) {
+  margin-bottom: 12px;
+}
 .ul-avatar-sidebar-list .ul-avatar-sidebar-list-item-img {
   width: 58px;
   height: 58px;
