@@ -66,7 +66,14 @@ class Component extends Command
 
         foreach ($files as  $file_name) {
 
-            $file_content = View::fetch(__DIR__ . '/component/tpl/' . $file_name, $assign_data);
+            $file_path = __DIR__ . '/component/tpl/' . $file_name;
+
+            if(pathinfo($file_name, PATHINFO_EXTENSION) == 'php') {
+
+                $file_content = file_get_contents($file_path);
+            } else {
+                $file_content = View::fetch($file_path, $assign_data);
+            }
 
             $file_path = $target_dir . '/' . $file_name;
 
