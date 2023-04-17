@@ -1662,8 +1662,13 @@
   text-align: center;
 }
 .ul-nav-grid .item .main {
-  display: inline-block;
   padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
 }
 .ul-nav-grid.colord .item.red .icon {
   color: #FF6961;

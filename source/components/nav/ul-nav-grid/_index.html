@@ -61,7 +61,22 @@
 <div class="ul-group-title">
     宫格边框+图片
 </div>
-<div class="ul-nav-grid">
+<div class="ul-nav-grid box">
+    {for start='0' end='4'}
+    <div class="item {$colors[$i%7]}">
+        <div class="icon">
+            <div class="main">
+                <img style="width: 26px;height: 26px;" src="/static/images/view.jpg">
+            </div>
+        </div>
+        <div class="title">首页</div>
+    </div>
+    {/for}
+</div>
+<div class="ul-group-title">
+    宫格边框+图片+背景
+</div>
+<div class="ul-nav-grid colord-bg">
     {for start='0' end='4'}
     <div class="item {$colors[$i%7]}">
         <div class="icon">

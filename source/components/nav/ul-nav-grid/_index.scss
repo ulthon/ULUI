@@ -14,8 +14,12 @@
         }
 
         .main {
-            display: inline-block;
             padding: 6px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: fit-content;
+			margin: 0 auto;
         }
     }
 
