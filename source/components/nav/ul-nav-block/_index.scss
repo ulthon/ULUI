@@ -1,0 +1,29 @@
+.ul-nav-block {
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #fff;
+    color: #333;
+
+    .item {
+        padding: 16px 32px;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        cursor: pointer;
+
+        .item-icon {
+            margin-right: 16px;
+        }
+
+        &.current {
+            background-color: rgb(255, 91, 114);
+            color: #fff;
+        }
+
+        &:hover {
+            background-color: rgba(255, 91, 113, 0.772);
+            color: #fff;
+        }
+    }
+}

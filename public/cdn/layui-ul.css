@@ -1647,6 +1647,31 @@
   font-size: clac(20px);
 }
 
+.ul-nav-block {
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #fff;
+  color: #333;
+}
+.ul-nav-block .item {
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+.ul-nav-block .item .item-icon {
+  margin-right: 16px;
+}
+.ul-nav-block .item.current {
+  background-color: rgb(255, 91, 114);
+  color: #fff;
+}
+.ul-nav-block .item:hover {
+  background-color: rgba(255, 91, 113, 0.772);
+  color: #fff;
+}
+
 .ul-nav-grid {
   display: flex;
   flex-wrap: wrap;
