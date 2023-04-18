@@ -1121,6 +1121,48 @@
   text-align: center;
 }
 
+.ul-header-shape {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(rgb(0, 197, 254), rgb(2, 158, 245));
+  color: #fff;
+  padding: 10px 10px 25px 10px;
+  --aug-bl-inset2: 20% !important;
+  --aug-bl-inset1: 0px !important;
+  --aug-bl: 15px !important;
+  --aug-br-inset1: 20% !important;
+  --aug-br-inset2: 0px !important;
+  --aug-br: 15px !important;
+}
+.ul-header-shape > div {
+  flex: 1;
+}
+.ul-header-shape .main {
+  flex: 2;
+  margin-bottom: -55px;
+  font-size: 24px;
+  text-align: center;
+}
+.ul-header-shape .left .logo {
+  height: 50px;
+}
+.ul-header-shape .right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+}
+.ul-header-shape .right .list-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.ul-header-shape .right .list-item .item {
+  margin-left: 18px;
+  cursor: pointer;
+}
+
 .ul-shop-header {
   padding: 15px;
 }

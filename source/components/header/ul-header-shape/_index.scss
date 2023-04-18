@@ -1,0 +1,54 @@
+.ul-header-shape {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(rgb(0, 197, 254), rgb(2, 158, 245));
+    color: #fff;
+    padding: 10px 10px 25px 10px;
+
+
+    --aug-bl-inset2: 20% !important;
+    --aug-bl-inset1: 0px !important;
+    --aug-bl: 15px !important;
+
+    --aug-br-inset1: 20% !important;
+    --aug-br-inset2: 0px !important;
+    --aug-br: 15px !important;
+
+
+    &>div {
+        flex: 1;
+    }
+
+    .main {
+        flex: 2;
+        margin-bottom: -55px;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .left {
+        .logo {
+            height: 50px;
+        }
+    }
+
+    .right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 100%;
+
+        .list-item {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            .item {
+                margin-left: 18px;
+                cursor: pointer;
+            }
+        }
+    }
+
+}
