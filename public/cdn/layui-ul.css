@@ -903,6 +903,8 @@
 .ul-card-file .main .icon {
   font-size: 40px;
   color: #999;
+  width: 40px;
+  text-align: center;
 }
 .ul-card-file .main .icon.file {
   color: #bbb;
