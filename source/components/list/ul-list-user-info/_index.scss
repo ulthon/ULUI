@@ -1,0 +1,79 @@
+.ul-list-user-info {
+    .item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 9px;
+        background-color: #fff;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #eee;
+        }
+
+        .info {
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-shrink: 1;
+
+            .main {
+                margin-left: 9px;
+
+                .header {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 8px;
+
+                    .name {
+                        font-size: 14px;
+                        font-weight: 500;
+                        margin-right: 6px;
+                    }
+                }
+
+                .content {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    margin-bottom: 6px;
+                }
+
+                .footer {
+                    display: flex;
+                    align-items: flex-end;
+                }
+            }
+
+        }
+
+    }
+
+    .tag-item {
+        font-size: 10px;
+        background-color: #c6e6fe;
+        color: #0091ff;
+        padding: 2px 4px;
+        border-radius: 3px 3px 3px 0;
+        margin-right: 6px;
+    }
+
+    .info-item {
+        color: #999;
+        margin-right: 6px;
+        font-size: 12px;
+    }
+
+    .title-item {
+        font-size: 14px;
+        font-weight: 500;
+        margin-right: 6px;
+    }
+
+    .text-item {
+        color: #1E9FFF;
+        margin-right: 6px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+}

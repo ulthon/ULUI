@@ -76,7 +76,7 @@
   background-size: cover;
   background-position: center;
 }
-.ul-demo-img-bg.circel {
+.ul-demo-img-bg.circle {
   border-radius: 100%;
 }
 
@@ -1579,6 +1579,69 @@
 }
 .ul-list-record .item-record .item-change.status-2 {
   color: orangered;
+}
+
+.ul-list-user-info .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px;
+  background-color: #fff;
+}
+.ul-list-user-info .item:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+.ul-list-user-info .item .info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 1;
+}
+.ul-list-user-info .item .info .main {
+  margin-left: 9px;
+}
+.ul-list-user-info .item .info .main .header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.ul-list-user-info .item .info .main .header .name {
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 6px;
+}
+.ul-list-user-info .item .info .main .content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+.ul-list-user-info .item .info .main .footer {
+  display: flex;
+  align-items: flex-end;
+}
+.ul-list-user-info .tag-item {
+  font-size: 10px;
+  background-color: #c6e6fe;
+  color: #0091ff;
+  padding: 2px 4px;
+  border-radius: 3px 3px 3px 0;
+  margin-right: 6px;
+}
+.ul-list-user-info .info-item {
+  color: #999;
+  margin-right: 6px;
+  font-size: 12px;
+}
+.ul-list-user-info .title-item {
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 6px;
+}
+.ul-list-user-info .text-item {
+  color: #1E9FFF;
+  margin-right: 6px;
+  font-size: 12px;
+  line-height: 18px;
 }
 
 .ul-music-list .ul-music-list-item {
