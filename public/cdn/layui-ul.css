@@ -1568,6 +1568,42 @@
   font-size: 13px;
 }
 
+.ul-note-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  cursor: pointer;
+  padding: 15px;
+}
+
+.ul-note-item.current,
+.ul-note-item:hover {
+  background-color: #dedede;
+}
+
+.ul-note-item .ul-note-item-icon {
+  margin-right: 10px;
+}
+
+.ul-note-item .ul-note-item-desc {
+  color: #999;
+  font-size: 12px;
+  margin-top: 5px;
+  word-break: break-all;
+}
+
+.ul-note-item .ul-note-item-time {
+  color: #bbb;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.ul-note-item .ul-note-item-tree {
+  font-size: 12px;
+  color: #bbb;
+  margin-top: 5px;
+}
+
 .ul-order-list-simple-card .item {
   box-shadow: 0 0 3px #ddd;
   border-radius: 2px;
@@ -2285,42 +2321,6 @@
   display: none;
   height: 100%;
   line-height: 35px;
-}
-
-.ul-note-item {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  cursor: pointer;
-  padding: 15px;
-}
-
-.ul-note-item.current,
-.ul-note-item:hover {
-  background-color: #dedede;
-}
-
-.ul-note-item .ul-note-item-icon {
-  margin-right: 10px;
-}
-
-.ul-note-item .ul-note-item-desc {
-  color: #999;
-  font-size: 12px;
-  margin-top: 5px;
-  word-break: break-all;
-}
-
-.ul-note-item .ul-note-item-time {
-  color: #bbb;
-  font-size: 12px;
-  margin-top: 5px;
-}
-
-.ul-note-item .ul-note-item-tree {
-  font-size: 12px;
-  color: #bbb;
-  margin-top: 5px;
 }
 
 .ul-input-table {
