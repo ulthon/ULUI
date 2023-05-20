@@ -777,69 +777,6 @@
 }
 
 
-.ul-course-list {
-    margin   : -10px;
-    font-size: 0;
-    display  : flex;
-    flex-wrap: wrap;
-}
-
-.ul-course-item {
-    display         : inline-block;
-    margin          : 10px;
-    width           : calc(25% - 20px);
-    background-color: #fff;
-    padding-bottom  : 12px;
-    cursor          : pointer;
-    font-size       : 14px;
-}
-
-.ul-course-item-poster {
-    background-position: center;
-    background-size    : cover;
-    height             : 140px;
-    transition         : all 0.6s;
-    position           : relative;
-}
-
-.ul-course-item-tag {
-    position: absolute;
-    right   : 8px;
-    top     : 8px;
-    z-index : 9999;
-}
-
-.ul-course-item-info {
-    padding: 6px;
-}
-
-.ul-course-item-title {
-    padding      : 8px 0;
-    text-overflow: ellipsis;
-    white-space  : nowrap;
-    overflow     : hidden;
-}
-
-.ul-course-item-option-item {
-    display     : inline-block;
-    margin-right: 8px;
-    font-size   : 12px;
-    color       : #999;
-}
-
-.ul-course-item-poster:hover {
-    transform: scale(1.2)
-}
-
-.ul-course-item-poster-container:hover .ul-course-item-tag {
-    display: none;
-}
-
-.ul-course-item-poster-container {
-    overflow: hidden;
-    position: relative;
-}
-
 
 body .layui-quote-gray {
     background-color : #f0f0f0;
