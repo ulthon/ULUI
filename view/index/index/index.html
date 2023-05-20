@@ -75,9 +75,7 @@
                         <fieldset class="layui-elem-field layui-field-title no-parser">
                             <legend>{$vo.config.TITLE}</legend>
                             <div class="layui-field-box">
-                                <div class="desc markdown-body ">
-                                    {$vo.desc|raw}
-                                </div>
+
                                 <div class="component-item" style="margin-top: 10px;" data-margin="{$vo.config.MARGIN|default='0'}" data-padding="{$vo.config.PADDING|default='0'}" data-gray="{$vo.config.GRAY|default='0'}" data-mobile="{$vo.config.MOBILE|default='0'}" data-inner-margin="{$vo.config.INNER_MARGIN|default='0'}">
                                     <div class="">
                                         <span>预览效果</span>
@@ -126,6 +124,9 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="desc markdown-body ">
+                                    {$vo.desc|raw}
                                 </div>
                             </div>
                         </fieldset>
