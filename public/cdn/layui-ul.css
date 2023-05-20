@@ -1147,6 +1147,29 @@
   margin: 0 8px;
 }
 
+.ul-element-fixed-option {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 16px;
+}
+.ul-element-fixed-option .item {
+  text-align: center;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+.ul-element-fixed-option .item .icon {
+  padding: 6px;
+  box-shadow: 0 0 3px #999;
+  width: calc(30px + 6px);
+  height: calc(30px + 6px);
+  display: inline-block;
+  border-radius: 100%;
+}
+.ul-element-fixed-option .item .title {
+  margin-top: 6px;
+}
+
 .ul-loading-pos {
   background-color: #eee;
   color: #999;
