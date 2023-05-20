@@ -76,6 +76,9 @@
   background-size: cover;
   background-position: center;
 }
+.ul-demo-img-bg.circel {
+  border-radius: 100%;
+}
 
 .ul-demo-mobile-page {
   width: 360px;
@@ -732,6 +735,46 @@
 
 .ul-header-user-info {
   margin-left: 10px;
+}
+
+.ul-card-avatar-info .main {
+  padding: 12px;
+  background-color: #1E9FFF;
+  color: #fff;
+  border-radius: 6px;
+  position: relative;
+}
+.ul-card-avatar-info .main-title {
+  font-size: 22px;
+  display: flex;
+  margin-bottom: 14px;
+  align-items: center;
+}
+.ul-card-avatar-info .main-title .item {
+  margin-right: 6px;
+}
+.ul-card-avatar-info .item-title {
+  font-size: 14px;
+  display: flex;
+  margin-bottom: 8px;
+  align-items: center;
+}
+.ul-card-avatar-info .item-title .item {
+  margin-right: 6px;
+}
+.ul-card-avatar-info .footer-title {
+  display: flex;
+  font-size: 12px;
+  justify-content: space-between;
+  margin-top: 12px;
+  align-items: center;
+}
+.ul-card-avatar-info .fixed-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px;
+  z-index: 9;
 }
 
 .ul-card-data {

@@ -1,0 +1,48 @@
+.ul-card-avatar-info {
+    .main {
+        padding: 12px;
+        background-color: #1E9FFF;
+        color: #fff;
+        border-radius: 6px;
+        position: relative;
+    }
+
+    .main-title {
+        font-size: 22px;
+        display: flex;
+        margin-bottom: 14px;
+        align-items: center;
+
+        .item {
+            margin-right: 6px;
+        }
+    }
+
+    .item-title {
+        font-size: 14px;
+        display: flex;
+        margin-bottom: 8px;
+        align-items: center;
+
+        .item {
+            margin-right: 6px;
+        }
+    }
+
+    .footer-title {
+        display: flex;
+        font-size: 12px;
+        justify-content: space-between;
+        margin-top: 12px;
+        align-items: center;
+
+    }
+
+    .fixed-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 15px;
+        z-index: 9;
+    }
+}
