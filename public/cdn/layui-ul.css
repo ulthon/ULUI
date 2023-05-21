@@ -1165,9 +1165,15 @@
   height: calc(30px + 6px);
   display: inline-block;
   border-radius: 100%;
+  background-color: #fff;
 }
 .ul-element-fixed-option .item .title {
   margin-top: 6px;
+  background-color: #fff;
+  color: #666;
+  padding: 3px;
+  border-radius: 3px;
+  font-size: 12px;
 }
 
 .ul-loading-pos {
