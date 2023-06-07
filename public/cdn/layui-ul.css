@@ -347,6 +347,9 @@
   border-top: 2px solid #ebeef5;
   margin-top: 8px;
   padding-top: 8px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .ul-card-message {
