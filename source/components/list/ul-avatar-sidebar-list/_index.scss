@@ -18,11 +18,20 @@
         background-image: url("/static/images/avatar.png");
         background-size: cover;
         background-position: center;
+        flex-shrink: 0;
+    }
 
+
+    .ul-avatar-sidebar-list-item-title,
+    .ul-avatar-sidebar-list-item-intro {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
     }
 
     .ul-avatar-sidebar-list-item-info {
         margin-left: 10px;
+        width: calc(100% - 58px - 10px);
     }
 
     .ul-avatar-sidebar-list-item-intro {
