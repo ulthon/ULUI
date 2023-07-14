@@ -1130,6 +1130,20 @@
   content: "：";
 }
 
+.ul-descriptions-row {
+  border: 1px solid #F2F2F2;
+  color: #333333;
+}
+.ul-descriptions-row .label {
+  background-color: #FAFAFA;
+}
+.ul-descriptions-row .item {
+  padding: 6px 12px;
+}
+.ul-descriptions-row .item:not(:last-child) {
+  border-bottom: 1px solid #F2F2F2;
+}
+
 .ul-easy-item {
   display: flex;
   align-items: flex-start;

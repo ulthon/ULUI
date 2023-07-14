@@ -1,0 +1,16 @@
+.ul-descriptions-row {
+    border: 1px solid #F2F2F2;
+    color: #333333;
+
+    .label {
+        background-color: #FAFAFA;
+    }
+
+    .item {
+        padding: 6px 12px;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #F2F2F2;
+        }
+    }
+}
