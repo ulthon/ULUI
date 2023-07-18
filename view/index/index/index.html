@@ -333,8 +333,8 @@
 
             }).mount(elem)
         })
-
-        $('.code-preview').css('width', $('.main-content').width() + 'px')
+        console.log($('.main-content').width());
+        $('.code-preview').css('width', 'calc('+$('.main-content').width() + 'px - 1em - 3.8em)')
 
     </script>
 </body>
