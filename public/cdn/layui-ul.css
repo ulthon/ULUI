@@ -1937,33 +1937,37 @@
   margin-top: 12px;
   padding-bottom: 12px;
   border-bottom: 1px solid #bbb;
+  position: relative;
 }
 .ul-post-list .ul-post-item .poster {
   height: 120px;
   width: 240px;
+  margin-right: 12px;
 }
 .ul-post-list .ul-post-item .main {
-  margin-left: 12px;
-  position: relative;
+  width: 100%;
 }
-.ul-post-list .ul-post-item .main .title {
+.ul-post-list .ul-post-item .main .info {
+  padding-bottom: 28px;
+}
+.ul-post-list .ul-post-item .main .info .title {
   font-size: 14px;
   font-weight: 600;
 }
-.ul-post-list .ul-post-item .main .desc {
+.ul-post-list .ul-post-item .main .info .desc {
   font-size: 12px;
   color: #999;
   margin-top: 4px;
 }
-.ul-post-list .ul-post-item .main .options {
+.ul-post-list .ul-post-item .options {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   position: absolute;
-  bottom: 0;
+  bottom: 12px;
   right: 0;
 }
-.ul-post-list .ul-post-item .main .options .item {
+.ul-post-list .ul-post-item .options .item {
   margin-left: 12px;
 }
 
