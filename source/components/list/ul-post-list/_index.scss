@@ -1,0 +1,43 @@
+.ul-post-list {
+    .ul-post-item {
+        display: flex;
+        align-items: stretch;
+        justify-content: flex-start;
+        margin-bottom: 12px;
+
+        .poster {
+            height: 120px;
+            width: 240px;
+
+        }
+
+        .main {
+            margin-left: 12px;
+            position: relative;
+
+            .title {
+                font-size: 14px;
+                font-weight: 600;
+            }
+
+            .desc {
+                font-size: 12px;
+                color: #999;
+                margin-top: 4px;
+            }
+
+            .options {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+
+                .item {
+                    margin-left: 12px;
+                }
+            }
+        }
+    }
+}

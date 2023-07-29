@@ -1930,6 +1930,41 @@
   line-height: 1.5;
 }
 
+.ul-post-list .ul-post-item {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  margin-bottom: 12px;
+}
+.ul-post-list .ul-post-item .poster {
+  height: 120px;
+  width: 240px;
+}
+.ul-post-list .ul-post-item .main {
+  margin-left: 12px;
+  position: relative;
+}
+.ul-post-list .ul-post-item .main .title {
+  font-size: 14px;
+  font-weight: 600;
+}
+.ul-post-list .ul-post-item .main .desc {
+  font-size: 12px;
+  color: #999;
+  margin-top: 4px;
+}
+.ul-post-list .ul-post-item .main .options {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.ul-post-list .ul-post-item .main .options .item {
+  margin-left: 12px;
+}
+
 .ul-site-group {
   margin-bottom: 8px;
 }
