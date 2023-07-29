@@ -1954,10 +1954,10 @@
   font-weight: 600;
   line-height: 20px;
   color: #333;
-  padding: 6px;
+  margin: 6px;
 }
 .ul-post-block-list .ul-post-block-item .desc {
-  padding: 0 6px 6px 6px;
+  margin: 6px;
   font-size: 12px;
   line-height: 20px;
   color: #999;
