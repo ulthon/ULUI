@@ -1934,7 +1934,9 @@
   display: flex;
   align-items: stretch;
   justify-content: flex-start;
-  margin-bottom: 12px;
+  margin-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #bbb;
 }
 .ul-post-list .ul-post-item .poster {
   height: 120px;
