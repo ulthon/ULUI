@@ -1,0 +1,74 @@
+.ul-descriptions-form {
+
+    .item {
+        float: left;
+        width: 50%;
+        box-sizing: border-box;
+        padding: 10px;
+
+        .label {
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 6px;
+        }
+
+        .value {
+            font-size: 14px;
+            color: #333;
+        }
+
+        &.full-line {
+            width: 100%;
+        }
+
+        &.poster {
+            .poster-item {
+                height: 80px;
+            }
+        }
+
+        .article-item {
+            color: #666;
+
+            // 文本换行
+            white-space: pre-wrap;
+            word-wrap: break-word
+        }
+    }
+
+    // 增加边框
+    &.border {
+        
+        .item {
+            border: 1px solid #e8e8e8;
+        }
+
+        border: 1px solid #e8e8e8;
+    }
+
+    // 左右排列
+    &.space-between {
+        .item {
+            display: flex;
+
+            .label {
+                width: 80px;
+                text-align: right;
+                margin-right: 10px;
+                white-space: nowrap;
+                flex-shrink: 0;
+            }
+
+            .value {
+                margin-left: 5px;
+
+            }
+        }
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}

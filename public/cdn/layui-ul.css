@@ -1108,6 +1108,57 @@
   margin-bottom: 6px;
 }
 
+.ul-descriptions-form .item {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.ul-descriptions-form .item .label {
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 6px;
+}
+.ul-descriptions-form .item .value {
+  font-size: 14px;
+  color: #333;
+}
+.ul-descriptions-form .item.full-line {
+  width: 100%;
+}
+.ul-descriptions-form .item.poster .poster-item {
+  height: 80px;
+}
+.ul-descriptions-form .item .article-item {
+  color: #666;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.ul-descriptions-form.border {
+  border: 1px solid #e8e8e8;
+}
+.ul-descriptions-form.border .item {
+  border: 1px solid #e8e8e8;
+}
+.ul-descriptions-form.space-between .item {
+  display: flex;
+}
+.ul-descriptions-form.space-between .item .label {
+  width: 80px;
+  text-align: right;
+  margin-right: 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.ul-descriptions-form.space-between .item .value {
+  margin-left: 5px;
+}
+.ul-descriptions-form::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 .ul-descriptions-info {
   display: flex;
   align-items: flex-start;

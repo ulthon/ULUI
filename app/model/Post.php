@@ -26,7 +26,7 @@ class Post extends Model
 
     public static $stausNameList = [
         0 => '不发布',
-        1 => '发布'
+        1 => '发布',
     ];
 
     protected $defaultSoftDelete = 0;
@@ -50,16 +50,18 @@ class Post extends Model
     {
         return strtotime($value);
     }
+
     public function getPublishTimeTextAttr()
     {
-
         $value = $this->getData('publish_time');
+
         return date('Y-m-d', $value);
     }
+
     public function getPublishTimeDatetimeAttr()
     {
-
         $value = $this->getData('publish_time');
+
         return date('Y-m-d H:i:s', $value);
     }
 
@@ -131,6 +133,7 @@ class Post extends Model
     {
         return json_encode($value);
     }
+
     public function setContentHtmlAttr($value)
     {
         return trim($value);
@@ -182,7 +185,6 @@ class Post extends Model
             return [];
         }
 
-
         $cache_key = 'cache_components_data_' . $tpl_name;
 
         $list_components_data = Cache::get($cache_key);
@@ -193,10 +195,7 @@ class Post extends Model
 
         $list_components = scandir($components_type_path);
 
-
-
         $list_components_data = [];
-
 
         $scss_compiler = new Compiler();
 
@@ -218,13 +217,14 @@ class Post extends Model
 
             $components_data = [];
 
-            if(file_exists($php_path)) {
-                $components_data = require($php_path);
+            if (file_exists($php_path)) {
+                $components_data = require $php_path;
             }
 
             $html_content = View::display(file_get_contents($components_path . '/_index.html'), $components_data);
 
             $formatter = new Formatter();
+
             $html_content = $formatter->beautify($html_content);
 
             $list_components_data[$components_name]['config'] = $env_info->get();
@@ -247,7 +247,6 @@ class Post extends Model
         return $list_components_data;
     }
 
-
     public static function quickSelect($clear = false)
     {
         $cacke_key = 'post_list';
@@ -255,7 +254,6 @@ class Post extends Model
         $list_post = Cache::get($cacke_key);
 
         if (empty($list_post) || $clear) {
-
             $list_post = Category::with(['post'])->where('type', 'default')
                 ->where('status', 1)
                 ->order('sort asc')
@@ -280,6 +278,7 @@ class Post extends Model
 
         return $model_post;
     }
+
     public static function quickFindByTplName($tpl_name, $clear = false)
     {
         $cache_key = 'post_item_' . $tpl_name;
@@ -291,6 +290,7 @@ class Post extends Model
 
             Cache::set($cache_key, $model_post, get_system_config('cache_expire_time'));
         }
+
         return $model_post;
     }
 

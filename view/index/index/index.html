@@ -3,14 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+          content="ie=edge">
     <title>{$model_post->title}-{:get_system_config('site_name')}</title>
     {include file='common/_require'/}
-    <link rel="stylesheet" href="/static/lib/quill/quill.snow.css">
-    <link rel="stylesheet" href="/cdn/augmented-ui.min.css">
-    <link rel="stylesheet" href="/cdn/fontawesome-free-6.4.0-web/css/all.min.css" />
-    <link rel="stylesheet" href="/static/lib/markdown-css/github-markdown.css">
+    <link rel="stylesheet"
+          href="/static/lib/quill/quill.snow.css">
+    <link rel="stylesheet"
+          href="/cdn/augmented-ui.min.css">
+    <link rel="stylesheet"
+          href="/cdn/fontawesome-free-6.4.0-web/css/all.min.css" />
+    <link rel="stylesheet"
+          href="/static/lib/markdown-css/github-markdown.css">
 
 
     <style>
@@ -31,7 +37,8 @@
                 {:get_system_config('site_desc')}
             </div>
         </div>
-        <div class="layui-row layui-col-space6 " style="margin-top: 15px;">
+        <div class="layui-row layui-col-space6 "
+             style="margin-top: 15px;">
             <div class="layui-col-md3 ul-border-right">
                 <div class="ul-nav-tree ul-padding-md ">
 
@@ -42,7 +49,8 @@
                         </div>
                         <div class="ul-nav-tree-group-main">
                             {volist name='category.post' id='post'}
-                            <a href="{$post.read_url}" class="ul-nav-tree-item {eq name='post.id' value='$model_post.id'}current{/eq}">
+                            <a href="{$post.read_url}"
+                               class="ul-nav-tree-item {eq name='post.id' value='$model_post.id'}current{/eq}">
                                 <div class="ul-nav-tree-item-title">
                                     {$post.title}
                                 </div>
@@ -60,7 +68,8 @@
             <div class="layui-col-md9">
                 <div class="main-content ul-padding-md">
                     <div class="">
-                        <span class="layui-breadcrumb" lay-separator="/">
+                        <span class="layui-breadcrumb"
+                              lay-separator="/">
                             <a href="{:url('Index/index')}">首页</a>
                             <a><cite>{$model_post->title}</cite></a>
                         </span>
@@ -68,7 +77,11 @@
                     <div class="ql-snow">
                         <div class="ql-editor">{$model_post->content_html|raw}</div>
                     </div>
-                    <div class="demo-page" id="app-demo-page" data-prismjs-copy="复制" data-prismjs-copy-error="复制失败" data-prismjs-copy-success="复制成功!">
+                    <div class="demo-page"
+                         id="app-demo-page"
+                         data-prismjs-copy="复制"
+                         data-prismjs-copy-error="复制失败"
+                         data-prismjs-copy-success="复制成功!">
                         {$model_post->demo_page|raw}
 
                         {volist name='model_post->components' id='vo'}
@@ -76,29 +89,68 @@
                             <legend>{$vo.config.TITLE}</legend>
                             <div class="layui-field-box">
 
-                                <div class="component-item" style="margin-top: 10px;" data-margin="{$vo.config.MARGIN|default='0'}" data-padding="{$vo.config.PADDING|default='0'}" data-gray="{$vo.config.GRAY|default='0'}" data-mobile="{$vo.config.MOBILE|default='0'}" data-inner-margin="{$vo.config.INNER_MARGIN|default='0'}">
+                                <div class="component-item"
+                                     style="margin-top: 10px;"
+                                     data-margin="{$vo.config.MARGIN|default='0'}"
+                                     data-padding="{$vo.config.PADDING|default='0'}"
+                                     data-gray="{$vo.config.GRAY|default='0'}"
+                                     data-mobile="{$vo.config.MOBILE|default='0'}"
+                                     data-inner-margin="{$vo.config.INNER_MARGIN|default='0'}">
                                     <div class="">
                                         <span>预览效果</span>
-                                        <div class="layui-btn-group" style="margin-left: 10px;">
-                                            <button type="button" class="layui-btn layui-btn-xs" @click="padding = 1" :class="padding == 1 ? 'layui-btn-normal' : 'layui-btn-primary'">padding</button>
-                                            <button type="button" class="layui-btn layui-btn-xs" @click="padding = 0" :class="padding == 0 ? 'layui-btn-normal' : 'layui-btn-primary'">无</button>
+                                        <div class="layui-btn-group"
+                                             style="margin-left: 10px;">
+                                            <button type="button"
+                                                    class="layui-btn layui-btn-xs"
+                                                    @click="padding = 1"
+                                                    :class="padding == 1 ? 'layui-btn-normal' : 'layui-btn-primary'">padding</button>
+                                            <button type="button"
+                                                    class="layui-btn layui-btn-xs"
+                                                    @click="padding = 0"
+                                                    :class="padding == 0 ? 'layui-btn-normal' : 'layui-btn-primary'">无</button>
                                         </div>
-                                        <div class="layui-btn-group" style="margin-left: 10px;">
-                                            <button type="button" class="layui-btn layui-btn-xs" @click="margin = 1" :class="margin == 1 ? 'layui-btn-normal' : 'layui-btn-primary'">margin</button>
-                                            <button type="button" class="layui-btn layui-btn-xs" @click="margin = 0" :class="margin == 0 ? 'layui-btn-normal' : 'layui-btn-primary'">无</button>
+                                        <div class="layui-btn-group"
+                                             style="margin-left: 10px;">
+                                            <button type="button"
+                                                    class="layui-btn layui-btn-xs"
+                                                    @click="margin = 1"
+                                                    :class="margin == 1 ? 'layui-btn-normal' : 'layui-btn-primary'">margin</button>
+                                            <button type="button"
+                                                    class="layui-btn layui-btn-xs"
+                                                    @click="margin = 0"
+                                                    :class="margin == 0 ? 'layui-btn-normal' : 'layui-btn-primary'">无</button>
                                         </div>
-                                        <div class="layui-btn-group" style="margin-left: 10px;">
-                                            <button type="button" class="layui-btn layui-btn-xs" @click="gray = 1" :class="gray == 1 ? 'layui-btn-normal' : 'layui-btn-primary'">gray</button>
-                                            <button type="button" class="layui-btn layui-btn-xs" @click="gray = 0" :class="gray == 0 ? 'layui-btn-normal' : 'layui-btn-primary'">无</button>
+                                        <div class="layui-btn-group"
+                                             style="margin-left: 10px;">
+                                            <button type="button"
+                                                    class="layui-btn layui-btn-xs"
+                                                    @click="gray = 1"
+                                                    :class="gray == 1 ? 'layui-btn-normal' : 'layui-btn-primary'">gray</button>
+                                            <button type="button"
+                                                    class="layui-btn layui-btn-xs"
+                                                    @click="gray = 0"
+                                                    :class="gray == 0 ? 'layui-btn-normal' : 'layui-btn-primary'">无</button>
                                         </div>
-                                        <div class="layui-btn-group" style="margin-left: 10px;">
-                                            <button type="button" class="layui-btn layui-btn-xs" @click="mobile = 1" :class="mobile == 1 ? 'layui-btn-normal' : 'layui-btn-primary'">手机端</button>
-                                            <button type="button" class="layui-btn layui-btn-xs" @click="mobile = 0" :class="mobile == 0 ? 'layui-btn-normal' : 'layui-btn-primary'">正常</button>
+                                        <div class="layui-btn-group"
+                                             style="margin-left: 10px;">
+                                            <button type="button"
+                                                    class="layui-btn layui-btn-xs"
+                                                    @click="mobile = 1"
+                                                    :class="mobile == 1 ? 'layui-btn-normal' : 'layui-btn-primary'">手机端</button>
+                                            <button type="button"
+                                                    class="layui-btn layui-btn-xs"
+                                                    @click="mobile = 0"
+                                                    :class="mobile == 0 ? 'layui-btn-normal' : 'layui-btn-primary'">正常</button>
                                         </div>
                                     </div>
-                                    <div class="" style="margin-top: 10px;">
-                                        <div class="preview content" :class="{'ul-bg-gray':gray,'ul-padding-md':padding,'ul-margin-md':margin}" :style="mobile== 1?'display:none':''">{$vo.html|raw}</div>
-                                        <iframe class="preview iframe ul-demo-mobile-page" :class="{'ul-bg-gray':gray,'ul-padding-md':padding,'ul-margin-md':margin}" :style="mobile== 0?'display:none':''"></iframe>
+                                    <div class=""
+                                         style="margin-top: 10px;">
+                                        <div class="preview content"
+                                             :class="{'ul-bg-gray':gray,'ul-padding-md':padding,'ul-margin-md':margin}"
+                                             :style="mobile== 1?'display:none':''">{$vo.html|raw}</div>
+                                        <iframe class="preview iframe ul-demo-mobile-page"
+                                                :class="{'ul-bg-gray':gray,'ul-padding-md':padding,'ul-margin-md':margin}"
+                                                :style="mobile== 0?'display:none':''"></iframe>
                                     </div>
                                 </div>
                                 <div class="code">
@@ -109,18 +161,23 @@
                                             <li>CSS</li>
                                             <li>UniApp</li>
                                         </ul>
-                                        <div class="layui-tab-content" style="padding:0">
+                                        <div class="layui-tab-content"
+                                             style="padding:0">
                                             <div class="layui-tab-item layui-show">
-                                                <pre style="margin: 0;max-height: 400px;" class="line-numbers code-preview"><code class="language-html">{$vo.html}</code></pre>
+                                                <pre style="margin: 0;max-height: 400px;"
+                                                     class="line-numbers code-preview"><code class="language-html">{$vo.html}</code></pre>
                                             </div>
                                             <div class="layui-tab-item ">
-                                                <pre style="margin: 0;max-height: 400px;" class="line-numbers code-preview"><code class="language-scss">{$vo.scss}</code></pre>
+                                                <pre style="margin: 0;max-height: 400px;"
+                                                     class="line-numbers code-preview"><code class="language-scss">{$vo.scss}</code></pre>
                                             </div>
                                             <div class="layui-tab-item">
-                                                <pre style="margin: 0;max-height: 400px;" class="line-numbers code-preview"><code class="language-css">{$vo.css}</code></pre>
+                                                <pre style="margin: 0;max-height: 400px;"
+                                                     class="line-numbers code-preview"><code class="language-css">{$vo.css}</code></pre>
                                             </div>
                                             <div class="layui-tab-item">
-                                                <pre style="margin: 0;max-height: 400px;" class="line-numbers code-preview"><code class="language-html">{$vo.uniapp}</code></pre>
+                                                <pre style="margin: 0;max-height: 400px;"
+                                                     class="line-numbers code-preview"><code class="language-html">{$vo.uniapp}</code></pre>
                                             </div>
                                         </div>
                                     </div>
@@ -141,7 +198,9 @@
                         <fieldset class="layui-elem-field layui-field-title ">
                             <legend>开源信息</legend>
                             <div class="layui-field-box">
-                                <script src='https://gitee.com/ulthon/layui-ul/widget_preview' async defer></script>
+                                <script src='https://gitee.com/ulthon/layui-ul/widget_preview'
+                                        async
+                                        defer></script>
                                 <div id="osc-gitee-widget-tag"></div>
                                 <style>
                                     .osc_pro_color {
@@ -177,12 +236,15 @@
             </div>
         </div>
     </div>
-    <div class="right-tips-container" style="display: none;">
-        <div class="ul-nav-min right-tips-nav" style="width: 160px;">
+    <div class="right-tips-container"
+         style="display: none;">
+        <div class="ul-nav-min right-tips-nav"
+             style="width: 160px;">
 
         </div>
     </div>
-    <div class="tpl" style="display: none;">
+    <div class="tpl"
+         style="display: none;">
         <a class="ul-nav-min-item">
             个人中心
         </a>
@@ -199,17 +261,17 @@
                     .css('display', 'block')
                     .data('title', $(elem).children('legend').text());
             }
-        })
+        });
         $('.main-content h2,.main-content>.demo-page>fieldset>legend').each(function (index, elem) {
 
             var id = 'title' + index;
-            $(elem).attr('id', id)
+            $(elem).attr('id', id);
 
-            var navItem = $('.tpl .ul-nav-min-item').clone()
-            navItem.attr('href', '#' + id)
-            navItem.text($(elem).text())
-            navItem.appendTo('.right-tips-nav')
-        })
+            var navItem = $('.tpl .ul-nav-min-item').clone();
+            navItem.attr('href', '#' + id);
+            navItem.text($(elem).text());
+            navItem.appendTo('.right-tips-nav');
+        });
 
         if ($('.right-tips-nav').children().length > 0) {
             layer.open({
@@ -220,18 +282,18 @@
                 closeBtn: 0,
                 shade: 0,
                 success(layero) {
-                    $(layero).css('margin-left', '-15px')
+                    $(layero).css('margin-left', '-15px');
                 }
-            })
+            });
         }
         function renderRepeat(elem) {
             $(elem).find('[data-repeat]').each(function () {
                 for (let index = 1; index < $(this).data('repeat'); index++) {
-                    var clone = $(this).clone()
-                    clone.insertAfter(this)
-                    renderRepeat(clone)
+                    var clone = $(this).clone();
+                    clone.insertAfter(this);
+                    renderRepeat(clone);
                 }
-            })
+            });
         }
 
 
@@ -240,22 +302,22 @@
         $('.demo-js-src').each(function () {
             var html = $(this).html();
             var htmlList = html.split(/[\n]/g);
-            var htmlListNew = []
+            var htmlListNew = [];
             var baseLineBlankNums = -1;
             htmlList.forEach(function (htmlLine, htmlIndex) {
                 if (htmlIndex == 0 && htmlLine.length == 0) {
-                    return true
+                    return true;
                 }
                 if (baseLineBlankNums < 0) {
-                    var kong = htmlLine.match(/^ */g) //筛选
+                    var kong = htmlLine.match(/^ */g); //筛选
                     if (kong != null) {
-                        baseLineBlankNums = kong[0].length
+                        baseLineBlankNums = kong[0].length;
                     } else {
-                        baseLineBlankNums = 0
+                        baseLineBlankNums = 0;
                     }
                 }
 
-                htmlListNew.push(htmlLine.slice(baseLineBlankNums))
+                htmlListNew.push(htmlLine.slice(baseLineBlankNums));
             });
             var contentCode = htmlListNew.join("\n");
             if ($(this).siblings('pre.demo-js').length == 0) {
@@ -266,22 +328,24 @@
                 }
                 $('<pre  class="layui-code demo-js" lay-title="' + title + '"></pre>').insertAfter(this);
             }
-            $(this).siblings('pre.demo-js').text(contentCode)
-        })
+            $(this).siblings('pre.demo-js').text(contentCode);
+        });
 
-        renderRepeat('body')
+        renderRepeat('body');
 
-        layui.form.render()
-        layui.element.render()
+        layui.form.render();
+        layui.element.render();
         layui.code({
             encode: true
-        })
-        layui.util.fixbar()
+        });
+        layui.util.fixbar();
 
-        const { createApp } = Vue
+        const { createApp } = Vue;
 
 
         $('.component-item').each(function (index, elem) {
+            var html = $(elem).find('.preview.content').html();
+
             createApp({
                 data() {
                     return {
@@ -291,11 +355,10 @@
                         mobile: $(elem).data('mobile'),
                         innerMargin: $(elem).data('inner-margin'),
 
-                    }
+                    };
                 },
-                mounted() {
 
-                    var html = $(elem).find('.preview.content').html();
+                mounted() {
 
                     var iframe = $(elem).find('.preview.iframe')[0];
                     var preview =
@@ -321,20 +384,20 @@
                         '<link rel="stylesheet" href="/cdn/layui-ul.css">' +
                         '<link rel="stylesheet" href="/cdn/layui-ul-mb.css">' +
                         '</head>' +
-                        '<body style="'+innerMarginStyle+'">' +
+                        '<body style="' + innerMarginStyle + '">' +
                         html +
                         '</body>' +
-                        '</html>'
+                        '</html>';
 
                     preview.open();
                     preview.write(iframeHtml);
                     preview.close();
                 }
 
-            }).mount(elem)
-        })
+            }).mount(elem);
+        });
         console.log($('.main-content').width());
-        $('.code-preview').css('width', 'calc('+$('.main-content').width() + 'px - 1em - 3.8em)')
+        $('.code-preview').css('width', 'calc(' + $('.main-content').width() + 'px - 1em - 3.8em)')
 
     </script>
 </body>
