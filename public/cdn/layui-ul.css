@@ -1758,6 +1758,7 @@
   padding: 2px 4px;
   border-radius: 3px 3px 3px 0;
   margin-right: 6px;
+  white-space: nowrap;
 }
 .ul-list-user-info .info-item {
   color: #999;
