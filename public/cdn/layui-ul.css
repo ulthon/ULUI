@@ -1114,6 +1114,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-wrap: wrap;
+  width: 100%;
 }
 .ul-class-1 .item {
   padding: 8px;
@@ -1144,6 +1145,19 @@
 .ul-class-1 .item .footer {
   font-size: 12px;
   color: #666;
+}
+.ul-class-1 .item.colord-blue {
+  background-color: rgb(53, 122, 250);
+  color: #fff;
+}
+.ul-class-1 .item.colord-blue .title {
+  color: #fff;
+}
+.ul-class-1 .item.colord-blue .desc {
+  color: #fff;
+}
+.ul-class-1 .item.colord-blue .footer {
+  color: #fff;
 }
 
 .ul-descriptions-form {
