@@ -1,27 +1,30 @@
 .ul-nav-tree-2 {
+  .ul-nav-tree-2-group-title {
+    font-size: 14px;
+    padding: 6px 0;
+    color: #253647;
+    font-weight: 600;
+    white-space: break-spaces;
+    word-wrap: anywhere;
+    display: block;
+  }
 
-    .ul-nav-tree-2-group-title {
-
-        font-size: 14px;
-        padding: 6px 0;
-        color: #253647;
-        font-weight: 600;
-        white-space: break-spaces;
-        word-wrap: anywhere;
-        display: block;
-    }
-
-    .ul-nav-tree-2-item-title {
-        font-size: 14px;
-        color: #999;
-        padding-left: 15px;
-        line-height: 24px;
-        white-space: break-spaces;
-        word-wrap: anywhere;
-    }
-
-    .ul-nav-tree-2-item:hover .ul-nav-tree-2-item-title {
+  .ul-nav-tree-2-item {
+    &.current,
+    &:hover {
+      .ul-nav-tree-2-item-title {
         color: #6cf;
         text-decoration: underline;
+      }
     }
+  }
+
+  .ul-nav-tree-2-item-title {
+    font-size: 14px;
+    color: #999;
+    padding-left: 15px;
+    line-height: 24px;
+    white-space: break-spaces;
+    word-wrap: anywhere;
+  }
 }
