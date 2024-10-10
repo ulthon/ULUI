@@ -2419,6 +2419,9 @@
   word-wrap: anywhere;
   display: block;
 }
+.ul-nav-tree-2 .ul-nav-tree-2-item {
+  cursor: pointer;
+}
 .ul-nav-tree-2 .ul-nav-tree-2-item.current .ul-nav-tree-2-item-title, .ul-nav-tree-2 .ul-nav-tree-2-item:hover .ul-nav-tree-2-item-title {
   color: #6cf;
   text-decoration: underline;
