@@ -1781,6 +1781,9 @@
   justify-content: flex-start;
   flex-shrink: 1;
 }
+.ul-list-user-info .item .info .avatar {
+  flex-shrink: 0;
+}
 .ul-list-user-info .item .info .main {
   margin-left: 9px;
 }

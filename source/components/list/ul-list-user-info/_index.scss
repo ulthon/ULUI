@@ -17,6 +17,10 @@
             justify-content: flex-start;
             flex-shrink: 1;
 
+            .avatar{
+              flex-shrink: 0;
+            }
+
             .main {
                 margin-left: 9px;
 
