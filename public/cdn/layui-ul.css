@@ -658,6 +658,12 @@
   margin-left: 10px;
 }
 
+.layui-quote-gray {
+  background-color: #f0f0f0;
+  color: #666;
+  border-left-color: #ddd;
+}
+
 .ul-card-avatar-info .main {
   padding: 12px;
   background-color: #1E9FFF;
@@ -3084,12 +3090,6 @@
 
 .ul-nav-card-item.disabled .ul-nav-card-item-icon {
   background-color: #908b8b;
-}
-
-body .layui-quote-gray {
-  background-color: #f0f0f0;
-  color: #666;
-  border-left-color: #ddd;
 }
 
 .ul-doc-info-page-list {
