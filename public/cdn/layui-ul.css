@@ -1169,6 +1169,19 @@
   font-weight: 600;
 }
 
+.ul-card-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ul-card-list .ul-card {
+  margin-right: 15px;
+}
+
+.ul-card-list .layui-card:last-child {
+  margin-bottom: 15px;
+}
+
 .ul-info-card {
   background-color: #fff;
 }
@@ -2591,19 +2604,6 @@
 
 .data-img {
   display: block;
-}
-
-.ul-card-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.ul-card-list .ul-card {
-  margin-right: 15px;
-}
-
-.ul-card-list .layui-card:last-child {
-  margin-bottom: 15px;
 }
 
 .ul-title {
