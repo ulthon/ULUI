@@ -1,0 +1,35 @@
+
+.ul-card-a {
+  width: 180px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #bbb;
+  box-shadow: 2px 2px 5px #999;
+  color: #516073;
+  padding: 15px;
+  cursor: pointer;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.ul-card-a-left {
+  width: 40%;
+}
+
+.ul-card-a-right {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+}
+
+.ul-card-a-title {
+  font-size: 18px;
+}
+
+.ul-card-a-desc {
+  margin-top: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+}
