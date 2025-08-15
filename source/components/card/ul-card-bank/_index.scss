@@ -1,0 +1,55 @@
+
+.ul-card-bank {
+    width        : 249px;
+    border       : 1px solid #e4e4e4;
+    border-radius: 5px;
+    box-shadow   : 0 1px 1px #e9e9e9;
+    display      : inline-block;
+    margin-right : 14px;
+    margin-bottom: 10px;
+    color        : #666666;
+    font-size    : 12px;
+    cursor       : pointer;
+}
+
+.ul-card-bank-header {
+    padding      : 10px 0;
+    margin       : 0 14px;
+    border-bottom: 1px dotted #d9d9d9;
+}
+
+.ul-card-bank-body {
+    height : 40px;
+    padding: 10px 10px 20px 0;
+}
+
+.ul-card-bank-line {
+    width        : 88px;
+    height       : 23px;
+    font-weight  : 100;
+    text-align   : center;
+    background   : #2e4158;
+    border-radius: 0 3px 0 0;
+    font-size    : 14px;
+    float        : left;
+}
+
+.ul-card-bank-footer {
+    padding   : 3px 14px;
+    background: #f8f8f8;
+    border-top: 1px solid #e7e7e7;
+}
+
+.ul-card-bank-line-triangle {
+    width        : 0px;
+    height       : 3px;
+    display      : block;
+    float        : right;
+    border-left  : 9px solid transparent;
+    border-bottom: 20px solid #fff;
+}
+
+.ul-card-bank-tips {
+    color    : #6cf;
+    font-size: 14px;
+}
