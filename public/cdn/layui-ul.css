@@ -40,11 +40,11 @@
 }
 
 .ul-bg-black {
-  background-color: #393D49;
+  background-color: #393d49;
 }
 
 .ul-bg-dark {
-  background-color: #1F2430;
+  background-color: #1f2430;
 }
 
 .ul-color-main {
@@ -85,6 +85,10 @@
   height: 660px;
   border: 0;
   box-shadow: 0 0 3px #bbb;
+}
+
+.data-item {
+  margin-right: 15px;
 }
 
 .ul-order-list-simple-card .item {
@@ -2578,10 +2582,6 @@
 .ul-card-options {
   float: right;
   cursor: pointer;
-}
-
-.data-item {
-  margin-right: 15px;
 }
 
 .data-img .data-img-main {

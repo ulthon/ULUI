@@ -1,92 +1,93 @@
 /* 通用类开始 */
 .ul-padding-md {
-    padding: 15px;
+  padding: 15px;
 }
 
 .ul-margin-md {
-    margin: 15px;
+  margin: 15px;
 }
 
-
 .ul-section {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .ul-inline-block {
-    display: inline-block !important;
-    margin-right: 15px;
-    margin-bottom: 15px;
+  display: inline-block !important;
+  margin-right: 15px;
+  margin-bottom: 15px;
 }
 
 .ul-icon-exit {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    background-image: url("img/exit.png");
-    background-size: cover;
-    background-position: center;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url("img/exit.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .ul-border-right {
-    border-right: 1px solid #bbb;
+  border-right: 1px solid #bbb;
 }
 
 .ul-bg-white {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .ul-bg-gray {
-    background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
 
 .ul-bg-black {
-
-    background-color: #393D49;
+  background-color: #393d49;
 }
 
 .ul-bg-dark {
-    background-color: #1F2430;
+  background-color: #1f2430;
 }
 
 .ul-color-main {
-    color: #6cf !important;
+  color: #6cf !important;
 }
 
 .ul-color-white {
-    color: #fff !important;
+  color: #fff !important;
 }
 
 .ul-common-flex-list {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .ul-common-flex-sb {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-
 .ul-mobile-box {
-    width: 360px;
+  width: 360px;
 }
 
 /* 通用类结束 */
 
 .ul-demo-img-bg {
-    background-image: url("https://layui.ulthon.com/cdn/img/view.jpg");
-    background-size: cover;
-    background-position: center;
+  background-image: url("https://layui.ulthon.com/cdn/img/view.jpg");
+  background-size: cover;
+  background-position: center;
 
-    &.circle {
-        border-radius: 100%;
-    }
+  &.circle {
+    border-radius: 100%;
+  }
 }
 
 .ul-demo-mobile-page {
-    width: 360px;
-    height: 660px;
-    border: 0;
-    box-shadow: 0 0 3px #bbb;
+  width: 360px;
+  height: 660px;
+  border: 0;
+  box-shadow: 0 0 3px #bbb;
+}
+
+.data-item {
+  margin-right: 15px;
 }
