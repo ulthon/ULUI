@@ -2556,6 +2556,32 @@
   margin-bottom: 15px;
 }
 
+.ul-group-title-2 {
+  background: #d2dbe0;
+  width: 84px;
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 14px;
+  color: #666666;
+}
+
+.ul-group-title-2::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left: 15px solid #d2dbe0;
+  right: -15px;
+  top: 0px;
+}
+
 .ul-title {
   text-align: center;
   line-height: 1.5;
