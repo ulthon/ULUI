@@ -2549,6 +2549,13 @@
   word-wrap: anywhere;
 }
 
+.ul-group-title {
+  color: #999;
+  border-bottom: 1px solid #bbb;
+  padding: 5px 0;
+  margin-bottom: 15px;
+}
+
 .ul-title {
   text-align: center;
   line-height: 1.5;
@@ -2756,13 +2763,6 @@
   background-image: url("img/upload.png");
   background-size: cover;
   background-position: center;
-}
-
-.ul-group-title {
-  color: #999;
-  border-bottom: 1px solid #bbb;
-  padding: 5px 0;
-  margin-bottom: 15px;
 }
 
 .ul-tree-item {
