@@ -1169,19 +1169,6 @@
   font-weight: 600;
 }
 
-.ul-card-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.ul-card-list .ul-card {
-  margin-right: 15px;
-}
-
-.ul-card-list .layui-card:last-child {
-  margin-bottom: 15px;
-}
-
 .ul-info-card {
   background-color: #fff;
 }
@@ -1453,6 +1440,19 @@
 .ul-loading-pos.screen .main {
   padding: 60px 0;
   text-align: center;
+}
+
+.ul-card-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ul-card-list .ul-card {
+  margin-right: 15px;
+}
+
+.ul-card-list .layui-card:last-child {
+  margin-bottom: 15px;
 }
 
 .ul-header-shape {
@@ -2549,6 +2549,76 @@
   word-wrap: anywhere;
 }
 
+.ul-group-title {
+  color: #999;
+  border-bottom: 1px solid #bbb;
+  padding: 5px 0;
+  margin-bottom: 15px;
+}
+
+.ul-group-title-2 {
+  background: #d2dbe0;
+  width: 84px;
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 14px;
+  color: #666666;
+}
+
+.ul-group-title-2::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left: 15px solid #d2dbe0;
+  right: -15px;
+  top: 0px;
+}
+
+.ul-group-title-simple {
+  line-height: 30px;
+  font-size: 16px;
+  padding-left: 10px;
+  position: relative;
+}
+
+.ul-group-title-simple:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  height: 16px;
+  width: 3px;
+  top: 7px;
+  border-radius: 3px;
+  background: linear-gradient(0deg, #7FC0FC, #4B7EEF);
+}
+
+.ul-title {
+  text-align: center;
+  line-height: 1.5;
+}
+
+.ul-title-main {
+  font-size: 16px;
+}
+
+.ul-title-plus {
+  color: #999;
+}
+
+.ul-title-line {
+  border-top: 2px solid #666;
+  margin-top: 8px;
+}
+
 /* 链接导航开始 */
 .ul-link-select {
   display: flex;
@@ -2604,24 +2674,6 @@
 
 .data-img {
   display: block;
-}
-
-.ul-title {
-  text-align: center;
-  line-height: 1.5;
-}
-
-.ul-title-main {
-  font-size: 16px;
-}
-
-.ul-title-plus {
-  color: #999;
-}
-
-.ul-title-line {
-  border-top: 2px solid #666;
-  margin-top: 8px;
 }
 
 .ul-message-item {
@@ -2756,13 +2808,6 @@
   background-image: url("img/upload.png");
   background-size: cover;
   background-position: center;
-}
-
-.ul-group-title {
-  color: #999;
-  border-bottom: 1px solid #bbb;
-  padding: 5px 0;
-  margin-bottom: 15px;
 }
 
 .ul-tree-item {
