@@ -327,42 +327,6 @@
   padding: 15px;
 }
 
-.ul-card-message {
-  border-radius: 10px 10px 0 0;
-  background-color: #fff;
-}
-.ul-card-message .header {
-  padding: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 14px;
-  font-weight: 600;
-  border-bottom: 2px solid #eee;
-}
-.ul-card-message .body {
-  padding: 15px;
-  padding-bottom: 0;
-}
-.ul-card-message .body .item {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  line-height: 1.8;
-  margin-bottom: 10px;
-}
-.ul-card-message .body .item .item-title {
-  width: 90px;
-  color: #999;
-}
-.ul-card-message .body .item .item-value {
-  white-space: normal;
-  width: calc(100% - 90px);
-}
-.ul-card-message .footer {
-  text-align: right;
-  padding: 15px;
-}
 
 .ul-jumbotron {
   padding: 15px;
