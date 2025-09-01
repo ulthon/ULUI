@@ -165,35 +165,6 @@
   justify-content: space-between;
 }
 
-/* 附带说明垂直导航 */
-.ul-nav-tree-group-title {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 2;
-}
-
-.ul-nav-tree-item {
-  display: flex;
-  align-items: baseline;
-  cursor: pointer;
-  padding: 5px;
-  white-space: nowrap;
-}
-
-.ul-nav-tree-item.current .ul-nav-tree-item-title {
-  color: #6cf;
-}
-
-.ul-nav-tree-item-title {
-  font-size: 15px;
-}
-
-.ul-nav-tree-item-desc {
-  font-size: 14px;
-  color: #999;
-  margin-left: 15px;
-}
-
 .ul-nav-card-simple .ul-nav-card-item {
   border-radius: 6px;
   background-color: rgb(255, 255, 255);
@@ -1509,51 +1480,6 @@
   color: #fff;
 }
 
-/* 头部结束 */
-/* 导航开始 */
-.layui-nav.ul-nav-white {
-  background-color: #f0f0f0;
-}
-
-.layui-nav.ul-nav-white .layui-nav-child a {
-  color: #666;
-}
-
-.layui-nav.ul-nav-white .layui-nav-item a {
-  color: #666;
-}
-
-.layui-nav.ul-nav-white .layui-nav-itemed > .layui-nav-child {
-  background-color: rgba(255, 255, 255, 0.6) !important;
-  padding-left: 15px;
-  min-width: calc(100% - 15px) !important;
-}
-
-.layui-nav-tree.ul-nav-white .layui-nav-item a:hover {
-  background-color: #9cf;
-  color: #fff !important;
-}
-
-.layui-nav.ul-nav-white .layui-nav-itemed > a,
-.layui-nav-tree.ul-nav-white .layui-nav-title a,
-.layui-nav-tree.ul-nav-white .layui-nav-title a:hover {
-  color: #666 !important;
-}
-
-.layui-nav-tree.ul-nav-white .layui-nav-bar {
-  background-color: #6cf;
-}
-
-.layui-nav-tree.ul-nav-white .layui-nav-child dd.layui-this,
-.layui-nav-tree.ul-nav-white .layui-nav-child dd.layui-this a,
-.layui-nav-tree.ul-nav-white .layui-this,
-.layui-nav-tree.ul-nav-white .layui-this > a,
-.layui-nav-tree.ul-nav-white .layui-this > a:hover {
-  background-color: #9cf;
-  color: #fff;
-}
-
-/* 导航结束 */
 .ul-shop-header {
   padding: 15px;
 }
@@ -2646,6 +2572,35 @@
 }
 .ul-nav-info__item:not(:last-child) {
   border-bottom: 1px solid #eee;
+}
+
+/* 附带说明垂直导航 */
+.ul-nav-tree-group-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 2;
+}
+
+.ul-nav-tree-item {
+  display: flex;
+  align-items: baseline;
+  cursor: pointer;
+  padding: 5px;
+  white-space: nowrap;
+}
+
+.ul-nav-tree-item.current .ul-nav-tree-item-title {
+  color: #6cf;
+}
+
+.ul-nav-tree-item-title {
+  font-size: 15px;
+}
+
+.ul-nav-tree-item-desc {
+  font-size: 14px;
+  color: #999;
+  margin-left: 15px;
 }
 
 .ul-nav-tree-2 .ul-nav-tree-2-group-title {
