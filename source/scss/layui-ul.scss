@@ -193,19 +193,6 @@
 }
 
 
-.ul-nav-link-item {
-    display    : inline-block;
-    margin     : 5px 0;
-    padding    : 0 10px;
-    border     : 1px solid transparent;
-    color      : #333;
-    white-space: nowrap;
-}
-
-.ul-nav-link-item:not(:last-child) {
-    border-right-color: #666;
-}
-
 .ul-group-title-2 {
     background   : #d2dbe0;
     width        : 84px;
