@@ -156,53 +156,6 @@
 }
 
 
-.ul-nav-header-main {
-    display        : flex;
-    align-items    : center;
-    justify-content: space-between;
-    padding        : 5px 15px;
-    margin         : 0 auto;
-}
-
-.ul-nav-header-right {
-    text-align: right;
-}
-
-.ul-nav-header-item {
-    display     : inline-block;
-    margin-right: 15px;
-    cursor      : pointer;
-    padding     : 5px 15px;
-    color       : #333;
-}
-
-.ul-nav-header-item:hover {
-    color: #6cf;
-}
-
-.ul-nav-header-red {
-    background-color: #f72222;
-}
-
-.ul-nav-header-red .ul-nav-header-item {
-    color: #fff;
-}
-
-.ul-nav-header-red .ul-nav-header-item:hover {
-    color: #fedf50;
-}
-
-.ul-nav-header-primary {
-    background-color: #6cf;
-}
-
-.ul-nav-header-primary .ul-nav-header-item {
-    color: #fff;
-}
-
-.ul-nav-header-primary .ul-nav-header-item:hover {
-    color: #ccffff;
-}
 
 .ul-card-a {
     width          : 180px;
