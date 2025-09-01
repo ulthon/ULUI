@@ -2434,6 +2434,36 @@
   color: #fff;
 }
 
+.ul-nav-easy {
+  background-color: transparent;
+}
+
+.layui-nav-tree.ul-nav-easy .layui-nav-item > a {
+  color: #666;
+}
+
+.layui-nav-tree.ul-nav-easy .layui-this {
+  background-color: transparent;
+}
+
+.layui-nav-tree.ul-nav-easy .layui-this > a {
+  background-color: transparent;
+  color: #6cf;
+}
+
+.layui-nav-tree.ul-nav-easy .layui-nav-item.layui-this a:hover {
+  color: #6cf;
+}
+
+.layui-nav-tree.ul-nav-easy .layui-nav-item a:hover {
+  color: #fff;
+}
+
+.layui-nav-tree.ul-nav-easy .layui-nav-item a {
+  height: 45px;
+  line-height: 45px;
+}
+
 .ul-nav-grid {
   display: flex;
   flex-wrap: wrap;
@@ -2830,36 +2860,6 @@
 
 .data-img {
   display: block;
-}
-
-.ul-nav-easy {
-  background-color: transparent;
-}
-
-.layui-nav-tree.ul-nav-easy .layui-nav-item > a {
-  color: #666;
-}
-
-.layui-nav-tree.ul-nav-easy .layui-this {
-  background-color: transparent;
-}
-
-.layui-nav-tree.ul-nav-easy .layui-this > a {
-  background-color: transparent;
-  color: #6cf;
-}
-
-.layui-nav-tree.ul-nav-easy .layui-nav-item.layui-this a:hover {
-  color: #6cf;
-}
-
-.layui-nav-tree.ul-nav-easy .layui-nav-item a:hover {
-  color: #fff;
-}
-
-.layui-nav-tree.ul-nav-easy .layui-nav-item a {
-  height: 45px;
-  line-height: 45px;
 }
 
 .search-item {
