@@ -1,0 +1,32 @@
+
+.ul-link-select {
+    display        : flex;
+    align-items    : flex-start;
+    justify-content: flex-start;
+}
+
+.ul-link-title {
+    margin-right: 15px;
+    white-space : nowrap;
+}
+
+.ul-link-list {
+    display        : flex;
+    align-items    : flex-start;
+    justify-content: flex-start;
+    flex-wrap      : wrap;
+
+}
+
+.ul-link-item {
+    padding      : 0px 10px;
+    cursor       : pointer;
+    margin-right : 10px;
+    margin-bottom: 5px;
+}
+
+.ul-link-item.current {
+    border-radius: 15px;
+    border       : 1px solid #6cf;
+    color        : #6cf;
+}
