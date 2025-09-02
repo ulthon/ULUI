@@ -174,38 +174,6 @@
   justify-content: space-between;
 }
 
-/* 简约风格Form */
-.ul-form-basic .layui-form-item {
-  clear: unset;
-  margin-bottom: 6px;
-}
-.ul-form-basic .layui-form-label {
-  float: unset;
-  width: unset;
-  text-align: left;
-  padding: 5px 0;
-  font-size: 14px;
-  color: #000;
-}
-.ul-form-basic .layui-input-block {
-  margin-left: unset;
-  min-height: 30px;
-}
-.ul-form-basic .layui-input {
-  padding: 10px 11px;
-  height: unset;
-}
-.ul-form-basic .layui-form-mid {
-  padding: 5px 0 !important;
-}
-.ul-form-basic .layui-form-select dl {
-  top: 28px;
-}
-.ul-form-basic .layui-form-select dl dd,
-.ul-form-basic .layui-form-select dl dt {
-  height: 30px;
-}
-
 .ul-form-space-between .layui-form-item {
   display: flex;
   align-items: flex-start;
@@ -1323,6 +1291,38 @@
 .ul-loading-pos.screen .main {
   padding: 60px 0;
   text-align: center;
+}
+
+/* 简约风格Form */
+.ul-form-basic .layui-form-item {
+  clear: unset;
+  margin-bottom: 6px;
+}
+.ul-form-basic .layui-form-label {
+  float: unset;
+  width: unset;
+  text-align: left;
+  padding: 5px 0;
+  font-size: 14px;
+  color: #000;
+}
+.ul-form-basic .layui-input-block {
+  margin-left: unset;
+  min-height: 30px;
+}
+.ul-form-basic .layui-input {
+  padding: 10px 11px;
+  height: unset;
+}
+.ul-form-basic .layui-form-mid {
+  padding: 5px 0 !important;
+}
+.ul-form-basic .layui-form-select dl {
+  top: 28px;
+}
+.ul-form-basic .layui-form-select dl dd,
+.ul-form-basic .layui-form-select dl dt {
+  height: 30px;
 }
 
 .ul-card-list {
