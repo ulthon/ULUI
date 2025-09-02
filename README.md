@@ -1,4 +1,4 @@
-# layui-ul
+# ULUI
 
 ### 介绍
 ULUI 是一个基于纯 CSS 和 HTML 的轻量级样式库。它不依赖任何前端框架，可以轻松集成到任何 Web 项目中，提供一套简洁、一致的 UI 组件和视觉风格。
@@ -16,10 +16,10 @@ ULUI 是一个基于纯 CSS 和 HTML 的轻量级样式库。它不依赖任何�
 
 只需要引入文件即可:
 ```
-//layui.ulthon.com/cdn/layui-ul.css
+//layui.ulthon.com/cdn/ului.css
 
 比如:
-<link rel="stylesheet" href="//layui.ulthon.com/cdn/layui-ul.css">
+<link rel="stylesheet" href="//layui.ulthon.com/cdn/ului.css">
 ```
 > 最近刚刚做了一个vue+elementui的项目,使用了这个样式库,没有任何不适
 
@@ -77,9 +77,9 @@ ULUI 是一个基于纯 CSS 和 HTML 的轻量级样式库。它不依赖任何�
 > 如果你只希望修改组件样式的话,只关注`source/scss`目录下的文件就可以了
 
 ```
-git clone https://gitee.com/ulthon/layui-ul.git
+git clone https://gitee.com/ulthon/ULUI.git
 
-cd layui-ul
+cd ULUI
 
 composer install
 
