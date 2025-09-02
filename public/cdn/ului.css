@@ -119,6 +119,11 @@
   display: block;
 }
 
+.ului-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .layui-quote-gray {
   background-color: #f0f0f0;
   color: #666;

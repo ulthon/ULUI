@@ -28,8 +28,8 @@
 
 <body>
 
-    <div class="layui-container">
-        <div class="layui-row ul-padding-md">
+    <div class="ului-container">
+        <div class="ului-row ul-padding-md">
             <div style="font-size: 22px;">
                 {:get_system_config('site_name')}
             </div>
@@ -37,9 +37,9 @@
                 {:get_system_config('site_desc')}
             </div>
         </div>
-        <div class="layui-row layui-col-space6 "
+        <div class="ului-row ului-col-space6 "
              style="margin-top: 15px;">
-            <div class="layui-col-md3 ul-border-right">
+            <div class="ului-col-md3 ul-border-right">
                 <div class="ul-nav-tree ul-padding-md ">
 
                     {volist name='list_post' id='category'}
@@ -65,10 +65,10 @@
 
                 </div>
             </div>
-            <div class="layui-col-md9">
+            <div class="ului-col-md9">
                 <div class="main-content ul-padding-md">
                     <div class="">
-                        <span class="layui-breadcrumb"
+                        <span class="ului-breadcrumb"
                               lay-separator="/">
                             <a href="{:url('Index/index')}">首页</a>
                             <a><cite>{$model_post->title}</cite></a>
@@ -85,9 +85,9 @@
                         {$model_post->demo_page|raw}
 
                         {volist name='model_post->components' id='vo'}
-                        <fieldset class="layui-elem-field layui-field-title no-parser">
+                        <fieldset class="ului-elem-field ului-field-title no-parser">
                             <legend>{$vo.config.TITLE}</legend>
-                            <div class="layui-field-box">
+                            <div class="ului-field-box">
 
                                 <div class="component-item"
                                      style="margin-top: 10px;"
@@ -98,49 +98,49 @@
                                      data-inner-margin="{$vo.config.INNER_MARGIN|default='0'}">
                                     <div class="">
                                         <span>预览效果</span>
-                                        <div class="layui-btn-group"
+                                        <div class="ului-btn-group"
                                              style="margin-left: 10px;">
                                             <button type="button"
-                                                    class="layui-btn layui-btn-xs"
+                                                    class="ului-btn ului-btn-xs"
                                                     @click="padding = 1"
-                                                    :class="padding == 1 ? 'layui-btn-normal' : 'layui-btn-primary'">padding</button>
+                                                    :class="padding == 1 ? 'ului-btn-normal' : 'ului-btn-primary'">padding</button>
                                             <button type="button"
-                                                    class="layui-btn layui-btn-xs"
+                                                    class="ului-btn ului-btn-xs"
                                                     @click="padding = 0"
-                                                    :class="padding == 0 ? 'layui-btn-normal' : 'layui-btn-primary'">无</button>
+                                                    :class="padding == 0 ? 'ului-btn-normal' : 'ului-btn-primary'">无</button>
                                         </div>
-                                        <div class="layui-btn-group"
+                                        <div class="ului-btn-group"
                                              style="margin-left: 10px;">
                                             <button type="button"
-                                                    class="layui-btn layui-btn-xs"
+                                                    class="ului-btn ului-btn-xs"
                                                     @click="margin = 1"
-                                                    :class="margin == 1 ? 'layui-btn-normal' : 'layui-btn-primary'">margin</button>
+                                                    :class="margin == 1 ? 'ului-btn-normal' : 'ului-btn-primary'">margin</button>
                                             <button type="button"
-                                                    class="layui-btn layui-btn-xs"
+                                                    class="ului-btn ului-btn-xs"
                                                     @click="margin = 0"
-                                                    :class="margin == 0 ? 'layui-btn-normal' : 'layui-btn-primary'">无</button>
+                                                    :class="margin == 0 ? 'ului-btn-normal' : 'ului-btn-primary'">无</button>
                                         </div>
-                                        <div class="layui-btn-group"
+                                        <div class="ului-btn-group"
                                              style="margin-left: 10px;">
                                             <button type="button"
-                                                    class="layui-btn layui-btn-xs"
+                                                    class="ului-btn ului-btn-xs"
                                                     @click="gray = 1"
-                                                    :class="gray == 1 ? 'layui-btn-normal' : 'layui-btn-primary'">gray</button>
+                                                    :class="gray == 1 ? 'ului-btn-normal' : 'ului-btn-primary'">gray</button>
                                             <button type="button"
-                                                    class="layui-btn layui-btn-xs"
+                                                    class="ului-btn ului-btn-xs"
                                                     @click="gray = 0"
-                                                    :class="gray == 0 ? 'layui-btn-normal' : 'layui-btn-primary'">无</button>
+                                                    :class="gray == 0 ? 'ului-btn-normal' : 'ului-btn-primary'">无</button>
                                         </div>
-                                        <div class="layui-btn-group"
+                                        <div class="ului-btn-group"
                                              style="margin-left: 10px;">
                                             <button type="button"
-                                                    class="layui-btn layui-btn-xs"
+                                                    class="ului-btn ului-btn-xs"
                                                     @click="mobile = 1"
-                                                    :class="mobile == 1 ? 'layui-btn-normal' : 'layui-btn-primary'">手机端</button>
+                                                    :class="mobile == 1 ? 'ului-btn-normal' : 'ului-btn-primary'">手机端</button>
                                             <button type="button"
-                                                    class="layui-btn layui-btn-xs"
+                                                    class="ului-btn ului-btn-xs"
                                                     @click="mobile = 0"
-                                                    :class="mobile == 0 ? 'layui-btn-normal' : 'layui-btn-primary'">正常</button>
+                                                    :class="mobile == 0 ? 'ului-btn-normal' : 'ului-btn-primary'">正常</button>
                                         </div>
                                     </div>
                                     <div class=""
@@ -154,28 +154,28 @@
                                     </div>
                                 </div>
                                 <div class="code">
-                                    <div class="layui-tab layui-tab-card">
-                                        <ul class="layui-tab-title">
-                                            <li class="layui-this">HTML</li>
+                                    <div class="ului-tab ului-tab-card">
+                                        <ul class="ului-tab-title">
+                                            <li class="ului-this">HTML</li>
                                             <li>SCSS</li>
                                             <li>CSS</li>
                                             <li>UniApp</li>
                                         </ul>
-                                        <div class="layui-tab-content"
+                                        <div class="ului-tab-content"
                                              style="padding:0">
-                                            <div class="layui-tab-item layui-show">
+                                            <div class="ului-tab-item ului-show">
                                                 <pre style="margin: 0;max-height: 400px;"
                                                      class="line-numbers code-preview"><code class="language-html">{$vo.html}</code></pre>
                                             </div>
-                                            <div class="layui-tab-item ">
+                                            <div class="ului-tab-item ">
                                                 <pre style="margin: 0;max-height: 400px;"
                                                      class="line-numbers code-preview"><code class="language-scss">{$vo.scss}</code></pre>
                                             </div>
-                                            <div class="layui-tab-item">
+                                            <div class="ului-tab-item">
                                                 <pre style="margin: 0;max-height: 400px;"
                                                      class="line-numbers code-preview"><code class="language-css">{$vo.css}</code></pre>
                                             </div>
-                                            <div class="layui-tab-item">
+                                            <div class="ului-tab-item">
                                                 <pre style="margin: 0;max-height: 400px;"
                                                      class="line-numbers code-preview"><code class="language-html">{$vo.uniapp}</code></pre>
                                             </div>
@@ -195,9 +195,9 @@
 
                 <div class="ul-padding-md">
                     <div id="gitee-container">
-                        <fieldset class="layui-elem-field layui-field-title ">
+                        <fieldset class="ului-elem-field ului-field-title ">
                             <legend>开源信息</legend>
-                            <div class="layui-field-box">
+                            <div class="ului-field-box">
                                 <script src='https://gitee.com/ulthon/ului/widget_preview'
                                         async
                                         defer></script>
@@ -256,7 +256,7 @@
                 return;
             }
             if ($(elem).find('.demo-js-src').length == 0) {
-                $(elem).children('.layui-field-box')
+                $(elem).children('.ului-field-box')
                     .addClass('demo-js-src')
                     .css('display', 'block')
                     .data('title', $(elem).children('legend').text());
@@ -326,7 +326,7 @@
                 if (!title) {
                     title = $(this).closest('fieldset').find('legend').text();
                 }
-                $('<pre  class="layui-code demo-js" lay-title="' + title + '"></pre>').insertAfter(this);
+                $('<pre  class="ului-code demo-js" lay-title="' + title + '"></pre>').insertAfter(this);
             }
             $(this).siblings('pre.demo-js').text(contentCode);
         });
