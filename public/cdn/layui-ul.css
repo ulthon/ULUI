@@ -165,13 +165,6 @@
   justify-content: space-between;
 }
 
-.ul-nav-card-simple .ul-nav-card-item {
-  border-radius: 6px;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0px 8px 18px -8px #aebcca;
-  border: unset;
-}
-
 /* 简约风格Form */
 .ul-form-basic .layui-form-item {
   clear: unset;
@@ -2434,6 +2427,63 @@
   color: #fff;
 }
 
+.ul-nav-card-item {
+  padding: 0 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  height: 82px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ul-nav-card-item-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.ul-nav-card-item-icon {
+  font-size: 28px;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  line-height: 50px;
+  text-align: center;
+  background: #2E4158;
+  display: inline-block;
+  color: #fff;
+  vertical-align: bottom;
+}
+
+.ul-nav-card-item-info {
+  margin-left: 10px;
+}
+
+.ul-nav-card-item-title {
+  font-size: 14px;
+  color: #253647;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.ul-nav-card-item-desc {
+  color: #666;
+  font-size: 12px;
+}
+
+.ul-nav-card-item.disabled .ul-nav-card-item-icon {
+  background-color: #908b8b;
+}
+
+.ul-nav-card-simple .ul-nav-card-item {
+  border-radius: 6px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 8px 18px -8px #aebcca;
+  border: unset;
+}
+
 .ul-nav-easy {
   background-color: transparent;
 }
@@ -3120,56 +3170,6 @@
   border-left: 15px solid #d2dbe0;
   right: -15px;
   top: 0px;
-}
-
-.ul-nav-card-item {
-  padding: 0 15px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  height: 82px;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.ul-nav-card-item-left {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.ul-nav-card-item-icon {
-  font-size: 28px;
-  width: 50px;
-  height: 50px;
-  border-radius: 5px;
-  line-height: 50px;
-  text-align: center;
-  background: #2E4158;
-  display: inline-block;
-  color: #fff;
-  vertical-align: bottom;
-}
-
-.ul-nav-card-item-info {
-  margin-left: 10px;
-}
-
-.ul-nav-card-item-title {
-  font-size: 14px;
-  color: #253647;
-  font-weight: 700;
-  margin-bottom: 4px;
-}
-
-.ul-nav-card-item-desc {
-  color: #666;
-  font-size: 12px;
-}
-
-.ul-nav-card-item.disabled .ul-nav-card-item-icon {
-  background-color: #908b8b;
 }
 
 .ul-doc-info-page-list {
