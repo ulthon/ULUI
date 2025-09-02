@@ -1,3 +1,18 @@
-.ul-table-form {
 
+.ul-input-table {
+    text-align: center;
 }
+
+.ul-input-table tbody td,
+.ul-input-table tbody th {
+    padding: 2px 4px;
+}
+
+.ul-input-table .layui-form-checkbox[lay-skin="primary"] {
+    margin-top: 0px;
+}
+
+.ul-input-table .layui-form-select dl dd {
+    text-align: left;
+}
+
