@@ -80,6 +80,15 @@
     border-radius: 100%;
   }
 }
+.ul-demo-img-logo {
+  background-image: url("/cdn/img/ulthon_logo_108.png");
+  background-size: cover;
+  background-position: center;
+
+  &.circle {
+    border-radius: 100%;
+  }
+}
 
 .ul-demo-mobile-page {
   width: 360px;

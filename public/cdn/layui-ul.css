@@ -80,6 +80,15 @@
   border-radius: 100%;
 }
 
+.ul-demo-img-logo {
+  background-image: url("/cdn/img/ulthon_logo_108.png");
+  background-size: cover;
+  background-position: center;
+}
+.ul-demo-img-logo.circle {
+  border-radius: 100%;
+}
+
 .ul-demo-mobile-page {
   width: 360px;
   height: 660px;
@@ -2427,6 +2436,38 @@
   color: #fff;
 }
 
+.ul-nav-button-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0px 1px 3px #bbb;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.ul-nav-button-icon {
+  margin-right: 10px;
+}
+
+.ul-nav-button-icon .icon {
+  font-size: 38px;
+  color: #999;
+}
+
+.ul-nav-button-title {
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.ul-nav-button-desc {
+  color: #666;
+  font-size: 14px;
+}
+
 .ul-nav-card-item {
   padding: 0 15px;
   border: 1px solid #ddd;
@@ -3212,38 +3253,6 @@
 
 .ul-doc-info-page-item.level-3 {
   margin-left: 45px;
-}
-
-.ul-nav-button-item {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  padding: 10px;
-  box-shadow: 0px 1px 3px #bbb;
-  background-color: #fff;
-  cursor: pointer;
-}
-
-.ul-nav-button-icon {
-  margin-right: 10px;
-}
-
-.ul-nav-button-icon .icon {
-  font-size: 38px;
-  color: #999;
-}
-
-.ul-nav-button-title {
-  color: #333;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.ul-nav-button-desc {
-  color: #666;
-  font-size: 14px;
 }
 
 .ul-timeline-rowstyle {
