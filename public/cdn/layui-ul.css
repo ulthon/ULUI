@@ -174,37 +174,6 @@
   justify-content: space-between;
 }
 
-.ul-form-space-between .layui-form-item {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  border-bottom: 2px solid #eee;
-}
-.ul-form-space-between .layui-form-item::after {
-  content: unset;
-}
-.ul-form-space-between .layui-form-item:last-child {
-  border: unset;
-}
-.ul-form-space-between .layui-form-item .layui-form-label {
-  text-align: left;
-  float: unset;
-}
-.ul-form-space-between .layui-form-item .layui-input-block {
-  margin-left: unset;
-  width: 60%;
-  text-align: right;
-}
-.ul-form-space-between .layui-form-item .layui-input {
-  border: unset;
-  text-align: right;
-}
-.ul-form-space-between .layui-form-item .layui-form-mid {
-  text-align: right;
-  display: block;
-  float: unset;
-}
-
 .ul-field-clean {
   border: unset;
 }
@@ -1323,6 +1292,37 @@
 .ul-form-basic .layui-form-select dl dd,
 .ul-form-basic .layui-form-select dl dt {
   height: 30px;
+}
+
+.ul-form-space-between .layui-form-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 2px solid #eee;
+}
+.ul-form-space-between .layui-form-item::after {
+  content: unset;
+}
+.ul-form-space-between .layui-form-item:last-child {
+  border: unset;
+}
+.ul-form-space-between .layui-form-item .layui-form-label {
+  text-align: left;
+  float: unset;
+}
+.ul-form-space-between .layui-form-item .layui-input-block {
+  margin-left: unset;
+  width: 60%;
+  text-align: right;
+}
+.ul-form-space-between .layui-form-item .layui-input {
+  border: unset;
+  text-align: right;
+}
+.ul-form-space-between .layui-form-item .layui-form-mid {
+  text-align: right;
+  display: block;
+  float: unset;
 }
 
 .ul-card-list {
