@@ -1,0 +1,28 @@
+.ul-btn-group {
+    display: inline-flex;
+    vertical-align: middle;
+    margin-right: $space-md;
+
+    .ul-btn {
+        position: relative;
+        margin: 0;
+        border-radius: 0;
+
+        &:first-child {
+            margin-left: 0;
+            border-top-left-radius: 2px;
+            border-bottom-left-radius: 2px;
+        }
+
+        &:last-child {
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+        }
+
+        &:hover,
+        &:focus {
+            z-index: 1;
+        }
+    }
+
+}

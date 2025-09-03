@@ -101,46 +101,46 @@
                                         <div class="ul-btn-group"
                                              style="margin-left: 10px;">
                                             <button type="button"
-                                                    class="ul-btn ul-btn-xs"
+                                                    class="ul-btn ul-btn-mini"
                                                     @click="padding = 1"
-                                                    :class="padding == 1 ? 'ul-btn-normal' : 'ul-btn-primary'">padding</button>
+                                                    :class="padding == 1 ? 'ul-btn-primary' : ''">padding</button>
                                             <button type="button"
-                                                    class="ul-btn ul-btn-xs"
+                                                    class="ul-btn ul-btn-mini"
                                                     @click="padding = 0"
-                                                    :class="padding == 0 ? 'ul-btn-normal' : 'ul-btn-primary'">无</button>
+                                                    :class="padding == 0 ? 'ul-btn-primary' : ''">无</button>
                                         </div>
                                         <div class="ul-btn-group"
                                              style="margin-left: 10px;">
                                             <button type="button"
-                                                    class="ul-btn ul-btn-xs"
+                                                    class="ul-btn ul-btn-mini"
                                                     @click="margin = 1"
-                                                    :class="margin == 1 ? 'ul-btn-normal' : 'ul-btn-primary'">margin</button>
+                                                    :class="margin == 1 ? 'ul-btn-primary' : ''">margin</button>
                                             <button type="button"
-                                                    class="ul-btn ul-btn-xs"
+                                                    class="ul-btn ul-btn-mini"
                                                     @click="margin = 0"
-                                                    :class="margin == 0 ? 'ul-btn-normal' : 'ul-btn-primary'">无</button>
+                                                    :class="margin == 0 ? 'ul-btn-primary' : ''">无</button>
                                         </div>
                                         <div class="ul-btn-group"
                                              style="margin-left: 10px;">
                                             <button type="button"
-                                                    class="ul-btn ul-btn-xs"
+                                                    class="ul-btn ul-btn-mini"
                                                     @click="gray = 1"
-                                                    :class="gray == 1 ? 'ul-btn-normal' : 'ul-btn-primary'">gray</button>
+                                                    :class="gray == 1 ? 'ul-btn-primary' : ''">gray</button>
                                             <button type="button"
-                                                    class="ul-btn ul-btn-xs"
+                                                    class="ul-btn ul-btn-mini"
                                                     @click="gray = 0"
-                                                    :class="gray == 0 ? 'ul-btn-normal' : 'ul-btn-primary'">无</button>
+                                                    :class="gray == 0 ? 'ul-btn-primary' : ''">无</button>
                                         </div>
                                         <div class="ul-btn-group"
                                              style="margin-left: 10px;">
                                             <button type="button"
-                                                    class="ul-btn ul-btn-xs"
+                                                    class="ul-btn ul-btn-mini"
                                                     @click="mobile = 1"
-                                                    :class="mobile == 1 ? 'ul-btn-normal' : 'ul-btn-primary'">手机端</button>
+                                                    :class="mobile == 1 ? 'ul-btn-primary' : ''">手机端</button>
                                             <button type="button"
-                                                    class="ul-btn ul-btn-xs"
+                                                    class="ul-btn ul-btn-mini"
                                                     @click="mobile = 0"
-                                                    :class="mobile == 0 ? 'ul-btn-normal' : 'ul-btn-primary'">正常</button>
+                                                    :class="mobile == 0 ? 'ul-btn-primary' : ''">正常</button>
                                         </div>
                                     </div>
                                     <div class=""
@@ -274,17 +274,17 @@
         });
 
         if ($('.right-tips-nav').children().length > 0) {
-            layer.open({
-                type: 1,
-                content: $('.right-tips-container'),
-                title: '目录',
-                offset: 'r',
-                closeBtn: 0,
-                shade: 0,
-                success(layero) {
-                    $(layero).css('margin-left', '-15px');
-                }
-            });
+            // layer.open({
+            //     type: 1,
+            //     content: $('.right-tips-container'),
+            //     title: '目录',
+            //     offset: 'r',
+            //     closeBtn: 0,
+            //     shade: 0,
+            //     success(layero) {
+            //         $(layero).css('margin-left', '-15px');
+            //     }
+            // });
         }
         function renderRepeat(elem) {
             $(elem).find('[data-repeat]').each(function () {
@@ -333,12 +333,12 @@
 
         renderRepeat('body');
 
-        layui.form.render();
-        layui.element.render();
-        layui.code({
-            encode: true
-        });
-        layui.util.fixbar();
+        // layui.form.render();
+        // layui.element.render();
+        // layui.code({
+        //     encode: true
+        // });
+        // layui.util.fixbar();
 
         const { createApp } = Vue;
 
