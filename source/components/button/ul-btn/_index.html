@@ -8,11 +8,7 @@
 {/volist}
 {foreach $button_status as $status => $status_name}
 <div class="ul-group-title"> {$status_name} </div>
-{volist name='button_list' id='type_list'}
-<div class="ul-section">
-    {volist name='type_list' id='button'}
-    <button class="{$button.class} {$status}">{$button.name}</button>
-    {/volist}
-</div>
+{volist name='button_type' id='type_name'}
+    <button class="ul-btn ul-btn-{$type_name} {$status}">默认按钮</button>
 {/volist}
 {/foreach}
