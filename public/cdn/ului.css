@@ -1259,9 +1259,41 @@ template {
   cursor: pointer;
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .ul-btn:hover {
   opacity: 0.8;
+}
+.ul-btn.disabled, .ul-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+.ul-btn.loading {
+  cursor: wait;
+  overflow: hidden;
+}
+.ul-btn.loading::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, 0));
+  transform: translateX(-100%);
+  animation: ul-btn-shine 2s infinite;
+}
+.ul-btn.loading > span {
+  visibility: hidden;
+}
+.ul-btn-mini {
+  height: 24px;
+  line-height: 24px;
+  padding: 0 8px;
+  font-size: 10px;
 }
 .ul-btn-sm {
   height: 30px;
@@ -1280,14 +1312,27 @@ template {
   border-color: var(--ul-color-primary-base);
   color: var(--ul-color-primary-text);
 }
-.ul-btn-normal {
-  background-color: var(--ul-color-light-base);
-  border-color: var(--ul-color-light-base);
-  color: var(--ul-color-light-text);
+.ul-btn-primary.plain {
+  color: var(--ul-color-primary-base);
+  background-color: transparent;
+  border-color: var(--ul-color-primary-base);
+}
+.ul-btn-primary.plain:hover {
+  background-color: var(--ul-color-primary-base);
+  color: var(--ul-color-primary-text);
 }
 .ul-btn-success {
   background-color: var(--ul-color-success-base);
   border-color: var(--ul-color-success-base);
+  color: var(--ul-color-success-text);
+}
+.ul-btn-success.plain {
+  color: var(--ul-color-success-base);
+  background-color: transparent;
+  border-color: var(--ul-color-success-base);
+}
+.ul-btn-success.plain:hover {
+  background-color: var(--ul-color-success-base);
   color: var(--ul-color-success-text);
 }
 .ul-btn-danger {
@@ -1295,9 +1340,27 @@ template {
   border-color: var(--ul-color-danger-base);
   color: var(--ul-color-danger-text);
 }
+.ul-btn-danger.plain {
+  color: var(--ul-color-danger-base);
+  background-color: transparent;
+  border-color: var(--ul-color-danger-base);
+}
+.ul-btn-danger.plain:hover {
+  background-color: var(--ul-color-danger-base);
+  color: var(--ul-color-danger-text);
+}
 .ul-btn-warning {
   background-color: var(--ul-color-warning-base);
   border-color: var(--ul-color-warning-base);
+  color: var(--ul-color-warning-text);
+}
+.ul-btn-warning.plain {
+  color: var(--ul-color-warning-base);
+  background-color: transparent;
+  border-color: var(--ul-color-warning-base);
+}
+.ul-btn-warning.plain:hover {
+  background-color: var(--ul-color-warning-base);
   color: var(--ul-color-warning-text);
 }
 .ul-btn-info {
@@ -1305,7 +1368,21 @@ template {
   border-color: var(--ul-color-info-base);
   color: var(--ul-color-info-text);
 }
+.ul-btn-info.plain {
+  color: var(--ul-color-info-base);
+  background-color: transparent;
+  border-color: var(--ul-color-info-base);
+}
+.ul-btn-info.plain:hover {
+  background-color: var(--ul-color-info-base);
+  color: var(--ul-color-info-text);
+}
 
+@keyframes ul-btn-shine {
+  100% {
+    transform: translateX(100%);
+  }
+}
 .ul-card-a {
   width: 180px;
   display: flex;
