@@ -77,6 +77,15 @@
   
   a {
     background-color: transparent;
+    // color: $color-text-secondary;  
+    text-decoration: none;
+    &:hover {
+      // color: $color-primary-hover;
+      text-decoration: underline;
+    }
+    &:visited {
+      // color: $color-text-placeholder;
+    }
   }
   
   /**
