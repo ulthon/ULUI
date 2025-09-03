@@ -1,0 +1,166 @@
+// ==========================================================================
+// Layout System: Container, Grid, Flex Helpers, and Utilities
+// ==========================================================================
+// Note: This file depends on variables and mixins defined in `_variables.scss`.
+
+
+// 1. Container
+// ==========================================================================
+.ul-container,
+.ul-container-fluid {
+  width: 100%;
+  padding-right: calc($grid-gutter-width / 2);
+  padding-left: calc($grid-gutter-width / 2);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.ul-container {
+  @each $name, $width in $container-max-widths {
+    @include media-breakpoint-up($name) {
+      max-width: $width;
+    }
+  }
+}
+
+
+// 2. Grid System (Row & Columns)
+// ==========================================================================
+.ul-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(-#{$grid-gutter-width} / 2);
+  margin-left: calc(-#{$grid-gutter-width} / 2);
+}
+
+// Common column styles
+[class*="ul-col-"] {
+  box-sizing: border-box; // 添加此行
+  position: relative;
+  width: 100%;
+  padding-right: calc($grid-gutter-width / 2);
+  padding-left: calc($grid-gutter-width / 2);
+}
+
+// Auto-width column
+.ul-col {
+  flex: 1 0 0%;
+}
+
+// Generate columns, offsets, and orders
+@mixin make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints-map: $breakpoints) {
+  // Non-responsive columns
+  @for $i from 1 through $columns {
+    .ul-col-#{$i} {
+      flex: 0 0 auto;
+      width: percentage($i / $columns);
+    }
+  }
+
+  // Responsive columns and offsets
+  @each $name, $width in $breakpoints-map {
+    @include media-breakpoint-up($name) {
+      .ul-col-#{$name} {
+        flex: 1 0 0%;
+      }
+
+      @for $i from 1 through $columns {
+        .ul-col-#{$name}-#{$i} {
+          flex: 0 0 auto;
+          width: percentage($i / $columns);
+        }
+      }
+
+      // Offsets
+      @for $i from 0 through $columns {
+        .ul-col-offset-#{$name}-#{$i} {
+          margin-left: if($i > 0, percentage($i / $columns), 0);
+        }
+      }
+
+      // Orders
+      @for $i from 0 through $columns {
+        .ul-col-order-#{$name}-#{$i} {
+          order: $i;
+        }
+      }
+    }
+  }
+}
+
+@include make-grid-columns();
+
+
+// 3. Flexbox Helpers
+// ==========================================================================
+$justify-content-map: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  between: space-between,
+  around: space-around
+);
+
+@each $key, $value in $justify-content-map {
+  .ul-justify-#{$key} {
+    justify-content: $value !important;
+  }
+}
+
+$align-items-map: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  baseline: baseline,
+  stretch: stretch
+);
+
+@each $key, $value in $align-items-map {
+  .ul-align-#{$key} {
+    align-items: $value !important;
+  }
+}
+
+
+// 4. Responsive Utilities
+// ==========================================================================
+@each $name, $width in $breakpoints {
+  @include media-breakpoint-up($name) {
+    .ul-hidden-#{$name}-up {
+      display: none !important;
+    }
+  }
+
+  @include media-breakpoint-down($name) {
+    .ul-hidden-#{$name}-down {
+      display: none !important;
+    }
+  }
+}
+
+
+// 5. Dedicated Layout Component
+// ==========================================================================
+.ul-layout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+
+  &.is-horizontal {
+    flex-direction: row;
+  }
+
+  &__header,
+  &__footer {
+    flex-shrink: 0;
+  }
+
+  &__main {
+    flex-grow: 1;
+  }
+
+  &__aside {
+    flex-shrink: 0;
+  }
+}

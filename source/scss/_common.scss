@@ -1,132 +1,228 @@
-/* 通用类开始 */
-.ul-padding-md {
-  padding: 15px;
+// CSS 变量定义
+// --------------------------------------------------
+:root {
+  // Main 主题色
+  --ul-color-main-base: #1E9FFF;
+  --ul-color-main-hover: #4fb2ff;
+  --ul-color-main-light: #e8f5ff;
+  --ul-color-main-text: #fff;
+
+  // Primary 主题色
+  --ul-color-primary-base: #007bff;
+  --ul-color-primary-hover: #0069d9;
+  --ul-color-primary-light: #cfe2ff;
+  --ul-color-primary-text: #fff;
+
+  // Success 主题色
+  --ul-color-success-base: #28a745;
+  --ul-color-success-hover: #218838;
+  --ul-color-success-light: #d4edda;
+  --ul-color-success-text: #fff;
+
+  // Danger 主题色
+  --ul-color-danger-base: #dc3545;
+  --ul-color-danger-hover: #c82333;
+  --ul-color-danger-light: #f8d7da;
+  --ul-color-danger-text: #fff;
+
+  // Warning 主题色
+  --ul-color-warning-base: #ffc107;
+  --ul-color-warning-hover: #e0a800;
+  --ul-color-warning-light: #fff3cd;
+  --ul-color-warning-text: #212529;
+
+  // Info 主题色
+  --ul-color-info-base: #17a2b8;
+  --ul-color-info-hover: #138496;
+  --ul-color-info-light: #d1ecf1;
+  --ul-color-info-text: #fff;
+
+  // Dark 主题色
+  --ul-color-dark-base: #343a40;
+  --ul-color-dark-hover: #23272b;
+  --ul-color-dark-light: #d6d8d9;
+  --ul-color-dark-text: #fff;
+
+  // Light 主题色
+  --ul-color-light-base: #f8f9fa;
+  --ul-color-light-hover: #e2e6ea;
+  --ul-color-light-light: #fdfdfe;
+  --ul-color-light-text: #212529;
+
+  // 中性色与通用色
+  --ul-color-white: #fff;
+  --ul-color-black: #000;
+  --ul-color-text: #333;
+  --ul-color-text-secondary: #6c757d;
+  --ul-color-text-placeholder: #999;
+  --ul-color-border: #e6e6e6;
+  --ul-color-bg: #f2f2f2;
 }
 
-.ul-margin-md {
-  margin: 15px;
-}
+// 全局变量
+// --------------------------------------------------
 
-.ul-section {
-  margin-bottom: 15px;
-}
+// 主题色
+// Main
+$color-main-base: var(--ul-color-main-base);
+$color-main-hover: var(--ul-color-main-hover);
+$color-main-light: var(--ul-color-main-light);
+$color-main-text: var(--ul-color-main-text);
 
-.ul-inline-block {
-  display: inline-block !important;
-  margin-right: 15px;
-  margin-bottom: 15px;
-}
+// Primary
+$color-primary-base: var(--ul-color-primary-base);
+$color-primary-hover: var(--ul-color-primary-hover);
+$color-primary-light: var(--ul-color-primary-light);
+$color-primary-text: var(--ul-color-primary-text);
 
-.ul-icon-exit {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  background-image: url("img/exit.png");
-  background-size: cover;
-  background-position: center;
-}
+// Success
+$color-success-base: var(--ul-color-success-base);
+$color-success-hover: var(--ul-color-success-hover);
+$color-success-light: var(--ul-color-success-light);
+$color-success-text: var(--ul-color-success-text);
 
-.ul-border-right {
-  border-right: 1px solid #bbb;
-}
+// Danger
+$color-danger-base: var(--ul-color-danger-base);
+$color-danger-hover: var(--ul-color-danger-hover);
+$color-danger-light: var(--ul-color-danger-light);
+$color-danger-text: var(--ul-color-danger-text);
 
-.ul-bg-white {
-  background-color: #fff;
-}
+// Warning
+$color-warning-base: var(--ul-color-warning-base);
+$color-warning-hover: var(--ul-color-warning-hover);
+$color-warning-light: var(--ul-color-warning-light);
+$color-warning-text: var(--ul-color-warning-text);
 
-.ul-bg-gray {
-  background-color: #f0f0f0;
-}
+// Info
+$color-info-base: var(--ul-color-info-base);
+$color-info-hover: var(--ul-color-info-hover);
+$color-info-light: var(--ul-color-info-light);
+$color-info-text: var(--ul-color-info-text);
 
-.ul-bg-black {
-  background-color: #393d49;
-}
+// Dark
+$color-dark-base: var(--ul-color-dark-base);
+$color-dark-hover: var(--ul-color-dark-hover);
+$color-dark-light: var(--ul-color-dark-light);
+$color-dark-text: var(--ul-color-dark-text);
 
-.ul-bg-dark {
-  background-color: #1f2430;
-}
+// Light
+$color-light-base: var(--ul-color-light-base);
+$color-light-hover: var(--ul-color-light-hover);
+$color-light-light: var(--ul-color-light-light);
+$color-light-text: var(--ul-color-light-text);
 
-.ul-color-main {
-  color: #6cf !important;
-}
+// 中性色与通用色
+$color-white: var(--ul-color-white);
+$color-black: var(--ul-color-black);
+$color-text: var(--ul-color-text);
+$color-text-secondary: var(--ul-color-text-secondary);
+$color-text-placeholder: var(--ul-color-text-placeholder);
+$color-border: var(--ul-color-border);
+$color-bg: var(--ul-color-bg);
 
-.ul-color-white {
-  color: #fff !important;
-}
 
-.ul-common-flex-list {
+// 间距
+$space-base: 4px;
+$space-xs: $space-base;      // 4px
+$space-sm: $space-base * 2;  // 8px
+$space-md: $space-base * 4;  // 16px
+$space-lg: $space-base * 6;  // 24px
+$space-xl: $space-base * 8;  // 32px
+
+// 字体
+$font-size-base: 14px;
+$font-size-sm: 12px;
+$font-size-lg: 16px;
+$line-height-base: 1.5;
+
+// 圆角
+$border-radius-base: 4px;
+$border-radius-sm: 2px;
+$border-radius-lg: 8px;
+
+// 阴影
+$box-shadow-base: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+
+
+// 混合宏 (Mixins)
+// --------------------------------------------------
+
+// Flex 布局
+@mixin flex($justify: flex-start, $align: center, $direction: row) {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
 }
 
-.ul-common-flex-sb {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.ul-mobile-box {
-  width: 360px;
-}
-
-/* 通用类结束 */
-
-.ul-demo-img-bg {
-  background-image: url("https://layui.ulthon.com/cdn/img/view.jpg");
-  background-size: cover;
-  background-position: center;
-
-  &.circle {
-    border-radius: 100%;
+// 文本溢出省略
+@mixin text-ellipsis($lines: 1) {
+  @if $lines == 1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lines;
+    overflow: hidden;
   }
 }
-.ul-demo-img-logo {
-  background-image: url("/cdn/img/ulthon_logo_108.png");
-  background-size: cover;
-  background-position: center;
 
-  &.circle {
-    border-radius: 100%;
+
+
+// ==========================================================================
+// Variables and Mixins
+// ==========================================================================
+
+// Grid columns
+$grid-columns: 12 !default;
+$grid-gutter-width: 30px !default;
+
+// Breakpoints
+$screen-sm: 576px !default;
+$screen-md: 768px !default;
+$screen-lg: 992px !default;
+$screen-xl: 1200px !default;
+$screen-xxl: 1400px !default;
+
+$breakpoints: (
+  sm: $screen-sm,
+  md: $screen-md,
+  lg: $screen-lg,
+  xl: $screen-xl,
+  xxl: $screen-xxl
+) !default;
+
+// Container max widths
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+) !default;
+
+
+// Media Query Mixins
+@mixin media-breakpoint-up($name, $breakpoints-map: $breakpoints) {
+  $min: map-get($breakpoints-map, $name);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @error "No value found for `#{$name}` in $breakpoints-map.";
   }
 }
 
-.ul-demo-mobile-page {
-  width: 360px;
-  height: 660px;
-  border: 0;
-  box-shadow: 0 0 3px #bbb;
-}
-
-.data-item {
-  margin-right: 15px;
-}
-
-.ul-card-status {
-    padding      : 5px;
-    border-radius: 5px;
-}
-
-.ul-card-options {
-    float : right;
-    cursor: pointer;
-}
-
-.data-img .data-img-main {
-    max-width: 120px;
-    margin   : 5px;
-}
-
-.data-img {
-    display: block;
-}
-
-
-.ului-container{
-
-}
-
-
-.ului-row {
-  display: flex;
-  flex-wrap: wrap;
+@mixin media-breakpoint-down($name, $breakpoints-map: $breakpoints) {
+  $max: map-get($breakpoints-map, $name) - 0.02;
+   @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @error "No value found for `#{$name}` in $breakpoints-map.";
+  }
 }
