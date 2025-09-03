@@ -1,0 +1,51 @@
+.ul-btn {
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 18px;
+    background-color: $color-white;
+    color: $color-text;
+    white-space: nowrap;
+    text-align: center;
+    font-size: $font-size-base;
+    border: 1px solid $color-border;
+    border-radius: $border-radius-base;
+    cursor: pointer;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &-sm {
+        height: 30px;
+        line-height: 30px;
+        padding: 0 10px;
+        font-size: $font-size-sm;
+    }
+
+    &-lg {
+        height: 44px;
+        line-height: 44px;
+        padding: 0 25px;
+        font-size: $font-size-lg;
+    }
+
+    $colors: (
+        primary: ($color-primary-base, $color-primary-text),
+        normal: ($color-light-base, $color-light-text),
+        success: ($color-success-base, $color-success-text),
+        danger: ($color-danger-base, $color-danger-text),
+        warning: ($color-warning-base, $color-warning-text),
+        info: ($color-info-base, $color-info-text)
+    );
+
+    @each $name, $value in $colors {
+        &-#{$name} {
+            background-color: nth($value, 1);
+            border-color: nth($value, 1);
+            color: nth($value, 2);
+        }
+    }
+}

@@ -37,7 +37,7 @@
                 {:get_system_config('site_desc')}
             </div>
         </div>
-        <div class="ul-row ului-col-space6 "
+        <div class="ul-row ul-col-space6 "
              style="margin-top: 15px;">
             <div class="ul-col-md-3 ul-border-right">
                 <div class="ul-nav-tree ul-padding-md ">
@@ -68,7 +68,7 @@
             <div class="ul-col-md-9">
                 <div class="main-content ul-padding-md">
                     <div class="">
-                        <span class="ului-breadcrumb"
+                        <span class="ul-breadcrumb"
                               lay-separator="/">
                             <a href="{:url('Index/index')}">首页</a>
                             <a><cite>{$model_post->title}</cite></a>
@@ -85,9 +85,9 @@
                         {$model_post->demo_page|raw}
 
                         {volist name='model_post->components' id='vo'}
-                        <fieldset class="ului-elem-field ului-field-title no-parser">
+                        <fieldset class="ul-elem-field ul-field-title no-parser">
                             <legend>{$vo.config.TITLE}</legend>
-                            <div class="ului-field-box">
+                            <div class="ul-field-box">
 
                                 <div class="component-item"
                                      style="margin-top: 10px;"
@@ -98,49 +98,49 @@
                                      data-inner-margin="{$vo.config.INNER_MARGIN|default='0'}">
                                     <div class="">
                                         <span>预览效果</span>
-                                        <div class="ului-btn-group"
+                                        <div class="ul-btn-group"
                                              style="margin-left: 10px;">
                                             <button type="button"
-                                                    class="ului-btn ului-btn-xs"
+                                                    class="ul-btn ul-btn-xs"
                                                     @click="padding = 1"
-                                                    :class="padding == 1 ? 'ului-btn-normal' : 'ului-btn-primary'">padding</button>
+                                                    :class="padding == 1 ? 'ul-btn-normal' : 'ul-btn-primary'">padding</button>
                                             <button type="button"
-                                                    class="ului-btn ului-btn-xs"
+                                                    class="ul-btn ul-btn-xs"
                                                     @click="padding = 0"
-                                                    :class="padding == 0 ? 'ului-btn-normal' : 'ului-btn-primary'">无</button>
+                                                    :class="padding == 0 ? 'ul-btn-normal' : 'ul-btn-primary'">无</button>
                                         </div>
-                                        <div class="ului-btn-group"
+                                        <div class="ul-btn-group"
                                              style="margin-left: 10px;">
                                             <button type="button"
-                                                    class="ului-btn ului-btn-xs"
+                                                    class="ul-btn ul-btn-xs"
                                                     @click="margin = 1"
-                                                    :class="margin == 1 ? 'ului-btn-normal' : 'ului-btn-primary'">margin</button>
+                                                    :class="margin == 1 ? 'ul-btn-normal' : 'ul-btn-primary'">margin</button>
                                             <button type="button"
-                                                    class="ului-btn ului-btn-xs"
+                                                    class="ul-btn ul-btn-xs"
                                                     @click="margin = 0"
-                                                    :class="margin == 0 ? 'ului-btn-normal' : 'ului-btn-primary'">无</button>
+                                                    :class="margin == 0 ? 'ul-btn-normal' : 'ul-btn-primary'">无</button>
                                         </div>
-                                        <div class="ului-btn-group"
+                                        <div class="ul-btn-group"
                                              style="margin-left: 10px;">
                                             <button type="button"
-                                                    class="ului-btn ului-btn-xs"
+                                                    class="ul-btn ul-btn-xs"
                                                     @click="gray = 1"
-                                                    :class="gray == 1 ? 'ului-btn-normal' : 'ului-btn-primary'">gray</button>
+                                                    :class="gray == 1 ? 'ul-btn-normal' : 'ul-btn-primary'">gray</button>
                                             <button type="button"
-                                                    class="ului-btn ului-btn-xs"
+                                                    class="ul-btn ul-btn-xs"
                                                     @click="gray = 0"
-                                                    :class="gray == 0 ? 'ului-btn-normal' : 'ului-btn-primary'">无</button>
+                                                    :class="gray == 0 ? 'ul-btn-normal' : 'ul-btn-primary'">无</button>
                                         </div>
-                                        <div class="ului-btn-group"
+                                        <div class="ul-btn-group"
                                              style="margin-left: 10px;">
                                             <button type="button"
-                                                    class="ului-btn ului-btn-xs"
+                                                    class="ul-btn ul-btn-xs"
                                                     @click="mobile = 1"
-                                                    :class="mobile == 1 ? 'ului-btn-normal' : 'ului-btn-primary'">手机端</button>
+                                                    :class="mobile == 1 ? 'ul-btn-normal' : 'ul-btn-primary'">手机端</button>
                                             <button type="button"
-                                                    class="ului-btn ului-btn-xs"
+                                                    class="ul-btn ul-btn-xs"
                                                     @click="mobile = 0"
-                                                    :class="mobile == 0 ? 'ului-btn-normal' : 'ului-btn-primary'">正常</button>
+                                                    :class="mobile == 0 ? 'ul-btn-normal' : 'ul-btn-primary'">正常</button>
                                         </div>
                                     </div>
                                     <div class=""
@@ -154,28 +154,28 @@
                                     </div>
                                 </div>
                                 <div class="code">
-                                    <div class="ului-tab ului-tab-card">
-                                        <ul class="ului-tab-title">
-                                            <li class="ului-this">HTML</li>
+                                    <div class="ul-tab ul-tab-card">
+                                        <ul class="ul-tab-title">
+                                            <li class="ul-this">HTML</li>
                                             <li>SCSS</li>
                                             <li>CSS</li>
                                             <li>UniApp</li>
                                         </ul>
-                                        <div class="ului-tab-content"
+                                        <div class="ul-tab-content"
                                              style="padding:0">
-                                            <div class="ului-tab-item ului-show">
+                                            <div class="ul-tab-item ul-show">
                                                 <pre style="margin: 0;max-height: 400px;"
                                                      class="line-numbers code-preview"><code class="language-html">{$vo.html}</code></pre>
                                             </div>
-                                            <div class="ului-tab-item ">
+                                            <div class="ul-tab-item ">
                                                 <pre style="margin: 0;max-height: 400px;"
                                                      class="line-numbers code-preview"><code class="language-scss">{$vo.scss}</code></pre>
                                             </div>
-                                            <div class="ului-tab-item">
+                                            <div class="ul-tab-item">
                                                 <pre style="margin: 0;max-height: 400px;"
                                                      class="line-numbers code-preview"><code class="language-css">{$vo.css}</code></pre>
                                             </div>
-                                            <div class="ului-tab-item">
+                                            <div class="ul-tab-item">
                                                 <pre style="margin: 0;max-height: 400px;"
                                                      class="line-numbers code-preview"><code class="language-html">{$vo.uniapp}</code></pre>
                                             </div>
@@ -195,9 +195,9 @@
 
                 <div class="ul-padding-md">
                     <div id="gitee-container">
-                        <fieldset class="ului-elem-field ului-field-title ">
+                        <fieldset class="ul-elem-field ul-field-title ">
                             <legend>开源信息</legend>
-                            <div class="ului-field-box">
+                            <div class="ul-field-box">
                                 <script src='https://gitee.com/ulthon/ului/widget_preview'
                                         async
                                         defer></script>
@@ -256,7 +256,7 @@
                 return;
             }
             if ($(elem).find('.demo-js-src').length == 0) {
-                $(elem).children('.ului-field-box')
+                $(elem).children('.ul-field-box')
                     .addClass('demo-js-src')
                     .css('display', 'block')
                     .data('title', $(elem).children('legend').text());
@@ -326,7 +326,7 @@
                 if (!title) {
                     title = $(this).closest('fieldset').find('legend').text();
                 }
-                $('<pre  class="ului-code demo-js" lay-title="' + title + '"></pre>').insertAfter(this);
+                $('<pre  class="ul-code demo-js" lay-title="' + title + '"></pre>').insertAfter(this);
             }
             $(this).siblings('pre.demo-js').text(contentCode);
         });

@@ -8,8 +8,6 @@ use app\model\Category;
 use app\model\Post;
 use think\console\Command;
 use think\console\Input;
-use think\console\input\Argument;
-use think\console\input\Option;
 use think\console\Output;
 use think\facade\App;
 use think\facade\Config;
@@ -28,15 +26,14 @@ class ScanDemo extends Command
         // 指令输出
         $output->writeln('scan:demo');
 
-
         $model_category = Category::where('title', '组件')->find();
 
-        $demo_pc_dir = App::getRootPath() . '/demo/pc';
-        
+        $demo_pc_dir = App::getRootPath() . '/source/components/';
+
         $list_demo_file = scandir($demo_pc_dir);
 
-        foreach ($list_demo_file as  $file_name) {
-            $file_name = str_replace(['.html', '.', '..',], '', $file_name);
+        foreach ($list_demo_file as $file_name) {
+            $file_name = str_replace(['.html', '_index.scss', '.', '..'], '', $file_name);
 
             if (empty($file_name)) {
                 continue;
