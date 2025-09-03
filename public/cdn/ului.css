@@ -2259,6 +2259,25 @@ template {
   text-align: center;
 }
 
+.ul-fieldset-basic {
+  border: 1px solid #e6e6e6;
+  border-radius: 2px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+}
+.ul-fieldset-basic__legend {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0 10px;
+  margin-left: 20px;
+  border: none;
+  width: auto;
+}
+.ul-fieldset-basic__body {
+  padding: 10px 0;
+  color: #666;
+}
+
 /* 简约风格Form */
 .ul-form-basic .layui-form-item {
   clear: unset;

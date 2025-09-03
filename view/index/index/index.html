@@ -85,12 +85,11 @@
                         {$model_post->demo_page|raw}
 
                         {volist name='model_post->components' id='vo'}
-                        <fieldset class="ul-elem-field ul-field-title no-parser">
-                            <legend>{$vo.config.TITLE}</legend>
-                            <div class="ul-field-box">
+                        <fieldset class="ul-fieldset-basic  no-parser">
+                            <legend class="ul-fieldset-basic__legend">{$vo.config.TITLE}</legend>
+                            <div class="ul-fieldset-basic__body">
 
                                 <div class="component-item"
-                                     style="margin-top: 10px;"
                                      data-margin="{$vo.config.MARGIN|default='0'}"
                                      data-padding="{$vo.config.PADDING|default='0'}"
                                      data-gray="{$vo.config.GRAY|default='0'}"
@@ -195,7 +194,7 @@
 
                 <div class="ul-padding-md">
                     <div id="gitee-container">
-                        <fieldset class="ul-elem-field ul-field-title ">
+                        <fieldset class="ul-fieldset-basic  ">
                             <legend>开源信息</legend>
                             <div class="ul-field-box">
                                 <script src='https://gitee.com/ulthon/ului/widget_preview'
