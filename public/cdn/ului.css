@@ -1238,6 +1238,14 @@ template {
   margin-bottom: 16px;
 }
 
+.ul-fixed-right-center {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
 .layui-quote-gray {
   background-color: #f0f0f0;
   color: #666;

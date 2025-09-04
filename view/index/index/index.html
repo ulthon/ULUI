@@ -35,6 +35,9 @@
         .ql-editor {
             padding: 15px 0;
         }
+        .right-tips-container{
+            background-color: #fff;
+        }
     </style>
 </head>
 
@@ -306,7 +309,7 @@
         </div>
     </div>
     <div
-        class="right-tips-container"
+        class="right-tips-container ul-fixed-right-center"
         style="display: none;"
     >
         <div
@@ -349,17 +352,7 @@
         });
 
         if ($('.right-tips-nav').children().length > 0) {
-            // layer.open({
-            //     type: 1,
-            //     content: $('.right-tips-container'),
-            //     title: '目录',
-            //     offset: 'r',
-            //     closeBtn: 0,
-            //     shade: 0,
-            //     success(layero) {
-            //         $(layero).css('margin-left', '-15px');
-            //     }
-            // });
+            $('.right-tips-container').show();
         }
         function renderRepeat(elem) {
             $(elem).find('[data-repeat]').each(function () {
