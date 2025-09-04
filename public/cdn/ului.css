@@ -1243,6 +1243,20 @@ template {
   margin-bottom: 16px;
 }
 
+.ul-link {
+  color: var(--ul-color-primary-base) !important;
+}
+.ul-link:visited {
+  color: var(--ul-color-info-base) !important;
+}
+.ul-link:hover {
+  color: var(--ul-color-primary-hover) !important;
+  text-decoration: underline !important;
+}
+.ul-link:active {
+  color: var(--ul-color-danger-base) !important;
+}
+
 .ul-fixed-right-center {
   position: fixed;
   right: 0;

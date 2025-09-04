@@ -2,6 +2,23 @@
   margin-bottom: $space-md;
 }
 
+.ul-link {
+  color: $color-primary-base !important;
+  
+  &:visited {
+    color: $color-info-base !important;
+  }
+  
+  &:hover {
+    color: $color-primary-hover !important;
+    text-decoration: underline !important;
+  }
+  
+  &:active {
+    color: $color-danger-base !important;
+  }
+}
+
 .ul-fixed-right-center {
   position: fixed;
   right: 0;
