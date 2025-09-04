@@ -207,7 +207,7 @@ class Post extends Model
         $markdown_parser = new Parsedown();
 
         foreach ($list_components as  $components_name) {
-            if ($components_name == '.' || $components_name == '..') {
+            if ($components_name == '.' || $components_name == '..' || $components_name == '_index') {
                 continue;
             }
             $components_path = $components_type_path . '/' . $components_name;
@@ -250,6 +250,32 @@ class Post extends Model
         Cache::set($cache_key, $list_components_data, 60);
 
         return $list_components_data;
+    }
+
+    public function getComponentHtmlAttr()
+    {
+        if (empty($this->getData('tpl_name'))) {
+            return '';
+        }
+
+        $tpl_name = $this->getData('tpl_name');
+
+        $components_type_path = App::getRootPath() . '/source/components/' . $tpl_name . '/_index/_index.html';
+
+        if (!file_exists($components_type_path)) {
+            return '';
+        }
+
+        $cache_key = 'cache_components_html_' . $tpl_name;
+
+        $list_components_html = Cache::get($cache_key);
+
+        if (!is_null($list_components_html) && !Env::get('APP_DEBUG')) {
+            return $list_components_html;
+        }
+        $html_content = View::fetch($components_type_path);
+
+        return $html_content;
     }
 
     public static function quickSelect($clear = false)

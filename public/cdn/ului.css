@@ -4014,6 +4014,33 @@ template {
   color: #6cf;
 }
 
+.ul-tab-basic__title {
+  border-bottom: 1px solid var(--ul-color-border);
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.ul-tab-basic__item {
+  padding: 8px 16px;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: -1px;
+}
+.ul-tab-basic__item.ul-this {
+  color: var(--ul-color-primary-base);
+  border-bottom: 2px solid var(--ul-color-primary-base);
+}
+.ul-tab-basic__content {
+  padding: 16px;
+}
+.ul-tab-basic__pane {
+  display: none;
+}
+.ul-tab-basic__pane.ul-show {
+  display: block;
+}
+
 .ul-group-title {
   color: #999;
   border-bottom: 1px solid #bbb;
