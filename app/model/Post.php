@@ -278,6 +278,33 @@ class Post extends Model
         return $html_content;
     }
 
+    public function getComponentMarkdownAttr()
+    {
+        if (empty($this->getData('tpl_name'))) {
+            return '';
+        }
+
+        $tpl_name = $this->getData('tpl_name');
+
+        $components_type_path = App::getRootPath() . '/source/components/' . $tpl_name . '/_index/_index.md';
+
+        if (!file_exists($components_type_path)) {
+            return '';
+        }
+
+        $cache_key = 'cache_components_md_' . $tpl_name;
+
+        $list_components_md = Cache::get($cache_key);
+
+        if (!is_null($list_components_md) && !Env::get('APP_DEBUG')) {
+            return $list_components_md;
+        }
+        $markdown_content = View::fetch($components_type_path);
+        $markdown_parser = new Parsedown();
+
+        return $markdown_parser->text($markdown_content);
+    }
+
     public static function quickSelect($clear = false)
     {
         $cacke_key = 'post_list';
