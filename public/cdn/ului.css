@@ -4041,6 +4041,54 @@ template {
   display: block;
 }
 
+.ul-tab-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.ul-tab-card__title {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid var(--ul-color-border);
+}
+.ul-tab-card__item {
+  flex: 1;
+  padding: 8px 16px;
+  text-align: center;
+  cursor: pointer;
+  background: #f8f9fa;
+  color: #666;
+  border-right: 1px solid var(--ul-color-border);
+  transition: all 0.3s ease;
+  position: relative;
+}
+.ul-tab-card__item:last-child {
+  border-right: none;
+}
+.ul-tab-card__item:hover {
+  background: #e9ecef;
+  color: #333;
+}
+.ul-tab-card__item.ul-this {
+  background: var(--ul-color-primary-base);
+  color: #fff;
+}
+.ul-tab-card__item.ul-this:hover {
+  background: var(--ul-color-primary-hover);
+}
+.ul-tab-card__content {
+  padding: 16px;
+}
+.ul-tab-card__pane {
+  display: none;
+}
+.ul-tab-card__pane.ul-show {
+  display: block;
+}
+
 .ul-group-title {
   color: #999;
   border-bottom: 1px solid #bbb;
