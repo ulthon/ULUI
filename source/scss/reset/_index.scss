@@ -77,14 +77,13 @@
   
   a {
     background-color: transparent;
-    // color: $color-text-secondary;  
+    color: $color-text;  
     text-decoration: none;
     &:hover {
-      // color: $color-primary-hover;
-      text-decoration: underline;
+      color: $color-primary-hover;
     }
     &:visited {
-      // color: $color-text-placeholder;
+      color: $color-text;
     }
   }
   
