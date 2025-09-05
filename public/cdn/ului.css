@@ -1403,6 +1403,10 @@ template {
   border: none;
 }
 
+.ul-inline-block {
+  display: inline-block !important;
+}
+
 .layui-quote-gray {
   background-color: #f0f0f0;
   color: #666;
