@@ -90,7 +90,7 @@ class Component extends Command
         $index_scss = '';
 
         foreach ($dir_tpl as  $dir_name) {
-            if ($dir_name == '.' || $dir_name == '..' || $dir_name == '_index.scss') {
+            if (in_array($dir_name, ['.', '..', '_index.scss','_index'])) {
                 continue;
             }
 
