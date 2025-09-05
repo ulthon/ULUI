@@ -1265,6 +1265,11 @@ template {
   z-index: 1000;
 }
 
+.ul-pure-iframe {
+  width: 100%;
+  border: none;
+}
+
 .layui-quote-gray {
   background-color: #f0f0f0;
   color: #666;
@@ -2303,6 +2308,47 @@ template {
 .ul-fieldset-basic__body {
   padding: 10px 0;
   color: #666;
+}
+
+.ul-fieldset-mobile {
+  margin: 15px auto;
+  width: 375px;
+  border-radius: 36px;
+  box-shadow: 0 0 20px rgb(0, 0, 0.1);
+  border: 8px solid #333;
+  overflow: hidden;
+  background-color: #fff;
+}
+.ul-fieldset-mobile__header {
+  height: 28px;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ul-fieldset-mobile__speaker {
+  width: 40px;
+  height: 6px;
+  background-color: #666;
+  border-radius: 3px;
+}
+.ul-fieldset-mobile__body {
+  flex: 1;
+  overflow-y: auto;
+  height: 667px;
+}
+.ul-fieldset-mobile__footer {
+  height: 34px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ul-fieldset-mobile__home-bar {
+  width: 134px;
+  height: 5px;
+  background-color: #333;
+  border-radius: 100px;
 }
 
 /* 简约风格Form */

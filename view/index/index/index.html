@@ -35,7 +35,8 @@
         .ql-editor {
             padding: 15px 0;
         }
-        .right-tips-container{
+
+        .right-tips-container {
             background-color: #fff;
         }
     </style>
@@ -206,11 +207,21 @@
                                             :class="{'ul-bg-gray':gray,'ul-padding-md':padding,'ul-margin-md':margin}"
                                             :style="mobile== 1?'display:none':''"
                                         >{$vo.html|raw}</div>
-                                        <iframe
-                                            class="preview iframe ul-demo-mobile-page"
-                                            :class="{'ul-bg-gray':gray,'ul-padding-md':padding,'ul-margin-md':margin}"
+                                        <div
+                                            class=" ul-fieldset-mobile"
                                             :style="mobile== 0?'display:none':''"
-                                        ></iframe>
+                                        >
+                                            <div class="ul-fieldset-mobile__header">
+                                                <div class="ul-fieldset-mobile__speaker"></div>
+                                            </div>
+                                            <div class="ul-fieldset-mobile__body">
+                                                <iframe class="preview iframe ul-pure-iframe" style="height: calc(100% - 5px);"  :class="{'ul-bg-gray':gray,'ul-padding-md':padding,'ul-margin-md':margin}"></iframe>
+                                            </div>
+                                            <div class="ul-fieldset-mobile__footer">
+                                                <div class="ul-fieldset-mobile__home-bar"></div>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                                 <div class="code">
@@ -312,6 +323,10 @@
         class="right-tips-container ul-fixed-right-center"
         style="display: none;"
     >
+        <div class="ul-title">
+            <div class="ul-title-main">目录 </div>
+            <div class="ul-title-line"></div>
+        </div>
         <div
             class="ul-nav-min right-tips-nav"
             style="width: 160px;"

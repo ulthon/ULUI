@@ -1,0 +1,46 @@
+.ul-fieldset-mobile {
+  margin: 15px auto;
+  width: 375px;
+  border-radius: 36px;
+  box-shadow: 0 0 20px rgba(0, 0, .1);
+  border: 8px solid #333;
+  overflow: hidden;
+  background-color: #fff;
+  
+
+  &__header {
+    height: 28px;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__speaker {
+    width: 40px;
+    height: 6px;
+    background-color: #666;
+    border-radius: 3px;
+  }
+
+  &__body {
+    flex: 1;
+    overflow-y: auto;
+    height: 667px;
+  }
+
+  &__footer {
+    height: 34px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__home-bar {
+    width: 134px;
+    height: 5px;
+    background-color: #333;
+    border-radius: 100px;
+  }
+}
