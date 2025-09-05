@@ -2392,7 +2392,9 @@ template {
   box-shadow: 0 0 3px #999;
   width: calc(30px + 6px);
   height: calc(30px + 6px);
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 100%;
   background-color: #fff;
 }

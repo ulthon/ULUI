@@ -214,8 +214,14 @@
                                             <div class="ul-fieldset-mobile__header">
                                                 <div class="ul-fieldset-mobile__speaker"></div>
                                             </div>
-                                            <div class="ul-fieldset-mobile__body" :class="{'ul-bg-gray':gray,'ul-padding-md':padding,'ul-margin-md':margin}">
-                                                <iframe class="preview iframe ul-pure-iframe" style="height: calc(100% - 5px);"  ></iframe>
+                                            <div
+                                                class="ul-fieldset-mobile__body"
+                                                :class="{'ul-bg-gray':gray,'ul-padding-md':padding,'ul-margin-md':margin}"
+                                            >
+                                                <iframe
+                                                    class="preview iframe ul-pure-iframe"
+                                                    style="height: calc(100% - 5px);"
+                                                ></iframe>
                                             </div>
                                             <div class="ul-fieldset-mobile__footer">
                                                 <div class="ul-fieldset-mobile__home-bar"></div>
@@ -317,6 +323,15 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="ul-element-fixed-option">
+        <div class="item scroll-to-top" >
+            <div class="icon"><i
+                    class="fa fa-arrow-up"
+                    style="font-size: 30px;color: #1e9fff;"
+                ></i></div>
+            <div class="title">回到顶部</div>
         </div>
     </div>
     <div
@@ -425,6 +440,9 @@
 
         $(function () {
             $('.ul-tab').ulTab();
+            $('.scroll-to-top').click(function () {
+                $('html,body').animate({scrollTop: 0 }, 500);
+            });
         });
 
         const { createApp } = Vue;
