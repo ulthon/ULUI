@@ -326,7 +326,7 @@
         </div>
     </div>
     <div class="ul-element-fixed-option">
-        <div class="item scroll-to-top" >
+        <div class="item scroll-to-top">
             <div class="icon"><i
                     class="fa fa-arrow-up"
                     style="font-size: 30px;color: #1e9fff;"
@@ -394,7 +394,20 @@
             });
         }
 
-
+        function initDemoNumber(targetElem) {
+            $(targetElem).find('[class*="ul-demo"]').each(function (index,elem) {
+                console.log(index);
+                console.log(elem);
+                
+                var $el = $(elem);
+                var classes = $el.attr('class').split(/\s+/);
+                $.each(classes, function (i, c) {
+                    if (c.startsWith('ul-demo')) {
+                        $el.addClass('n' + ((index % 9) + 1));
+                    }
+                });
+            });
+        }
 
 
         $('.demo-js-src').each(function () {
@@ -431,6 +444,7 @@
 
         renderRepeat('body');
 
+
         // layui.form.render();
         // layui.element.render();
         // layui.code({
@@ -441,7 +455,7 @@
         $(function () {
             $('.ul-tab').ulTab();
             $('.scroll-to-top').click(function () {
-                $('html,body').animate({scrollTop: 0 }, 500);
+                $('html,body').animate({ scrollTop: 0 }, 500);
             });
         });
 
@@ -496,10 +510,14 @@
                     preview.open();
                     preview.write(iframeHtml);
                     preview.close();
+
+                    
                 }
 
             }).mount(elem);
+
         });
+        initDemoNumber('body');
         console.log($('.main-content').width());
         $('.code-preview').css('width', 'calc(' + $('.main-content').width() + 'px - 1em - 3.8em)')
 

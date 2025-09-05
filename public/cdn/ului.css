@@ -1407,6 +1407,196 @@ template {
   display: inline-block !important;
 }
 
+.ul-demo-view {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+}
+.ul-demo-view.n1 {
+  background-image: url("/cdn/img/view-n1.jpg");
+}
+.ul-demo-view.n2 {
+  background-image: url("/cdn/img/view-n2.jpg");
+}
+.ul-demo-view.n3 {
+  background-image: url("/cdn/img/view-n3.jpg");
+}
+.ul-demo-view.n4 {
+  background-image: url("/cdn/img/view-n4.jpg");
+}
+.ul-demo-view.n5 {
+  background-image: url("/cdn/img/view-n5.jpg");
+}
+.ul-demo-view.n6 {
+  background-image: url("/cdn/img/view-n6.jpg");
+}
+.ul-demo-view.n7 {
+  background-image: url("/cdn/img/view-n7.jpg");
+}
+.ul-demo-view.n8 {
+  background-image: url("/cdn/img/view-n8.jpg");
+}
+.ul-demo-view.n9 {
+  background-image: url("/cdn/img/view-n9.jpg");
+}
+.ul-demo-view.n10 {
+  background-image: url("/cdn/img/view-n10.jpg");
+}
+
+.ul-demo-avatar {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+}
+.ul-demo-avatar.n1 {
+  background-image: url("/cdn/img/avatar-n1.jpg");
+}
+.ul-demo-avatar.n2 {
+  background-image: url("/cdn/img/avatar-n2.jpg");
+}
+.ul-demo-avatar.n3 {
+  background-image: url("/cdn/img/avatar-n3.jpg");
+}
+.ul-demo-avatar.n4 {
+  background-image: url("/cdn/img/avatar-n4.jpg");
+}
+.ul-demo-avatar.n5 {
+  background-image: url("/cdn/img/avatar-n5.jpg");
+}
+.ul-demo-avatar.n6 {
+  background-image: url("/cdn/img/avatar-n6.jpg");
+}
+.ul-demo-avatar.n7 {
+  background-image: url("/cdn/img/avatar-n7.jpg");
+}
+.ul-demo-avatar.n8 {
+  background-image: url("/cdn/img/avatar-n8.jpg");
+}
+.ul-demo-avatar.n9 {
+  background-image: url("/cdn/img/avatar-n9.jpg");
+}
+.ul-demo-avatar.n10 {
+  background-image: url("/cdn/img/avatar-n10.jpg");
+}
+
+.ul-demo-icon {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+}
+.ul-demo-icon.n1 {
+  background-image: url("/cdn/img/icon-n1.jpg");
+}
+.ul-demo-icon.n2 {
+  background-image: url("/cdn/img/icon-n2.jpg");
+}
+.ul-demo-icon.n3 {
+  background-image: url("/cdn/img/icon-n3.jpg");
+}
+.ul-demo-icon.n4 {
+  background-image: url("/cdn/img/icon-n4.jpg");
+}
+.ul-demo-icon.n5 {
+  background-image: url("/cdn/img/icon-n5.jpg");
+}
+.ul-demo-icon.n6 {
+  background-image: url("/cdn/img/icon-n6.jpg");
+}
+.ul-demo-icon.n7 {
+  background-image: url("/cdn/img/icon-n7.jpg");
+}
+.ul-demo-icon.n8 {
+  background-image: url("/cdn/img/icon-n8.jpg");
+}
+.ul-demo-icon.n9 {
+  background-image: url("/cdn/img/icon-n9.jpg");
+}
+.ul-demo-icon.n10 {
+  background-image: url("/cdn/img/icon-n10.jpg");
+}
+
+.ul-demo-product {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+}
+.ul-demo-product.n1 {
+  background-image: url("/cdn/img/product-n1.jpg");
+}
+.ul-demo-product.n2 {
+  background-image: url("/cdn/img/product-n2.jpg");
+}
+.ul-demo-product.n3 {
+  background-image: url("/cdn/img/product-n3.jpg");
+}
+.ul-demo-product.n4 {
+  background-image: url("/cdn/img/product-n4.jpg");
+}
+.ul-demo-product.n5 {
+  background-image: url("/cdn/img/product-n5.jpg");
+}
+.ul-demo-product.n6 {
+  background-image: url("/cdn/img/product-n6.jpg");
+}
+.ul-demo-product.n7 {
+  background-image: url("/cdn/img/product-n7.jpg");
+}
+.ul-demo-product.n8 {
+  background-image: url("/cdn/img/product-n8.jpg");
+}
+.ul-demo-product.n9 {
+  background-image: url("/cdn/img/product-n9.jpg");
+}
+.ul-demo-product.n10 {
+  background-image: url("/cdn/img/product-n10.jpg");
+}
+
+.ul-demo-banner {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+}
+.ul-demo-banner.n1 {
+  background-image: url("/cdn/img/banner-n1.jpg");
+}
+.ul-demo-banner.n2 {
+  background-image: url("/cdn/img/banner-n2.jpg");
+}
+.ul-demo-banner.n3 {
+  background-image: url("/cdn/img/banner-n3.jpg");
+}
+.ul-demo-banner.n4 {
+  background-image: url("/cdn/img/banner-n4.jpg");
+}
+.ul-demo-banner.n5 {
+  background-image: url("/cdn/img/banner-n5.jpg");
+}
+.ul-demo-banner.n6 {
+  background-image: url("/cdn/img/banner-n6.jpg");
+}
+.ul-demo-banner.n7 {
+  background-image: url("/cdn/img/banner-n7.jpg");
+}
+.ul-demo-banner.n8 {
+  background-image: url("/cdn/img/banner-n8.jpg");
+}
+.ul-demo-banner.n9 {
+  background-image: url("/cdn/img/banner-n9.jpg");
+}
+.ul-demo-banner.n10 {
+  background-image: url("/cdn/img/banner-n10.jpg");
+}
+
 .layui-quote-gray {
   background-color: #f0f0f0;
   color: #666;
