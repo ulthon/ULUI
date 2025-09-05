@@ -32,6 +32,10 @@
   --ul-color-light-hover: #e2e6ea;
   --ul-color-light-light: #fdfdfe;
   --ul-color-light-text: #212529;
+  --ul-color-gray-base: #e9ecef;
+  --ul-color-gray-hover: #dee2e6;
+  --ul-color-gray-light: #f8f9fa;
+  --ul-color-gray-text: #343a40;
   --ul-color-white: #fff;
   --ul-color-black: #000;
   --ul-color-text: #333;
@@ -1241,6 +1245,135 @@ template {
 
 .ul-section {
   margin-bottom: 16px;
+}
+
+.ul-padding-xs {
+  padding: 4px !important;
+}
+
+.ul-padding-sm {
+  padding: 8px !important;
+}
+
+.ul-padding-md {
+  padding: 16px !important;
+}
+
+.ul-padding-lg {
+  padding: 24px !important;
+}
+
+.ul-padding-xl {
+  padding: 32px !important;
+}
+
+.ul-margin-xs {
+  margin: 4px !important;
+}
+
+.ul-margin-sm {
+  margin: 8px !important;
+}
+
+.ul-margin-md {
+  margin: 16px !important;
+}
+
+.ul-margin-lg {
+  margin: 24px !important;
+}
+
+.ul-margin-xl {
+  margin: 32px !important;
+}
+
+.ul-bg-primary {
+  background-color: var(--ul-color-primary-base) !important;
+  color: var(--ul-color-primary-text) !important;
+}
+
+.ul-bg-success {
+  background-color: var(--ul-color-success-base) !important;
+  color: var(--ul-color-success-text) !important;
+}
+
+.ul-bg-danger {
+  background-color: var(--ul-color-danger-base) !important;
+  color: var(--ul-color-danger-text) !important;
+}
+
+.ul-bg-warning {
+  background-color: var(--ul-color-warning-base) !important;
+  color: var(--ul-color-warning-text) !important;
+}
+
+.ul-bg-info {
+  background-color: var(--ul-color-info-base) !important;
+  color: var(--ul-color-info-text) !important;
+}
+
+.ul-bg-dark {
+  background-color: var(--ul-color-dark-base) !important;
+  color: var(--ul-color-dark-text) !important;
+}
+
+.ul-bg-light {
+  background-color: var(--ul-color-light-base) !important;
+  color: var(--ul-color-light-text) !important;
+}
+
+.ul-bg-white {
+  background-color: var(--ul-color-white) !important;
+  color: var(--ul-color-text) !important;
+}
+
+.ul-bg-gray {
+  background-color: var(--ul-color-gray-base) !important;
+  color: var(--ul-color-gray-text) !important;
+}
+
+.ul-text-primary {
+  color: var(--ul-color-primary-base) !important;
+}
+
+.ul-text-success {
+  color: var(--ul-color-success-base) !important;
+}
+
+.ul-text-danger {
+  color: var(--ul-color-danger-base) !important;
+}
+
+.ul-text-warning {
+  color: var(--ul-color-warning-base) !important;
+}
+
+.ul-text-info {
+  color: var(--ul-color-info-base) !important;
+}
+
+.ul-text-dark {
+  color: var(--ul-color-dark-base) !important;
+}
+
+.ul-text-light {
+  color: var(--ul-color-light-base) !important;
+}
+
+.ul-text-white {
+  color: var(--ul-color-white) !important;
+}
+
+.ul-text-black {
+  color: var(--ul-color-black) !important;
+}
+
+.ul-text-gray {
+  color: var(--ul-color-gray-base) !important;
+}
+
+.ul-text-secondary {
+  color: var(--ul-color-text-secondary) !important;
 }
 
 .ul-link {
