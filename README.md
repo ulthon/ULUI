@@ -8,22 +8,19 @@ ULUI 是一个基于纯 CSS 和 HTML 的轻量级样式库。它不依赖任何�
 
 - 实现原始的样式组件库(而不是vue/angular之类的组件主题)
 - 收藏主流的JS插件
-- 使用了部分layui的样式,但是大部分组件不依赖layui.
-- 依赖layui的部分也很容易替换掉(使用layui的按钮/颜色之类样式).
 - 不限制开发终端,只要支持css的都可以使用(vue,angular,uni,小程序都可以)
 
 ### 使用说明
 
 只需要引入文件即可:
 ```
-//layui.ulthon.com/cdn/ului.css
+//ului.top/cdn/ului.css
 
 比如:
-<link rel="stylesheet" href="//layui.ulthon.com/cdn/ului.css">
+<link rel="stylesheet" href="//ului.top/cdn/ului.css">
 ```
-> 最近刚刚做了一个vue+elementui的项目,使用了这个样式库,没有任何不适
 
-全部文档网站 http://layui.ulthon.com/
+全部文档网站 http://ului.top/
 
 ### 整体设计原则
 

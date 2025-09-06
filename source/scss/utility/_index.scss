@@ -95,7 +95,7 @@
 }
 
 // Demo: 动态加载不同类型的图片
-$demo-img-types: view, avatar, icon, product, banner;
+$demo-img-types: view, avatar, icon, banner, tech;
 $demo-img-count: 10; // 每种类型生成的图片数量
 
 @each $type in $demo-img-types {
@@ -107,10 +107,9 @@ $demo-img-count: 10; // 每种类型生成的图片数量
     vertical-align: middle;
 
     // 生成数字修饰符类，用于加载具体图片
-    // 假设图片路径为 /cdn/img/[type]-n[i].jpg
     @for $i from 1 through $demo-img-count {
       &.n#{$i} {
-        background-image: url('/cdn/img/#{$type}-n#{$i}.jpg');
+        background-image: url('/cdn/img/#{$type}-n#{$i}.png') !important;
       }
     }
   }

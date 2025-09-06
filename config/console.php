@@ -3,6 +3,7 @@
 // | 控制台配置
 // +----------------------------------------------------------------------
 
+use app\command\InitCdnImg;
 use app\command\make\Component;
 use app\command\make\View;
 use app\command\ScanDemo;
@@ -13,6 +14,7 @@ return [
         'app\command\ResetPassword',
         View::class,
         ScanDemo::class,
-        Component::class
+        Component::class,
+        InitCdnImg::class
     ],
 ];
