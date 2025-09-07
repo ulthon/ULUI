@@ -48,6 +48,7 @@ class ScanDemo extends Command
                 $model_post->title = Config::get("demo.{$file_name}.title", $file_name);
                 $model_post->desc = Config::get("demo.{$file_name}.desc", $file_name);
                 $model_post->category_id = $model_category['id'];
+                $model_post->status = 1;
                 $model_post->save();
             }
         }
