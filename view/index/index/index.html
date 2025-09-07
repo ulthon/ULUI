@@ -394,23 +394,6 @@
             });
         }
 
-        function initDemoNumber(targetElem) {
-            if (!window.DEMO_INDEX) {
-                window.DEMO_INDEX = 0;
-            }
-            $(targetElem).find('[class*="ul-demo"]').each(function (index, elem) {
-
-                var $el = $(elem);
-                var classes = $el.attr('class').split(/\s+/);
-                $.each(classes, function (i, c) {
-                    if (c.startsWith('ul-demo')) {
-                        $el.addClass('n' + ((window.DEMO_INDEX % 9) + 1));
-                    }
-                });
-                window.DEMO_INDEX++;
-            });
-        }
-
 
         $('.demo-js-src').each(function () {
             var html = $(this).html();
@@ -480,7 +463,7 @@
                 },
 
                 mounted() {
-                    initDemoNumber(elem);
+                    $(elem).ulDemo()
                     var html = $(elem).find('.preview.content').html();
                     var iframe = $(elem).find('.preview.iframe')[0];
 

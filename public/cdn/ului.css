@@ -1413,6 +1413,7 @@ template {
   background-repeat: no-repeat;
   display: inline-block;
   vertical-align: middle;
+  background-image: url("/cdn/img/view-n1.png") !important;
 }
 .ul-demo-view.n1 {
   background-image: url("/cdn/img/view-n1.png") !important;
@@ -1451,6 +1452,7 @@ template {
   background-repeat: no-repeat;
   display: inline-block;
   vertical-align: middle;
+  background-image: url("/cdn/img/avatar-n1.png") !important;
 }
 .ul-demo-avatar.n1 {
   background-image: url("/cdn/img/avatar-n1.png") !important;
@@ -1489,6 +1491,7 @@ template {
   background-repeat: no-repeat;
   display: inline-block;
   vertical-align: middle;
+  background-image: url("/cdn/img/icon-n1.png") !important;
 }
 .ul-demo-icon.n1 {
   background-image: url("/cdn/img/icon-n1.png") !important;
@@ -1527,6 +1530,7 @@ template {
   background-repeat: no-repeat;
   display: inline-block;
   vertical-align: middle;
+  background-image: url("/cdn/img/banner-n1.png") !important;
 }
 .ul-demo-banner.n1 {
   background-image: url("/cdn/img/banner-n1.png") !important;
@@ -1565,6 +1569,7 @@ template {
   background-repeat: no-repeat;
   display: inline-block;
   vertical-align: middle;
+  background-image: url("/cdn/img/tech-n1.png") !important;
 }
 .ul-demo-tech.n1 {
   background-image: url("/cdn/img/tech-n1.png") !important;
@@ -1603,6 +1608,7 @@ template {
   background-repeat: no-repeat;
   display: inline-block;
   vertical-align: middle;
+  background-image: url("/cdn/img/person-n1.png") !important;
 }
 .ul-demo-person.n1 {
   background-image: url("/cdn/img/person-n1.png") !important;
@@ -1641,6 +1647,7 @@ template {
   background-repeat: no-repeat;
   display: inline-block;
   vertical-align: middle;
+  background-image: url("/cdn/img/product-n1.png") !important;
 }
 .ul-demo-product.n1 {
   background-image: url("/cdn/img/product-n1.png") !important;
