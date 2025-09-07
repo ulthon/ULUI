@@ -396,9 +396,6 @@
 
         function initDemoNumber(targetElem) {
             $(targetElem).find('[class*="ul-demo"]').each(function (index,elem) {
-                console.log(index);
-                console.log(elem);
-                
                 var $el = $(elem);
                 var classes = $el.attr('class').split(/\s+/);
                 $.each(classes, function (i, c) {
@@ -478,8 +475,10 @@
                 },
 
                 mounted() {
-
+                    initDemoNumber(elem);
+                    var html = $(elem).find('.preview.content').html();
                     var iframe = $(elem).find('.preview.iframe')[0];
+                    
                     var preview =
                         iframe.contentDocument ||
                         iframe.contentWindow.document;
@@ -517,7 +516,7 @@
             }).mount(elem);
 
         });
-        initDemoNumber('body');
+        
         console.log($('.main-content').width());
         $('.code-preview').css('width', 'calc(' + $('.main-content').width() + 'px - 1em - 3.8em)')
 
