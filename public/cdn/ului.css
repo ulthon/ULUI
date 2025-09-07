@@ -1395,7 +1395,7 @@ template {
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 1000;
+  z-index: 999999999;
 }
 
 .ul-pure-iframe {
@@ -1595,6 +1595,82 @@ template {
 }
 .ul-demo-tech.n10 {
   background-image: url("/cdn/img/tech-n10.png") !important;
+}
+
+.ul-demo-person {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+}
+.ul-demo-person.n1 {
+  background-image: url("/cdn/img/person-n1.png") !important;
+}
+.ul-demo-person.n2 {
+  background-image: url("/cdn/img/person-n2.png") !important;
+}
+.ul-demo-person.n3 {
+  background-image: url("/cdn/img/person-n3.png") !important;
+}
+.ul-demo-person.n4 {
+  background-image: url("/cdn/img/person-n4.png") !important;
+}
+.ul-demo-person.n5 {
+  background-image: url("/cdn/img/person-n5.png") !important;
+}
+.ul-demo-person.n6 {
+  background-image: url("/cdn/img/person-n6.png") !important;
+}
+.ul-demo-person.n7 {
+  background-image: url("/cdn/img/person-n7.png") !important;
+}
+.ul-demo-person.n8 {
+  background-image: url("/cdn/img/person-n8.png") !important;
+}
+.ul-demo-person.n9 {
+  background-image: url("/cdn/img/person-n9.png") !important;
+}
+.ul-demo-person.n10 {
+  background-image: url("/cdn/img/person-n10.png") !important;
+}
+
+.ul-demo-product {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+}
+.ul-demo-product.n1 {
+  background-image: url("/cdn/img/product-n1.png") !important;
+}
+.ul-demo-product.n2 {
+  background-image: url("/cdn/img/product-n2.png") !important;
+}
+.ul-demo-product.n3 {
+  background-image: url("/cdn/img/product-n3.png") !important;
+}
+.ul-demo-product.n4 {
+  background-image: url("/cdn/img/product-n4.png") !important;
+}
+.ul-demo-product.n5 {
+  background-image: url("/cdn/img/product-n5.png") !important;
+}
+.ul-demo-product.n6 {
+  background-image: url("/cdn/img/product-n6.png") !important;
+}
+.ul-demo-product.n7 {
+  background-image: url("/cdn/img/product-n7.png") !important;
+}
+.ul-demo-product.n8 {
+  background-image: url("/cdn/img/product-n8.png") !important;
+}
+.ul-demo-product.n9 {
+  background-image: url("/cdn/img/product-n9.png") !important;
+}
+.ul-demo-product.n10 {
+  background-image: url("/cdn/img/product-n10.png") !important;
 }
 
 .layui-quote-gray {

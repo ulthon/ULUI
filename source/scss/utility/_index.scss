@@ -82,7 +82,7 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 1000;
+  z-index: 999999999;
 }
 
 .ul-pure-iframe {
@@ -95,7 +95,7 @@
 }
 
 // Demo: 动态加载不同类型的图片
-$demo-img-types: view, avatar, icon, banner, tech;
+$demo-img-types: view, avatar, icon, banner, tech, person, product;
 $demo-img-count: 10; // 每种类型生成的图片数量
 
 @each $type in $demo-img-types {
