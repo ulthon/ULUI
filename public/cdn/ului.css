@@ -3987,6 +3987,11 @@ template {
   font-size: 14px;
 }
 
+.ul-nav-card.badge .ul-nav-card-item-icon {
+  width: 20px;
+  height: 20px;
+}
+
 .ul-nav-card-item {
   padding: 0 15px;
   border: 1px solid #ddd;
@@ -4006,13 +4011,14 @@ template {
 
 .ul-nav-card-item-icon {
   font-size: 28px;
-  width: 50px;
-  height: 50px;
   border-radius: 5px;
-  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   background: #2E4158;
-  display: inline-block;
   color: #fff;
   vertical-align: bottom;
 }

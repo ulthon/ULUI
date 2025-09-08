@@ -109,7 +109,6 @@ class Component extends Command
             $list_component = scandir($component_tpl_dir . '/' . $dir_name);
 
             foreach ($list_component as  $component_name) {
-                dump($component_name);
                 if (in_array($component_name, ['.', '..', '_index'])) {
                     continue;
                 }
