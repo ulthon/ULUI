@@ -9,4 +9,8 @@ return [
         'title' => '按钮',
         'desc' => '基础按钮'
     ],
+    'utility' => [
+        'title' => '工具类',
+        'desc' => '颜色、示例、通用'
+    ],
 ];

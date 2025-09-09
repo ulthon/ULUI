@@ -1,0 +1,20 @@
+$demo-img-types: view, avatar, icon, banner, tech, person, product;
+$demo-img-count: 10;
+
+@each $type in $demo-img-types {
+  .ul-demo-#{$type} {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url('/cdn/img/#{$type}-n1.png') !important;
+
+    // 生成数字修饰符类，用于加载具体图片
+    @for $i from 1 through $demo-img-count {
+      &.n#{$i} {
+        background-image: url('/cdn/img/#{$type}-n#{$i}.png') !important;
+      }
+    }
+  }
+}
