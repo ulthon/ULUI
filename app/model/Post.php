@@ -236,7 +236,7 @@ class Post extends Model
             $list_components_data[$components_name]['html'] = $html_content;
             $list_components_data[$components_name]['scss'] = file_get_contents($components_path . '/_index.scss');
             $list_components_data[$components_name]['css'] = $scss_compiler->compileString($common_scss_content . $list_components_data[$components_name]['scss'])->getCss();
-            $list_components_data[$components_name]['markdown'] = file_get_contents($components_path . '/_index.md');
+            $list_components_data[$components_name]['markdown'] = View::fetch($components_path . '/_index.md');
             $list_components_data[$components_name]['desc'] = $markdown_parser->text($list_components_data[$components_name]['markdown']);
 
             $uniapp_code = $list_components_data[$components_name]['html'];

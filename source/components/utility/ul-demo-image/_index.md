@@ -6,5 +6,19 @@ ULUI提供了各种类型的示例图片，所有图片资源来源 https://pixa
 
 ULUI还提供了n1-n9的编号，用于展示不同的图片。可以使用ULUI提供的内置方法自动追加编号。
 ```javascript
-$('body').ulDemo();
+<script src="//ului.top/cdn/js/jquery-3.7.1.min.js"></script>
+<script src="//ului.top/cdn/js/modules/ul-demo.js"></script>
+<script>
+    $(function () {
+        $('.ul-tab').ulDemo();
+    });
+</script>
+```
+
+
+ul-demo.js的代码如下：
+
+```javascript
+{php}echo file_get_contents(app()->getRootPath().'/public/cdn/js/modules/ul-demo.js');{/php}
+
 ```
