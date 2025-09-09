@@ -1,0 +1,18 @@
+<div class="ul-group-title">背景色</div>
+{volist name='color_list' id='vo'}
+<div
+    class="ul-bg-{$vo}"
+    style="display: inline-block;padding: 10px 18px;"
+>
+    <div>自动文字颜色</div> <div>ul-bg-{$vo}</div>
+</div>
+{/volist}
+<div class="ul-group-title">字体色</div>
+{volist name='color_list' id='vo'}
+<div
+    class="ul-text-{$vo}"
+    style="display: inline-block;padding: 10px 18px;"
+>
+    <div>文字颜色</div> <div>ul-text-{$vo}</div>
+</div>
+{/volist}
