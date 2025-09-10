@@ -1,0 +1,22 @@
+
+{volist name='size_list' id='vo'}
+<div class="ul-group-title" style="margin-bottom: 0;">ul-padding-{$vo} ul-margin-{$vo}</div>
+<div class="ul-padding-{$vo} ul-margin-{$vo} ul-bg-gray"></div>
+{/volist}
+
+<div class="ul-group-title" style="margin-bottom: 0;">ul-section</div>
+{for start='1' end='4'}
+<div class="ul-section ul-bg-gray ul-padding-xl"></div>
+{/for}
+
+<div class="ul-group-title" style="margin-bottom: 0;">ul-inline-block</div>
+{for start='1' end='20'}
+    <div class="ul-inline-block ul-margin-xs ul-bg-gray ul-padding-xl"></div>
+{/for}
+
+<div class="ul-group-title" style="margin-bottom: 0;">ul-margin-container</div>
+<div class="ul-margin-container-xs">
+{for start='1' end='20'}
+    <div class="ul-inline-block ul-margin-xs ul-bg-gray ul-padding-xl"></div>
+{/for}
+</div>
