@@ -1,49 +1,63 @@
-.ul-avatar-list {
+.ul-avatar-item {
+    display: flex;
+    align-items: center;
+    padding: $space-sm;
+    background-color: $color-light-light;
+    border-radius: $border-radius-base;
+    cursor: pointer;
+    transition: background-color .3s;
 
-    /* 用户头像开始 */
-    .ul-avatar-list-item {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 8px;
-        background-color: rgb(229, 228, 228);
+    
+    &:hover {
+        background-color: $color-light-hover;
     }
 
-    .ul-avatar-list-item.current {
-        background-color: rgb(216, 215, 215);
+    &.current {
+        background-color: $color-light-hover;
     }
 
-    .ul-avatar-list-item-img {
-        height: 48px;
-        width: 48px;
+    // 非第一个元素增加上边距
+    & + & {
+        margin-top: $border-radius-sm;
+    }
+
+    &__avatar {
+        flex-shrink: 0;
+        height: $space-xl * 1.5;
+        width: $space-xl * 1.5;
         background-image: url("/static/images/avatar.png");
         background-size: cover;
         background-position: center;
-        border-radius: 3px;
-        background-color: #fff;
+        border-radius: $border-radius-sm;
+        background-color: $color-white;
     }
 
-    .ul-avatar-list-item-info {
-        margin-left: 10px;
+    &__info {
+        flex-grow: 1;
+        margin-left: $space-md;
         position: relative;
-        width: calc(100% - 48px - 10px);
+        min-width: 0; // 防止内容撑开
     }
 
-    .ul-avatar-list-item-time {
+    &__title {
+        font-size: $font-size-lg;
+        color: $color-text;
+    }
+
+    &__time {
         position: absolute;
         right: 0;
         top: 0;
-        color: rgb(187, 187, 187);
+        font-size: $font-size-sm;
+        color: $color-text-secondary;
     }
 
-    .ul-avatar-list-item-tips {
-        color: rgb(187, 187, 187);
-        font-size: 14px;
-        display: inline-block;
+    &__tips {
+        color: $color-text-secondary;
+        font-size: $font-size-base;
         white-space: nowrap;
-        width: 100%;
         overflow: hidden;
         text-overflow: ellipsis;
+        padding-right: $space-xl + $space-sm; // 减去时间区域的宽度，防止重叠
     }
-
 }

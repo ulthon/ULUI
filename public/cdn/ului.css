@@ -3196,47 +3196,58 @@ template {
     margin: 16px 0;
   }
 }
-.ul-avatar-list {
-  /* 用户头像开始 */
-}
-.ul-avatar-list .ul-avatar-list-item {
+.ul-avatar-item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 8px;
-  background-color: rgb(229, 228, 228);
+  background-color: var(--ul-color-light-light);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
-.ul-avatar-list .ul-avatar-list-item.current {
-  background-color: rgb(216, 215, 215);
+.ul-avatar-item:hover {
+  background-color: var(--ul-color-light-hover);
 }
-.ul-avatar-list .ul-avatar-list-item-img {
+.ul-avatar-item.current {
+  background-color: var(--ul-color-light-hover);
+}
+.ul-avatar-item + .ul-avatar-item {
+  margin-top: 2px;
+}
+.ul-avatar-item__avatar {
+  flex-shrink: 0;
   height: 48px;
   width: 48px;
   background-image: url("/static/images/avatar.png");
   background-size: cover;
   background-position: center;
-  border-radius: 3px;
-  background-color: #fff;
+  border-radius: 2px;
+  background-color: var(--ul-color-white);
 }
-.ul-avatar-list .ul-avatar-list-item-info {
-  margin-left: 10px;
+.ul-avatar-item__info {
+  flex-grow: 1;
+  margin-left: 16px;
   position: relative;
-  width: calc(100% - 48px - 10px);
+  min-width: 0;
 }
-.ul-avatar-list .ul-avatar-list-item-time {
+.ul-avatar-item__title {
+  font-size: 16px;
+  color: var(--ul-color-text);
+}
+.ul-avatar-item__time {
   position: absolute;
   right: 0;
   top: 0;
-  color: rgb(187, 187, 187);
+  font-size: 12px;
+  color: var(--ul-color-text-secondary);
 }
-.ul-avatar-list .ul-avatar-list-item-tips {
-  color: rgb(187, 187, 187);
+.ul-avatar-item__tips {
+  color: var(--ul-color-text-secondary);
   font-size: 14px;
-  display: inline-block;
   white-space: nowrap;
-  width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding-right: 40px;
 }
 
 .ul-avatar-sidebar-list .ul-avatar-sidebar-list-item {
