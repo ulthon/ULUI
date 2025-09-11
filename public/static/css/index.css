@@ -20,3 +20,7 @@
 .demo-col:nth-child(even) .demo-col-main {
     background-color: #d7d7d7;
 }
+
+.demo-page .desc{
+    margin-top: 16px;
+}

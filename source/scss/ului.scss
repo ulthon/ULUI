@@ -2,67 +2,67 @@
 // --------------------------------------------------
 :root {
   // Main 主题色
-  --ul-color-main-base: #1E9FFF;
-  --ul-color-main-hover: #4fb2ff;
-  --ul-color-main-light: #e8f5ff;
+  --ul-color-main-base: #3B82F6;
+  --ul-color-main-hover: #2563EB;
+  --ul-color-main-light: #DBEAFE;
   --ul-color-main-text: #fff;
 
   // Primary 主题色
-  --ul-color-primary-base: #007bff;
-  --ul-color-primary-hover: #0069d9;
-  --ul-color-primary-light: #cfe2ff;
+  --ul-color-primary-base: #3B82F6;
+  --ul-color-primary-hover: #2563EB;
+  --ul-color-primary-light: #DBEAFE;
   --ul-color-primary-text: #fff;
 
   // Success 主题色
-  --ul-color-success-base: #28a745;
-  --ul-color-success-hover: #218838;
-  --ul-color-success-light: #d4edda;
+  --ul-color-success-base: #10B981;
+  --ul-color-success-hover: #059669;
+  --ul-color-success-light: #D1FAE5;
   --ul-color-success-text: #fff;
 
   // Danger 主题色
-  --ul-color-danger-base: #dc3545;
-  --ul-color-danger-hover: #c82333;
-  --ul-color-danger-light: #f8d7da;
+  --ul-color-danger-base: #EF4444;
+  --ul-color-danger-hover: #DC2626;
+  --ul-color-danger-light: #FEE2E2;
   --ul-color-danger-text: #fff;
 
   // Warning 主题色
-  --ul-color-warning-base: #ffc107;
-  --ul-color-warning-hover: #e0a800;
-  --ul-color-warning-light: #fff3cd;
-  --ul-color-warning-text: #212529;
+  --ul-color-warning-base: #F59E0B;
+  --ul-color-warning-hover: #D97706;
+  --ul-color-warning-light: #FEF3C7;
+  --ul-color-warning-text: #fff;
 
   // Info 主题色
-  --ul-color-info-base: #17a2b8;
-  --ul-color-info-hover: #138496;
-  --ul-color-info-light: #d1ecf1;
+  --ul-color-info-base: #06B6D4;
+  --ul-color-info-hover: #0891B2;
+  --ul-color-info-light: #CFFAFE;
   --ul-color-info-text: #fff;
 
   // Dark 主题色
-  --ul-color-dark-base: #343a40;
-  --ul-color-dark-hover: #23272b;
-  --ul-color-dark-light: #d6d8d9;
+  --ul-color-dark-base: #1F2937;
+  --ul-color-dark-hover: #111827;
+  --ul-color-dark-light: #D1D5DB;
   --ul-color-dark-text: #fff;
 
   // Light 主题色
-  --ul-color-light-base: #f8f9fa;
-  --ul-color-light-hover: #e2e6ea;
-  --ul-color-light-light: #fdfdfe;
-  --ul-color-light-text: #212529;
+  --ul-color-light-base: #F9FAFB;
+  --ul-color-light-hover: #F3F4F6;
+  --ul-color-light-light: #FFFFFF;
+  --ul-color-light-text: #1F2937;
 
   // Gray 主题色
-  --ul-color-gray-base: #e9ecef;
-  --ul-color-gray-hover: #dee2e6;
-  --ul-color-gray-light: #f8f9fa;
-  --ul-color-gray-text: #343a40;
+  --ul-color-gray-base: #E5E7EB;
+  --ul-color-gray-hover: #D1D5DB;
+  --ul-color-gray-light: #F3F4F6;
+  --ul-color-gray-text: #374151;
 
   // 中性色与通用色
   --ul-color-white: #fff;
   --ul-color-black: #000;
-  --ul-color-text: #333;
-  --ul-color-text-secondary: #6c757d;
-  --ul-color-text-placeholder: #999;
-  --ul-color-border: #e6e6e6;
-  --ul-color-bg: #f2f2f2;
+  --ul-color-text: #1F2937;
+  --ul-color-text-secondary: #6B7280;
+  --ul-color-text-placeholder: #9CA3AF;
+  --ul-color-border: #E5E7EB;
+  --ul-color-bg: #F9FAFB;
 }
 
 @import './common';
