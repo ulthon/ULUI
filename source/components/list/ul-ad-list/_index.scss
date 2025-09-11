@@ -1,42 +1,62 @@
-.ul-ad-list {}
+.ul-ad-list {
+    &__item {
+        box-shadow: $box-shadow-base;
+        background-color: $color-white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+        margin-bottom: 15px;
 
-.ul-ad-item {
-    box-shadow: 1px 1px 8px #666;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px;
-    margin-bottom: 15px;
-}
+        @include media-breakpoint-down(md) {
+            flex-direction: column;
+        }
+    }
 
-.ul-ad-left {
-    width: 72%;
-    height: 170px;
-}
+    &__left {
+        width: 72%;
+        height: 170px;
 
-.ul-ad-img {
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-}
+        @include media-breakpoint-down(md) {
+            width: 100%;
+            margin-bottom: $space-md;
+        }
+    }
 
-.ul-ad-right {
-    width: 25%;
-}
 
-.ul-ad-title {
-    font-size: 28px;
-    font-weight: 100;
-    margin: 0;
-    color: #e4393c;
+    &__img {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+    }
 
-}
+    &__right {
+        width: 25%;
 
-.ul-ad-desc {
-    font-size: 14px;
-    color: #666666;
-    margin: 26px 0;
-    line-height: 24px;
+        @include media-breakpoint-down(md) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__title {
+        font-size: 28px;
+        font-weight: 100;
+        margin: 0;
+        color: $color-main-base;
+    }
+
+    &__desc {
+        font-size: 14px;
+        color: $color-text-secondary;
+        margin: 26px 0;
+        line-height: 24px;
+
+        @include media-breakpoint-down(md) {
+            margin: $space-md 0;
+        }
+    }
+
+    &__options {}
 }

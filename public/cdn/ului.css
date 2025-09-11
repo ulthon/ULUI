@@ -3140,46 +3140,62 @@ template {
   margin-right: 3px;
 }
 
-.ul-ad-item {
-  box-shadow: 1px 1px 8px #666;
-  background-color: #fff;
+.ul-ad-list__item {
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  background-color: var(--ul-color-white);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 15px;
   margin-bottom: 15px;
 }
-
-.ul-ad-left {
+@media (max-width: 767.98px) {
+  .ul-ad-list__item {
+    flex-direction: column;
+  }
+}
+.ul-ad-list__left {
   width: 72%;
   height: 170px;
 }
-
-.ul-ad-img {
+@media (max-width: 767.98px) {
+  .ul-ad-list__left {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+}
+.ul-ad-list__img {
   height: 100%;
   width: 100%;
   background-size: cover;
   background-position: center;
 }
-
-.ul-ad-right {
+.ul-ad-list__right {
   width: 25%;
 }
-
-.ul-ad-title {
+@media (max-width: 767.98px) {
+  .ul-ad-list__right {
+    width: 100%;
+    text-align: center;
+  }
+}
+.ul-ad-list__title {
   font-size: 28px;
   font-weight: 100;
   margin: 0;
-  color: #e4393c;
+  color: var(--ul-color-main-base);
 }
-
-.ul-ad-desc {
+.ul-ad-list__desc {
   font-size: 14px;
-  color: #666666;
+  color: var(--ul-color-text-secondary);
   margin: 26px 0;
   line-height: 24px;
 }
-
+@media (max-width: 767.98px) {
+  .ul-ad-list__desc {
+    margin: 16px 0;
+  }
+}
 .ul-avatar-list {
   /* 用户头像开始 */
 }
