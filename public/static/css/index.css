@@ -1,0 +1,22 @@
+.ql-editor {
+    padding: 15px 0;
+}
+
+.right-tips-container {
+    background-color: #fff;
+}
+
+.demo-col .demo-col-main {
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* 单数时 */
+.demo-col:nth-child(odd) .demo-col-main {
+    background-color: #e8e8e8;
+}
+
+/* 双数时 */
+.demo-col:nth-child(even) .demo-col-main {
+    background-color: #d7d7d7;
+}

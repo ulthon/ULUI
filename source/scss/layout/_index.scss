@@ -29,8 +29,19 @@
 .ul-row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: calc(-#{$grid-gutter-width} / 2);
-  margin-left: calc(-#{$grid-gutter-width} / 2);
+
+  // Column Spacing
+  @each $space in 1, 2, 4, 5, 6, 8, 10, 12, 14, 15, 16, 18, 20, 22, 24, 25, 26, 28, 30, 32 {
+    &.ul-col-space-#{$space} {
+      margin-right: -#{$space / 2}px;
+      margin-left: -#{$space / 2}px;
+
+      > [class*="ul-col-"] {
+        padding-right: #{$space / 2}px;
+        padding-left: #{$space / 2}px;
+      }
+    }
+  }
 }
 
 // Common column styles
@@ -38,13 +49,24 @@
   box-sizing: border-box; // 添加此行
   position: relative;
   width: 100%;
-  padding-right: calc($grid-gutter-width / 2);
-  padding-left: calc($grid-gutter-width / 2);
 }
 
 // Auto-width column
 .ul-col {
   flex: 1 0 0%;
+}
+
+// Column Spacing
+@each $space in 1, 2, 4, 5, 6, 8, 10, 12, 14, 15, 16, 18, 20, 22, 24, 25, 26, 28, 30, 32 {
+  .ul-col-space-#{$space} {
+    margin-right: -#{$space / 2}px;
+    margin-left: -#{$space / 2}px;
+
+    > [class*="ul-col-"] {
+      padding-right: #{$space / 2}px;
+      padding-left: #{$space / 2}px;
+    }
+  }
 }
 
 // Generate columns, offsets, and orders
