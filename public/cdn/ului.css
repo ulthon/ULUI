@@ -3140,59 +3140,64 @@ template {
   margin-right: 3px;
 }
 
-.ul-ad-list__item {
+.ul-ad-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ul-ad-item {
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
   background-color: var(--ul-color-white);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 15px;
-  margin-bottom: 15px;
 }
 @media (max-width: 767.98px) {
-  .ul-ad-list__item {
+  .ul-ad-item {
     flex-direction: column;
   }
 }
-.ul-ad-list__left {
+.ul-ad-item__left {
   width: 72%;
   height: 170px;
 }
 @media (max-width: 767.98px) {
-  .ul-ad-list__left {
+  .ul-ad-item__left {
     width: 100%;
     margin-bottom: 16px;
   }
 }
-.ul-ad-list__img {
+.ul-ad-item__img {
   height: 100%;
   width: 100%;
   background-size: cover;
   background-position: center;
 }
-.ul-ad-list__right {
+.ul-ad-item__right {
   width: 25%;
 }
 @media (max-width: 767.98px) {
-  .ul-ad-list__right {
+  .ul-ad-item__right {
     width: 100%;
     text-align: center;
   }
 }
-.ul-ad-list__title {
+.ul-ad-item__title {
   font-size: 28px;
   font-weight: 100;
   margin: 0;
   color: var(--ul-color-main-base);
 }
-.ul-ad-list__desc {
+.ul-ad-item__desc {
   font-size: 14px;
   color: var(--ul-color-text-secondary);
   margin: 26px 0;
   line-height: 24px;
 }
 @media (max-width: 767.98px) {
-  .ul-ad-list__desc {
+  .ul-ad-item__desc {
     margin: 16px 0;
   }
 }
@@ -3452,7 +3457,7 @@ template {
   margin-left: 8px;
 }
 
-.ul-list-record-item {
+.ul-record-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -3462,26 +3467,26 @@ template {
   margin-bottom: 8px;
   border-radius: 12px;
 }
-.ul-list-record-item__right {
+.ul-record-item__right {
   text-align: right;
 }
-.ul-list-record-item__name {
+.ul-record-item__name {
   font-size: 14px;
 }
-.ul-list-record-item__desc {
+.ul-record-item__desc {
   font-size: 12px;
   color: var(--ul-color-text-secondary);
   margin-top: 6px;
 }
-.ul-list-record-item__change {
+.ul-record-item__change {
   font-weight: 600;
   color: var(--ul-color-success-base);
 }
-.ul-list-record-item__change.negative {
+.ul-record-item__change.negative {
   color: var(--ul-color-danger-base);
 }
 
-.ul-list-record .ul-list-record-item:last-child {
+.ul-record .ul-record-item:last-child {
   margin-bottom: 0;
 }
 
