@@ -6,8 +6,6 @@ $demo-img-count: 10;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    display: inline-block;
-    vertical-align: middle;
     background-image: url('img/#{$type}-n1.png') !important;
 
     // 生成数字修饰符类，用于加载具体图片

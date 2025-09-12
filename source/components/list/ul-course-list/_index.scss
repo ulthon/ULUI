@@ -1,63 +1,66 @@
-.ul-course-list {
-    margin: -10px;
-    font-size: 0;
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .ul-course-item {
-    display: inline-block;
-    margin: 10px;
-    width: calc(25% - 20px);
+    display: block;
+    border-radius: $border-radius-base;
+    overflow: hidden;
     background-color: #fff;
-    padding-bottom: 12px;
-    cursor: pointer;
-    font-size: 14px;
+    box-shadow: $box-shadow-base;
+    transition: all .3s;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: $box-shadow-lg;
+    }
+
+    &__poster {
+        position: relative;
+    }
+
+    &__tag {
+        position: absolute;
+        top: $space-sm;
+        left: $space-sm;
+        z-index: 1;
+    }
+
+    &__image {
+        padding-top: 56.25%; // 16:9 aspect ratio
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__info {
+        padding: $space-sm;
+    }
+
+    &__title {
+        font-size: $font-size-base;
+        font-weight: bold;
+        @include text-ellipsis;
+    }
+
+    &__meta {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: $space-xs;
+        font-size: $font-size-sm;
+        color: $color-text-secondary;
+    }
+
+    &__meta-item {
+        margin-right: $space-sm;
+    }
 }
 
-.ul-course-item-poster {
-    background-position: center;
-    background-size: cover;
-    height: 140px;
-    width: 100%;
-    transition: all 0.6s;
-    position: relative;
-}
+.ul-course-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: $space-md;
 
-.ul-course-item-tag {
-    position: absolute;
-    right: 8px;
-    top: 8px;
-    z-index: 9999;
-}
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-.ul-course-item-info {
-    padding: 6px;
-}
-
-.ul-course-item-title {
-    padding: 8px 0;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-.ul-course-item-option-item {
-    display: inline-block;
-    margin-right: 8px;
-    font-size: 12px;
-    color: #999;
-}
-
-.ul-course-item-poster:hover {
-    transform: scale(1.2)
-}
-
-.ul-course-item-poster-container:hover .ul-course-item-tag {
-    display: none;
-}
-
-.ul-course-item-poster-container {
-    overflow: hidden;
-    position: relative;
+    @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+    }
 }

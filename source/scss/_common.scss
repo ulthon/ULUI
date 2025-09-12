@@ -80,15 +80,22 @@ $font-size-base: 14px;
 $font-size-xs: 10px;
 $font-size-sm: 12px;
 $font-size-lg: 16px;
+$font-size-xl: 18px;
+$font-size-xxl: 20px;
 $line-height-base: 1.5;
 
 // 圆角
-$border-radius-base: 4px;
 $border-radius-sm: 2px;
+$border-radius-base: 4px;
 $border-radius-lg: 8px;
+$border-radius-xl: 12px;
+$border-radius-circle: 50%;
 
 // 阴影
+$box-shadow-sm: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
 $box-shadow-base: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+$box-shadow-lg: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+$box-shadow-xl: 0 12px 24px 0 rgba(0, 0, 0, 0.12);
 
 
 // 混合宏 (Mixins)
