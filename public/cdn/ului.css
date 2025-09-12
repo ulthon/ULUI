@@ -3452,33 +3452,37 @@ template {
   margin-left: 8px;
 }
 
-.ul-list-record .item-record {
+.ul-list-record-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #fff;
-  box-shadow: 0px 0px 4px rgba(77, 85, 114, 0.1);
+  background-color: var(--ul-color-white);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
   padding: 12px;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
   border-radius: 12px;
 }
-.ul-list-record .item-record .right {
+.ul-list-record-item__right {
   text-align: right;
 }
-.ul-list-record .item-record .item-name {
+.ul-list-record-item__name {
   font-size: 14px;
 }
-.ul-list-record .item-record .item-desc {
+.ul-list-record-item__desc {
   font-size: 12px;
-  color: #999;
+  color: var(--ul-color-text-secondary);
   margin-top: 6px;
 }
-.ul-list-record .item-record .item-change {
+.ul-list-record-item__change {
   font-weight: 600;
-  color: green;
+  color: var(--ul-color-success-base);
 }
-.ul-list-record .item-record .item-change.status-2 {
-  color: orangered;
+.ul-list-record-item__change.negative {
+  color: var(--ul-color-danger-base);
+}
+
+.ul-list-record .ul-list-record-item:last-child {
+  margin-bottom: 0;
 }
 
 .ul-list-user-info .item {
