@@ -1,79 +1,69 @@
+.ul-book-item {
+    display: flex;
+    cursor: pointer;
+
+    &__poster {
+        flex-shrink: 0;
+        width: 75px;
+        height: 100px;
+        background-color: $color-light-light;
+        border-radius: $border-radius-sm;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        padding: $space-xs $space-sm;
+        min-width: 0;
+    }
+
+    &__title {
+        font-size: $font-size-base;
+        font-weight: bold;
+        @include text-ellipsis;
+    }
+
+    &__author,
+    &__status {
+        font-size: $font-size-sm;
+        color: $color-text-secondary;
+        @include text-ellipsis;
+    }
+
+    &__status {
+        margin-top: auto;
+        span + span {
+            margin-left: $space-xs;
+        }
+    }
+    
+}
 
 .ul-book-list {
-    display        : flex;
-    align-items    : flex-start;
-    justify-content: flex-start;
-    flex-wrap      : wrap;
-}
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: $space-md;
 
-.ul-book-item {
-    width          : 140px;
-    display        : flex;
-    align-items    : flex-start;
-    justify-content: space-between;
-    margin-bottom  : 15px;
-    margin-right   : 15px;
-    cursor         : pointer;
-    border         : 1px solid transparent;
-}
+    &.big {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 
-.ul-book-item:hover {
-    border-color: #ddd;
-}
+        .ul-book-item__poster {
+            width: 90px;
+            height: 120px;
+        }
 
-.ul-book-poster {
-    background-image      : url(../img/book-bg.png);
-    background-size       : cover;
-    background-position   : center;
-    width                 : 60px;
-    height                : 80px;
-    /* margin-right       : 15px; */
-}
+        .ul-book-item__title {
+            font-size: $font-size-lg;
+        }
+    }
 
-.ul-book-info {
-    position: relative;
-    height  : 80px;
-    width   : 75px;
-}
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
 
-.ul-book-title {
-    font-size         : 16px;
-    color             : #3e3a39;
-    margin-bottom     : 6px;
-    font-weight       : 600;
-    line-height       : 1.5;
-    word-break        : break-all;
-    text-overflow     : ellipsis;
-    display           : -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    overflow          : hidden;
-}
-
-.ul-book-author {
-    font-size : 12px;
-    color     : #3e3a39;
-    word-break: break-all;
-}
-
-.ul-book-status {
-    font-size: 12px;
-    color    : #99999a;
-    position : absolute;
-    bottom   : 0;
-    left     : 0;
-}
-
-.ul-book-list.big .ul-book-item {
-    width: 240px;
-}
-
-.ul-book-list.big .ul-book-poster {
-    width : 120px;
-    height: 160px;
-}
-
-.ul-book-list.big .ul-book-info {
-    height: 160px;
-    width : 110px;
+        &.big {
+            grid-template-columns: 1fr;
+        }
+    }
 }

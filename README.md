@@ -101,6 +101,7 @@ source
     -   `{type}`: 组件的分类，例如 `card`, `list`, `form`, `btn` 等。
     -   `{name}`: 组件的具体名称。推荐使用有意义的单词（如 `user-info`, `file`）。如果组件变体较多或难以找到合适的描述词，也**允许使用数字序号**（如 `1`, `2`, `3`）。
     -   **示例**: `.ul-card-user`, `.ul-list-item`, `.ul-card-1`。
+    -   对于类似list模式的组件，一般会搭配item的子类，BEM一般基于item实现。因为list一般不设置具体样式，主要改变盒模型，也用于统一设置不同的模式。
 
 -   **内部元素 (BEM 规范)**: 组件内部的子元素命名应严格遵循 **BEM (Block, Element, Modifier)** 方法论，以确保样式的独立性和可维护性。
     -   **块 (Block)**: 即组件的根 Class，如 `.ul-info-card`。
