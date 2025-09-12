@@ -2,9 +2,9 @@
 <div class="ul-group-title">ul-demo-{$vo}</div>
 {for start='1' end='10'}
     {if in_array($vo, ['avatar', 'icon'])}
-        <div class="ul-demo-{$vo} n{$i}" style="width: 80px;height: 80px;"></div>
+        <div class="ul-inline-block ul-demo-{$vo} n{$i}" style="width: 80px;height: 80px;"></div>
         {else /}
-        <div class="ul-demo-{$vo} n{$i}" style="width: 120px;height: 80px;"></div>
+        <div class="ul-inline-block ul-demo-{$vo} n{$i}" style="width: 120px;height: 80px;"></div>
     {/if}
 {/for}
 {/volist}
