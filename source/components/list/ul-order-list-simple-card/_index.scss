@@ -1,86 +1,103 @@
-.ul-order-list-simple-card {
-    .item {
-        box-shadow   : 0 0 3px #ddd;
-        border-radius: 2px;
-        padding      : 15px;
-        margin-bottom: 15px;
-        background-color: #fff;
+.ul-order-list {
+    .ul-order-card + .ul-order-card {
+        margin-top: $space-md;
+    }
+}
+
+
+.ul-order-card {
+    background-color: $color-white;
+    border-radius: $radius-md;
+    padding: $space-md;
+
+    &__header,
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    .item-header {
-        display        : flex;
-        align-items    : center;
-        justify-content: space-between;
-        font-size      : 13px;
-        margin-bottom  : 5px;
+    &__header {
+        font-size: $font-size-md;
+        padding-bottom: $space-md;
+        border-bottom: 1px solid $color-border;
+    }
 
-        .item-header-status {
-            color: #1E9FFF;
+    &__shop {
+        color: $color-text;
+        font-weight: bold;
+        .layui-icon {
+            margin-right: $space-sm;
         }
     }
 
-    .item-body {
-        margin-top    : 10px;
-        padding-bottom: 10px;
+    &__status {
+        color: $color-primary-base;
+    }
 
-        .item-body-item {
-            display        : flex;
-            align-items    : center;
-            justify-content: space-between;
-            padding        : 5px 0;
+    &__body {
+        padding: $space-md 0;
+    }
 
-            .item-image {
-                width              : 90px;
-                height             : 90px;
-                background-size    : cover;
-                background-position: center;
-                box-shadow         : 0 0 2px #999;
+    &__product {
+        display: flex;
+        align-items: flex-start;
+    }
 
-            }
+    &__product-image {
+        width: 80px;
+        height: 80px;
+        flex-shrink: 0;
+        margin-right: $space-md;
+        background-color: $color-main-light;
+        border-radius: $radius-sm;
+    }
 
-            .item-info {
-                width      : calc(100% - 90px - 15px);
-                margin-left: 15px;
-                height     : 90px;
-                position   : relative;
+    &__product-info {
+        flex: 1;
+        min-width: 0;
+    }
 
-                .ul-info-title {
-                    font-weight       : 500;
-                    font-size         : 15px;
-                    margin-bottom     : 5px;
-                    text-overflow     : -o-ellipsis-lastline;
-                    overflow          : hidden;
-                    text-overflow     : ellipsis;
-                    display           : -webkit-box;
-                    -webkit-line-clamp: 2;
-                    -webkit-box-orient: vertical;
-                }
+    &__product-title {
+        color: $color-text;
+        margin-bottom: $space-sm;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 
-                .ul-info-value {
-                    display        : flex;
-                    align-items    : center;
-                    justify-content: space-between;
-                    color          : #999;
-                    font-size      : 14px;
-                }
-
-                .ul-info-money {
-                    position   : absolute;
-                    bottom     : 0;
-                    left       : 0;
-                    font-size  : 15px;
-                    font-weight: 600;
-                }
-            }
+    &__product-spec {
+        display: flex;
+        flex-wrap: wrap;
+        color: $color-text-secondary;
+        font-size: $font-size-sm;
+        align-items: baseline;
+        &-item + &-item {
+            margin-left: $space-md;
         }
     }
 
-    .item-footer {
-        padding-top    : 15px;
-        margin-top     : 5px;
-        border-top     : 1px solid #eee;
-        display        : flex;
-        align-items    : center;
-        justify-content: space-between;
+    &__price {
+        font-weight: bold;
+        margin-left: $space-md;
+    }
+
+    &__footer {
+        padding-top: $space-md;
+        border-top: 1px solid $color-border;
+    }
+
+
+    &__meta {
+        font-size: $font-size-sm;
+        color: $color-text-secondary;
+    }
+
+    &__actions {
+        .layui-btn + .layui-btn {
+            margin-left: $space-md;
+        }
     }
 }

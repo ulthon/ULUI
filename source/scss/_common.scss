@@ -77,8 +77,14 @@ $space-md: $space-base * 4;  // 16px
 $space-lg: $space-base * 6;  // 24px
 $space-xl: $space-base * 8;  // 32px
 
+$radius-sm: 2px;
+$radius-md: 4px;
+$radius-lg: 8px;
+$radius-circle: 50%;
+
 // 字体
 $font-size-base: 14px;
+$font-size-md: 14px;
 $font-size-xs: 10px;
 $font-size-sm: 12px;
 $font-size-lg: 16px;
