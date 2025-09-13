@@ -43,6 +43,8 @@
   --ul-color-text-placeholder: #9CA3AF;
   --ul-color-border: #E5E7EB;
   --ul-color-bg: #F9FAFB;
+  --ul-bg-color-overlay: #fff;
+  --ul-bg-color-page: #F3F4F6;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -3693,38 +3695,48 @@ template {
 
 .ul-note-item {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  padding: 16px;
   cursor: pointer;
-  padding: 15px;
+  border-left: 3px solid transparent;
+  transition: background-color 0.3s;
 }
-
-.ul-note-item.current,
 .ul-note-item:hover {
-  background-color: #dedede;
+  background-color: var(--ul-color-light-hover);
 }
-
-.ul-note-item .ul-note-item-icon {
-  margin-right: 10px;
+.ul-note-item.current {
+  background-color: var(--ul-color-main-light);
+  border-left-color: var(--ul-color-primary-base);
 }
-
-.ul-note-item .ul-note-item-desc {
-  color: #999;
+.ul-note-item__icon {
+  margin-right: 16px;
+  font-size: 16px;
+  color: var(--ul-color-text-placeholder);
+  display: flex;
+  align-items: center;
+}
+.ul-note-item__info {
+  flex: 1;
+  min-width: 0;
+}
+.ul-note-item__title {
+  font-size: 14px;
+  color: var(--ul-color-text);
+  margin-bottom: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ul-note-item__desc {
   font-size: 12px;
-  margin-top: 5px;
-  word-break: break-all;
+  color: var(--ul-color-text-secondary);
+  margin-bottom: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-
-.ul-note-item .ul-note-item-time {
-  color: #bbb;
+.ul-note-item__time {
   font-size: 12px;
-  margin-top: 5px;
-}
-
-.ul-note-item .ul-note-item-tree {
-  font-size: 12px;
-  color: #bbb;
-  margin-top: 5px;
+  color: var(--ul-color-text-placeholder);
 }
 
 .ul-order-list-simple-card .item {

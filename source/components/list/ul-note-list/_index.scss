@@ -1,35 +1,56 @@
+.ul-note-list {
+
+}
+
 .ul-note-item {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    padding: $space-md;
     cursor: pointer;
-    padding: 15px;
-}
+    border-left: 3px solid transparent;
+    transition: background-color .3s;
 
-.ul-note-item.current,
-.ul-note-item:hover {
-    background-color: #dedede;
-}
+    &:hover {
+        background-color: $color-light-hover;
+    }
 
-.ul-note-item .ul-note-item-icon {
-    margin-right: 10px;
-}
+    &.current {
+        background-color: $color-main-light;
+        border-left-color: $color-primary-base;
+    }
 
-.ul-note-item .ul-note-item-desc {
-    color: #999;
-    font-size: 12px;
-    margin-top: 5px;
-    word-break: break-all;
-}
+    &__icon {
+        margin-right: $space-md;
+        font-size: $font-size-lg;
+        color: $color-text-placeholder;
+        display: flex;
+        align-items: center;
+    }
 
-.ul-note-item .ul-note-item-time {
-    color: #bbb;
-    font-size: 12px;
-    margin-top: 5px;
-}
+    &__info {
+        flex: 1;
+        min-width: 0;
+    }
 
-.ul-note-item .ul-note-item-tree {
-    font-size: 12px;
-    color: #bbb;
-    margin-top: 5px;
+    &__title {
+        font-size: $font-size-base;
+        color: $color-text;
+        margin-bottom: $space-xs;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &__desc {
+        font-size: $font-size-sm;
+        color: $color-text-secondary;
+        margin-bottom: $space-xs;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &__time {
+        font-size: $font-size-sm;
+        color: $color-text-placeholder;
+    }
 }
