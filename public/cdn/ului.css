@@ -3661,33 +3661,33 @@ template {
   }
 }
 
-.ul-music-list .ul-music-list-item {
+.ul-music-item {
   display: flex;
   align-items: center;
   justify-content: left;
   padding: 10px;
 }
-.ul-music-list .ul-music-list-item__image {
+.ul-music-item__image {
   width: 50px;
   height: 50px;
   border-radius: 5px;
 }
-.ul-music-list .ul-music-list-item__number {
+.ul-music-item__number {
   font-size: 16px;
-  font-weight: bolder;
+  font-weight: 700;
   margin: 12px;
 }
-.ul-music-list .ul-music-list-item__title {
-  color: #303133;
+.ul-music-item__title {
+  color: var(--ul-color-text);
   font-size: 16px;
 }
-.ul-music-list .ul-music-list-item__dot {
-  color: #303133;
+.ul-music-item__dot {
+  color: var(--ul-color-text);
   font-size: 16px;
   margin: 8px;
 }
-.ul-music-list .ul-music-list-item__author {
-  color: #999;
+.ul-music-item__author {
+  color: var(--ul-color-text-secondary);
   font-size: 13px;
 }
 
