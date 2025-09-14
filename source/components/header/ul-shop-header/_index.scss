@@ -1,66 +1,75 @@
 .ul-shop-header {
-    padding: 15px;
+    background-color: $color-white;
+    padding: $space-md;
 
+    
     &__main {
-        display        : flex;
-        align-items    : center;
-        justify-content: flex-start;
-        position       : relative;
-    }
-
-    &__logo {
-        width : 80px;
-        height: 80px;
-    }
-
-    &__info {
-        margin-left: 15px;
-
-        &__name {
-            line-height: 30px;
-            font-size  : 16px;
-            font-weight: 600;
-        }
-
-        &__tag {
-            display   : flex;
-            margin-top: 5px;
-
-            &__item {
-                vertical-align: middle;
-                margin-right  : 10px;
-                color         : #bbb;
-                font-size     : 14px;
-            }
-        }
-    }
-
-    &__right {
-        position   : absolute;
-        right      : 0;
-        top        : 0;
-        height     : 100%;
-        display    : flex;
+        display: flex;
         align-items: center;
     }
 
-    &__footer {
-        border-top     : 1px solid #eee;
-        margin-top     : 10px;
-        padding-top    : 10px;
-        display        : flex;
-        align-items    : flex-start;
-        justify-content: flex-start;
-        font-size      : 14px;
-        color          : #999;
+    &__logo {
+        width: 60px;
+        height: 60px;
+        margin-right: $space-md;
+        flex-shrink: 0;
+    }
 
-        &__item {
-            margin-right: 15px;
+    &__info {
+        flex: 1;
+        min-width: 0;
+    }
 
-            &__icon {
-                color       : #333;
-                margin-right: 3px;
-            }
+    &__name {
+        font-size: $font-size-lg;
+        font-weight: bold;
+        color: $color-text;
+        margin-bottom: $space-sm;
+    }
+
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &__tag {
+        font-size: $font-size-sm;
+        color: $color-text-secondary;
+        display: flex;
+        align-items: center;
+
+        & + & {
+            margin-left: $space-md;
         }
+    }
+
+    &__tag-icon {
+        margin-right: $space-xs;
+    }
+
+    &__arrow {
+        color: $color-text-placeholder;
+        margin-left: $space-md;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: $space-md;
+        padding-top: $space-md;
+        border-top: 1px solid $color-border;
+    }
+
+    &__footer-item {
+        font-size: $font-size-sm;
+        color: $color-text-secondary;
+        display: flex;
+        align-items: center;
+    }
+
+    &__footer-icon {
+        margin-right: $space-xs;
     }
 }
