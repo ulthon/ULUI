@@ -3044,47 +3044,50 @@ template {
 
 /* 头部开始 */
 .ul-header {
-  background-color: #fff;
-  box-shadow: 0 3px 5px #999;
-  padding: 3px;
+  background-color: var(--ul-color-white);
+  padding: 16px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
 }
-
-.ul-header-main {
+.ul-header__main {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
 }
-
-.ul-header-logo {
-  max-height: 48px;
+.ul-header__logo {
+  height: 40px;
 }
-
-.ul-header-user {
+.ul-header__user {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
-
-.ul-header-user-avatar {
-  background-image: url("/static/images/avatar.png");
-  width: 45px;
-  height: 45px;
-  background-size: cover;
-  background-position: center;
+.ul-header__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--ul-color-main-light);
+  margin-right: 16px;
 }
-
-.ul-header-user-options {
+.ul-header__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.ul-header__name {
+  font-size: 14px;
+  color: var(--ul-color-text);
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.ul-header__options {
   display: flex;
   align-items: center;
-  color: #999;
   font-size: 12px;
+  color: var(--ul-color-text-secondary);
   cursor: pointer;
-  margin-top: 5px;
 }
-
-.ul-header-user-info {
-  margin-left: 10px;
+.ul-header__options .ul-icon-exit {
+  margin-right: 4px;
 }
 
 .ul-header-a {
