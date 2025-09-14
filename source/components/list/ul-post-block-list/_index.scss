@@ -22,11 +22,11 @@
     background-color: $color-white;
     border-radius: $radius-md;
     overflow: hidden;
-    box-shadow: $box-shadow-sm;
+    box-shadow: $shadow-sm;
     transition: all .3s;
 
     &:hover {
-        box-shadow: $box-shadow-lg;
+        box-shadow: $shadow-lg;
         transform: translateY(-4px);
     }
 

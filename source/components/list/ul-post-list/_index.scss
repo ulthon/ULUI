@@ -1,53 +1,78 @@
 .ul-post-list {
-    .ul-post-item {
+    display: flex;
+    flex-direction: column;
+    gap: $space-lg;
+}
+
+.ul-post-item {
+    display: flex;
+    background-color: $color-white;
+    border-radius: $radius-md;
+    box-shadow: $shadow-sm;
+    overflow: hidden;
+    transition: box-shadow .3s, transform .3s;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: $shadow-lg;
+        transform: translateY(-2px);
+    }
+
+    &__poster {
+        flex-shrink: 0;
+        width: 180px;
+        background-size: cover;
+        background-position: center;
+        background-color: $color-main-light;
+    }
+
+    &__body {
+        flex-grow: 1;
         display: flex;
-        align-items: stretch;
-        justify-content: flex-start;
-        margin-top: 12px;
+        flex-direction: column;
+        padding: $space-md;
+    }
 
-        padding-bottom: 12px;
-        border-bottom: 1px solid #bbb;
-        position: relative;
+    &__title {
+        font-size: $font-size-lg;
+        font-weight: bold;
+        color: $color-text;
+        @include text-ellipsis;
+    }
 
+    &__desc {
+        flex-grow: 1;
+        margin: $space-sm 0;
+        color: $color-text-secondary;
+        font-size: $font-size-base;
+        @include text-ellipsis(2);
+    }
 
+    &__meta {
+        display: flex;
+        gap: $space-md;
+        font-size: $font-size-sm;
+        color: $color-text-placeholder;
+    }
 
-        .poster {
-            height: 120px;
-            width: 240px;
-            margin-right: 12px;
+    &__meta-item {
+        // Meta item specific styles if needed
+    }
+
+    // 响应式：手机端
+    @media (max-width: 768px) {
+        flex-direction: row;
+
+        &__poster {
+            width: 120px;
         }
 
-        .main {
-
-            width: 100%;
-            .info {
-                padding-bottom: 28px;
-
-                .title {
-                    font-size: 14px;
-                    font-weight: 600;
-                }
-
-                .desc {
-                    font-size: 12px;
-                    color: #999;
-                    margin-top: 4px;
-                }
-            }
-
+        &__body {
+            padding: $space-sm;
         }
 
-        .options {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            position: absolute;
-            bottom: 12px;
-            right: 0;
-
-            .item {
-                margin-left: 12px;
-            }
+        &__title {
+            font-size: $font-size-base;
         }
     }
 }

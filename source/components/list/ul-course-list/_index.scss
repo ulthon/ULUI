@@ -3,12 +3,12 @@
     border-radius: $border-radius-base;
     overflow: hidden;
     background-color: #fff;
-    box-shadow: $box-shadow-base;
+    box-shadow: $shadow-base;
     transition: all .3s;
 
     &:hover {
         transform: translateY(-4px);
-        box-shadow: $box-shadow-lg;
+        box-shadow: $shadow-lg;
     }
 
     &__poster {

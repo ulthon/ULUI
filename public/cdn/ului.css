@@ -4035,45 +4035,75 @@ template {
   overflow: hidden;
 }
 
-.ul-post-list .ul-post-item {
+.ul-post-list {
   display: flex;
-  align-items: stretch;
-  justify-content: flex-start;
-  margin-top: 12px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #bbb;
-  position: relative;
+  flex-direction: column;
+  gap: 24px;
 }
-.ul-post-list .ul-post-item .poster {
-  height: 120px;
-  width: 240px;
-  margin-right: 12px;
+
+.ul-post-item {
+  display: flex;
+  background-color: var(--ul-color-white);
+  border-radius: 4px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.3s;
+  cursor: pointer;
 }
-.ul-post-list .ul-post-item .main {
-  width: 100%;
+.ul-post-item:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
 }
-.ul-post-list .ul-post-item .main .info {
-  padding-bottom: 28px;
+.ul-post-item__poster {
+  flex-shrink: 0;
+  width: 180px;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--ul-color-main-light);
 }
-.ul-post-list .ul-post-item .main .info .title {
+.ul-post-item__body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+.ul-post-item__title {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--ul-color-text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ul-post-item__desc {
+  flex-grow: 1;
+  margin: 8px 0;
+  color: var(--ul-color-text-secondary);
   font-size: 14px;
-  font-weight: 600;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
-.ul-post-list .ul-post-item .main .info .desc {
-  font-size: 12px;
-  color: #999;
-  margin-top: 4px;
-}
-.ul-post-list .ul-post-item .options {
+.ul-post-item__meta {
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  position: absolute;
-  bottom: 12px;
-  right: 0;
+  gap: 16px;
+  font-size: 12px;
+  color: var(--ul-color-text-placeholder);
 }
-.ul-post-list .ul-post-item .options .item {
-  margin-left: 12px;
+@media (max-width: 768px) {
+  .ul-post-item {
+    flex-direction: row;
+  }
+  .ul-post-item__poster {
+    width: 120px;
+  }
+  .ul-post-item__body {
+    padding: 8px;
+  }
+  .ul-post-item__title {
+    font-size: 14px;
+  }
 }
 
 .ul-site-group {
