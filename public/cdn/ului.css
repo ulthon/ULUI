@@ -1739,6 +1739,22 @@ template {
   color: var(--ul-color-text-secondary);
 }
 
+.ul-shadow-sm {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
+}
+
+.ul-shadow {
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+.ul-shadow-lg {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+}
+
+.ul-shadow-xl {
+  box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.12);
+}
+
 .ul-link {
   color: var(--ul-color-primary-base);
 }
@@ -1768,6 +1784,86 @@ template {
 
 .ul-inline-block {
   display: inline-block;
+}
+
+.ul-flex {
+  display: flex;
+}
+
+.ul-inline-flex {
+  display: inline-flex;
+}
+
+.ul-flex-row {
+  flex-direction: row;
+}
+
+.ul-flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.ul-flex-col {
+  flex-direction: column;
+}
+
+.ul-flex-col-reverse {
+  flex-direction: column-reverse;
+}
+
+.ul-justify-start {
+  justify-content: flex-start;
+}
+
+.ul-justify-end {
+  justify-content: flex-end;
+}
+
+.ul-justify-center {
+  justify-content: center;
+}
+
+.ul-justify-between {
+  justify-content: space-between;
+}
+
+.ul-justify-around {
+  justify-content: space-around;
+}
+
+.ul-justify-evenly {
+  justify-content: space-evenly;
+}
+
+.ul-items-start {
+  align-items: flex-start;
+}
+
+.ul-items-end {
+  align-items: flex-end;
+}
+
+.ul-items-center {
+  align-items: center;
+}
+
+.ul-items-baseline {
+  align-items: baseline;
+}
+
+.ul-items-stretch {
+  align-items: stretch;
+}
+
+.ul-flex-wrap {
+  flex-wrap: wrap;
+}
+
+.ul-flex-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+.ul-flex-nowrap {
+  flex-wrap: nowrap;
 }
 
 .layui-quote-gray {
