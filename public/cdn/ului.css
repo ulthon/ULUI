@@ -3981,50 +3981,58 @@ template {
 }
 
 .ul-post-block-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+.ul-post-block-list.fixed-height {
+  align-items: stretch;
+}
+.ul-post-block-list.fixed-height .ul-post-block-item {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  margin: -8px;
+  flex-direction: column;
 }
-.ul-post-block-list .ul-post-block-item {
-  margin: 8px;
-  width: calc(33.3333333333% - 16px);
-  align-self: normal;
+.ul-post-block-list.fixed-height .ul-post-block-item__desc {
+  flex-grow: 1;
 }
-.ul-post-block-list .ul-post-block-item:hover {
-  background-color: #efefef;
+
+.ul-post-block-item {
+  background-color: var(--ul-color-white);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
+  transition: all 0.3s;
 }
-.ul-post-block-list .ul-post-block-item .poster {
+.ul-post-block-item:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+.ul-post-block-item__poster {
   width: 100%;
-  height: 120px;
+  padding-top: 56.25%;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--ul-color-main-light);
 }
-.ul-post-block-list .ul-post-block-item .title {
+.ul-post-block-item__title {
+  font-size: 16px;
+  color: var(--ul-color-text);
+  font-weight: bold;
+  padding: 16px 16px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ul-post-block-item__desc {
   font-size: 14px;
-  font-weight: 600;
-  line-height: 20px;
-  color: #333;
-  margin: 6px;
-}
-.ul-post-block-list .ul-post-block-item .desc {
-  margin: 6px;
-  font-size: 12px;
-  line-height: 20px;
-  color: #999;
-}
-.ul-post-block-list.fixed-height .ul-post-block-item .title {
-  overflow: hidden;
-  text-overflow: ellipsis;
+  color: var(--ul-color-text-secondary);
+  margin: 8px 16px 16px;
+  line-height: 1.6;
   display: -webkit-box;
-  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
-}
-.ul-post-block-list.fixed-height .ul-post-block-item .desc {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
   -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .ul-post-list .ul-post-item {
