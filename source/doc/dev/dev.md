@@ -4,7 +4,9 @@
     *   **根类名**: 必须是 `ul-{type}-{name}` 格式，如 `.ul-card-user`。
     *   **内部元素**: 遵循 BEM 规范，使用双下划线 `__` 连接，如 `.ul-card-user__header`。
     *   **状态**: 使用独立的状态类进行组合，而非 BEM 的修饰符，如 `.ul-card-user.dark`。
-    *   对于类似list模式的组件，一般会搭配item的子类，BEM一般基于item实现。因为list一般不设置具体样式，主要改变盒模型，也用于统一设置不同的模式。
+    *   **列表例外**:对于类似list模式的组件，一般会搭配item的子类，BEM一般基于item实现。因为list一般不设置具体样式，主要改变盒模型，也用于统一设置不同的模式，此时类名组合的规则一般是`ul-{name}-list`，`ul-{name}-item`。
+        *   因此，`.ul-user-list` 和 `.ul-user-item` 是允许的。
+        *   因此，一般组件不要以`-item`结尾，因为item一般是列表的子类。
 
 2.  **开发规范**:
     *   严格遵守命名规范。
@@ -23,7 +25,7 @@
 
 
   
-### 开发说明
+## 开发说明
 
 本站是一个基于ulthon_admin的官网项目,有关样式的代码在`source/scss`目录下.
 
@@ -49,7 +51,7 @@
 }
 ```
 
-### SCSS 结构说明
+## SCSS 结构说明
 
 项目的 SCSS 遵循模块化的组织方式，核心文件结构如下：
 
@@ -74,7 +76,7 @@ source
    ├─ ului.scss                                   
 ```
 
-### 组件命名规范
+## 组件命名规范
 
 为了保持代码的清晰和可维护性，所有组件都应遵循以下命名规范：
 
@@ -83,7 +85,9 @@ source
     -   `{type}`: 组件的分类，例如 `card`, `list`, `form`, `btn` 等。
     -   `{name}`: 组件的具体名称。推荐使用有意义的单词（如 `user-info`, `file`）。如果组件变体较多或难以找到合适的描述词，也**允许使用数字序号**（如 `1`, `2`, `3`）。
     -   **示例**: `.ul-card-user`, `.ul-list-item`, `.ul-card-1`。
-    -   对于类似list模式的组件，一般会搭配item的子类，BEM一般基于item实现。因为list一般不设置具体样式，主要改变盒模型，也用于统一设置不同的模式。
+    -   **列表例外**:对于类似list模式的组件，一般会搭配item的子类，BEM一般基于item实现。因为list一般不设置具体样式，主要改变盒模型，也用于统一设置不同的模式，此时类名组合的规则一般是`ul-{name}-list`，`ul-{name}-item`。
+      - 因此，`.ul-user-list` 和 `.ul-user-item` 是允许的。
+      - 因此，一般组件不要以`-item`结尾，因为item一般是列表的子类。
 
 -   **内部元素 (BEM 规范)**: 组件内部的子元素命名应严格遵循 **BEM (Block, Element, Modifier)** 方法论，以确保样式的独立性和可维护性。
     -   **块 (Block)**: 即组件的根 Class，如 `.ul-info-card`。
@@ -94,7 +98,7 @@ source
 
 -   **工具/辅助 Class**: 通用的辅助类也应以 `ul-` 开头，例如 `.ul-inline-block`。
 
-### 样式类型
+## 样式类型
 
 ULUI 的样式库体系结构清晰，主要包含以下几种类型，由底层到上层依次为：
 
@@ -105,7 +109,7 @@ ULUI 的样式库体系结构清晰，主要包含以下几种类型，由底层
 -   **工具/辅助类 (Utility)**: 提供原子化的、高复用性的 CSS 功能，用于微调样式。例如间距、浮动、文本对齐等。
 
 
-### 组件开发规范
+## 组件开发规范
 
 所有新贡献或修改的组件都应遵循以下基本规范：
 
@@ -115,7 +119,7 @@ ULUI 的样式库体系结构清晰，主要包含以下几种类型，由底层
 4.  **响应式设计**：组件应具备良好的响应式能力，确保在桌面和移动设备上都能正常显示和使用。
 
 
-#### 运行站点
+### 运行站点
 
 本站是基于ulthon_admin开发的,它是ThinkPHP6的项目,你需要掌握相关基础才行.实际上是一个CMS站点.
 
@@ -143,8 +147,11 @@ php think run
 
 新版本的组件支持独立的文件，更好的浏览体验，可以快捷单独复制每个文件，可以通过命令生成：
 
-```
+```shell
+# 创建
 php think make:component tpl_name component_name component_title 
+# 删除
+php think make:component tpl_name component_name component_title -d
 ```
 
 比如:
@@ -153,9 +160,7 @@ php think make:component tpl_name component_name component_title
 php think make:component list ul-user-list 用户列表
 ```
 
-![新版组件效果](public/static/images/demo/new-component.png)
-
-新的组件代码结构：
+组件代码结构：
 ```
 ul-music-list   
 ├─ _index.env   
