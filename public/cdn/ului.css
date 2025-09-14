@@ -3149,46 +3149,68 @@ template {
   }
 }
 .ul-header-shape {
+  background: linear-gradient(var(--ul-color-primary-base), var(--ul-color-main-hover));
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background: linear-gradient(rgb(0, 197, 254), rgb(2, 158, 245));
-  color: #fff;
-  padding: 10px 10px 25px 10px;
-  --aug-bl-inset2: 20% !important;
-  --aug-bl-inset1: 0px !important;
-  --aug-bl: 15px !important;
-  --aug-br-inset1: 20% !important;
-  --aug-br-inset2: 0px !important;
-  --aug-br: 15px !important;
+  padding: 0 24px;
+  height: 60px;
+  color: var(--ul-color-white);
 }
-.ul-header-shape > div {
+.ul-header-shape__left, .ul-header-shape__right {
+  flex-shrink: 0;
+}
+.ul-header-shape__main {
   flex: 1;
-}
-.ul-header-shape .main {
-  flex: 2;
-  margin-bottom: -55px;
-  font-size: 24px;
+  min-width: 0;
   text-align: center;
+  font-size: 16px;
+  font-weight: bold;
 }
-.ul-header-shape .left .logo {
-  height: 50px;
+.ul-header-shape__logo {
+  height: 42px;
 }
-.ul-header-shape .right {
+.ul-header-shape__actions {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  height: 100%;
 }
-.ul-header-shape .right .list-item {
+.ul-header-shape__action {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-}
-.ul-header-shape .right .list-item .item {
-  margin-left: 18px;
+  padding: 0 16px;
   cursor: pointer;
-  color: #fff;
+  color: var(--ul-color-white);
+}
+.ul-header-shape__action:visited {
+  color: var(--ul-color-white);
+}
+.ul-header-shape__action:hover {
+  color: var(--ul-color-primary-light);
+}
+.ul-header-shape__action .layui-icon {
+  font-size: 18px;
+}
+.ul-header-shape__user-avatar {
+  height: 30px;
+  width: 30px;
+  margin-right: 8px;
+  border-radius: 50%;
+}
+@media (max-width: 575.98px) {
+  .ul-header-shape {
+    padding: 0;
+  }
+  .ul-header-shape__logo {
+    display: none;
+  }
+  .ul-header-shape__action {
+    padding: 0 8px;
+  }
+  .ul-header-shape__main {
+    text-align: center;
+  }
+  .ul-header-shape__user-name {
+    display: none;
+  }
 }
 
 .ul-shop-header {

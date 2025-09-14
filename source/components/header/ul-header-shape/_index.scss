@@ -1,55 +1,75 @@
 .ul-header-shape {
+    background: linear-gradient($color-primary-base, $color-main-hover);
+
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background: linear-gradient(rgb(0, 197, 254), rgb(2, 158, 245));
-    color: #fff;
-    padding: 10px 10px 25px 10px;
+    padding: 0 $space-lg;
+    height: 60px;
+    color: $color-white;
 
+    &__left,
+    &__right {
+        flex-shrink: 0;
+    }
 
-    --aug-bl-inset2: 20% !important;
-    --aug-bl-inset1: 0px !important;
-    --aug-bl: 15px !important;
-
-    --aug-br-inset1: 20% !important;
-    --aug-br-inset2: 0px !important;
-    --aug-br: 15px !important;
-
-
-    &>div {
+    &__main {
         flex: 1;
-    }
-
-    .main {
-        flex: 2;
-        margin-bottom: -55px;
-        font-size: 24px;
+        min-width: 0;
         text-align: center;
+        font-size: $font-size-lg;
+        font-weight: bold;
     }
 
-    .left {
-        .logo {
-            height: 50px;
-        }
+    &__logo {
+        height: 42px;
     }
 
-    .right {
+    &__actions {
         display: flex;
         align-items: center;
-        justify-content: flex-end;
-        height: 100%;
+    }
 
-        .list-item {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-
-            .item {
-                margin-left: 18px;
-                cursor: pointer;
-                color: #fff;
-            }
+    
+    &__action {
+        display: flex;
+        align-items: center;
+        padding: 0 $space-md;
+        cursor: pointer;
+        color: $color-white;
+        &:visited {
+            color: $color-white;
+        }
+        &:hover {
+            color: $color-primary-light;
+        }
+        .layui-icon {
+            font-size: $font-size-xl;
         }
     }
 
+    &__user {
+        &-avatar {
+            height: 30px;
+            width: 30px;
+            margin-right: $space-sm;
+            border-radius: 50%;
+        }
+    }
+
+
+    @include media-breakpoint-down(sm) {
+        padding: 0;
+        &__logo {
+            display: none;
+        }
+        &__action {
+            padding: 0 $space-sm;
+        }
+        &__main {
+            text-align: center;
+        }
+        &__user-name {
+            display: none;
+        }
+    }
 }
