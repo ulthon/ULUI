@@ -1,0 +1,50 @@
+.ul-photo-b-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -$space-md;
+
+    @media (max-width: 768px) {
+        margin: 0;
+    }
+}
+
+
+.ul-photo-b-item {
+    padding: $space-md;
+    width: 200px; // Or use flex-basis for responsiveness
+
+    @media (max-width: 768px) {
+        box-sizing: border-box;
+        width: 50%;
+        padding: $space-sm;
+    }
+
+    &__poster {
+        width: 100%;
+        padding-top: 100%; // 1:1 aspect ratio
+        background-size: cover;
+        background-position: center;
+        background-color: $color-main-light;
+        border-radius: $radius-md;
+        box-shadow: $box-shadow-sm;
+        margin-bottom: $space-md;
+    }
+
+    &__info {
+        text-align: center;
+    }
+
+    &__title {
+        font-size: $font-size-md;
+        color: $color-text;
+        font-weight: bold;
+        @include text-ellipsis;
+    }
+
+    &__desc {
+        font-size: $font-size-sm;
+        color: $color-text-secondary;
+        margin-top: $space-sm;
+        @include text-ellipsis;
+    }
+}
