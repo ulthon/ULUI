@@ -1,31 +1,52 @@
 
 .ul-photo-card-list {
-    display        : flex;
-    align-items    : flex-start;
-    justify-content: flex-start;
-    flex-wrap      : wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: $space-lg;
 }
 
 .ul-photo-card-item {
-    width     : 200px;
-    margin    : 15px;
-    box-shadow: 0 5px 10px #999;
-}
+    background-color: $color-white;
+    border-radius: $radius-md;
+    overflow: hidden;
+    box-shadow: $box-shadow-sm;
+    transition: all .3s;
+    cursor: pointer;
 
-.ul-photo-card-poster {
-    width              : 100%;
-    height             : 140px;
-    background-size    : cover;
-    background-position: center;
-}
+    &:hover {
+        box-shadow: $box-shadow-lg;
+        transform: translateY(-4px);
+    }
 
-.ul-photo-card-info {
-    padding    : 5px;
-    font-size  : 18px;
-    line-height: 1.5;
-}
+    &__poster {
+        width: 100%;
+        padding-top: 66.66%; // 3:2 aspect ratio
+        background-size: cover;
+        background-position: center;
+        background-color: $color-main-light;
+    }
 
-.ul-photo-card-desc {
-    font-size: 14px;
-    color    : #999;
+    &__info {
+        padding: $space-md;
+    }
+
+    &__title {
+        font-size: $font-size-md;
+        color: $color-text;
+        font-weight: bold;
+        @include text-ellipsis;
+    }
+
+    &__desc {
+        font-size: $font-size-sm;
+        color: $color-text-secondary;
+        margin: $space-sm 0;
+        @include text-ellipsis;
+    }
+
+    &__plus {
+        font-size: $font-size-sm;
+        color: $color-primary-base;
+        font-weight: bold;
+    }
 }
