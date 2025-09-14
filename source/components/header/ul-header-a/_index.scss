@@ -1,56 +1,71 @@
+.ul-header-toolbar {
+  background-color: $color-light-light;
+  border-bottom: 1px solid $color-border;
+  color: $color-text-secondary;
+  font-size: $font-size-sm;
+  padding: $space-sm $space-md;
 
-.ul-header-a {
-    background-color: #f8f8f8;
-    border-bottom   : 1px solid #e8e8e8;
-    color           : #666;
-}
-
-.ul-header-a-main {
-    display        : flex;
-    align-items    : center;
+  &__main {
+    display: flex;
     justify-content: space-between;
-    /* border-width: 1px 0;
-  border-color     : #bbb;
-  border-style     : solid; */
-    padding        : 5px;
-    margin         : 0 auto;
-}
-
-.ul-header-a-nav-item {
-    margin-right: 15px;
-    position    : relative;
-    display     : flex;
-    align-items : center;
-    cursor      : pointer;
-}
-
-.ul-header-a-nav-item:hover .ul-header-a-nav-plus {
-    display: block;
-}
-
-.ul-header-a-img {
-    height             : 24px;
-    width              : 24px;
-    background-size    : cover;
-    background-position: center;
-    margin-right       : 10px;
-}
-
-.ul-header-a-right {
-    display    : flex;
     align-items: center;
+    margin: 0 auto;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    padding: 0 $space-md;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-text;
+    }
+
+    &+& {
+      border-left: 1px solid $color-border;
+    }
+  }
+
+  &__user-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: $space-sm;
+  }
+
+  &__dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    padding-top: $space-sm;
+    z-index: 100;
+  }
+
+  &__item:hover &__dropdown {
+    display: block;
+  }
+
 }
 
-.ul-header-a-nav-plus {
-    position        : absolute;
-    top             : 100%;
-    left            : 50%;
-    display         : none;
-    background-color: transparent;
-    z-index         : 99999;
-}
+@media (max-width: 768px) {
+  .ul-header-toolbar {
+    &__left {
+      display: none;
+    }
 
-.ul-header-a-nav-plus>.ul-nav-min {
-    background-color: #fff;
-    margin-top      : 15px;
+    &__main {
+      justify-content: flex-end;
+    }
+
+    &__item {
+      padding: 0 $space-sm;
+    }
+  }
 }

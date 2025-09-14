@@ -3090,62 +3090,64 @@ template {
   margin-right: 4px;
 }
 
-.ul-header-a {
-  background-color: #f8f8f8;
-  border-bottom: 1px solid #e8e8e8;
-  color: #666;
+.ul-header-toolbar {
+  background-color: var(--ul-color-light-light);
+  border-bottom: 1px solid var(--ul-color-border);
+  color: var(--ul-color-text-secondary);
+  font-size: 12px;
+  padding: 8px 16px;
 }
-
-.ul-header-a-main {
+.ul-header-toolbar__main {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  /* border-width: 1px 0;
-  border-color     : #bbb;
-  border-style     : solid; */
-  padding: 5px;
+  align-items: center;
   margin: 0 auto;
 }
-
-.ul-header-a-nav-item {
-  margin-right: 15px;
+.ul-header-toolbar__right {
+  display: flex;
+  align-items: center;
+}
+.ul-header-toolbar__item {
+  padding: 0 16px;
   position: relative;
   display: flex;
   align-items: center;
   cursor: pointer;
 }
-
-.ul-header-a-nav-item:hover .ul-header-a-nav-plus {
+.ul-header-toolbar__item:hover {
+  color: var(--ul-color-text);
+}
+.ul-header-toolbar__item + .ul-header-toolbar__item {
+  border-left: 1px solid var(--ul-color-border);
+}
+.ul-header-toolbar__user-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+.ul-header-toolbar__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  padding-top: 8px;
+  z-index: 100;
+}
+.ul-header-toolbar__item:hover .ul-header-toolbar__dropdown {
   display: block;
 }
 
-.ul-header-a-img {
-  height: 24px;
-  width: 24px;
-  background-size: cover;
-  background-position: center;
-  margin-right: 10px;
+@media (max-width: 768px) {
+  .ul-header-toolbar__left {
+    display: none;
+  }
+  .ul-header-toolbar__main {
+    justify-content: flex-end;
+  }
+  .ul-header-toolbar__item {
+    padding: 0 8px;
+  }
 }
-
-.ul-header-a-right {
-  display: flex;
-  align-items: center;
-}
-
-.ul-header-a-nav-plus {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  display: none;
-  background-color: transparent;
-  z-index: 99999;
-}
-
-.ul-header-a-nav-plus > .ul-nav-min {
-  background-color: #fff;
-  margin-top: 15px;
-}
-
 .ul-header-shape {
   display: flex;
   align-items: center;
