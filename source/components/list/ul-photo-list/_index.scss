@@ -1,33 +1,53 @@
 .ul-photo-list {
-    display        : flex;
-    align-items    : flex-start;
-    justify-content: flex-start;
-    flex-wrap      : wrap;
+    display: grid;
+    gap: $space-md;
 }
+
 
 .ul-photo-item {
-    margin    : 15px;
-    text-align: center;
-    min-width : 220px;
-}
+    display: flex;
+    background-color: $color-white;
+    padding: $space-md;
+    border-radius: $radius-md;
+    transition: background-color .3s;
 
-.ul-photo-poster {
-    width              : 180px;
-    height             : 140px;
-    background-image   : url("../static/images/avatar.png");
-    background-size    : cover;
-    background-position: center;
-    margin             : 0 auto;
-    box-shadow         : 1px 1px 3px #999;
-}
+    &:hover {
+        background-color: $color-main-light;
+    }
 
-.ul-photo-info {
-    margin-top : 10px;
-    font-size  : 18px;
-    line-height: 1.5;
-}
+    &__poster {
+        width: 120px;
+        height: 80px;
+        flex-shrink: 0;
+        border-radius: $radius-sm;
+        background-size: cover;
+        background-position: center;
+        margin-right: $space-md;
+    }
 
-.ul-photo-desc {
-    font-size: 14px;
-    color    : #999;
+    &__info {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-size: $font-size-md;
+        color: $color-text;
+        font-weight: bold;
+        @include text-ellipsis;
+    }
+
+    &__plus {
+        font-size: $font-size-sm;
+        color: $color-primary-base;
+        margin: auto 0 $space-xs;
+    }
+
+    &__desc {
+        font-size: $font-size-sm;
+        color: $color-text-secondary;
+        @include text-ellipsis;
+    }
 }

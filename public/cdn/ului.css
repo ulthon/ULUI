@@ -1690,6 +1690,11 @@ template {
   color: var(--ul-color-gray-text);
 }
 
+.ul-bg-page {
+  background-color: var(--ul-bg-color-page);
+  color: var(--ul-color-text);
+}
+
 .ul-text-primary {
   color: var(--ul-color-primary-base);
 }
@@ -3873,37 +3878,54 @@ template {
 }
 
 .ul-photo-list {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  display: grid;
+  gap: 16px;
 }
 
 .ul-photo-item {
-  margin: 15px;
-  text-align: center;
-  min-width: 220px;
+  display: flex;
+  background-color: var(--ul-color-white);
+  padding: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
 }
-
-.ul-photo-poster {
-  width: 180px;
-  height: 140px;
-  background-image: url("../static/images/avatar.png");
+.ul-photo-item:hover {
+  background-color: var(--ul-color-main-light);
+}
+.ul-photo-item__poster {
+  width: 120px;
+  height: 80px;
+  flex-shrink: 0;
+  border-radius: 2px;
   background-size: cover;
   background-position: center;
-  margin: 0 auto;
-  box-shadow: 1px 1px 3px #999;
+  margin-right: 16px;
 }
-
-.ul-photo-info {
-  margin-top: 10px;
-  font-size: 18px;
-  line-height: 1.5;
+.ul-photo-item__info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
-
-.ul-photo-desc {
+.ul-photo-item__title {
   font-size: 14px;
-  color: #999;
+  color: var(--ul-color-text);
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ul-photo-item__plus {
+  font-size: 12px;
+  color: var(--ul-color-primary-base);
+  margin: auto 0 4px;
+}
+.ul-photo-item__desc {
+  font-size: 12px;
+  color: var(--ul-color-text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .ul-photo-list-b {
