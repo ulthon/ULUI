@@ -1,89 +1,88 @@
 .ul-site-group {
-    margin-bottom: 8px;
-}
+    & + & {
+        margin-top: $space-lg * 2;
+    }
 
-.ul-site-group-header {
-    font-size     : 16px;
-    color         : #333;
-    padding-bottom: 8px;
+    &__header {
+        font-size: $font-size-lg;
+        font-weight: bold;
+        margin-bottom: $space-lg;
+        color: $color-text;
+    }
 }
 
 .ul-site-list {
-    display        : flex;
-    align-items    : flex-start;
-    justify-content: flex-start;
-    flex-wrap      : wrap;
-    margin-top     : 8px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: $space-md;
 }
+
 
 .ul-site-item {
-    width          : 20%;
-    margin-right   : 5%;
-    display        : flex;
-    align-items    : flex-start;
-    justify-content: flex-start;
-    margin-bottom  : 15px;
+    display: flex;
+    align-items: center;
+    padding: $space-md;
+    border: 1px solid transparent;
+    border-radius: $border-radius-base;
+    background-color: $color-bg;
+    transition: all .3s;
+    cursor: pointer;
 
+    &:hover {
+        border-color: $color-primary-base;
+        transform: translateY(-4px);
+        box-shadow: $shadow-base;
+    }
 
+    &__logo {
+        width: 48px;
+        height: 48px;
+        margin-right: $space-md;
+        flex-shrink: 0;
+        border-radius: 50%;
+    }
+
+    &__info {
+        flex: 1;
+        min-width: 0;
+    }
+
+    &__title {
+        font-size: $font-size-md;
+        color: $color-text;
+        font-weight: bold;
+        margin-bottom: $space-sm;
+    }
+
+    &__desc {
+        color: $color-text-secondary;
+        font-size: $font-size-sm;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    // 卡片模式
     &.card {
-        background-color: #fff;
-        border-radius   : 5px;
-        padding         : 10px;
-        margin-right    : 15px;
-    }
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: $color-white;
+        border-color: $color-border;
 
-    &.same-height {
-        align-self: normal;
-    }
-}
-
-.ul-site-item-logo {
-    width              : 34px;
-    height             : 34px;
-    margin-right       : 8px;
-    margin-top         : 4px;
-    background-size    : cover;
-    background-position: center;
-
-
-}
-
-
-.ul-site-item-info {
-    width: calc(100% - 34px);
-
-}
-
-.ul-site-item-title {
-    color          : #4662d9;
-    font-weight    : bold;
-    text-decoration: none;
-}
-
-.ul-site-item-desc {
-    font-size: 12px;
-    color    : #666;
-}
-
-@media screen and (max-width:450px) {
-
-    .ul-site-list {
-        display        : flex;
-        align-items    : flex-start;
-        justify-content: space-between;
-
-        .ul-site-item {
-            width       : calc(50% - 10px);
+        .ul-site-item__logo {
+            width: 40px;
+            height: 40px;
+            border-radius: $border-radius-base;
             margin-right: 0;
-
-            &.card {
-                width: calc(50% - 30px);
-            }
+            margin-bottom: $space-md;
         }
+    }
 
-        .ul-site-item-desc {
-            font-size : 11px;
-            margin-top: 3px;
+    // 等高模式
+    &.same-height {
+        height: 100%;
+        .ul-site-item__desc {
+            white-space: normal;
         }
     }
 }
