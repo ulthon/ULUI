@@ -193,3 +193,88 @@
 .ul-inline-block {
   display: inline-block;
 }
+
+// Flex
+.ul-flex {
+  display: flex;
+}
+
+.ul-inline-flex {
+  display: inline-flex;
+}
+
+// Flex Direction
+.ul-flex-row {
+  flex-direction: row;
+}
+
+.ul-flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.ul-flex-col {
+  flex-direction: column;
+}
+
+.ul-flex-col-reverse {
+  flex-direction: column-reverse;
+}
+
+// Justify Content
+.ul-justify-start {
+  justify-content: flex-start;
+}
+
+.ul-justify-end {
+  justify-content: flex-end;
+}
+
+.ul-justify-center {
+  justify-content: center;
+}
+
+.ul-justify-between {
+  justify-content: space-between;
+}
+
+.ul-justify-around {
+  justify-content: space-around;
+}
+
+.ul-justify-evenly {
+  justify-content: space-evenly;
+}
+
+// Align Items
+.ul-items-start {
+  align-items: flex-start;
+}
+
+.ul-items-end {
+  align-items: flex-end;
+}
+
+.ul-items-center {
+  align-items: center;
+}
+
+.ul-items-baseline {
+  align-items: baseline;
+}
+
+.ul-items-stretch {
+  align-items: stretch;
+}
+
+// Flex Wrap
+.ul-flex-wrap {
+  flex-wrap: wrap;
+}
+
+.ul-flex-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+.ul-flex-nowrap {
+  flex-wrap: nowrap;
+}

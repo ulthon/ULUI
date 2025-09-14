@@ -254,6 +254,13 @@ class Post extends Model
 
     public function getComponentHtmlAttr()
     {
+        $cache_key = 'cache_components_html_' . $this->getAttr('id');
+
+        $html_content = Cache::get($cache_key);
+
+        if (!is_null($html_content) && !Env::get('APP_DEBUG')) {
+            return $html_content;
+        }
         if (empty($this->getData('tpl_name'))) {
             return '';
         }
@@ -266,43 +273,70 @@ class Post extends Model
             return '';
         }
 
-        $cache_key = 'cache_components_html_' . $tpl_name;
-
-        $list_components_html = Cache::get($cache_key);
-
-        if (!is_null($list_components_html) && !Env::get('APP_DEBUG')) {
-            return $list_components_html;
-        }
         $html_content = View::fetch($components_type_path);
+
+        Cache::set($cache_key, $html_content, 600);
 
         return $html_content;
     }
 
     public function getComponentMarkdownAttr()
     {
+        $cache_key = 'cache_components_md_' . $this->getAttr('id');
+
+        $component_content = Cache::get($cache_key);
+        if (!is_null($component_content) && !Env::get('APP_DEBUG')) {
+            return $component_content;
+        }
+
         if (empty($this->getData('tpl_name'))) {
             return '';
         }
 
         $tpl_name = $this->getData('tpl_name');
-
         $components_type_path = App::getRootPath() . '/source/components/' . $tpl_name . '/_index/_index.md';
 
         if (!file_exists($components_type_path)) {
             return '';
         }
 
-        $cache_key = 'cache_components_md_' . $tpl_name;
-
-        $list_components_md = Cache::get($cache_key);
-
-        if (!is_null($list_components_md) && !Env::get('APP_DEBUG')) {
-            return $list_components_md;
-        }
         $markdown_content = View::fetch($components_type_path);
         $markdown_parser = new Parsedown();
 
-        return $markdown_parser->text($markdown_content);
+        $component_content = $markdown_parser->text($markdown_content);
+        Cache::set($cache_key, $component_content, 600);
+
+        return $component_content;
+    }
+
+    public function getPostMarkdownAttr()
+    {
+        $cache_key = 'cache_post_md_' . $this->getAttr('id');
+        $post_content = Cache::get($cache_key);
+
+        if (!is_null($post_content) && !Env::get('APP_DEBUG')) {
+            return $post_content;
+        }
+
+        $category_tpl_name = $this->getAttr('category')->getData('tpl_name');
+        if (empty($category_tpl_name)) {
+            return '';
+        }
+
+        $tpl_name = $this->getData('tpl_name');
+        $components_type_path = App::getRootPath() . '/source/doc/' . $category_tpl_name . '/' . $tpl_name . '.md';
+
+        if (!file_exists($components_type_path)) {
+            return '';
+        }
+
+        $markdown_content = View::fetch($components_type_path);
+        $markdown_parser = new Parsedown();
+
+        $post_content = $markdown_parser->text($markdown_content);
+        Cache::set($cache_key, $post_content, 600);
+
+        return $post_content;
     }
 
     public static function quickSelect($clear = false)

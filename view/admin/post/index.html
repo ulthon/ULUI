@@ -47,6 +47,7 @@
                 <th>状态</th>
                 <th>分类</th>
                 <th>标签</th>
+                <th>模板</th>
                 <th>操作</th>
               </tr>
             </thead>
@@ -65,9 +66,12 @@
                   {$vo.category.title|default="未分类"}
                 </td>
                 <td>
-                  {volist name='vo.tags_list' id='tag'}
-                  <span class="layui-badge layui-bg-blue">{$tag.title}</span>
-                  {/volist}
+                    {volist name='vo.tags_list' id='tag'}
+                    <span class="layui-badge layui-bg-blue">{$tag.title}</span>
+                    {/volist}
+                </td>
+                <td>
+                  {$vo.tpl_name}
                 </td>
                 <td>
                   <div class="layui-btn-container">
