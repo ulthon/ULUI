@@ -4330,28 +4330,32 @@ template {
 }
 
 .ul-nav-block {
-  border-radius: 16px;
+  background-color: var(--ul-color-white);
+  border-radius: 12px;
   overflow: hidden;
-  background-color: #fff;
-  color: #333;
 }
-.ul-nav-block .item {
-  padding: 16px 32px;
+.ul-nav-block__item {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  padding: 16px 24px;
   cursor: pointer;
+  transition: all 0.3s;
+  color: var(--ul-color-text);
 }
-.ul-nav-block .item .item-icon {
-  margin-right: 16px;
+.ul-nav-block__item:hover {
+  background-color: var(--ul-color-light-light);
 }
-.ul-nav-block .item.current {
-  background-color: rgb(255, 91, 114);
-  color: #fff;
+.ul-nav-block__item.current {
+  background-color: var(--ul-color-primary-base);
+  color: var(--ul-color-white);
 }
-.ul-nav-block .item:hover {
-  background-color: rgba(255, 91, 113, 0.772);
-  color: #fff;
+.ul-nav-block__icon {
+  margin-right: 8px;
+  font-size: 18px;
+  line-height: 1;
+}
+.ul-nav-block__title {
+  font-size: 14px;
 }
 
 .ul-nav-button-item {
