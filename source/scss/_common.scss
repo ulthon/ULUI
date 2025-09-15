@@ -63,6 +63,7 @@ $color-black: var(--ul-color-black);
 $color-text: var(--ul-color-text);
 $color-text-secondary: var(--ul-color-text-secondary);
 $color-text-placeholder: var(--ul-color-text-placeholder);
+$color-text-disabled: var(--ul-color-text-placeholder);
 $color-border: var(--ul-color-border);
 $color-bg: var(--ul-color-bg);
 $bg-color-overlay: var(--ul-bg-color-overlay);
@@ -77,10 +78,6 @@ $space-md: $space-base * 4;  // 16px
 $space-lg: $space-base * 6;  // 24px
 $space-xl: $space-base * 8;  // 32px
 
-$radius-sm: 2px;
-$radius-md: 4px;
-$radius-lg: 8px;
-$radius-circle: 50%;
 
 // 字体
 $font-size-base: 14px;
@@ -98,11 +95,12 @@ $font-weight-medium: 500;
 $font-weight-bold: 700;
 
 // 圆角
-$border-radius-sm: 2px;
-$border-radius-base: 4px;
-$border-radius-lg: 8px;
-$border-radius-xl: 12px;
-$border-radius-circle: 50%;
+$radius-sm: 2px;
+$radius-base: 4px;
+$radius-md: 6px; 
+$radius-lg: 8px;
+$radius-xl: 12px;
+$radius-circle: 50%;
 
 // 阴影
 $shadow-sm: 0 1px 4px 0 rgba(0, 0, 0, 0.08);

@@ -13,7 +13,7 @@
     margin-right: $space-sm;
     width: 60px;
     height: 60px;
-    border-radius: $border-radius-circle;
+    border-radius: $radius-circle;
     overflow: hidden;
 
     img {
@@ -50,7 +50,7 @@
       background-color: $color-primary-light;
       color: $color-primary-base;
       padding: 2px 6px;
-      border-radius: $border-radius-sm;
+      border-radius: $radius-sm;
       white-space: nowrap;
     }
   }

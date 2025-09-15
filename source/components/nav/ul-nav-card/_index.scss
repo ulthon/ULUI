@@ -1,12 +1,98 @@
 .ul-nav-card {
+    background-color: $color-white;
+    border-radius: $radius-base;
 
-  &.badge {
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: $space-md;
+        position: relative;
 
-    .ul-nav-card-item-icon {
-      width: 20px;
-      height: 20px;
+        & + & {
+            border-top: 1px solid $color-border;
+        }
+
+        &.disabled {
+            color: $color-text-disabled;
+            .ul-nav-card__title,
+            .ul-nav-card__desc {
+                color: $color-text-disabled;
+            }
+        }
     }
-  }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        min-width: 0;
+        margin-right: $space-lg;
+    }
+
+    &__icon {
+        font-size: 24px;
+        color: $color-primary-base;
+        margin-right: $space-lg;
+        flex-shrink: 0;
+    }
+
+    &__info {
+        flex: 1;
+        min-width: 0;
+    }
+
+    &__title {
+        font-size: $font-size-md;
+        color: $color-text;
+        margin-bottom: $space-xs;
+    }
+
+    &__desc {
+        font-size: $font-size-sm;
+        color: $color-text-secondary;
+        @include text-ellipsis(1);
+    }
+
+    &__right {
+        flex-shrink: 0;
+        .layui-btn + .layui-btn {
+            margin-left: $space-md;
+        }
+    }
+
+    // simple模式
+    &.simple {
+        background-color: transparent;
+        .ul-nav-card__item {
+            background-color: $color-white;
+            border-radius: $radius-base;
+            & + .ul-nav-card__item {
+                border-top: none;
+                margin-top: $space-md;
+            }
+        }
+        .ul-nav-card__icon {
+            display: none;
+        }
+    }
+
+    // badge模式
+    &.badge {
+        .ul-nav-card__item {
+            overflow: initial;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 3px;
+                height: 30%;
+                background-color: $color-primary-base;
+            }
+        }
+    }
 }
 
 .ul-nav-card-item {

@@ -3,7 +3,7 @@
     align-items: center;
     padding: $space-sm;
     background-color: $color-light-light;
-    border-radius: $border-radius-base;
+    border-radius: $radius-base;
     cursor: pointer;
     transition: background-color .3s;
 
@@ -18,7 +18,7 @@
 
     // 非第一个元素增加上边距
     & + & {
-        margin-top: $border-radius-sm;
+        margin-top: $radius-sm;
     }
 
     &__avatar {
@@ -28,7 +28,7 @@
         background-image: url("/static/images/avatar.png");
         background-size: cover;
         background-position: center;
-        border-radius: $border-radius-sm;
+        border-radius: $radius-sm;
         background-color: $color-white;
     }
 

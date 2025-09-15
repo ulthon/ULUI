@@ -23,7 +23,7 @@
     align-items: center;
     padding: $space-md;
     border: 1px solid transparent;
-    border-radius: $border-radius-base;
+    border-radius: $radius-base;
     background-color: $color-bg;
     transition: all .3s;
     cursor: pointer;
@@ -72,7 +72,7 @@
         .ul-site-item__logo {
             width: 40px;
             height: 40px;
-            border-radius: $border-radius-base;
+            border-radius: $radius-base;
             margin-right: 0;
             margin-bottom: $space-md;
         }
