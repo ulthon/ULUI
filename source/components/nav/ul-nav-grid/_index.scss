@@ -6,27 +6,7 @@
 
     $gridCount: 3;
 
-    .item {
-        flex: 0 0 calc(100% / $gridCount);
-        text-align: center;
-        margin-bottom: 12px;
-
-        .icon {
-            text-align: center;
-        }
-
-        .main {
-            padding: 6px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: fit-content;
-			margin: 0 auto;
-        }
-    }
-
     // 将背景颜色值定义成变量
-
     $colors:('red': #FF6961,
         'orange': #FFA07A,
         'yellow': #FF69B4,
@@ -36,48 +16,67 @@
         'purple': #AF7AC5,
     );
 
+    &__item {
+        flex: 0 0 calc(100% / #{$gridCount});
+        text-align: center;
+        margin-bottom: 12px;
+    }
 
+    &__icon {
+        text-align: center;
+    }
+    &__title {
+        margin-top: $space-sm;
+    }
 
+    &__icon-main {
+        padding: 6px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    // 状态: 图标颜色
     &.colord {
-
         @each $colorKey,
         $color in $colors {
-            .item.#{$colorKey} {
-                .icon {
+            .#{$colorKey} {
+                .ul-nav-grid__icon {
                     color: $color;
                 }
             }
-
         }
-
     }
 
+    // 状态: 图标背景色
     &.colord-bg {
-
         @each $colorKey,
         $color in $colors {
-            .item.#{$colorKey} {
-                .icon {
-                    color: #fff;
+            .#{$colorKey} {
+                .ul-nav-grid__icon-main {
+                    background-color: $color;
+                    border-radius: 50%;
+                }
 
-                    .main {
-                        background-color: $color;
-                        border-radius: 50%;
-                    }
+                .ul-nav-grid__icon {
+                    color: #fff;
                 }
             }
         }
     }
 
+    // 状态: 宫格模式
     &.box {
         background-color: #eee;
         padding: 0.5px;
 
-        .item {
-            flex: 0 0 calc(100% / $gridCount - 1px - 24px);
+        .ul-nav-grid__item {
+            flex: 0 0 calc(100% / #{$gridCount} - 1px);
             margin: 0.5px;
             background-color: #fff;
             padding: 12px;
+            box-sizing: border-box;
         }
     }
 }
