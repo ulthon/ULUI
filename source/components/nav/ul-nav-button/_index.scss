@@ -1,34 +1,37 @@
 
+.ul-nav-button {
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: $space-sm;
+        border-radius: $border-radius-lg;
+        padding: $space-sm;
+        box-shadow: $shadow-sm;
+        background-color: $color-white;
+        cursor: pointer;
+    }
 
-.ul-nav-button-item {
-    display         : flex;
-    align-items     : center;
-    justify-content : flex-start;
-    margin-bottom   : 10px;
-    border-radius   : 8px;
-    padding         : 10px;
-    box-shadow      : 0px 1px 3px #bbb;
-    background-color: #fff;
-    cursor          : pointer;
+    
+    &__icon {
+        margin-right: $space-sm;
+
+        .icon {
+            font-size: 38px; // _common.scss 中没有对应的大尺寸图标变量，暂时保留
+            color: $color-text-placeholder;
+        }
+    }
+    
+
+    &__title {
+        color: $color-text;
+        font-size: $font-size-lg;
+        font-weight: $font-weight-bold;
+    }
+
+    &__desc {
+        color: $color-text-secondary;
+        font-size: $font-size-base;
+        margin-top: $space-xs;
+    }
 }
-
-.ul-nav-button-icon {
-    margin-right: 10px;
-}
-
-.ul-nav-button-icon .icon {
-    font-size: 38px;
-    color    : #999;
-}
-
-.ul-nav-button-title {
-    color      : #333;
-    font-size  : 16px;
-    font-weight: 600;
-}
-
-.ul-nav-button-desc {
-    color    : #666;
-    font-size: 14px;
-}
-
