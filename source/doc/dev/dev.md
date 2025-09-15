@@ -4,7 +4,7 @@
     *   **根类名**: 必须是 `ul-{type}-{name}` 格式，如 `.ul-card-user`。
     *   **内部元素**: 遵循 BEM 规范，使用双下划线 `__` 连接，如 `.ul-card-user__header`。
     *   **状态**: 使用独立的状态类进行组合，而非 BEM 的修饰符，如 `.ul-card-user.dark`。
-    *   **列表例外**:对于类似list模式的组件，一般会搭配item的子类，BEM一般基于item实现。因为list一般不设置具体样式，主要改变盒模型，也用于统一设置不同的模式，此时类名组合的规则一般是`ul-{name}-list`，`ul-{name}-item`。
+    *   **列表类型例外**:对于类似list类型的组件，一般会搭配item的子类，BEM一般基于item实现。因为list一般不设置具体样式，主要改变盒模型，也用于统一设置不同的模式，此时类名组合的规则一般是`ul-{name}-list`，`ul-{name}-item`。
         *   因此，`.ul-user-list` 和 `.ul-user-item` 是允许的。
         *   因此，一般组件不要以`-item`结尾，因为item一般是列表的子类。
 

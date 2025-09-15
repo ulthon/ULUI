@@ -3266,7 +3266,7 @@ template {
   padding-top: 16px;
   border-top: 1px solid var(--ul-color-border);
 }
-.ul-shop-header__footer-item {
+.ul-shop-header__footer-meta {
   font-size: 12px;
   color: var(--ul-color-text-secondary);
   display: flex;
