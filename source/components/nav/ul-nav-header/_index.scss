@@ -1,48 +1,109 @@
+// ul-nav-header 组件样式
+// ==========================================================================
 
-.ul-nav-header-main {
-    display        : flex;
-    align-items    : center;
-    justify-content: space-between;
-    padding        : 5px 15px;
-    margin         : 0 auto;
-}
-
-.ul-nav-header-right {
-    text-align: right;
-}
-
-.ul-nav-header-item {
-    display     : inline-block;
-    margin-right: 15px;
-    cursor      : pointer;
-    padding     : 5px 15px;
-    color       : #333;
-}
-
-.ul-nav-header-item:hover {
-    color: #6cf;
-}
-
-.ul-nav-header-red {
-    background-color: #f72222;
-}
-
-.ul-nav-header-red .ul-nav-header-item {
-    color: #fff;
-}
-
-.ul-nav-header-red .ul-nav-header-item:hover {
-    color: #fedf50;
-}
-
-.ul-nav-header-primary {
-    background-color: #6cf;
-}
-
-.ul-nav-header-primary .ul-nav-header-item {
-    color: #fff;
-}
-
-.ul-nav-header-primary .ul-nav-header-item:hover {
-    color: #ccffff;
+.ul-nav-header {
+  background-color: $color-white;
+  box-shadow: $shadow-sm;
+  
+  &__main {
+    @include flex(space-between, center);
+    max-width: map-get($container-max-widths, xl);
+    margin: 0 auto;
+    padding: $space-md $space-lg;
+  }
+  
+  &__logo {
+    height: 60px;
+    width: 60px;
+    flex-shrink: 0;
+  }
+  
+  &__nav {
+    @include flex(flex-end, center);
+    flex-wrap: wrap;
+    gap: $space-sm;
+  }
+  
+  &__item {
+    padding: $space-sm $space-md;
+    color: $color-text;
+    cursor: pointer;
+    border-radius: $radius-base;
+    transition: all 0.3s ease;
+    font-weight: $font-weight-medium;
+    
+    &:hover {
+      color: $color-primary-base;
+      background-color: $color-primary-light;
+    }
+  }
+  
+  // 主题变体
+  &.primary {
+    background-color: $color-primary-base;
+    
+    .ul-nav-header__item {
+      color: $color-white;
+      
+      &:hover {
+        color: $color-white;
+        background-color: rgba($color-white, 0.2);
+      }
+    }
+  }
+  
+  &.danger {
+    background-color: $color-danger-base;
+    
+    .ul-nav-header__item {
+      color: $color-white;
+      
+      &:hover {
+        color: $color-white;
+        background-color: rgba($color-white, 0.2);
+      }
+    }
+  }
+  
+  // 响应式设计
+  @include media-breakpoint-down(md) {
+    &__main {
+      padding: $space-sm $space-md;
+      flex-direction: column;
+      gap: $space-md;
+    }
+    
+    &__nav {
+      justify-content: center;
+      width: 100%;
+    }
+    
+    &__item {
+      padding: $space-xs $space-sm;
+      font-size: $font-size-sm;
+    }
+  }
+  
+  @include media-breakpoint-down(sm) {
+    &__logo {
+      height: 40px;
+      width: 40px;
+    }
+    
+    &__nav {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      justify-content: flex-start;
+      padding-bottom: $space-xs;
+      
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    
+    &__item {
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+  }
 }

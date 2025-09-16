@@ -6,3 +6,4 @@
 ul.db
 composer.lock
 public/upload/*
+.kilocode/mcp.json
