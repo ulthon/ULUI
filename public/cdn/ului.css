@@ -4684,6 +4684,16 @@ template {
   color: var(--ul-color-white);
   background-color: rgba(var(--ul-color-white), 0.2);
 }
+.ul-nav-header.success {
+  background-color: var(--ul-color-success-base);
+}
+.ul-nav-header.success .ul-nav-header__item {
+  color: var(--ul-color-white);
+}
+.ul-nav-header.success .ul-nav-header__item:hover {
+  color: var(--ul-color-white);
+  background-color: rgba(var(--ul-color-white), 0.2);
+}
 .ul-nav-header.danger {
   background-color: var(--ul-color-danger-base);
 }
@@ -4691,6 +4701,56 @@ template {
   color: var(--ul-color-white);
 }
 .ul-nav-header.danger .ul-nav-header__item:hover {
+  color: var(--ul-color-white);
+  background-color: rgba(var(--ul-color-white), 0.2);
+}
+.ul-nav-header.warning {
+  background-color: var(--ul-color-warning-base);
+}
+.ul-nav-header.warning .ul-nav-header__item {
+  color: var(--ul-color-white);
+}
+.ul-nav-header.warning .ul-nav-header__item:hover {
+  color: var(--ul-color-white);
+  background-color: rgba(var(--ul-color-white), 0.2);
+}
+.ul-nav-header.info {
+  background-color: var(--ul-color-info-base);
+}
+.ul-nav-header.info .ul-nav-header__item {
+  color: var(--ul-color-white);
+}
+.ul-nav-header.info .ul-nav-header__item:hover {
+  color: var(--ul-color-white);
+  background-color: rgba(var(--ul-color-white), 0.2);
+}
+.ul-nav-header.dark {
+  background-color: var(--ul-color-dark-base);
+}
+.ul-nav-header.dark .ul-nav-header__item {
+  color: var(--ul-color-white);
+}
+.ul-nav-header.dark .ul-nav-header__item:hover {
+  color: var(--ul-color-white);
+  background-color: rgba(var(--ul-color-white), 0.2);
+}
+.ul-nav-header.light {
+  background-color: var(--ul-color-light-base);
+}
+.ul-nav-header.light .ul-nav-header__item {
+  color: var(--ul-color-white);
+}
+.ul-nav-header.light .ul-nav-header__item:hover {
+  color: var(--ul-color-white);
+  background-color: rgba(var(--ul-color-white), 0.2);
+}
+.ul-nav-header.gray {
+  background-color: var(--ul-color-gray-base);
+}
+.ul-nav-header.gray .ul-nav-header__item {
+  color: var(--ul-color-white);
+}
+.ul-nav-header.gray .ul-nav-header__item:hover {
   color: var(--ul-color-white);
   background-color: rgba(var(--ul-color-white), 0.2);
 }

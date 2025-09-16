@@ -38,29 +38,17 @@
     }
   }
   
-  // 主题变体
-  &.primary {
-    background-color: $color-primary-base;
-    
-    .ul-nav-header__item {
-      color: $color-white;
+  @each $name, $color in $theme-colors {
+    &.#{$name} {
+      background-color: $color;
       
-      &:hover {
+      .ul-nav-header__item {
         color: $color-white;
-        background-color: rgba($color-white, 0.2);
-      }
-    }
-  }
-  
-  &.danger {
-    background-color: $color-danger-base;
-    
-    .ul-nav-header__item {
-      color: $color-white;
-      
-      &:hover {
-        color: $color-white;
-        background-color: rgba($color-white, 0.2);
+        
+        &:hover {
+          color: $color-white;
+          background-color: rgba($color-white, 0.2);
+        }
       }
     }
   }
