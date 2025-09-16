@@ -4960,20 +4960,87 @@ template {
 }
 
 .ul-nav-min {
-  box-shadow: 2px 2px 5px #999;
-  padding: 5px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  padding: 8px;
   text-align: center;
+  background: var(--ul-color-white);
+  border-radius: 4px;
+  border: 1px solid var(--ul-color-border);
 }
 
-.ul-nav-min .ul-nav-min-item {
-  padding: 5px 0;
+.ul-nav-min__item {
+  padding: 4px 0;
   cursor: pointer;
-  color: #333;
+  color: var(--ul-color-text);
   display: block;
+  font-size: 12px;
+  line-height: 1.5;
+  transition: all 0.2s ease;
+  position: relative;
+}
+.ul-nav-min__item:not(:last-child) {
+  border-bottom: 1px solid var(--ul-color-border);
+}
+.ul-nav-min__item:hover {
+  color: var(--ul-color-primary-base);
+  background: var(--ul-color-primary-light);
+}
+.ul-nav-min__item.active {
+  color: var(--ul-color-primary-base);
+  font-weight: 500;
+}
+.ul-nav-min__item.active::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 60%;
+  background-color: var(--ul-color-primary-base);
+  border-radius: 1px;
 }
 
-.ul-nav-min-item:hover {
-  color: #6cf;
+@media (max-width: 767.98px) {
+  .ul-nav-min {
+    padding: 4px;
+    border-radius: 2px;
+  }
+  .ul-nav-min .ul-nav-min__item {
+    font-size: 10px;
+    padding: 2px 0;
+  }
+  .ul-nav-min .ul-nav-min__item.active::before {
+    left: -4px;
+    width: 1px;
+  }
+}
+.ul-nav-min.dark {
+  background: var(--ul-color-dark-base);
+  border-color: var(--ul-color-dark-light);
+}
+.ul-nav-min.dark .ul-nav-min__item {
+  color: var(--ul-color-dark-text);
+  border-bottom-color: var(--ul-color-dark-light);
+}
+.ul-nav-min.dark .ul-nav-min__item:hover {
+  color: var(--ul-color-primary-light);
+  background: rgba(var(--ul-color-primary-base), 0.1);
+}
+.ul-nav-min.dark .ul-nav-min__item.active {
+  color: var(--ul-color-primary-light);
+}
+.ul-nav-min.dark .ul-nav-min__item.active::before {
+  background-color: var(--ul-color-primary-light);
+}
+
+.ul-nav-min__item.disabled {
+  cursor: not-allowed;
+  color: var(--ul-color-text-placeholder);
+}
+.ul-nav-min__item.disabled:hover {
+  background: transparent;
+  color: var(--ul-color-text-placeholder);
 }
 
 .ul-nav-poster {

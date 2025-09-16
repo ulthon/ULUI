@@ -1,17 +1,99 @@
 
 .ul-nav-min {
-    box-shadow: 2px 2px 5px #999;
-    padding   : 5px;
+    box-shadow: $shadow-base;
+    padding: $space-sm;
     text-align: center;
+    background: $color-white;
+    border-radius: $radius-base;
+    border: 1px solid $color-border;
 }
 
-.ul-nav-min .ul-nav-min-item {
-    padding: 5px 0;
-    cursor : pointer;
-    color  : #333;
+.ul-nav-min__item {
+    padding: $space-xs 0;
+    cursor: pointer;
+    color: $color-text;
     display: block;
+    font-size: $font-size-sm;
+    line-height: $line-height-base;
+    transition: all 0.2s ease;
+    position: relative;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid $color-border;
+    }
+
+    &:hover {
+        color: $color-primary-base;
+        background: $color-primary-light;
+    }
+
+    &.active {
+        color: $color-primary-base;
+        font-weight: $font-weight-medium;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            left: -$space-sm;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 2px;
+            height: 60%;
+            background-color: $color-primary-base;
+            border-radius: 1px;
+        }
+    }
 }
 
-.ul-nav-min-item:hover {
-    color: #6cf;
+// 响应式设计
+@include media-breakpoint-down(md) {
+    .ul-nav-min {
+        padding: $space-xs;
+        border-radius: $radius-sm;
+        
+        .ul-nav-min__item {
+            font-size: $font-size-xs;
+            padding: $space-xs * 0.5 0;
+            
+            &.active::before {
+                left: -$space-xs;
+                width: 1px;
+            }
+        }
+    }
+}
+
+// 深色主题支持
+.ul-nav-min.dark {
+    background: $color-dark-base;
+    border-color: $color-dark-light;
+    
+    .ul-nav-min__item {
+        color: $color-dark-text;
+        border-bottom-color: $color-dark-light;
+        
+        &:hover {
+            color: $color-primary-light;
+            background: rgba($color-primary-base, 0.1);
+        }
+        
+        &.active {
+            color: $color-primary-light;
+            
+            &::before {
+                background-color: $color-primary-light;
+            }
+        }
+    }
+}
+
+// 禁用状态
+.ul-nav-min__item.disabled {
+    cursor: not-allowed;
+    color: $color-text-disabled;
+    
+    &:hover {
+        background: transparent;
+        color: $color-text-disabled;
+    }
 }
