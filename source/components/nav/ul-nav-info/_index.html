@@ -1,106 +1,82 @@
 <div class="ul-nav-info">
+    <!-- 完整示例：图标 + 标题 + 描述 + 右侧操作 -->
     <div class="ul-nav-info__item">
-        <div class="ul-nav-info__item__main">
-            <div class="ul-nav-info__item__main__info">
-                <div class="ul-nav-info__item__main__icon">
-                    <i class="layui-icon layui-icon-set"></i>
-                </div>
-                <div class="ul-nav-info__item__main__title">
-                    设置
-                </div>
+        <div class="ul-nav-info__main">
+            <div class="ul-nav-info__icon">
+                <i class="fa fa-gear"></i>
             </div>
-            <div class="ul-nav-info__item__main__content">
-                设置系统信息
+            <div class="ul-nav-info__content">
+                <div class="ul-nav-info__title">设置</div>
+                <div class="ul-nav-info__desc">设置系统信息</div>
             </div>
         </div>
-        <div class="ul-nav-info__item__right">
-            <div class="ul-nav-info__item__right__item">
-                新版本
-            </div>
-            <div class="ul-nav-info__item__right__item">
-                <i class="layui-icon layui-icon-right"></i>
-            </div>
+        <div class="ul-nav-info__action">
+            <span class="ul-nav-info__badge">新版本</span>
+            <i class="fa fa-chevron-right"></i>
         </div>
     </div>
-    <div class="ul-nav-info__item">
-        <div class="ul-nav-info__item__main">
-            <div class="ul-nav-info__item__main__info">
-                <div class="ul-nav-info__item__main__icon">
-                    <i class="layui-icon layui-icon-set"></i>
-                </div>
-                <div class="ul-nav-info__item__main__title">
-                    设置
-                </div>
-            </div>
-        </div>
-        <div class="ul-nav-info__item__right">
-            <div class="ul-nav-info__item__right__item">
-                新版本
-            </div>
-            <div class="ul-nav-info__item__right__item">
-                <i class="layui-icon layui-icon-right"></i>
-            </div>
-        </div>
-    </div>
-    <div class="ul-nav-info__item">
-        <div class="ul-nav-info__item__main">
-            <div class="ul-nav-info__item__main__info">
-                <div class="ul-nav-info__item__main__title">
-                    设置
-                </div>
-            </div>
-        </div>
-        <div class="ul-nav-info__item__right">
-            <div class="ul-nav-info__item__right__item">
-                新版本
-            </div>
-            <div class="ul-nav-info__item__right__item">
-                <i class="layui-icon layui-icon-right"></i>
-            </div>
-        </div>
-    </div>
-    <div class="ul-nav-info__item">
-        <div class="ul-nav-info__item__main">
-            <div class="ul-nav-info__item__main__info">
-                <div class="ul-nav-info__item__main__icon ">
-                    <div class="ul-demo-view" style="width:30px;height: 30px;"></div>
-                </div>
-                <div class="ul-nav-info__item__main__title">
-                    设置
-                </div>
-            </div>
-        </div>
-        <div class="ul-nav-info__item__right">
-            <div class="ul-nav-info__item__right__item">
-                新版本
-            </div>
-            <div class="ul-nav-info__item__right__item">
-                <i class="layui-icon layui-icon-right"></i>
-            </div>
-        </div>
-    </div>
-    <div class="ul-nav-info__item">
-        <div class="ul-nav-info__item__main">
-            <div class="ul-nav-info__item__main__info">
-                <div class="ul-nav-info__item__main__icon ">
-                    <div class="ul-demo-view" style="width:90px;height: 90px;"></div>
-                </div>
-                <div class="ul-nav-info__item__main__title">
-                    设置
-                    <div class="ul-nav-info__item__main__content">
-                        设置系统信息
-                    </div>
-                </div>
-            </div>
 
+    <!-- 简化示例：图标 + 标题 + 右侧操作 -->
+    <div class="ul-nav-info__item">
+        <div class="ul-nav-info__main">
+            <div class="ul-nav-info__icon">
+                <i class="fa fa-gear"></i>
+            </div>
+            <div class="ul-nav-info__content">
+                <div class="ul-nav-info__title">设置</div>
+            </div>
         </div>
-        <div class="ul-nav-info__item__right">
-            <div class="ul-nav-info__item__right__item">
-                新版本
+        <div class="ul-nav-info__action">
+            <span class="ul-nav-info__badge">新版本</span>
+            <i class="fa fa-chevron-right"></i>
+        </div>
+    </div>
+
+    <!-- 最简示例：只有标题 + 右侧操作 -->
+    <div class="ul-nav-info__item">
+        <div class="ul-nav-info__main">
+            <div class="ul-nav-info__content">
+                <div class="ul-nav-info__title">设置</div>
             </div>
-            <div class="ul-nav-info__item__right__item">
-                <i class="layui-icon layui-icon-right"></i>
+        </div>
+        <div class="ul-nav-info__action">
+            <span class="ul-nav-info__badge">新版本</span>
+            <i class="fa fa-chevron-right"></i>
+        </div>
+    </div>
+
+    <!-- 自定义图标示例：自定义尺寸图标 + 标题 + 右侧操作 -->
+    <div class="ul-nav-info__item">
+        <div class="ul-nav-info__main">
+            <div class="ul-nav-info__icon">
+                <div class="ul-demo-view" style="width:30px;height: 30px;"></div>
             </div>
+            <div class="ul-nav-info__content">
+                <div class="ul-nav-info__title">设置</div>
+            </div>
+        </div>
+        <div class="ul-nav-info__action">
+            <span class="ul-nav-info__badge">新版本</span>
+            <i class="fa fa-chevron-right"></i>
+        </div>
+    </div>
+
+    <!-- 大图标示例：大尺寸图标 + 标题（内嵌描述）+ 右侧操作 -->
+    <div class="ul-nav-info__item">
+        <div class="ul-nav-info__main">
+            <div class="ul-nav-info__icon">
+                <div class="ul-demo-view" style="width:90px;height: 90px;"></div>
+            </div>
+            <div class="ul-nav-info__content">
+                <div class="ul-nav-info__title">
+                    设置
+                    <div class="ul-nav-info__desc">设置系统信息</div>
+                </div>
+            </div>
+        </div>
+        <div class="ul-nav-info__action">
+            <span class="ul-nav-info__badge">新版本</span>
+            <i class="fa fa-chevron-right"></i>
         </div>
     </div>
 </div>

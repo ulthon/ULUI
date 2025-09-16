@@ -4791,38 +4791,84 @@ template {
 
 .ul-nav-info__item {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 15px;
-}
-.ul-nav-info__item__main__info {
-  display: flex;
   align-items: center;
+  flex-direction: row;
+  padding: 24px;
+  border-bottom: 1px solid var(--ul-color-border);
+}
+.ul-nav-info__item:last-child {
+  border-bottom: none;
+}
+.ul-nav-info__main {
+  display: flex;
   justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex: 1;
 }
-.ul-nav-info__item__main__icon {
-  margin-right: 10px;
+.ul-nav-info__icon {
+  margin-right: 16px;
+  color: var(--ul-color-primary-base);
+  font-size: 18px;
 }
-.ul-nav-info__item__main__title {
-  font-size: 15px;
+.ul-nav-info__content {
+  flex: 1;
+}
+.ul-nav-info__title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ul-color-text);
+  margin-bottom: 4px;
+}
+.ul-nav-info__title .ul-nav-info__desc {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--ul-color-text-secondary);
+  line-height: 1.5;
   font-weight: 400;
 }
-.ul-nav-info__item__main__content {
-  margin-top: 10px;
-  color: #bbb;
-  font-size: 14px;
+.ul-nav-info__desc {
+  font-size: 12px;
+  color: var(--ul-color-text-secondary);
+  line-height: 1.5;
+  font-weight: 400;
 }
-.ul-nav-info__item__right {
+.ul-nav-info__action {
   display: flex;
-  align-items: center;
   justify-content: flex-end;
-  color: #bbb;
+  align-items: center;
+  flex-direction: row;
+  color: var(--ul-color-text-secondary);
 }
-.ul-nav-info__item__right__item {
-  margin-left: 5px;
+.ul-nav-info__badge {
+  background-color: var(--ul-color-primary-light);
+  color: var(--ul-color-primary-base);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 500;
+  margin-right: 8px;
 }
-.ul-nav-info__item:not(:last-child) {
-  border-bottom: 1px solid #eee;
+@media (max-width: 767.98px) {
+  .ul-nav-info__item {
+    padding: 16px;
+  }
+  .ul-nav-info__icon {
+    font-size: 16px;
+    margin-right: 8px;
+  }
+  .ul-nav-info__title {
+    font-size: 14px;
+  }
+  .ul-nav-info__desc {
+    font-size: 10px;
+  }
+  .ul-nav-info__badge {
+    padding: 2px 4px;
+    font-size: 10px;
+  }
 }
 
 .ul-nav-link-item {

@@ -1,49 +1,90 @@
 .ul-nav-info {
+  &__item {
+    @include flex(space-between, center);
+    padding: $space-lg;
+    border-bottom: 1px solid $color-border;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__main {
+    @include flex(flex-start, center);
+    flex: 1;
+  }
+
+  &__icon {
+    margin-right: $space-md;
+    color: $color-primary-base;
+    font-size: $font-size-xl;
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__title {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-medium;
+    color: $color-text;
+    margin-bottom: $space-xs;
+    
+    // 标题内嵌描述的情况
+    .ul-nav-info__desc {
+      display: block;
+      margin-top: $space-xs;
+      font-size: $font-size-sm;
+      color: $color-text-secondary;
+      line-height: $line-height-base;
+      font-weight: $font-weight-normal;
+    }
+  }
+
+  &__desc {
+    font-size: $font-size-sm;
+    color: $color-text-secondary;
+    line-height: $line-height-base;
+    font-weight: $font-weight-normal;
+  }
+
+  &__action {
+    @include flex(flex-end, center);
+    color: $color-text-secondary;
+  }
+
+  &__badge {
+    background-color: $color-primary-light;
+    color: $color-primary-base;
+    padding: $space-xs $space-sm;
+    border-radius: $radius-base;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
+    margin-right: $space-sm;
+  }
+
+  // 响应式设计
+  @include media-breakpoint-down(md) {
     &__item {
-        display        : flex;
-        align-items    : center;
-        justify-content: space-between;
-        padding        : 15px;
-
-
-        &__main {
-            &__info {
-                display        : flex;
-                align-items    : center;
-                justify-content: flex-start;
-            }
-
-            &__icon {
-                margin-right: 10px;
-            }
-
-            &__title {
-                font-size  : 15px;
-                font-weight: 400;
-            }
-
-            &__content {
-                margin-top: 10px;
-                color     : #bbb;
-                font-size : 14px;
-            }
-        }
-
-        &__right {
-            display        : flex;
-            align-items    : center;
-            justify-content: flex-end;
-            color          : #bbb;
-
-            &__item {
-                margin-left: 5px;
-            }
-        }
-
-
-        &:not(:last-child) {
-            border-bottom: 1px solid #eee;
-        }
+      padding: $space-md;
     }
 
+    &__icon {
+      font-size: $font-size-lg;
+      margin-right: $space-sm;
+    }
+
+    &__title {
+      font-size: $font-size-md;
+    }
+
+    &__desc {
+      font-size: $font-size-xs;
+    }
+
+    &__badge {
+      padding: 2px $space-xs;
+      font-size: 10px;
+    }
+  }
 }
