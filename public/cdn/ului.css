@@ -4871,17 +4871,92 @@ template {
   }
 }
 
-.ul-nav-link-item {
-  display: inline-block;
-  margin: 5px 0;
-  padding: 0 10px;
-  border: 1px solid transparent;
-  color: #333;
-  white-space: nowrap;
+.ul-nav-link {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
-
-.ul-nav-link-item:not(:last-child) {
-  border-right-color: #666;
+.ul-nav-link__item {
+  display: inline-block;
+  margin: 8px 0;
+  padding: 0 16px;
+  border: 1px solid transparent;
+  color: var(--ul-color-text);
+  white-space: nowrap;
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.ul-nav-link__item:hover {
+  color: var(--ul-color-primary-base);
+}
+.ul-nav-link__item.active {
+  color: var(--ul-color-primary-base);
+  border-color: var(--ul-color-primary-base);
+}
+.ul-nav-link__item.disabled {
+  color: var(--ul-color-text-placeholder);
+  cursor: not-allowed;
+}
+.ul-nav-link__item.disabled:hover {
+  color: var(--ul-color-text-placeholder);
+}
+.ul-nav-link__item:not(:last-child) {
+  border-right-color: var(--ul-color-border);
+}
+.ul-nav-link.vertical {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.ul-nav-link.vertical .ul-nav-link__item {
+  margin: 0 0 8px 0;
+  padding: 8px 0;
+  border-right: none;
+  border-bottom: 1px solid var(--ul-color-border);
+}
+.ul-nav-link.vertical .ul-nav-link__item:not(:last-child) {
+  border-right-color: transparent;
+}
+.ul-nav-link.vertical .ul-nav-link__item:last-child {
+  border-bottom: none;
+}
+.ul-nav-link.no-divider .ul-nav-link__item {
+  border: none;
+}
+.ul-nav-link.no-divider .ul-nav-link__item:not(:last-child) {
+  border-right-color: transparent;
+}
+@media (max-width: 767.98px) {
+  .ul-nav-link {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .ul-nav-link__item {
+    margin: 4px 0;
+    padding: 8px 0;
+    border-right: none;
+    border-bottom: 1px solid var(--ul-color-border);
+  }
+  .ul-nav-link__item:not(:last-child) {
+    border-right-color: transparent;
+  }
+  .ul-nav-link__item:last-child {
+    border-bottom: none;
+  }
+  .ul-nav-link.horizontal-mobile {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  .ul-nav-link.horizontal-mobile .ul-nav-link__item {
+    margin: 4px 8px;
+    padding: 4px 8px;
+    border: none;
+    flex-shrink: 0;
+  }
+  .ul-nav-link.horizontal-mobile .ul-nav-link__item:not(:last-child) {
+    border-right: 1px solid var(--ul-color-border);
+  }
 }
 
 .ul-nav-min {

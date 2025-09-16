@@ -18,6 +18,8 @@
     *   组件位于 `source/components/` 目录下，每个组件一个独立文件夹。
     *   每个组件包含 `_index.html`, `_index.scss`, `_index.md` 等文件。
     *   `source/components/_index.scss` 文件会自动引入所有组件的样式。
+    *   尽量在html中实现各种状态和模式的效果，而不是在markdown中说明。
+    *   不需要在html中专门实现移动端的效果，因为网站提供了移动端的预览功能。
 
 4.  **组件文档**:
     *   组件文档应简洁明了，只包含必要的用法说明
