@@ -13,10 +13,14 @@
     >
     <title>{$model_post->title}-{:get_system_config('site_name')}</title>
     {include file='common/_require'/}
-    <link rel="stylesheet" href="/static/css/index.css">
+
     <link
         rel="stylesheet"
         href="/static/lib/quill/quill.snow.css"
+    >
+    <link
+        rel="stylesheet"
+        href="/static/css/index.css"
     >
     <link
         rel="stylesheet"
@@ -77,14 +81,12 @@
             </div>
             <div class="ul-col-md-9">
                 <div class="main-content ul-padding-md">
-                    <div class="">
-                        <span
-                            class="ul-breadcrumb"
-                            lay-separator="/"
-                        >
-                            <a href="{:url('Index/index')}">首页</a>
-                            <a><cite>{$model_post->title}</cite></a>
-                        </span>
+                    <div class="ul-nav-link">
+                        <a
+                            class="ul-nav-link__item"
+                            href="{:url('Index/index')}"
+                        >首页</a>
+                        <a class="ul-nav-link__item active">{$model_post->title}</a>
                     </div>
                     <div class="ql-snow">
                         <div class="ql-editor">{$model_post->content_html|raw}</div>
@@ -433,6 +435,11 @@
             $('.scroll-to-top').click(function () {
                 $('html,body').animate({ scrollTop: 0 }, 500);
             });
+
+            // 如果ql-editor中没有实际的文字内容或图片，则隐藏元素
+            if ($('.ql-editor').text().trim() == '' && $('.ql-editor img').length == 0) {
+                $('.ql-editor').parent().hide();
+            }
         });
 
         const { createApp } = Vue;
@@ -454,7 +461,7 @@
                 },
 
                 mounted() {
-                    $(elem).ulDemo()
+                    $(elem).ulDemo();
                     var html = $(elem).find('.preview.content').html();
                     var iframe = $(elem).find('.preview.iframe')[0];
 
@@ -478,7 +485,7 @@
                         '<link rel="stylesheet" href="/cdn/augmented-ui.min.css">' +
                         '<link rel="stylesheet" href="/cdn/fontawesome-free-6.4.0-web/css/all.min.css">' +
                         '<link rel="stylesheet" href="/cdn/ului.css">' +
-                        '<link rel="stylesheet" href="/static/css/index.css">'+
+                        '<link rel="stylesheet" href="/static/css/index.css">' +
                         '</head>' +
                         '<body style="' + innerMarginStyle + '">' +
                         html +

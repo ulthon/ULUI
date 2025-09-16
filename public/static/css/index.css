@@ -1,5 +1,6 @@
-.ql-editor {
-    padding: 15px 0;
+.ql-editor,
+.page {
+    padding: 0;
 }
 
 .right-tips-container {
@@ -21,6 +22,6 @@
     background-color: #d7d7d7;
 }
 
-.demo-page .desc{
+.demo-page .desc {
     margin-top: 16px;
 }

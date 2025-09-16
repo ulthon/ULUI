@@ -4875,6 +4875,7 @@ template {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  margin: 0 -16px;
 }
 .ul-nav-link__item {
   display: inline-block;
@@ -4891,7 +4892,6 @@ template {
 }
 .ul-nav-link__item.active {
   color: var(--ul-color-primary-base);
-  border-color: var(--ul-color-primary-base);
 }
 .ul-nav-link__item.disabled {
   color: var(--ul-color-text-placeholder);

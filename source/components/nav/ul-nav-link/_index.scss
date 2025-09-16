@@ -3,6 +3,8 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  margin: 0 calc(-1 * $space-md);
+  
 
   &__item {
     display: inline-block;
@@ -22,14 +24,13 @@
     // 激活状态
     &.active {
       color: $color-primary-base;
-      border-color: $color-primary-base;
     }
 
     // 禁用状态
     &.disabled {
       color: $color-text-disabled;
       cursor: not-allowed;
-      
+
       &:hover {
         color: $color-text-disabled;
       }
@@ -39,6 +40,7 @@
     &:not(:last-child) {
       border-right-color: $color-border;
     }
+
   }
 
   // 垂直排列变体
@@ -66,7 +68,7 @@
   &.no-divider {
     .ul-nav-link__item {
       border: none;
-      
+
       &:not(:last-child) {
         border-right-color: transparent;
       }
