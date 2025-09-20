@@ -3350,7 +3350,7 @@ template {
 .ul-avatar-item:hover {
   background-color: var(--ul-color-light-hover);
 }
-.ul-avatar-item.current {
+.ul-avatar-item.active {
   background-color: var(--ul-color-light-hover);
 }
 .ul-avatar-item + .ul-avatar-item {
@@ -3838,7 +3838,7 @@ template {
 .ul-note-item:hover {
   background-color: var(--ul-color-light-hover);
 }
-.ul-note-item.current {
+.ul-note-item.active {
   background-color: var(--ul-color-main-light);
   border-left-color: var(--ul-color-primary-base);
 }
@@ -4346,7 +4346,7 @@ template {
 .ul-nav-block__item:hover {
   background-color: var(--ul-color-light-light);
 }
-.ul-nav-block__item.current {
+.ul-nav-block__item.active {
   background-color: var(--ul-color-primary-base);
   color: var(--ul-color-white);
 }
@@ -5197,7 +5197,7 @@ template {
   white-space: nowrap;
 }
 
-.ul-nav-tree-item.current .ul-nav-tree-item-title {
+.ul-nav-tree-item.active .ul-nav-tree-item-title {
   color: #6cf;
 }
 
@@ -5222,7 +5222,7 @@ template {
 .ul-nav-tree-2 .ul-nav-tree-2-item {
   cursor: pointer;
 }
-.ul-nav-tree-2 .ul-nav-tree-2-item.current .ul-nav-tree-2-item-title, .ul-nav-tree-2 .ul-nav-tree-2-item:hover .ul-nav-tree-2-item-title {
+.ul-nav-tree-2 .ul-nav-tree-2-item.active .ul-nav-tree-2-item-title, .ul-nav-tree-2 .ul-nav-tree-2-item:hover .ul-nav-tree-2-item-title {
   color: #6cf;
   text-decoration: underline;
 }
@@ -5343,7 +5343,7 @@ template {
   margin-bottom: 5px;
 }
 
-.ul-link-item.current {
+.ul-link-item.active {
   border-radius: 15px;
   border: 1px solid #6cf;
   color: #6cf;

@@ -10,7 +10,7 @@
 
   .ul-nav-tree-2-item {
     cursor: pointer;
-    &.current,
+    &.active,
     &:hover {
       .ul-nav-tree-2-item-title {
         color: #6cf;
