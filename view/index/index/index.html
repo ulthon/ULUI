@@ -63,7 +63,7 @@
                             {volist name='category.post' id='post'}
                             <a
                                 href="{$post.read_url}"
-                                class="ul-nav-tree-item {eq name='post.id' value='$model_post.id'}current{/eq}"
+                                class="ul-nav-tree-item {eq name='post.id' value='$model_post.id'}active{/eq}"
                             >
                                 <div class="ul-nav-tree-item-title">
                                     {$post.title}
@@ -375,8 +375,9 @@
             }
 
             // 根据样式生成右侧的目录
-            $('.main-content h2,.main-content>.demo-page>fieldset>legend').each(function (index, elem) {
+            var headers = $('.main-content h2,.main-content>.demo-page>fieldset>legend');
 
+            headers.each(function (index, elem) {
                 var id = 'title' + index;
                 $(elem).attr('id', id);
 
@@ -386,8 +387,60 @@
                 navItem.appendTo('.right-tips-nav');
             });
 
-            if ($('.right-tips-nav').children().length > 0) {
-                $('.right-tips-container').show();
+            $('.right-tips-container').show();
+
+            // 使用 IntersectionObserver 监听目录对应元素
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // 获取当前可见元素对应的导航链接
+                        const id = $(entry.target).attr('id');
+                        const activeLink = $('.right-tips-nav a[href="#' + id + '"]');
+
+                        // 移除其他链接的激活状态，并为当前链接添加
+                        $('.right-tips-nav a').removeClass('active');
+                        activeLink.addClass('active');
+
+                        // 更新 URL hash (可选，但建议保留)
+                        // 使用 history.replaceState 避免污染浏览器历史记录
+                        if (history.replaceState) {
+                            history.replaceState(null, null, '#' + id);
+                        }
+                    }
+                });
+            }, {
+                rootMargin: '0px 0px -80% 0px', // 元素进入视口顶部 20% 时触发
+                threshold: 0
+            });
+
+            // 观察所有标题元素
+            headers.each(function() {
+                observer.observe(this);
+            });
+
+            // 点击目录项平滑滚动到对应位置
+            $('.right-tips-nav').on('click', 'a', function (e) {
+                e.preventDefault();
+                var targetId = $(this).attr('href');
+                var targetElement = $(targetId);
+                if (targetElement.length) {
+                    $('html, body').animate({
+                        scrollTop: targetElement.offset().top - 80 // 减去头部导航高度
+                    }, 300);
+                }
+            });
+
+            // 页面加载时，根据 hash 激活对应目录项
+            if (window.location.hash) {
+                var hash = window.location.hash;
+                var activeLink = $('.right-tips-nav a[href="' + hash + '"]');
+                if (activeLink.length) {
+                    $('.right-tips-nav a').removeClass('active');
+                    activeLink.addClass('active');
+                }
+            } else {
+                // 如果没有 hash，默认激活第一个
+                $('.right-tips-nav a').first().addClass('active');
             }
 
             // 生成重复元素

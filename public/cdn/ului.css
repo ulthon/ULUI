@@ -2317,7 +2317,6 @@ template {
 
 .ul-card-file {
   background-color: #fff;
-  display: block;
   width: 240px;
   color: #000 !important;
   cursor: pointer;
