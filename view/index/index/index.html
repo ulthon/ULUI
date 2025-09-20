@@ -352,31 +352,6 @@
     </div>
     <script>
 
-        $('.main-content h2,.main-content>.demo-page>fieldset').each(function (index, elem) {
-            if ($(elem).hasClass('no-parser')) {
-                return;
-            }
-            if ($(elem).find('.demo-js-src').length == 0) {
-                $(elem).children('.ul-field-box')
-                    .addClass('demo-js-src')
-                    .css('display', 'block')
-                    .data('title', $(elem).children('legend').text());
-            }
-        });
-        $('.main-content h2,.main-content>.demo-page>fieldset>legend').each(function (index, elem) {
-
-            var id = 'title' + index;
-            $(elem).attr('id', id);
-
-            var navItem = $('.tpl .ul-nav-min__item').clone();
-            navItem.attr('href', '#' + id);
-            navItem.text($(elem).text());
-            navItem.appendTo('.right-tips-nav');
-        });
-
-        if ($('.right-tips-nav').children().length > 0) {
-            $('.right-tips-container').show();
-        }
         function renderRepeat(elem) {
             $(elem).find('[data-repeat]').each(function () {
                 for (let index = 1; index < $(this).data('repeat'); index++) {
@@ -388,48 +363,6 @@
         }
 
 
-        $('.demo-js-src').each(function () {
-            var html = $(this).html();
-            var htmlList = html.split(/[\n]/g);
-            var htmlListNew = [];
-            var baseLineBlankNums = -1;
-            htmlList.forEach(function (htmlLine, htmlIndex) {
-                if (htmlIndex == 0 && htmlLine.length == 0) {
-                    return true;
-                }
-                if (baseLineBlankNums < 0) {
-                    var kong = htmlLine.match(/^ */g); //筛选
-                    if (kong != null) {
-                        baseLineBlankNums = kong[0].length;
-                    } else {
-                        baseLineBlankNums = 0;
-                    }
-                }
-
-                htmlListNew.push(htmlLine.slice(baseLineBlankNums));
-            });
-            var contentCode = htmlListNew.join("\n");
-            if ($(this).siblings('pre.demo-js').length == 0) {
-                var title = $(this).data('title');
-
-                if (!title) {
-                    title = $(this).closest('fieldset').find('legend').text();
-                }
-                $('<pre  class="ul-code demo-js" lay-title="' + title + '"></pre>').insertAfter(this);
-            }
-            $(this).siblings('pre.demo-js').text(contentCode);
-        });
-
-        renderRepeat('body');
-
-
-        // layui.form.render();
-        // layui.element.render();
-        // layui.code({
-        //     encode: true
-        // });
-        // layui.util.fixbar();
-
         $(function () {
             $('.ul-tab').ulTab();
             $('.scroll-to-top').click(function () {
@@ -440,71 +373,89 @@
             if ($('.ql-editor').text().trim() == '' && $('.ql-editor img').length == 0) {
                 $('.ql-editor').parent().hide();
             }
-        });
 
-        const { createApp } = Vue;
+            // 根据样式生成右侧的目录
+            $('.main-content h2,.main-content>.demo-page>fieldset>legend').each(function (index, elem) {
+
+                var id = 'title' + index;
+                $(elem).attr('id', id);
+
+                var navItem = $('.tpl .ul-nav-min__item').clone();
+                navItem.attr('href', '#' + id);
+                navItem.text($(elem).text());
+                navItem.appendTo('.right-tips-nav');
+            });
+
+            if ($('.right-tips-nav').children().length > 0) {
+                $('.right-tips-container').show();
+            }
+
+            // 生成重复元素
+            renderRepeat('body');
+
+            // 渲染vue
+            const { createApp } = Vue;
+            $('.component-item').each(function (index, elem) {
+                var html = $(elem).find('.preview.content').html();
+
+                createApp({
+                    data() {
+                        return {
+                            margin: $(elem).data('margin'),
+                            padding: $(elem).data('padding'),
+                            gray: $(elem).data('gray'),
+                            mobile: $(elem).data('mobile'),
+                            innerMargin: $(elem).data('inner-margin'),
+                        };
+                    },
+
+                    mounted() {
+                        $(elem).ulDemo();
+                        var html = $(elem).find('.preview.content').html();
+                        var iframe = $(elem).find('.preview.iframe')[0];
+
+                        var preview =
+                            iframe.contentDocument ||
+                            iframe.contentWindow.document;
+
+                        var innerMarginStyle = '';
+
+                        if (this.innerMargin == 1) {
+                            innerMarginStyle = 'margin-right:15px';
+                        }
+
+                        var iframeHtml = '<!DOCTYPE html>' +
+                            '<html lang="en">' +
+                            '<head>' +
+                            '<meta charset="UTF-8">' +
+                            '<meta http-equiv="X-UA-Compatible" content="IE=edge">' +
+                            '<meta name="viewport" content="width=device-width, initial-scale=1.0">' +
+                            '<title>演示</title>' +
+                            '<link rel="stylesheet" href="/cdn/augmented-ui.min.css">' +
+                            '<link rel="stylesheet" href="/cdn/fontawesome-free-6.4.0-web/css/all.min.css">' +
+                            '<link rel="stylesheet" href="/cdn/ului.css">' +
+                            '<link rel="stylesheet" href="/static/css/index.css">' +
+                            '</head>' +
+                            '<body style="' + innerMarginStyle + '">' +
+                            html +
+                            '</body>' +
+                            '</html>';
+
+                        preview.open();
+                        preview.write(iframeHtml);
+                        preview.close();
 
 
-        $('.component-item').each(function (index, elem) {
-            var html = $(elem).find('.preview.content').html();
-
-            createApp({
-                data() {
-                    return {
-                        margin: $(elem).data('margin'),
-                        padding: $(elem).data('padding'),
-                        gray: $(elem).data('gray'),
-                        mobile: $(elem).data('mobile'),
-                        innerMargin: $(elem).data('inner-margin'),
-
-                    };
-                },
-
-                mounted() {
-                    $(elem).ulDemo();
-                    var html = $(elem).find('.preview.content').html();
-                    var iframe = $(elem).find('.preview.iframe')[0];
-
-                    var preview =
-                        iframe.contentDocument ||
-                        iframe.contentWindow.document;
-
-                    var innerMarginStyle = '';
-
-                    if (this.innerMargin == 1) {
-                        innerMarginStyle = 'margin-right:15px';
                     }
 
-                    var iframeHtml = '<!DOCTYPE html>' +
-                        '<html lang="en">' +
-                        '<head>' +
-                        '<meta charset="UTF-8">' +
-                        '<meta http-equiv="X-UA-Compatible" content="IE=edge">' +
-                        '<meta name="viewport" content="width=device-width, initial-scale=1.0">' +
-                        '<title>演示</title>' +
-                        '<link rel="stylesheet" href="/cdn/augmented-ui.min.css">' +
-                        '<link rel="stylesheet" href="/cdn/fontawesome-free-6.4.0-web/css/all.min.css">' +
-                        '<link rel="stylesheet" href="/cdn/ului.css">' +
-                        '<link rel="stylesheet" href="/static/css/index.css">' +
-                        '</head>' +
-                        '<body style="' + innerMarginStyle + '">' +
-                        html +
-                        '</body>' +
-                        '</html>';
+                }).mount(elem);
 
-                    preview.open();
-                    preview.write(iframeHtml);
-                    preview.close();
+            });
 
-
-                }
-
-            }).mount(elem);
-
+            // 设置代码宽度
+            $('.code-preview').css('width', 'calc(' + $('.main-content').width() + 'px - 1em - 3.8em)');
         });
 
-        console.log($('.main-content').width());
-        $('.code-preview').css('width', 'calc(' + $('.main-content').width() + 'px - 1em - 3.8em)')
 
     </script>
 </body>
