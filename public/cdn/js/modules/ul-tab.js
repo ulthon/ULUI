@@ -6,7 +6,7 @@
         var settings = $.extend({
             itemClass: '.ul-tab-item',
             paneClass: '.ul-tab-pane',
-            activeClass: 'ul-this',
+            activeClass: 'active',
             showClass: 'ul-show'
         }, options);
 

@@ -13,7 +13,7 @@
     position: relative;
     margin-bottom: -1px; // 让选中项的下边框覆盖父元素的下边框
 
-    &.ul-this {
+    &.active {
       color: $color-primary-base;
       border-bottom: 2px solid $color-primary-base;
     }

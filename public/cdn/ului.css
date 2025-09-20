@@ -5362,7 +5362,7 @@ template {
   position: relative;
   margin-bottom: -1px;
 }
-.ul-tab-basic__item.ul-this {
+.ul-tab-basic__item.active {
   color: var(--ul-color-primary-base);
   border-bottom: 2px solid var(--ul-color-primary-base);
 }
@@ -5407,11 +5407,11 @@ template {
   background: #e9ecef;
   color: #333;
 }
-.ul-tab-card__item.ul-this {
+.ul-tab-card__item.active {
   background: var(--ul-color-primary-base);
   color: #fff;
 }
-.ul-tab-card__item.ul-this:hover {
+.ul-tab-card__item.active:hover {
   background: var(--ul-color-primary-hover);
 }
 .ul-tab-card__content {
