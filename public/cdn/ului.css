@@ -5182,32 +5182,52 @@ template {
 }
 
 /* 附带说明垂直导航 */
-.ul-nav-tree-group-title {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 2;
+.ul-nav-tree__group + .ul-nav-tree__group {
+  margin-top: 24px;
 }
-
-.ul-nav-tree-item {
-  display: flex;
-  align-items: baseline;
-  cursor: pointer;
-  padding: 5px;
-  white-space: nowrap;
-}
-
-.ul-nav-tree-item.active .ul-nav-tree-item-title {
-  color: #6cf;
-}
-
-.ul-nav-tree-item-title {
-  font-size: 15px;
-}
-
-.ul-nav-tree-item-desc {
+.ul-nav-tree__group-title {
   font-size: 14px;
-  color: #999;
-  margin-left: 15px;
+  font-weight: 700;
+  line-height: 2;
+  padding: 0 8px;
+  color: var(--ul-color-text-secondary);
+}
+.ul-nav-tree__item {
+  display: block;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.ul-nav-tree__item:hover {
+  background-color: var(--ul-color-bg);
+}
+.ul-nav-tree__item.active {
+  background-color: var(--ul-color-primary-light);
+}
+.ul-nav-tree__item.active .ul-nav-tree__item-title {
+  color: var(--ul-color-primary-base);
+}
+.ul-nav-tree__item-title {
+  font-size: 14px;
+  color: var(--ul-color-text);
+  font-weight: 500;
+}
+.ul-nav-tree__item-desc {
+  font-size: 12px;
+  color: var(--ul-color-text-secondary);
+  margin-top: 4px;
+}
+.ul-nav-tree.row .ul-nav-tree__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.ul-nav-tree.row .ul-nav-tree__item-desc {
+  margin-top: 0;
+  margin-left: 4px;
 }
 
 .ul-nav-tree-2 .ul-nav-tree-2-group-title {

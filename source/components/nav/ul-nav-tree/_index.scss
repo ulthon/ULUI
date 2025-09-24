@@ -1,30 +1,60 @@
 /* 附带说明垂直导航 */
-.ul-nav-tree {}
+.ul-nav-tree {
+    &__group {
+        & + & {
+            margin-top: $space-lg;
+        }
+    }
 
-.ul-nav-tree-group-title {
-    font-size  : 16px;
-    font-weight: 600;
-    line-height: 2;
-}
+    &__group-title {
+        font-size: $font-size-md;
+        font-weight: $font-weight-bold;
+        line-height: 2;
+        padding: 0 $space-sm;
+        color: $color-text-secondary;
+    }
 
-.ul-nav-tree-item {
-    display    : flex;
-    align-items: baseline;
-    cursor     : pointer;
-    padding    : 5px;
-    white-space: nowrap;
-}
+    &__item {
+        display: block;
+        cursor: pointer;
+        padding: $space-sm;
+        border-radius: $radius-base;
+        text-decoration: none;
+        transition: background-color 0.2s ease, color 0.2s ease;
 
-.ul-nav-tree-item.active .ul-nav-tree-item-title {
-    color: #6cf;
-}
+        &:hover {
+            background-color: $color-bg;
+        }
 
-.ul-nav-tree-item-title {
-    font-size: 15px;
-}
+        &.active {
+            background-color: $color-primary-light;
+            .ul-nav-tree__item-title {
+                color: $color-primary-base;
+            }
+        }
+    }
 
-.ul-nav-tree-item-desc {
-    font-size  : 14px;
-    color      : #999;
-    margin-left: 15px;
+    &__item-title {
+        font-size: $font-size-base;
+        color: $color-text;
+        font-weight: $font-weight-medium;
+    }
+
+    &__item-desc {
+        font-size: $font-size-sm;
+        color: $color-text-secondary;
+        margin-top: $space-xs;
+    }
+
+    // 水平布局修饰符
+    &.row {
+        .ul-nav-tree__item {
+            @include flex(flex-start, center);
+        }
+
+        .ul-nav-tree__item-desc {
+            margin-top: 0;
+            margin-left: $space-xs;
+        }
+    }
 }

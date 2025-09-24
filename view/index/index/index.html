@@ -52,23 +52,23 @@
             style="margin-top: 15px;"
         >
             <div class="ul-col-md-3 ul-border-right">
-                <div class="ul-nav-tree ul-padding-md ">
+                <div class="ul-nav-tree row ">
 
                     {volist name='list_post' id='category'}
-                    <div class="ul-nav-tree-group">
-                        <div class="ul-nav-tree-group-title">
+                    <div class="ul-nav-tree__group">
+                        <div class="ul-nav-tree__group-title">
                             {$category.title}
                         </div>
-                        <div class="ul-nav-tree-group-main">
+                        <div class="ul-nav-tree__group-main">
                             {volist name='category.post' id='post'}
                             <a
                                 href="{$post.read_url}"
-                                class="ul-nav-tree-item {eq name='post.id' value='$model_post.id'}active{/eq}"
+                                class="ul-nav-tree__item {eq name='post.id' value='$model_post.id'}active{/eq}"
                             >
-                                <div class="ul-nav-tree-item-title">
+                                <div class="ul-nav-tree__item-title">
                                     {$post.title}
                                 </div>
-                                <div class="ul-nav-tree-item-desc">
+                                <div class="ul-nav-tree__item-desc">
                                     {$post.desc}
                                 </div>
                             </a>
