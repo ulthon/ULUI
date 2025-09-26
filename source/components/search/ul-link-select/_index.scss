@@ -1,32 +1,125 @@
 
 .ul-link-select {
-    display        : flex;
-    align-items    : flex-start;
-    justify-content: flex-start;
-}
+    display: flex;
+    align-items: flex-start;
+    padding: $space-sm;
+    gap: $space-md;
 
-.ul-link-title {
-    margin-right: 15px;
-    white-space : nowrap;
-}
+    &__title {
+        color: $color-text;
+        font-size: $font-size-base;
+        font-weight: $font-weight-medium;
+        white-space: nowrap;
+        flex-shrink: 0;
+        line-height: 1.5; // 确保与选项的行高一致
+        padding: $space-xs 0; // 与选项的垂直内边距保持一致
+    }
 
-.ul-link-list {
-    display        : flex;
-    align-items    : flex-start;
-    justify-content: flex-start;
-    flex-wrap      : wrap;
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $space-sm;
+        flex: 1;
+    }
 
-}
+    &__item {
+        padding: $space-xs $space-md;
+        color: $color-text-secondary;
+        font-size: $font-size-sm;
+        cursor: pointer;
+        border-radius: $radius-base;
+        transition: all 0.2s ease;
+        white-space: nowrap;
+        line-height: 1.5; // 与标题保持一致的行高
 
-.ul-link-item {
-    padding      : 0px 10px;
-    cursor       : pointer;
-    margin-right : 10px;
-    margin-bottom: 5px;
-}
+        &:hover {
+            color: $color-primary-base;
+            background-color: $color-primary-light;
+        }
 
-.ul-link-item.active {
-    border-radius: 15px;
-    border       : 1px solid #6cf;
-    color        : #6cf;
+        &.active {
+            color: $color-primary-base;
+            background-color: $color-primary-light;
+            font-weight: $font-weight-medium;
+        }
+
+        &.disabled {
+            color: $color-text-disabled;
+            cursor: not-allowed;
+            
+            &:hover {
+                color: $color-text-disabled;
+                background-color: transparent;
+            }
+        }
+    }
+
+    // 按钮样式模式
+    &.button {
+        .ul-link-select__item {
+            border: 1px solid $color-border;
+            background-color: $color-white;
+
+            &:hover {
+                border-color: $color-primary-base;
+                color: $color-primary-base;
+                background-color: $color-white;
+            }
+
+            &.active {
+                border-color: $color-primary-base;
+                color: $color-white;
+                background-color: $color-primary-base;
+            }
+            
+        }
+    }
+
+    // 垂直排列模式
+    &.vertical {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .ul-link-select__list {
+            flex-direction: column;
+            width: 100%;
+            align-items: flex-start; // 确保选项左对齐
+        }
+
+        .ul-link-select__item {
+            width: auto; // 改为auto，让背景色只包围文字内容
+            text-align: left;
+            display: inline-block; // 确保宽度只包围内容
+        }
+    }
+
+    // 响应式设计
+    @include media-breakpoint-down(md) {
+        flex-direction: column;
+        gap: $space-sm;
+
+        &__title {
+            margin-bottom: $space-xs;
+        }
+
+        &__list {
+            width: 100%;
+        }
+
+        &__item {
+            padding: $space-sm $space-md;
+            font-size: $font-size-base;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        &__list {
+            gap: $space-xs;
+        }
+
+        &__item {
+            padding: $space-xs $space-sm;
+            font-size: $font-size-sm;
+        }
+    }
 }
