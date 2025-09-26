@@ -1,7 +1,93 @@
 
 .ul-group-title {
-    color        : #999;
-    border-bottom: 1px solid #bbb;
-    padding      : 5px 0;
-    margin-bottom: 15px;
+    font-size: $font-size-md;
+    font-weight: $font-weight-medium;
+    color: $color-text-secondary;
+    margin: $space-lg 0 $space-sm 0;
+    padding-bottom: $space-xs;
+    border-bottom: 1px solid $color-border;
+    line-height: $line-height-base;
+    
+    // 大号标题
+    &.large {
+        font-size: $font-size-lg;
+        font-weight: $font-weight-bold;
+        margin: $space-xl 0 $space-md 0;
+    }
+    
+    // 小号标题
+    &.small {
+        font-size: $font-size-sm;
+        margin: $space-md 0 $space-xs 0;
+    }
+    
+    // 居中对齐
+    &.center {
+        text-align: center;
+    }
+    
+    // 带边框（加强版）
+    &.border {
+        border-bottom: 2px solid $color-primary-base;
+        color: $color-text;
+        font-weight: $font-weight-bold;
+    }
+    
+    // 带图标
+    &.icon {
+        display: flex;
+        align-items: center;
+    }
+    
+    &__icon {
+        margin-right: $space-sm;
+        color: $color-primary-base;
+        font-size: inherit;
+    }
+    
+    // 深色模式
+    &.dark {
+        color: $color-white;
+        border-bottom-color: rgba($color-white, 0.3);
+        
+        &.border {
+            border-bottom-color: $color-white;
+        }
+        
+        .ul-group-title__icon {
+            color: $color-white;
+        }
+    }
+    
+    // 禁用状态
+    &.disabled {
+        color: $color-text-disabled;
+        border-bottom-color: $color-border;
+        cursor: not-allowed;
+        
+        .ul-group-title__icon {
+            color: $color-text-disabled;
+        }
+    }
+    
+    // 响应式设计
+    @include media-breakpoint-down(md) {
+        font-size: $font-size-sm;
+        margin: $space-md 0 $space-xs 0;
+        
+        &.large {
+            font-size: $font-size-md;
+            margin: $space-lg 0 $space-sm 0;
+        }
+        
+        &.small {
+            font-size: $font-size-xs;
+        }
+    }
+    
+    @include media-breakpoint-down(sm) {
+        .ul-group-title__icon {
+            margin-right: $space-xs;
+        }
+    }
 }
