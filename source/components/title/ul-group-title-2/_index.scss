@@ -1,26 +1,68 @@
-
 .ul-group-title-2 {
-  background: #d2dbe0;
-  width: 84px;
-  height: 28px;
-  line-height: 28px;
-  font-size: 14px;
-  font-weight: bold;
-  text-align: center;
-  position: relative;
-  margin-top: 30px;
-  margin-bottom: 14px;
-  color: #666666;
-}
+    font-size: $font-size-base;
+    font-weight: $font-weight-medium;
+    color: $color-text;
+    background-color: $color-light-base;
+    padding: $space-sm $space-md;
+    margin-bottom: $space-md;
+    margin-right: $space-md;
+    position: relative;
 
-.ul-group-title-2::after {
-  content: "";
-  width: 0;
-  height: 0;
-  position: absolute;
-  border-top: 14px solid transparent;
-  border-bottom: 14px solid transparent;
-  border-left: 15px solid #d2dbe0;
-  right: -15px;
-  top: 0px;
+    &.width-limit{
+      max-width: 60px;
+      text-align: right;
+      text-align: center;
+    }
+    
+    &::after {
+        content: '';
+        position: absolute;
+        right: -8px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-left: 8px solid $color-light-base;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+    }
+    
+    // Use a loop to generate Sass variables for theme colors
+    @each $name, $color in $theme-colors {
+        $bg-color: #{$name}-bg;
+        $text-color: #{$name}-text;
+
+        &.#{$name} {
+            background-color: $color;
+            color: var(--ul-color-#{$text-color});
+            
+            &::after {
+                border-left-color: $color;
+            }
+        }
+    }
+    
+    // Responsive design
+    @include media-breakpoint-down(md) {
+        font-size: $font-size-sm;
+        padding: $space-xs $space-sm;
+        
+        &::after {
+            right: -6px;
+            border-left-width: 6px;
+            border-top-width: 6px;
+            border-bottom-width: 6px;
+        }
+    }
+    
+    @include media-breakpoint-down(sm) {
+        margin-right: $space-sm;
+        
+        &::after {
+            right: -5px;
+            border-left-width: 5px;
+            border-top-width: 5px;
+            border-bottom-width: 5px;
+        }
+    }
 }
