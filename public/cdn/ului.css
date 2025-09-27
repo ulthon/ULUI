@@ -5714,22 +5714,34 @@ template {
   }
 }
 
-.ul-group-title-simple {
-  line-height: 30px;
-  font-size: 16px;
-  padding-left: 10px;
+.ul-title-bar {
+  font-size: 14px;
+  font-weight: 700;
+  padding-left: 8px;
   position: relative;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
 }
-.ul-group-title-simple:before {
+.ul-title-bar::before {
   content: "";
   display: block;
   position: absolute;
   left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   height: 16px;
   width: 3px;
-  top: 7px;
-  border-radius: 3px;
-  background: linear-gradient(0deg, var(--ul-color-main-light), var(--ul-color-main-base));
+  border-radius: 2px;
+  background: linear-gradient(0deg, var(--ul-color-primary-light), var(--ul-color-primary-base));
+}
+@media (max-width: 767.98px) {
+  .ul-title-bar {
+    font-size: 14px;
+  }
+  .ul-title-bar::before {
+    height: 14px;
+  }
 }
 
 .ul-title {

@@ -1,4 +1,4 @@
-.ul-title-group-simple {
+.ul-title-bar {
   font-size: $font-size-md;
   font-weight: $font-weight-bold;
   padding-left: $space-sm;
@@ -19,6 +19,7 @@
     border-radius: $radius-sm;
     background: linear-gradient(0deg, $color-primary-light, $color-primary-base);
   }
+  
 
   // 响应式设计
   @include media-breakpoint-down(md) {
