@@ -1,23 +1,30 @@
-.ul-group-title-simple {
+.ul-title-group-simple {
+  font-size: $font-size-md;
+  font-weight: $font-weight-bold;
+  padding-left: $space-sm;
+  position: relative;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
 
-    line-height: 30px;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 16px;
+    width: 3px;
+    border-radius: $radius-sm;
+    background: linear-gradient(0deg, $color-primary-light, $color-primary-base);
+  }
 
-    font-size   : 16px;
-    padding-left: 10px;
-
-    position: relative;
-
-    &:before {
-        content : "";
-        display : block;
-        position: absolute;
-        left    : 0;
-        height  : 16px;
-        width   : 3px;
-        top     : 7px;
-
-        border-radius: 3px;
-        background   : linear-gradient(0deg, #7FC0FC, #4B7EEF);
+  // 响应式设计
+  @include media-breakpoint-down(md) {
+    font-size: $font-size-base;
+    &::before {
+      height: 14px;
     }
-
+  }
 }

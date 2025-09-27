@@ -5729,7 +5729,7 @@ template {
   width: 3px;
   top: 7px;
   border-radius: 3px;
-  background: linear-gradient(0deg, #7FC0FC, #4B7EEF);
+  background: linear-gradient(0deg, var(--ul-color-main-light), var(--ul-color-main-base));
 }
 
 .ul-title {
