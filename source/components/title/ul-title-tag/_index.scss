@@ -1,4 +1,4 @@
-.ul-group-title-2 {
+.ul-title-tag {
     font-size: $font-size-base;
     font-weight: $font-weight-medium;
     color: $color-text;
@@ -7,6 +7,7 @@
     margin-bottom: $space-md;
     margin-right: $space-md;
     position: relative;
+    
 
     &.width-limit{
       max-width: 60px;
