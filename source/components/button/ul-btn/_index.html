@@ -1,4 +1,4 @@
-<div class="ul-group-title"> 基本按钮 </div>
+<div class="ul-title-section"> 基本按钮 </div>
 {volist name='button_list' id='type_list'}
 <div class="ul-section">
     {volist name='type_list' id='button'}
@@ -7,7 +7,7 @@
 </div>
 {/volist}
 {foreach $button_status as $status => $status_name}
-<div class="ul-group-title"> {$status_name} </div>
+<div class="ul-title-section"> {$status_name} </div>
 <div class="ul-section">
     {volist name='button_type' id='type_name'}
     <button class="ul-btn {if !empty($type_name)}ul-btn-{$type_name}{/if} {$status}">默认按钮</button>

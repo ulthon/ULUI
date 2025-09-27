@@ -1,5 +1,5 @@
 
-.ul-group-title {
+.ul-title-section {
     font-size: $font-size-md;
     font-weight: $font-weight-medium;
     color: $color-text-secondary;
@@ -54,7 +54,7 @@
             border-bottom-color: $color-white;
         }
         
-        .ul-group-title__icon {
+        .ul-title-section__icon {
             color: $color-white;
         }
     }
@@ -65,7 +65,7 @@
         border-bottom-color: $color-border;
         cursor: not-allowed;
         
-        .ul-group-title__icon {
+        .ul-title-section__icon {
             color: $color-text-disabled;
         }
     }
@@ -86,7 +86,7 @@
     }
     
     @include media-breakpoint-down(sm) {
-        .ul-group-title__icon {
+        .ul-title-section__icon {
             margin-right: $space-xs;
         }
     }
