@@ -295,3 +295,24 @@
 .ul-flex-nowrap {
   flex-wrap: nowrap;
 }
+
+
+// 标题
+.ul-title {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  margin-bottom: $space-md;
+}
+
+// 文本对齐
+.ul-text-left {
+  text-align: left;
+}
+
+.ul-text-center {
+  text-align: center;
+}
+
+.ul-text-right {
+  text-align: right;
+}

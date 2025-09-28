@@ -1867,6 +1867,24 @@ template {
   flex-wrap: nowrap;
 }
 
+.ul-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.ul-text-left {
+  text-align: left;
+}
+
+.ul-text-center {
+  text-align: center;
+}
+
+.ul-text-right {
+  text-align: right;
+}
+
 .layui-quote-gray {
   background-color: #f0f0f0;
   color: #666;
@@ -4966,6 +4984,11 @@ template {
   border-radius: 4px;
   border: 1px solid var(--ul-color-border);
 }
+.ul-nav-min.ghost {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
 
 .ul-nav-min__item {
   padding: 4px 0;
@@ -5553,7 +5576,7 @@ template {
   font-size: 14px;
   font-weight: 500;
   color: var(--ul-color-text-secondary);
-  margin: 24px 0 8px 0;
+  margin: 16px 0 8px 0;
   padding-bottom: 4px;
   border-bottom: 1px solid var(--ul-color-border);
   line-height: 1.5;
