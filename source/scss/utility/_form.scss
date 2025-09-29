@@ -1,0 +1,113 @@
+// --- Base Input, Textarea, Select ---
+.ul-input,
+.ul-textarea,
+.ul-select {
+    box-sizing: border-box; 
+    display: inline-block;
+    width: 100%;
+    padding: $space-sm $space-md;
+    font-size: $font-size-base;
+    line-height: 1.5;
+    color: $color-text;
+    background-color: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $radius-base;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+    &:focus {
+        outline: 0;
+        border-color: $color-primary-base;
+        box-shadow: 0 0 0 2px rgba($color-primary-base, 0.2);
+    }
+
+    &::placeholder {
+        color: $color-text-placeholder;
+        opacity: 1;
+    }
+
+    &:disabled,
+    &[readonly] {
+        background-color: $color-bg;
+        opacity: 1;
+    }
+}
+
+.ul-textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+// --- Checkbox & Radio ---
+.ul-checkbox,
+.ul-radio {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: $space-md;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    &__indicator {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border: 1px solid $color-border;
+        background-color: $color-white;
+        margin-right: $space-sm;
+        transition: all 0.2s ease;
+        flex-shrink: 0;
+    }
+
+    &__label {
+        color: $color-text;
+    }
+
+    input:checked ~ &__indicator {
+        background-color: $color-primary-base;
+        border-color: $color-primary-base;
+    }
+
+    input:checked ~ &__indicator::after {
+        display: block;
+    }
+}
+
+// Checkbox
+.ul-checkbox {
+    &__indicator {
+        border-radius: $radius-sm;
+
+        &::after {
+            content: "";
+            display: none;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg) translate(-1px, -2px);
+            margin-left: 4px;
+        }
+    }
+}
+
+// Radio
+.ul-radio {
+    &__indicator {
+        border-radius: 50%;
+
+        &::after {
+            content: "";
+            display: none;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: white;
+            margin: 3px;
+        }
+    }
+}

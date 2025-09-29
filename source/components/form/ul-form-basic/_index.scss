@@ -1,41 +1,57 @@
 /* 简约风格Form */
 .ul-form-basic {
+    background-color: $color-white;
+    border-radius: $radius-base;
+    padding: $space-lg;
 
-    .layui-form-item {
-        clear        : unset;
-        margin-bottom: 6px;
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: $space-lg;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 
-    .layui-form-label {
-        float     : unset;
-        width     : unset;
-        text-align: left;
-        padding   : 5px 0;
-        font-size : 14px;
-        color     : #000;
+    &__label {
+        width: 100px;
+        flex-shrink: 0;
+        padding-top: $space-sm;
+        padding-right: $space-lg;
+        text-align: right;
+        color: $color-text;
     }
 
-    .layui-input-block {
-        margin-left: unset;
-        min-height : 30px;
+    &__control {
+        flex: 1;
+        min-width: 0;
     }
 
-    .layui-input {
-        padding: 10px 11px;
-        height : unset;
+    &__actions {
+        padding-left: 100px;
     }
 
-    .layui-form-mid {
-        padding: 5px 0 !important
-    }
+    // 响应式设计
+    @include media-breakpoint-down(sm) {
+        padding: $space-md;
 
-    .layui-form-select dl {
-        top: 28px;
-    }
+        &__item {
+            flex-direction: column;
+            align-items: stretch;
+            margin-bottom: $space-md;
+        }
 
-    .layui-form-select dl dd,
-    .layui-form-select dl dt {
-        height: 30px
-    }
+        &__label {
+            width: auto;
+            text-align: left;
+            padding-top: 0;
+            padding-right: 0;
+            margin-bottom: $space-sm;
+        }
 
+        &__actions {
+            padding-left: 0;
+        }
+    }
 }
