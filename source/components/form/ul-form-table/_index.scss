@@ -49,6 +49,7 @@
     .ul-radio {
       margin-right: $space-lg;
       margin-bottom: $space-sm;
+      vertical-align: middle; // 确保垂直对齐
       
       &:last-child {
         margin-right: 0;

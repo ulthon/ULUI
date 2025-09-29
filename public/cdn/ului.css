@@ -1937,13 +1937,18 @@ template {
   align-items: center;
   cursor: pointer;
   margin-right: 16px;
+  position: relative;
+  vertical-align: middle;
 }
 .ul-checkbox input,
 .ul-radio input {
   position: absolute;
   opacity: 0;
-  width: 0;
-  height: 0;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  z-index: 1;
+  margin: 0;
 }
 .ul-checkbox__indicator,
 .ul-radio__indicator {
@@ -1957,10 +1962,16 @@ template {
   margin-right: 8px;
   transition: all 0.2s ease;
   flex-shrink: 0;
+  position: relative;
+  box-sizing: border-box;
 }
 .ul-checkbox__label,
 .ul-radio__label {
   color: var(--ul-color-text);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  line-height: 1.2;
 }
 input:checked ~ .ul-checkbox__indicator,
 input:checked ~ .ul-radio__indicator {
@@ -1970,6 +1981,26 @@ input:checked ~ .ul-radio__indicator {
 input:checked ~ .ul-checkbox__indicator::after,
 input:checked ~ .ul-radio__indicator::after {
   display: block;
+}
+.ul-checkbox:hover .ul-checkbox__indicator,
+.ul-checkbox:hover .ul-radio__indicator,
+.ul-radio:hover .ul-checkbox__indicator,
+.ul-radio:hover .ul-radio__indicator {
+  border-color: var(--ul-color-primary-base);
+}
+.ul-checkbox.disabled,
+.ul-radio.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.ul-checkbox.disabled input,
+.ul-radio.disabled input {
+  cursor: not-allowed;
+}
+.ul-checkbox.disabled__indicator,
+.ul-radio.disabled__indicator {
+  background-color: var(--ul-color-bg);
+  border-color: var(--ul-color-border);
 }
 
 .ul-checkbox__indicator {
@@ -1983,6 +2014,11 @@ input:checked ~ .ul-radio__indicator::after {
   border: solid white;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg) translateY(-1px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -5px;
+  margin-left: -2.5px;
 }
 
 .ul-radio__indicator {
@@ -1995,6 +2031,11 @@ input:checked ~ .ul-radio__indicator::after {
   height: 8px;
   border-radius: 50%;
   background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -4px;
+  margin-left: -4px;
 }
 
 .layui-quote-gray {
@@ -3213,11 +3254,21 @@ input:checked ~ .ul-radio__indicator::after {
   min-width: 0;
   text-align: right;
   color: var(--ul-color-text-secondary);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 .ul-form-settings__control .ul-input {
   border: none;
   text-align: right;
   background-color: transparent;
+}
+.ul-form-settings__control .ul-checkbox,
+.ul-form-settings__control .ul-radio {
+  margin-right: 0;
+  flex-shrink: 0;
 }
 @media (max-width: 575.98px) {
   .ul-form-settings {
@@ -3271,6 +3322,7 @@ input:checked ~ .ul-radio__indicator::after {
 .ul-form-table__control .ul-radio {
   margin-right: 24px;
   margin-bottom: 8px;
+  vertical-align: middle;
 }
 .ul-form-table__control .ul-checkbox:last-child,
 .ul-form-table__control .ul-radio:last-child {

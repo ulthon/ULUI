@@ -26,11 +26,23 @@
         min-width: 0;
         text-align: right;
         color: $color-text-secondary;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: $space-md;
 
         .ul-input {
             border: none;
             text-align: right;
             background-color: transparent;
+        }
+
+        // 确保复选框和单选框布局稳定
+        .ul-checkbox,
+        .ul-radio {
+            margin-right: 0; // 移除默认右边距，使用 gap 控制间距
+            flex-shrink: 0; // 防止压缩
         }
     }
 
