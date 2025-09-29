@@ -1,4 +1,74 @@
 
+.ul-doc-tree {
+    padding: $space-md;
+    background-color: $color-bg;
+    border: 1px solid $color-border;
+    border-radius: $radius-base;
+    transition: all .3s;
+
+    &__item {
+        padding: $space-xs $space-sm;
+        color: $color-text-secondary;
+        font-size: $font-size-base;
+        border-radius: $radius-sm;
+        cursor: pointer;
+        transition: all .3s;
+
+        &:hover {
+            background-color: $color-primary-light;
+            color: $color-primary-base;
+        }
+
+        // 不同层级的缩进
+        &.level-1 {
+            padding-left: $space-lg * 1.5;
+        }
+
+        &.level-2 {
+            padding-left: $space-lg * 2.5;
+        }
+
+        // 不同类型的图标和样式
+        &.page::before {
+            content: "\f15c"; // fa-file-text-o
+            font-family: "FontAwesome";
+            margin-right: $space-sm;
+            color: $color-text-placeholder;
+        }
+
+        &.group {
+            font-weight: $font-weight-bold;
+            color: $color-text;
+            margin-top: $space-sm;
+        }
+
+        &.point::before {
+            content: "#";
+            font-family: "FontAwesome";
+            margin-right: $space-sm;
+            color: $color-text-placeholder;
+        }
+    }
+
+    // 深色主题
+    &.dark {
+        background-color: $color-black;
+        border-color: transparent;
+
+        .ul-doc-tree__item {
+            color: $color-text-secondary;
+
+            &:hover {
+                background-color: rgba($color-white, 0.1);
+                color: $color-white;
+            }
+
+            &.group {
+                color: $color-white;
+            }
+        }
+    }
+}
 
 .ul-doc-info-page-list {
     padding: 15px;

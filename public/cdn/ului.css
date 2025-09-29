@@ -5572,6 +5572,68 @@ template {
   display: block;
 }
 
+.ul-title-bar {
+  font-size: 14px;
+  font-weight: 700;
+  padding-left: 8px;
+  position: relative;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+}
+.ul-title-bar::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 16px;
+  width: 3px;
+  border-radius: 2px;
+  background: linear-gradient(0deg, var(--ul-color-primary-light), var(--ul-color-primary-base));
+}
+@media (max-width: 767.98px) {
+  .ul-title-bar {
+    font-size: 14px;
+  }
+  .ul-title-bar::before {
+    height: 14px;
+  }
+}
+
+.ul-title-decorated {
+  text-align: center;
+  position: relative;
+  padding-bottom: 16px;
+}
+.ul-title-decorated__main {
+  font-size: 16px;
+  color: var(--ul-color-text);
+  font-weight: 700;
+}
+.ul-title-decorated__plus {
+  font-size: 14px;
+  color: var(--ul-color-text-secondary);
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+.ul-title-decorated__line {
+  width: 40px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--ul-color-primary-base), var(--ul-color-primary-hover));
+  border-radius: 2px;
+  margin: 16px auto 0;
+}
+@media (max-width: 767.98px) {
+  .ul-title-decorated__main {
+    font-size: 16px;
+  }
+  .ul-title-decorated__plus {
+    font-size: 12px;
+  }
+}
+
 .ul-title-section {
   font-size: 14px;
   font-weight: 500;
@@ -5751,66 +5813,61 @@ template {
   }
 }
 
-.ul-title-bar {
-  font-size: 14px;
-  font-weight: 700;
-  padding-left: 8px;
-  position: relative;
-  line-height: 1.5;
-  display: flex;
-  align-items: center;
+.ul-doc-tree {
+  padding: 16px;
+  background-color: var(--ul-color-bg);
+  border: 1px solid var(--ul-color-border);
+  border-radius: 4px;
+  transition: all 0.3s;
 }
-.ul-title-bar::before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 16px;
-  width: 3px;
-  border-radius: 2px;
-  background: linear-gradient(0deg, var(--ul-color-primary-light), var(--ul-color-primary-base));
-}
-@media (max-width: 767.98px) {
-  .ul-title-bar {
-    font-size: 14px;
-  }
-  .ul-title-bar::before {
-    height: 14px;
-  }
-}
-
-.ul-title-decorated {
-  text-align: center;
-  position: relative;
-  padding-bottom: 16px;
-}
-.ul-title-decorated__main {
-  font-size: 16px;
-  color: var(--ul-color-text);
-  font-weight: 700;
-}
-.ul-title-decorated__plus {
-  font-size: 14px;
+.ul-doc-tree__item {
+  padding: 4px 8px;
   color: var(--ul-color-text-secondary);
-  margin-top: 4px;
-  text-transform: uppercase;
-}
-.ul-title-decorated__line {
-  width: 40px;
-  height: 4px;
-  background: linear-gradient(90deg, var(--ul-color-primary-base), var(--ul-color-primary-hover));
+  font-size: 14px;
   border-radius: 2px;
-  margin: 16px auto 0;
+  cursor: pointer;
+  transition: all 0.3s;
 }
-@media (max-width: 767.98px) {
-  .ul-title-decorated__main {
-    font-size: 16px;
-  }
-  .ul-title-decorated__plus {
-    font-size: 12px;
-  }
+.ul-doc-tree__item:hover {
+  background-color: var(--ul-color-primary-light);
+  color: var(--ul-color-primary-base);
+}
+.ul-doc-tree__item.level-1 {
+  padding-left: 36px;
+}
+.ul-doc-tree__item.level-2 {
+  padding-left: 60px;
+}
+.ul-doc-tree__item.page::before {
+  content: "\f15c";
+  font-family: "FontAwesome";
+  margin-right: 8px;
+  color: var(--ul-color-text-placeholder);
+}
+.ul-doc-tree__item.group {
+  font-weight: 700;
+  color: var(--ul-color-text);
+  margin-top: 8px;
+}
+.ul-doc-tree__item.point::before {
+  content: "#";
+  font-family: "FontAwesome";
+  margin-right: 8px;
+  color: var(--ul-color-text-placeholder);
+}
+.ul-doc-tree.dark {
+  background-color: var(--ul-color-black);
+  border-color: transparent;
+}
+.ul-doc-tree.dark .ul-doc-tree__item {
+  color: var(--ul-color-text-secondary);
+}
+.ul-doc-tree.dark .ul-doc-tree__item:hover {
+  background-color: rgba(var(--ul-color-white), 0.1);
+  color: var(--ul-color-white);
+}
+.ul-doc-tree.dark .ul-doc-tree__item.group {
+  color: var(--ul-color-white);
 }
 
 .ul-doc-info-page-list {
