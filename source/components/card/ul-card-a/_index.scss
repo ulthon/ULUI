@@ -1,35 +1,354 @@
 
+// 卡片基础样式
 .ul-card-a {
-  width: 180px;
-  display: flex;
-  justify-content: space-between;
-  border: 1px solid #bbb;
-  box-shadow: 2px 2px 5px #999;
-  color: #516073;
-  padding: 15px;
-  cursor: pointer;
-  margin-right: 15px;
-  margin-bottom: 15px;
-  position: relative;
-}
-
-.ul-card-a-left {
-  width: 40%;
-}
-
-.ul-card-a-right {
+  box-sizing: border-box;
+  width: 200px;
   display: flex;
   align-items: center;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  box-shadow: $shadow-sm;
+  background-color: $color-white;
+  color: $color-text;
+  padding: $space-md;
+  cursor: pointer;
+  margin-right: $space-md;
+  margin-bottom: $space-md;
+  position: relative;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  
+  &:hover {
+    box-shadow: $shadow-base;
+    border-color: $color-primary-base;
+    transform: translateY(-2px);
+  }
+  
+  // 状态变体
+  &.dark {
+    background-color: $color-dark-base;
+    color: $color-white;
+    border-color: $color-dark-hover;
+    
+    &__description {
+      color: $color-text-placeholder;
+    }
+    
+    &__image {
+      background-color: $color-dark-hover;
+      
+      &::before {
+        color: $color-text-placeholder;
+      }
+    }
+  }
+  
+  &.primary {
+    border-color: $color-primary-base;
+    background-color: $color-primary-light;
+    
+    &__title {
+      color: $color-primary-base;
+    }
+  }
+  
+  &.success {
+    border-color: $color-success-base;
+    background-color: $color-success-light;
+    
+    &__title {
+      color: $color-success-base;
+    }
+  }
+  
+  &.warning {
+    border-color: $color-warning-base;
+    background-color: $color-warning-light;
+    
+    &__title {
+      color: $color-warning-base;
+    }
+  }
+  
+  &.danger {
+    border-color: $color-danger-base;
+    background-color: $color-danger-light;
+    
+    &__title {
+      color: $color-danger-base;
+    }
+  }
+  
+  &.info {
+    border-color: $color-info-base;
+    background-color: $color-info-light;
+    
+    &__title {
+      color: $color-info-base;
+    }
+  }
+  
+  &.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    
+    &:hover {
+      box-shadow: $shadow-sm;
+      border-color: $color-border;
+      transform: none;
+    }
+  }
+  
+  // 选中状态
+  &.selected {
+    border-color: $color-primary-base;
+    box-shadow: 0 0 0 2px $color-primary-light;
+    
+    &:hover {
+      box-shadow: 0 0 0 2px $color-primary-light, $shadow-base;
+    }
+  }
+  
+  // 加载状态
+  &.loading {
+    position: relative;
+    overflow: hidden;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+      animation: loading-shimmer 1.5s infinite;
+    }
+  }
+  
+  // 激活状态
+  &.active {
+    border-color: $color-primary-base;
+    background-color: rgba($color-primary-base, 0.05);
+    
+    &__title {
+      color: $color-primary-base;
+      font-weight: $font-weight-bold;
+    }
+  }
+}
+
+.ul-card-a__media {
+  flex: 0 0 40%;
+  margin-right: $space-md;
+}
+
+.ul-card-a__image {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: $radius-base;
+  background-color: $color-gray-light;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.ul-card-a__content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.ul-card-a__header {
   text-align: center;
-  width: 50%;
+  width: 100%;
 }
 
-.ul-card-a-title {
-  font-size: 18px;
+.ul-card-a__title {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-medium;
+  line-height: 1.4;
+  margin-bottom: $space-xs;
+  @include text-ellipsis(2);
 }
 
-.ul-card-a-desc {
-  margin-top: 5px;
-  font-size: 14px;
-  white-space: nowrap;
+.ul-card-a__description {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  line-height: 1.4;
+  @include text-ellipsis(2);
+}
+
+// 响应式设计 Mixin
+@mixin card-responsive($breakpoint) {
+  @if $breakpoint == md {
+    .ul-card-a {
+      width: calc(50% - #{$space-md});
+      margin-right: $space-md;
+      margin-bottom: $space-md;
+      padding: $space-sm;
+      
+      .ul-card-a__media {
+        flex: 0 0 60px;
+        margin-right: $space-sm;
+      }
+      
+      .ul-card-a__image {
+        aspect-ratio: 1;
+      }
+      
+      .ul-card-a__title {
+        font-size: $font-size-md;
+        text-align: left;
+      }
+      
+      .ul-card-a__description {
+        font-size: $font-size-xs;
+        text-align: left;
+      }
+    }
+  }
+  
+  @if $breakpoint == sm {
+    .ul-card-a {
+      width: calc(50% - #{$space-sm});
+      margin-right: $space-sm;
+      margin-bottom: $space-sm;
+      padding: $space-sm;
+      flex-direction: column;
+      text-align: center;
+      
+      .ul-card-a__media {
+        flex: none;
+        margin-right: 0;
+        margin-bottom: $space-sm;
+        width: 100%;
+      }
+      
+      .ul-card-a__image {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto;
+      }
+      
+      .ul-card-a__content {
+        width: 100%;
+      }
+      
+      .ul-card-a__header {
+        text-align: center;
+      }
+      
+      .ul-card-a__title {
+        font-size: $font-size-sm;
+        text-align: center;
+      }
+      
+      .ul-card-a__description {
+        font-size: $font-size-xs;
+        text-align: center;
+      }
+    }
+  }
+}
+
+// 响应式设计
+@include media-breakpoint-down(md) {
+  @include card-responsive(md);
+}
+
+// 小屏幕手机适配
+@include media-breakpoint-down(sm) {
+  @include card-responsive(sm);
+}
+
+// 动画定义
+@keyframes loading-shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes card-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+// 点击涟漪效果
+.ul-card-a {
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: rgba($color-primary-base, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease;
+  }
+  
+  &:active::before {
+    width: 100%;
+    height: 100%;
+    transition: width 0.3s ease, height 0.3s ease;
+  }
+  
+  // 防止涟漪效果影响内容
+  .ul-card-a__media,
+  .ul-card-a__content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  // 脉冲动画效果
+  &.pulse {
+    animation: card-pulse 2s infinite;
+  }
+}
+
+// 焦点状态
+.ul-card-a:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px $color-primary-light;
+}
+
+// 键盘导航支持
+.ul-card-a:focus-visible {
+  box-shadow: 0 0 0 2px $color-primary-base;
+}
+
+// 紧凑模式
+.ul-card-a.compact {
+  padding: $space-sm;
+  
+  &__media {
+    flex: 0 0 40px;
+    margin-right: $space-sm;
+  }
+  
+  &__image {
+    width: 40px;
+    height: 40px;
+  }
+  
+  &__title {
+    font-size: $font-size-sm;
+  }
+  
+  &__description {
+    font-size: $font-size-xs;
+  }
 }
