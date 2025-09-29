@@ -3188,85 +3188,44 @@ input:checked ~ .ul-radio__indicator::after {
     padding-left: 0;
   }
 }
-/* 简约风格Form */
-.ul-form-basic {
+.ul-form-space-between {
   background-color: var(--ul-color-white);
   border-radius: 4px;
-  padding: 24px;
+  padding: 0 24px;
 }
-.ul-form-basic__item {
+.ul-form-space-between__item {
   display: flex;
-  align-items: flex-start;
-  margin-bottom: 24px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--ul-color-border);
 }
-.ul-form-basic__item:last-child {
-  margin-bottom: 0;
+.ul-form-space-between__item:last-child {
+  border-bottom: none;
 }
-.ul-form-basic__label {
-  width: 100px;
-  flex-shrink: 0;
-  padding-top: 8px;
-  padding-right: 24px;
-  text-align: right;
+.ul-form-space-between__label {
   color: var(--ul-color-text);
+  flex-shrink: 0;
+  margin-right: 24px;
 }
-.ul-form-basic__control {
+.ul-form-space-between__control {
   flex: 1;
   min-width: 0;
+  text-align: right;
+  color: var(--ul-color-text-secondary);
 }
-.ul-form-basic__actions {
-  padding-left: 100px;
+.ul-form-space-between__control .ul-input {
+  border: none;
+  text-align: right;
+  background-color: transparent;
 }
 @media (max-width: 575.98px) {
-  .ul-form-basic {
-    padding: 16px;
+  .ul-form-space-between {
+    padding: 0 16px;
   }
-  .ul-form-basic__item {
-    flex-direction: column;
-    align-items: stretch;
-    margin-bottom: 16px;
+  .ul-form-space-between__item {
+    padding: 8px 0;
   }
-  .ul-form-basic__label {
-    width: auto;
-    text-align: left;
-    padding-top: 0;
-    padding-right: 0;
-    margin-bottom: 8px;
-  }
-  .ul-form-basic__actions {
-    padding-left: 0;
-  }
-}
-
-.ul-form-space-between .layui-form-item {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  border-bottom: 2px solid #eee;
-}
-.ul-form-space-between .layui-form-item::after {
-  content: unset;
-}
-.ul-form-space-between .layui-form-item:last-child {
-  border: unset;
-}
-.ul-form-space-between .layui-form-item .layui-form-label {
-  text-align: left;
-  float: unset;
-}
-.ul-form-space-between .layui-form-item .layui-input-block {
-  margin-left: unset;
-  width: 60%;
-  text-align: right;
-}
-.ul-form-space-between .layui-form-item .layui-input {
-  border: unset;
-  text-align: right;
-}
-.ul-form-space-between .layui-form-item .layui-form-mid {
-  text-align: right;
-  display: block;
-  float: unset;
 }
 
 .ul-input-table {

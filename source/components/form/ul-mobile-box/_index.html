@@ -1,125 +1,96 @@
-<div class="ul-data-card" style="width: 320px;">
-    <div class="body">
-        <form
-            class="layui-form ul-form-space-between"
-            action=""
-        >
-            <div class="layui-form-item">
-                <label class="layui-form-label">输入框</label>
-                <div class="layui-input-block">
-                    <input
-                        type="text"
-                        name="title"
-                        required
-                        lay-verify="required"
-                        placeholder="请输入标题"
-                        autocomplete="off"
-                        class="layui-input"
-                    >
-                </div>
-            </div>
-            <div class="layui-form-item">
-                <label class="layui-form-label">密码框</label>
-                <div class="layui-input-block">
-                    <input
-                        type="password"
-                        name="password"
-                        required
-                        lay-verify="required"
-                        placeholder="请输入密码"
-                        autocomplete="off"
-                        class="layui-input"
-                    >
-                    <div class="layui-form-mid layui-word-aux">辅助文字</div>
-                </div>
-            </div>
-            <div class="layui-form-item">
-                <label class="layui-form-label">选择框</label>
-                <div class="layui-input-block">
-                    <select
-                        name="city"
-                        lay-verify="required"
-                    >
-                        <option value=""></option>
-                        <option value="0">北京</option>
-                        <option value="1">上海</option>
-                        <option value="2">广州</option>
-                        <option value="3">深圳</option>
-                        <option value="4">杭州</option>
-                    </select>
-                </div>
-            </div>
-            <div class="layui-form-item">
-                <label class="layui-form-label">复选框</label>
-                <div class="layui-input-block">
-                    <input
-                        type="checkbox"
-                        name="like[write]"
-                        lay-skin="primary"
-                        title="写作"
-                    >
-                    <input
-                        type="checkbox"
-                        name="like[read]"
-                        lay-skin="primary"
-                        title="阅读"
-                        checked
-                    >
-                    <input
-                        type="checkbox"
-                        name="like[dai]"
-                        lay-skin="primary"
-                        title="发呆"
-                    >
-                </div>
-            </div>
-            <div class="layui-form-item">
-                <label class="layui-form-label">开关</label>
-                <div class="layui-input-block">
-                    <input
-                        type="checkbox"
-                        name="switch"
-                        lay-skin="switch"
-                    >
-                </div>
-            </div>
-            <div class="layui-form-item">
-                <label class="layui-form-label">单选框</label>
-                <div class="layui-input-block">
-                    <input
-                        type="radio"
-                        name="sex"
-                        value="男"
-                        title="男"
-                    >
-                    <input
-                        type="radio"
-                        name="sex"
-                        value="女"
-                        title="女"
-                        checked
-                    >
-                </div>
-            </div>
-            <div class="layui-form-item layui-form-text">
-                <label class="layui-form-label">文本域</label>
-                <div class="layui-input-block">
-                    <textarea
-                        name="desc"
-                        placeholder="请输入内容"
-                        class="layui-textarea"
-                    ></textarea>
-                </div>
-            </div>
-            <div class="layui-form-item">
-                <button
-                    class="layui-btn layui-btn-fluid"
-                    lay-submit
-                    lay-filter="formDemo"
-                >立即提交</button>
-
-            </div>
-        </form>
+<div class="ul-form-space-between">
+    <div class="ul-form-space-between__item">
+        <div class="ul-form-space-between__label">
+            用户名
+        </div>
+        <div class="ul-form-space-between__control">
+            <input type="text" class="ul-input" placeholder="请输入用户名" value="奥宏科技">
+        </div>
     </div>
-
+    <div class="ul-form-space-between__item">
+        <div class="ul-form-space-between__label">
+            绑定手机
+        </div>
+        <div class="ul-form-space-between__control">
+            138****8888
+        </div>
+    </div>
+    <div class="ul-form-space-between__item">
+        <div class="ul-form-space-between__label">
+            账户余额
+        </div>
+        <div class="ul-form-space-between__control">
+            ￥1024.00
+        </div>
+    </div>
+    <div class="ul-form-space-between__item">
+        <div class="ul-form-space-between__label">
+            收货地址
+        </div>
+        <div class="ul-form-space-between__control">
+            去设置
+        </div>
+    </div>
+    <div class="ul-form-space-between__item">
+        <div class="ul-form-space-between__label">
+            实名认证
+        </div>
+        <div class="ul-form-space-between__control">
+            未认证
+        </div>
+    </div>
+    <div class="ul-form-space-between__item">
+        <div class="ul-form-space-between__label">
+            我的订单
+        </div>
+        <div class="ul-form-space-between__control">
+            查看全部订单
+        </div>
+    </div>
+    <div class="ul-form-space-between__item">
+        <div class="ul-form-space-between__label">
+            性别
+        </div>
+        <div class="ul-form-space-between__control">
+            <label class="ul-radio" style="vertical-align: middle;">
+                <input type="radio" name="sex" checked>
+                <span class="ul-radio__indicator"></span>
+                <span class="ul-radio__label">男</span>
+            </label>
+            <label class="ul-radio" style="vertical-align: middle;">
+                <input type="radio" name="sex">
+                <span class="ul-radio__indicator"></span>
+                <span class="ul-radio__label">女</span>
+            </label>
+        </div>
+    </div>
+    <div class="ul-form-space-between__item">
+        <div class="ul-form-space-between__label">
+            城市
+        </div>
+        <div class="ul-form-space-between__control">
+            <select class="ul-select" style="width: auto;">
+                <option>请选择</option>
+                <option selected>广州</option>
+                <option>深圳</option>
+            </select>
+        </div>
+    </div>
+    <div class="ul-form-space-between__item">
+        <div class="ul-form-space-between__label">
+            兴趣爱好
+        </div>
+        <div class="ul-form-space-between__control">
+            <label class="ul-checkbox" style="vertical-align: middle;">
+                <input type="checkbox" name="hobby" checked>
+                <span class="ul-checkbox__indicator"></span>
+                <span class="ul-checkbox__label">写作</span>
+            </label>
+            <label class="ul-checkbox" style="vertical-align: middle;">
+                <input type="checkbox" name="hobby">
+                <span class="ul-checkbox__indicator"></span>
+                <span class="ul-checkbox__label">编码</span>
+            </label>
+        </div>
+    </div>
 </div>

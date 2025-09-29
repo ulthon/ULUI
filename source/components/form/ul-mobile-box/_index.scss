@@ -1,39 +1,45 @@
 .ul-form-space-between {
-    .layui-form-item {
-        display        : flex;
-        align-items    : flex-start;
-        justify-content: space-between;
-        border-bottom  : 2px solid #eee;
+    background-color: $color-white;
+    border-radius: $radius-base;
+    padding: 0 $space-lg;
 
-        &::after {
-            content: unset
-        }
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: $space-md 0;
+        border-bottom: 1px solid $color-border;
 
         &:last-child {
-            border: unset;
+            border-bottom: none;
         }
+    }
 
-        .layui-form-label {
-            text-align: left;
-            float     : unset;
-        }
+    &__label {
+        color: $color-text;
+        flex-shrink: 0;
+        margin-right: $space-lg;
+    }
 
-        .layui-input-block {
-            margin-left: unset;
-            width      : 60%;
-            text-align : right;
+    &__control {
+        flex: 1;
+        min-width: 0;
+        text-align: right;
+        color: $color-text-secondary;
 
-        }
-
-        .layui-input {
-            border    : unset;
+        .ul-input {
+            border: none;
             text-align: right;
+            background-color: transparent;
         }
+    }
 
-        .layui-form-mid {
-            text-align: right;
-            display   : block;
-            float     : unset
+    // 响应式设计
+    @include media-breakpoint-down(sm) {
+        padding: 0 $space-md;
+
+        &__item {
+            padding: $space-sm 0;
         }
     }
 }
