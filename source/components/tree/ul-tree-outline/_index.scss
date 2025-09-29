@@ -7,6 +7,8 @@
     transition: all .3s;
 
     &__item {
+        display: flex;
+        align-items: center;
         padding: $space-xs $space-sm;
         color: $color-text-secondary;
         font-size: $font-size-base;
@@ -28,28 +30,18 @@
             padding-left: $space-lg * 2.5;
         }
 
-        // 不同类型的图标和样式
-        &.page::before {
-            content: "\f15c"; // fa-file-text-o
-            font-family: "FontAwesome";
-            margin-right: $space-sm;
-            color: $color-text-placeholder;
-        }
-
         &.group {
             font-weight: $font-weight-bold;
             color: $color-text;
             margin-top: $space-sm;
         }
-
-        &.point::before {
-            content: "#";
-            font-family: "FontAwesome";
-            margin-right: $space-sm;
-            color: $color-text-placeholder;
-        }
     }
 
+    &__icon {
+        margin-right: $space-sm;
+        color: $color-text-placeholder;
+    }
+    
     // 深色主题
     &.dark {
         background-color: $color-black;

@@ -5821,6 +5821,8 @@ template {
   transition: all 0.3s;
 }
 .ul-tree-outline__item {
+  display: flex;
+  align-items: center;
   padding: 4px 8px;
   color: var(--ul-color-text-secondary);
   font-size: 14px;
@@ -5838,20 +5840,12 @@ template {
 .ul-tree-outline__item.level-2 {
   padding-left: 60px;
 }
-.ul-tree-outline__item.page::before {
-  content: "\f15c";
-  font-family: "FontAwesome";
-  margin-right: 8px;
-  color: var(--ul-color-text-placeholder);
-}
 .ul-tree-outline__item.group {
   font-weight: 700;
   color: var(--ul-color-text);
   margin-top: 8px;
 }
-.ul-tree-outline__item.point::before {
-  content: "#";
-  font-family: "FontAwesome";
+.ul-tree-outline__icon {
   margin-right: 8px;
   color: var(--ul-color-text-placeholder);
 }
