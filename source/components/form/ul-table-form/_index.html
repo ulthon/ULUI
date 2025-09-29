@@ -1,112 +1,88 @@
-<div class="ul-table-form">
-    <div class="layui-form">
-        <div class="layui-form-item">
-            <table
-                class="layui-table ul-input-table"
-                lay-even
-            >
-                <tbody>
-                    <tr>
-                        <td>输入</td>
-                        <td>
-                            <input
-                                type="text"
-                                name="input-1"
-                                placeholder="请输入"
-                                class="layui-input"
-                                id=""
-                            >
-                        </td>
+<div class="ul-form-table">
+    <table class="ul-form-table__table">
+        <tbody>
+            <tr class="ul-form-table__row">
+                <td class="ul-form-table__label">输入</td>
+                <td class="ul-form-table__control">
+                    <input
+                        type="text"
+                        name="input-1"
+                        placeholder="请输入"
+                        class="ul-input"
+                    >
+                </td>
 
-                        <td>选择框</td>
-                        <td>
-                            <select
-                                name="city"
-                                lay-verify="required"
-                            >
-                                <option value=""></option>
-                                <option value="0">北京</option>
-                                <option value="1">上海</option>
-                                <option value="2">广州</option>
-                                <option value="3">深圳</option>
-                                <option value="4">杭州</option>
-                            </select>
-                        </td>
-                        <td>复选框</td>
-                        <td>
-                            <input
-                                type="checkbox"
-                                name="like[write]"
-                                lay-skin="primary"
-                                title="写作"
-                            >
-                            <input
-                                type="checkbox"
-                                name="like[read]"
-                                lay-skin="primary"
-                                title="阅读"
-                                checked
-                            >
-                            <input
-                                type="checkbox"
-                                name="like[dai]"
-                                lay-skin="primary"
-                                title="发呆"
-                            >
-                        </td>
-
-                    </tr>
-                    <tr>
-                        <td>单选框</td>
-                        <td colspan="5">
-                            <input
-                                type="radio"
-                                name="sex"
-                                value="男"
-                                title="国产"
-                            >
-                            <input
-                                type="radio"
-                                name="sex"
-                                value="男"
-                                title="日韩"
-                            >
-                            <input
-                                type="radio"
-                                name="sex"
-                                value="男"
-                                title="欧洲"
-                            >
-                            <input
-                                type="radio"
-                                name="sex"
-                                value="男"
-                                title="美国"
-                            >
-                            <input
-                                type="radio"
-                                name="sex"
-                                value="女"
-                                title="俄罗斯"
-                                checked
-                            >
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>文本域</td>
-                        <td colspan="5">
-                            <textarea
-                                name=""
-                                class="layui-textarea"
-                                rows="3"
-                            ></textarea>
-
-                        </td>
-                    </tr>
-
-                </tbody>
-            </table>
-        </div>
-    </div>
+                <td class="ul-form-table__label">选择框</td>
+                <td class="ul-form-table__control">
+                    <select name="city" class="ul-select" required>
+                        <option value="">请选择</option>
+                        <option value="0">北京</option>
+                        <option value="1">上海</option>
+                        <option value="2">广州</option>
+                        <option value="3">深圳</option>
+                        <option value="4">杭州</option>
+                    </select>
+                </td>
+                <td class="ul-form-table__label">复选框</td>
+                <td class="ul-form-table__control">
+                    <label class="ul-checkbox">
+                        <input type="checkbox" name="like[write]">
+                        <span class="ul-checkbox__indicator"></span>
+                        <span class="ul-checkbox__label">写作</span>
+                    </label>
+                    <label class="ul-checkbox">
+                        <input type="checkbox" name="like[read]" checked>
+                        <span class="ul-checkbox__indicator"></span>
+                        <span class="ul-checkbox__label">阅读</span>
+                    </label>
+                    <label class="ul-checkbox">
+                        <input type="checkbox" name="like[dai]">
+                        <span class="ul-checkbox__indicator"></span>
+                        <span class="ul-checkbox__label">发呆</span>
+                    </label>
+                </td>
+            </tr>
+            <tr class="ul-form-table__row">
+                <td class="ul-form-table__label">单选框</td>
+                <td class="ul-form-table__control" colspan="5">
+                    <label class="ul-radio">
+                        <input type="radio" name="sex" value="男">
+                        <span class="ul-radio__indicator"></span>
+                        <span class="ul-radio__label">国产</span>
+                    </label>
+                    <label class="ul-radio">
+                        <input type="radio" name="sex" value="男">
+                        <span class="ul-radio__indicator"></span>
+                        <span class="ul-radio__label">日韩</span>
+                    </label>
+                    <label class="ul-radio">
+                        <input type="radio" name="sex" value="男">
+                        <span class="ul-radio__indicator"></span>
+                        <span class="ul-radio__label">欧洲</span>
+                    </label>
+                    <label class="ul-radio">
+                        <input type="radio" name="sex" value="男">
+                        <span class="ul-radio__indicator"></span>
+                        <span class="ul-radio__label">美国</span>
+                    </label>
+                    <label class="ul-radio">
+                        <input type="radio" name="sex" value="女" checked>
+                        <span class="ul-radio__indicator"></span>
+                        <span class="ul-radio__label">俄罗斯</span>
+                    </label>
+                </td>
+            </tr>
+            <tr class="ul-form-table__row">
+                <td class="ul-form-table__label">文本域</td>
+                <td class="ul-form-table__control" colspan="5">
+                    <textarea
+                        name=""
+                        class="ul-textarea"
+                        rows="3"
+                        placeholder="请输入内容"
+                    ></textarea>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>

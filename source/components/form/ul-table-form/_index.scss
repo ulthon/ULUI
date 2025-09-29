@@ -1,18 +1,94 @@
+// 表格表单组件样式
+// --------------------------------------------------
 
-.ul-input-table {
+.ul-form-table {
+  width: 100%;
+  
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
     text-align: center;
-}
+    background-color: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $radius-base;
+    overflow: hidden;
+  }
 
-.ul-input-table tbody td,
-.ul-input-table tbody th {
-    padding: 2px 4px;
-}
+  &__row {
+    border-bottom: 1px solid $color-border;
+    
+    &:last-child {
+      border-bottom: none;
+    }
+  }
 
-.ul-input-table .layui-form-checkbox[lay-skin="primary"] {
-    margin-top: 0px;
-}
+  &__label {
+    padding: $space-md $space-sm;
+    background-color: $color-bg;
+    color: $color-text-secondary;
+    font-weight: $font-weight-medium;
+    text-align: center;
+    white-space: nowrap;
+    border-right: 1px solid $color-border;
+    width: 80px;
+  }
 
-.ul-input-table .layui-form-select dl dd {
+  &__control {
+    padding: $space-sm $space-md;
     text-align: left;
-}
+    
+    .ul-input,
+    .ul-textarea,
+    .ul-select {
+      width: 100%;
+      margin: 0;
+    }
+    
+    .ul-checkbox,
+    .ul-radio {
+      margin-right: $space-lg;
+      margin-bottom: $space-sm;
+      
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
 
+  // 响应式设计
+  @include media-breakpoint-down(md) {
+    &__table {
+      border: none;
+      border-radius: 0;
+    }
+    
+    &__row {
+      display: block;
+      border-bottom: 1px solid $color-border;
+      padding: $space-md 0;
+    }
+    
+    &__label {
+      display: block;
+      width: 100%;
+      text-align: left;
+      border-right: none;
+      border-bottom: 1px solid $color-border;
+      margin-bottom: $space-sm;
+      padding: $space-sm;
+    }
+    
+    &__control {
+      display: block;
+      padding: $space-sm;
+      
+      .ul-checkbox,
+      .ul-radio {
+        display: block;
+        margin-right: 0;
+        margin-bottom: $space-sm;
+      }
+    }
+  }
+}

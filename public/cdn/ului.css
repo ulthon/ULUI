@@ -3228,21 +3228,83 @@ input:checked ~ .ul-radio__indicator::after {
   }
 }
 
-.ul-input-table {
+.ul-form-table {
+  width: 100%;
+}
+.ul-form-table__table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
   text-align: center;
+  background-color: var(--ul-color-white);
+  border: 1px solid var(--ul-color-border);
+  border-radius: 4px;
+  overflow: hidden;
 }
-
-.ul-input-table tbody td,
-.ul-input-table tbody th {
-  padding: 2px 4px;
+.ul-form-table__row {
+  border-bottom: 1px solid var(--ul-color-border);
 }
-
-.ul-input-table .layui-form-checkbox[lay-skin=primary] {
-  margin-top: 0px;
+.ul-form-table__row:last-child {
+  border-bottom: none;
 }
-
-.ul-input-table .layui-form-select dl dd {
+.ul-form-table__label {
+  padding: 16px 8px;
+  background-color: var(--ul-color-bg);
+  color: var(--ul-color-text-secondary);
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  border-right: 1px solid var(--ul-color-border);
+  width: 80px;
+}
+.ul-form-table__control {
+  padding: 8px 16px;
   text-align: left;
+}
+.ul-form-table__control .ul-input,
+.ul-form-table__control .ul-textarea,
+.ul-form-table__control .ul-select {
+  width: 100%;
+  margin: 0;
+}
+.ul-form-table__control .ul-checkbox,
+.ul-form-table__control .ul-radio {
+  margin-right: 24px;
+  margin-bottom: 8px;
+}
+.ul-form-table__control .ul-checkbox:last-child,
+.ul-form-table__control .ul-radio:last-child {
+  margin-right: 0;
+}
+@media (max-width: 767.98px) {
+  .ul-form-table__table {
+    border: none;
+    border-radius: 0;
+  }
+  .ul-form-table__row {
+    display: block;
+    border-bottom: 1px solid var(--ul-color-border);
+    padding: 16px 0;
+  }
+  .ul-form-table__label {
+    display: block;
+    width: 100%;
+    text-align: left;
+    border-right: none;
+    border-bottom: 1px solid var(--ul-color-border);
+    margin-bottom: 8px;
+    padding: 8px;
+  }
+  .ul-form-table__control {
+    display: block;
+    padding: 8px;
+  }
+  .ul-form-table__control .ul-checkbox,
+  .ul-form-table__control .ul-radio {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
 }
 
 .ul-card-list {
