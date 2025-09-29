@@ -1,5 +1,5 @@
 
-.ul-doc-tree {
+.ul-tree-outline {
     padding: $space-md;
     background-color: $color-bg;
     border: 1px solid $color-border;
@@ -55,7 +55,7 @@
         background-color: $color-black;
         border-color: transparent;
 
-        .ul-doc-tree__item {
+        .ul-tree-outline__item {
             color: $color-text-secondary;
 
             &:hover {

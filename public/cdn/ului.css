@@ -5813,14 +5813,14 @@ template {
   }
 }
 
-.ul-doc-tree {
+.ul-tree-outline {
   padding: 16px;
   background-color: var(--ul-color-bg);
   border: 1px solid var(--ul-color-border);
   border-radius: 4px;
   transition: all 0.3s;
 }
-.ul-doc-tree__item {
+.ul-tree-outline__item {
   padding: 4px 8px;
   color: var(--ul-color-text-secondary);
   font-size: 14px;
@@ -5828,45 +5828,45 @@ template {
   cursor: pointer;
   transition: all 0.3s;
 }
-.ul-doc-tree__item:hover {
+.ul-tree-outline__item:hover {
   background-color: var(--ul-color-primary-light);
   color: var(--ul-color-primary-base);
 }
-.ul-doc-tree__item.level-1 {
+.ul-tree-outline__item.level-1 {
   padding-left: 36px;
 }
-.ul-doc-tree__item.level-2 {
+.ul-tree-outline__item.level-2 {
   padding-left: 60px;
 }
-.ul-doc-tree__item.page::before {
+.ul-tree-outline__item.page::before {
   content: "\f15c";
   font-family: "FontAwesome";
   margin-right: 8px;
   color: var(--ul-color-text-placeholder);
 }
-.ul-doc-tree__item.group {
+.ul-tree-outline__item.group {
   font-weight: 700;
   color: var(--ul-color-text);
   margin-top: 8px;
 }
-.ul-doc-tree__item.point::before {
+.ul-tree-outline__item.point::before {
   content: "#";
   font-family: "FontAwesome";
   margin-right: 8px;
   color: var(--ul-color-text-placeholder);
 }
-.ul-doc-tree.dark {
+.ul-tree-outline.dark {
   background-color: var(--ul-color-black);
   border-color: transparent;
 }
-.ul-doc-tree.dark .ul-doc-tree__item {
+.ul-tree-outline.dark .ul-tree-outline__item {
   color: var(--ul-color-text-secondary);
 }
-.ul-doc-tree.dark .ul-doc-tree__item:hover {
+.ul-tree-outline.dark .ul-tree-outline__item:hover {
   background-color: rgba(var(--ul-color-white), 0.1);
   color: var(--ul-color-white);
 }
-.ul-doc-tree.dark .ul-doc-tree__item.group {
+.ul-tree-outline.dark .ul-tree-outline__item.group {
   color: var(--ul-color-white);
 }
 
