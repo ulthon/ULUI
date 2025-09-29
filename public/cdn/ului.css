@@ -3188,42 +3188,42 @@ input:checked ~ .ul-radio__indicator::after {
     padding-left: 0;
   }
 }
-.ul-form-space-between {
+.ul-form-settings {
   background-color: var(--ul-color-white);
   border-radius: 4px;
   padding: 0 24px;
 }
-.ul-form-space-between__item {
+.ul-form-settings__item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 16px 0;
   border-bottom: 1px solid var(--ul-color-border);
 }
-.ul-form-space-between__item:last-child {
+.ul-form-settings__item:last-child {
   border-bottom: none;
 }
-.ul-form-space-between__label {
+.ul-form-settings__label {
   color: var(--ul-color-text);
   flex-shrink: 0;
   margin-right: 24px;
 }
-.ul-form-space-between__control {
+.ul-form-settings__control {
   flex: 1;
   min-width: 0;
   text-align: right;
   color: var(--ul-color-text-secondary);
 }
-.ul-form-space-between__control .ul-input {
+.ul-form-settings__control .ul-input {
   border: none;
   text-align: right;
   background-color: transparent;
 }
 @media (max-width: 575.98px) {
-  .ul-form-space-between {
+  .ul-form-settings {
     padding: 0 16px;
   }
-  .ul-form-space-between__item {
+  .ul-form-settings__item {
     padding: 8px 0;
   }
 }
