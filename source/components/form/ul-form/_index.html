@@ -1,0 +1,131 @@
+<div class="ul-form">
+    <form action="">
+        <!-- 基础输入框 -->
+        <div class="ul-form__item">
+            <label class="ul-form__label">输入框</label>
+            <div class="ul-form__control">
+                <input type="text" class="ul-input" placeholder="请输入内容">
+            </div>
+        </div>
+
+        <!-- 基础下拉框 -->
+        <div class="ul-form__item">
+            <label class="ul-form__label">下拉框</label>
+            <div class="ul-form__control">
+                <select class="ul-select">
+                    <option>请选择城市</option>
+                    <option>北京</option>
+                    <option>上海</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- 输入框和下拉框组合 -->
+        <div class="ul-form__item">
+            <label class="ul-form__label">输入框+下拉框</label>
+            <div class="ul-form__control">
+                <div class="ul-input-group">
+                    <span class="ul-input-group__prepend">
+                        <select class="ul-select">
+                            <option>+86</option>
+                            <option>+852</option>
+                        </select>
+                    </span>
+                    <input type="text" class="ul-input" placeholder="请输入手机号">
+                </div>
+            </div>
+        </div>
+
+        <!-- 输入框和按钮组合 -->
+        <div class="ul-form__item">
+            <label class="ul-form__label">输入框+按钮</label>
+            <div class="ul-form__control">
+                <div class="ul-input-group">
+                    <input type="text" class="ul-input" placeholder="请输入验证码">
+                    <span class="ul-input-group__append">
+                        <button type="button" class="ul-btn">获取验证码</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 下拉框和按钮组合 -->
+        <div class="ul-form__item">
+            <label class="ul-form__label">下拉框+按钮</label>
+            <div class="ul-form__control">
+                <div class="ul-input-group">
+                    <select class="ul-select">
+                        <option>操作一</option>
+                        <option>操作二</option>
+                    </select>
+                    <span class="ul-input-group__append">
+                        <button type="button" class="ul-btn ul-btn-primary">执行</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 单选框 -->
+        <div class="ul-form__item">
+            <label class="ul-form__label">单选框</label>
+            <div class="ul-form__control">
+                <label class="ul-radio">
+                    <input type="radio" name="sex" checked>
+                    <span class="ul-radio__indicator"></span>
+                    <span class="ul-radio__label">男</span>
+                </label>
+                <label class="ul-radio">
+                    <input type="radio" name="sex">
+                    <span class="ul-radio__indicator"></span>
+                    <span class="ul-radio__label">女</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- 复选框 -->
+        <div class="ul-form__item">
+            <label class="ul-form__label">复选框</label>
+            <div class="ul-form__control">
+                <label class="ul-checkbox">
+                    <input type="checkbox" name="hobby" checked>
+                    <span class="ul-checkbox__indicator"></span>
+                    <span class="ul-checkbox__label">写作</span>
+                </label>
+                <label class="ul-checkbox">
+                    <input type="checkbox" name="hobby">
+                    <span class="ul-checkbox__indicator"></span>
+                    <span class="ul-checkbox__label">编码</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- 文本域 -->
+        <div class="ul-form__item">
+            <label class="ul-form__label">文本域</label>
+            <div class="ul-form__control">
+                <textarea class="ul-textarea" placeholder="请输入更多内容"></textarea>
+            </div>
+        </div>
+
+        <!-- 复选框和输入框 -->
+        <div class="ul-form__item">
+            <label class="ul-form__label">复选框+输入框</label>
+            <div class="ul-form__control">
+                <label class="ul-checkbox">
+                    <input type="checkbox" name="other">
+                    <span class="ul-checkbox__indicator"></span>
+                    <span class="ul-checkbox__label">其他</span>
+                </label>
+                <input type="text" class="ul-input" placeholder="请说明" style="margin-left: 10px; width: 200px;">
+            </div>
+        </div>
+
+        <!-- 提交按钮 -->
+        <div class="ul-form__item">
+            <div class="ul-form__actions">
+                <button type="button" class="ul-btn ul-btn-primary">立即提交</button>
+                <button type="button" class="ul-btn">重置</button>
+            </div>
+        </div>
+    </form>
+</div>

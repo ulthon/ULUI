@@ -15,6 +15,7 @@
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 
     &:focus {
+      
         outline: 0;
         border-color: $color-primary-base;
         box-shadow: 0 0 0 2px rgba($color-primary-base, 0.2);
@@ -53,7 +54,9 @@
     }
 
     &__indicator {
-        display: inline-block;
+        display: inline-flex; // 改为 flex 布局
+        align-items: center;    // 垂直居中
+        justify-content: center; // 水平居中
         width: 16px;
         height: 16px;
         border: 1px solid $color-border;
@@ -89,8 +92,7 @@
             height: 10px;
             border: solid white;
             border-width: 0 2px 2px 0;
-            transform: rotate(45deg) translate(-1px, -2px);
-            margin-left: 4px;
+            transform: rotate(45deg) translateY(-1px); // 移除 margin 和部分 translate
         }
     }
 }
@@ -107,7 +109,7 @@
             height: 8px;
             border-radius: 50%;
             background: white;
-            margin: 3px;
+            // 移除 margin
         }
     }
 }

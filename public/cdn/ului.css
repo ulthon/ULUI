@@ -1947,7 +1947,9 @@ template {
 }
 .ul-checkbox__indicator,
 .ul-radio__indicator {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 16px;
   height: 16px;
   border: 1px solid var(--ul-color-border);
@@ -1980,8 +1982,7 @@ input:checked ~ .ul-radio__indicator::after {
   height: 10px;
   border: solid white;
   border-width: 0 2px 2px 0;
-  transform: rotate(45deg) translate(-1px, -2px);
-  margin-left: 4px;
+  transform: rotate(45deg) translateY(-1px);
 }
 
 .ul-radio__indicator {
@@ -1994,7 +1995,6 @@ input:checked ~ .ul-radio__indicator::after {
   height: 8px;
   border-radius: 50%;
   background: white;
-  margin: 3px;
 }
 
 .layui-quote-gray {
@@ -3079,6 +3079,115 @@ input:checked ~ .ul-radio__indicator::after {
   border-radius: 100px;
 }
 
+.ul-form__item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+.ul-form__item:last-child {
+  margin-bottom: 0;
+}
+.ul-form__label {
+  width: 100px;
+  padding: 8px 0;
+  line-height: 1.5;
+  text-align: right;
+  margin-right: 16px;
+  flex-shrink: 0;
+  color: var(--ul-color-text);
+  font-size: 14px;
+}
+.ul-form__control {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.ul-form__actions {
+  padding-left: 116px;
+  display: flex;
+  gap: 16px;
+}
+
+.ul-input-group {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+  position: relative;
+}
+.ul-input-group__prepend, .ul-input-group__append {
+  display: flex;
+  align-items: stretch;
+  background-color: var(--ul-color-bg);
+  border: 1px solid var(--ul-color-border);
+  color: var(--ul-color-text-secondary);
+  flex-shrink: 0;
+  position: relative;
+}
+.ul-input-group__prepend:has(> .ul-btn[class*=ul-btn-]), .ul-input-group__append:has(> .ul-btn[class*=ul-btn-]) {
+  background: none;
+  border: none;
+}
+.ul-input-group__prepend > .ul-btn:not([class*=ul-btn-]), .ul-input-group__append > .ul-btn:not([class*=ul-btn-]) {
+  background: none;
+  border: none;
+  padding: 0 16px;
+  color: inherit;
+}
+.ul-input-group__prepend > .ul-btn[class*=ul-btn-], .ul-input-group__append > .ul-btn[class*=ul-btn-] {
+  border-radius: 0;
+  margin: -1px;
+}
+.ul-input-group__prepend .ul-select, .ul-input-group__append .ul-select {
+  border: none;
+  background: none;
+}
+.ul-input-group__prepend {
+  border-right: 0;
+  border-radius: 4px 0 0 4px;
+}
+.ul-input-group__prepend > .ul-btn[class*=ul-btn-] {
+  border-radius: 4px 0 0 4px;
+}
+.ul-input-group__append {
+  border-left: 0;
+  border-radius: 0 4px 4px 0;
+}
+.ul-input-group__append > .ul-btn[class*=ul-btn-] {
+  border-radius: 0 4px 4px 0;
+}
+.ul-input-group .ul-input {
+  border-radius: 0;
+  flex: 1;
+  min-width: 0;
+}
+.ul-input-group .ul-input:first-child {
+  border-radius: 4px 0 0 4px;
+}
+.ul-input-group .ul-input:last-child {
+  border-radius: 0 4px 4px 0;
+}
+
+@media (max-width: 767.98px) {
+  .ul-form__item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .ul-form__label {
+    width: auto;
+    text-align: left;
+    margin-right: 0;
+    margin-bottom: 8px;
+    padding: 0;
+  }
+  .ul-form__control {
+    padding: 0;
+  }
+  .ul-form__actions {
+    padding-left: 0;
+  }
+}
 /* 简约风格Form */
 .ul-form-basic {
   background-color: var(--ul-color-white);

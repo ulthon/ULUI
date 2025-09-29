@@ -1,0 +1,138 @@
+.ul-form {
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: $space-md;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__label {
+        width: 100px;
+        padding: 8px 0;
+        line-height: 1.5;
+        text-align: right;
+        margin-right: $space-md;
+        flex-shrink: 0;
+        color: $color-text;
+        font-size: $font-size-base;
+    }
+
+    &__control {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__actions {
+        padding-left: 100px + $space-md; // 等于 label 宽度 + 间距
+        display: flex;
+        gap: $space-md;
+    }
+}
+
+// 输入框组
+.ul-input-group {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    position: relative;
+
+    &__prepend,
+    &__append {
+        display: flex;
+        align-items: stretch;
+        background-color: $color-bg;
+        border: 1px solid $color-border;
+        color: $color-text-secondary;
+        flex-shrink: 0;
+        position: relative;
+
+        // 移除容器的样式，让带颜色的按钮完全显示
+        &:has(> .ul-btn[class*="ul-btn-"]) {
+            background: none;
+            border: none;
+        }
+
+        // 默认按钮融入容器
+        > .ul-btn:not([class*="ul-btn-"]) {
+            background: none;
+            border: none;
+            padding: 0 $space-md;
+            color: inherit; // 继承容器的文字颜色
+        }
+
+        // 带颜色的按钮，调整边框和圆角
+        > .ul-btn[class*="ul-btn-"] {
+            border-radius: 0;
+            margin: -1px; // 负边距用于覆盖容器边框
+        }
+
+        .ul-select {
+            border: none;
+            background: none;
+        }
+    }
+
+    &__prepend {
+        border-right: 0;
+        border-radius: $radius-base 0 0 $radius-base;
+
+        > .ul-btn[class*="ul-btn-"] {
+            border-radius: $radius-base 0 0 $radius-base;
+        }
+    }
+
+    &__append {
+        border-left: 0;
+        border-radius: 0 $radius-base $radius-base 0;
+
+        > .ul-btn[class*="ul-btn-"] {
+            border-radius: 0 $radius-base $radius-base 0;
+        }
+    }
+
+    .ul-input {
+        border-radius: 0;
+        flex: 1;
+        min-width: 0;
+
+        &:first-child {
+            border-radius: $radius-base 0 0 $radius-base;
+        }
+
+        &:last-child {
+            border-radius: 0 $radius-base $radius-base 0;
+        }
+    }
+}
+
+// 响应式：手机端
+@include media-breakpoint-down(md) {
+    .ul-form {
+        &__item {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        &__label {
+            width: auto;
+            text-align: left;
+            margin-right: 0;
+            margin-bottom: $space-sm;
+            padding: 0; // 移除桌面端的垂直padding
+        }
+
+        &__control {
+            padding: 0; // 移除桌面端的垂直padding
+        }
+
+        &__actions {
+            padding-left: 0; // 移除为label留出的左边距
+        }
+    }
+}
