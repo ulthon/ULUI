@@ -1,45 +1,126 @@
-<div class="ul-card-data-a ul-card-data" data-repeat="2">
-    <div class="ul-card-data-a-title">
-        509778.80
+<!-- Type A: 余额卡片 -->
+<div class="ul-card-data-a type-a" data-repeat="2">
+    <div class="ul-card-data-a__title">
+        509,778.80
     </div>
-    <div class="ul-card-data-a-options">
-        <div class="ul-card-data-a-item">
-            <i class="layui-icon layui-icon-gift"></i>
+    <div class="ul-card-data-a__options">
+        <div class="ul-card-data-a__item">
+            <i class="ul-card-data-a__icon fa fa-wallet"></i>
             余额
         </div>
-        <div class="ul-card-data-a-item">
-            <div class="layui-btn layui-btn-xs">充值</div>
-            <div class="layui-btn layui-btn-xs">提现</div>
-            <div class="layui-btn layui-btn-xs">记录</div>
+        <div class="ul-card-data-a__item">
+            <button class="ul-btn ul-btn-sm">充值</button>
+            <button class="ul-btn ul-btn-sm">提现</button>
+            <button class="ul-btn ul-btn-sm">记录</button>
         </div>
     </div>
 </div>
-<div class="ul-card-data-b ul-card-data" data-repeat="2">
-    <div class="ul-card-data-b-main">
 
-        <div class="ul-card-data-b-icon layui-icon layui-icon-gift">
-
-        </div>
-        <div class="ul-card-data-b-info">
-            <div class="ul-card-data-b-title">
+<!-- Type B: 数据卡片 -->
+<div class="ul-card-data-a type-b" data-repeat="2">
+    <div class="ul-card-data-a__main">
+        <div class="ul-card-data-a__icon fa fa-chart-line"></div>
+        <div class="ul-card-data-a__info">
+            <div class="ul-card-data-a__subtitle">
                 盈亏总额(元)
             </div>
-            <div class="ul-card-data-b-value">
+            <div class="ul-card-data-a__value">
                 0.00
             </div>
         </div>
     </div>
-
 </div>
-<div class="ul-card-data-c ul-card-data">
 
-    <div class="ul-card-data-c-item" data-repeat="3">
-        <div class="ul-card-data-c-value">
+<!-- Type C: 统计卡片 -->
+<div class="ul-card-data-a type-c">
+    <div class="ul-card-data-a__stat-item" data-repeat="3">
+        <div class="ul-card-data-a__stat-value">
             0
         </div>
-        <div class="ul-card-data-c-title">
+        <div class="ul-card-data-a__stat-title">
             余额
         </div>
+    </div>
+</div>
 
+<!-- 深色主题示例 -->
+<div class="ul-card-data-a type-a dark">
+    <div class="ul-card-data-a__title">
+        509,778.80
+    </div>
+    <div class="ul-card-data-a__options">
+        <div class="ul-card-data-a__item">
+            <i class="ul-card-data-a__icon fa fa-wallet"></i>
+            余额
+        </div>
+    </div>
+</div>
+
+<!-- 紧凑模式示例 -->
+<div class="ul-card-data-a type-b compact">
+    <div class="ul-card-data-a__main">
+        <div class="ul-card-data-a__icon fa fa-chart-bar"></div>
+        <div class="ul-card-data-a__info">
+            <div class="ul-card-data-a__subtitle">
+                紧凑模式
+            </div>
+            <div class="ul-card-data-a__value">
+                1,234.56
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 主题色变体 -->
+<div class="ul-card-data-a type-b success">
+    <div class="ul-card-data-a__main">
+        <div class="ul-card-data-a__icon fa fa-check-circle"></div>
+        <div class="ul-card-data-a__info">
+            <div class="ul-card-data-a__subtitle">
+                Success
+            </div>
+            <div class="ul-card-data-a__value">
+                100%
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ul-card-data-a type-b danger">
+    <div class="ul-card-data-a__main">
+        <div class="ul-card-data-a__icon fa fa-times-circle"></div>
+        <div class="ul-card-data-a__info">
+            <div class="ul-card-data-a__subtitle">
+                Danger
+            </div>
+            <div class="ul-card-data-a__value">
+                -5.2%
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ul-card-data-a type-b warning">
+    <div class="ul-card-data-a__main">
+        <div class="ul-card-data-a__icon fa fa-exclamation-triangle"></div>
+        <div class="ul-card-data-a__info">
+            <div class="ul-card-data-a__subtitle">
+                Warning
+            </div>
+            <div class="ul-card-data-a__value">
+                3 Alerts
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ul-card-data-a type-b info">
+    <div class="ul-card-data-a__main">
+        <div class="ul-card-data-a__icon fa fa-info-circle"></div>
+        <div class="ul-card-data-a__info">
+            <div class="ul-card-data-a__subtitle">
+                Info
+            </div>
+            <div class="ul-card-data-a__value">
+                Updated
+            </div>
+        </div>
     </div>
 </div>

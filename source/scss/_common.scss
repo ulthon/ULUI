@@ -58,14 +58,14 @@ $color-gray-text: var(--ul-color-gray-text);
 
 
 // 主题变体 - 可以使用循环生成所有主题色变体
-$theme-colors: (primary: $color-primary-base,
-  success: $color-success-base,
-  danger: $color-danger-base,
-  warning: $color-warning-base,
-  info: $color-info-base,
-  dark: $color-dark-base,
-  light: $color-light-base,
-  gray: $color-gray-base);
+$theme-colors: ("primary": $color-primary-base,
+  "success": $color-success-base,
+  "danger": $color-danger-base,
+  "warning": $color-warning-base,
+  "info": $color-info-base,
+  "dark": $color-dark-base,
+  "light": $color-light-base,
+  "gray": $color-gray-base);
 
 
 // 中性色与通用色
