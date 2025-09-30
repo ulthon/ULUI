@@ -1,0 +1,164 @@
+.ul-card-profile {
+    &__main {
+        padding: $space-md;
+        background-color: $color-primary-base;
+        color: $color-white;
+        border-radius: $radius-md;
+        position: relative;
+    }
+
+    &__header {
+        font-size: $font-size-xxl;
+        display: flex;
+        margin-bottom: $space-md;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: $space-sm;
+    }
+
+    &__name {
+        font-weight: $font-weight-bold;
+    }
+
+    &__badge {
+        background-color: $color-warning-base;
+        color: $color-white;
+        padding: $space-xs $space-sm;
+        border-radius: $radius-sm;
+        font-size: $font-size-xs;
+        font-weight: $font-weight-bold;
+        line-height: 1;
+    }
+
+    &__field {
+        font-size: $font-size-md;
+        display: flex;
+        margin-bottom: $space-sm;
+        align-items: center;
+        gap: $space-sm;
+    }
+
+    &__icon {
+        flex-shrink: 0;
+        width: 16px;
+        text-align: center;
+    }
+
+    &__value {
+        @include text-ellipsis(1);
+    }
+        &__footer {
+        display: flex;
+        font-size: $font-size-sm;
+        justify-content: space-between;
+        margin-top: $space-md;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: $space-sm;
+        }
+
+    &__meta {
+        color: rgba($color-white, 0.8);
+        }
+
+    &__avatar {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: $space-lg;
+        z-index: 9;
+    }
+
+    // 颜色主题状态类
+    &.primary &__main {
+        background-color: $color-primary-base;
+    }
+
+    &.success &__main {
+        background-color: $color-success-base;
+    }
+
+    &.danger &__main {
+        background-color: $color-danger-base;
+    }
+
+    &.warning &__main {
+        background-color: $color-warning-base;
+    }
+
+    &.info &__main {
+        background-color: $color-info-base;
+    }
+
+    &.dark &__main {
+        background-color: $color-dark-base;
+    }
+
+    &.light &__main {
+        background-color: $color-light-base;
+        color: $color-text;
+    }
+
+    &.gray &__main {
+        background-color: $color-gray-base;
+    }
+
+    // 徽章颜色状态类
+    &.primary &__badge {
+        background-color: $color-primary-base;
+    }
+
+    &.success &__badge {
+        background-color: $color-success-base;
+    }
+
+    &.danger &__badge {
+        background-color: $color-danger-base;
+    }
+
+    &.warning &__badge {
+        background-color: $color-warning-base;
+    }
+
+    &.info &__badge {
+        background-color: $color-info-base;
+    }
+
+    &.dark &__badge {
+        background-color: $color-dark-base;
+    }
+
+    &.light &__badge {
+        background-color: $color-light-base;
+        color: $color-text;
+    }
+
+    &.gray &__badge {
+        background-color: $color-gray-base;
+    }
+
+    // Responsive design
+    @include media-breakpoint-down(md) {
+        &__header {
+            font-size: $font-size-xl;
+            margin-bottom: $space-sm;
+}
+
+        &__field {
+            font-size: $font-size-sm;
+            margin-bottom: $space-xs;
+        }
+
+        &__footer {
+            font-size: $font-size-xs;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: $space-xs;
+        }
+
+        &__avatar {
+            padding: $space-md;
+        }
+    }
+}
+
