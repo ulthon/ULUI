@@ -12,14 +12,13 @@
 
   &:hover {
     box-shadow: $shadow-base;
-    transform: translateY(-2px);
   }
+
 
   // 响应式设计
   @include media-breakpoint-down(md) {
     display: block;
     margin-right: 0;
-    width: 100%;
     padding: $space-md;
   }
 
@@ -70,6 +69,7 @@
 
   &__info {
     flex: 1;
+    min-width: 0;
   }
 
   &__value {
@@ -84,6 +84,7 @@
   &__main {
     @include flex(flex-start, center);
     width: 100%;
+
   }
 
   &__subtitle {
@@ -109,11 +110,6 @@
     @include media-breakpoint-down(sm) {
       padding: $space-md $space-lg;
 
-      &:not(:last-child) {
-        border-right: none;
-        border-bottom: 1px solid $color-border;
-        padding-bottom: $space-lg;
-      }
     }
   }
 
@@ -164,31 +160,7 @@
     padding: $space-md 0;
 
     @include media-breakpoint-down(sm) {
-      flex-direction: column;
       min-width: auto;
-    }
-  }
-
-
-  // 状态修饰符
-  &.dark {
-    background: $color-dark-base;
-    border-color: $color-dark-light;
-    color: $color-dark-text;
-
-    #{&}__title,
-    #{&}__value {
-      color: $color-white;
-    }
-
-    #{&}__subtitle,
-    #{&}__stat-title {
-      color: $color-text-placeholder;
-    }
-
-    #{&}__icon {
-      background: $color-primary-base;
-      box-shadow: 0 4px 8px rgba($color-primary-base, 0.3);
     }
   }
 
