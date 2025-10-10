@@ -35,15 +35,18 @@
         </div>
     </div>
 </div>
-
+{volist name='theme_list' id='vo'} 
 <div class="ul-section">
-    <div class="ul-card-data-simple dark">
+    <div class="ul-card-data-simple {$vo}">
         <div class="ul-card-data-simple__item main">
             <div class="ul-card-data-simple__title">
                 订单数量
             </div>
             <div class="ul-card-data-simple__value">
                 120
+            </div>
+            <div class="ul-card-data-simple__rate up">
+                30%
             </div>
         </div>
         <div class="ul-card-data-simple__item">
@@ -64,3 +67,4 @@
         </div>
     </div>
 </div>
+{/volist}

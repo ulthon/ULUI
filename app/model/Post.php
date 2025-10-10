@@ -220,10 +220,22 @@ class Post extends Model
 
             $php_path = $components_path . '/_index.php';
 
-            $components_data = [];
+            $components_data = [
+                'theme_list' => [
+                    'primary',
+                    'success',
+                    'danger',
+                    'warning',
+                    'info',
+                    'dark',
+                    'light',
+                    'gray',
+                ],
+            ];
 
             if (file_exists($php_path)) {
-                $components_data = require $php_path;
+                $file_data = require $php_path;
+                $components_data = array_merge($components_data, $file_data);
             }
 
             $html_content = View::display(file_get_contents($components_path . '/_index.html'), $components_data);

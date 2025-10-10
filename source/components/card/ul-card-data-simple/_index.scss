@@ -2,7 +2,7 @@
   display: flex;
   gap: $space-md;
   background-color: $color-white;
-  
+
   border-radius: $radius-md;
   box-shadow: $shadow-sm;
   justify-content: flex-start;
@@ -59,33 +59,91 @@
     }
   }
 
-  // Dark 模式
-  &.dark {
-    background-color: $color-dark-base;
-    box-shadow: none;
-    padding: $space-md;
+  // 主题色变体
+  @each $theme,
+  $color in $theme-colors {
+    &.#{$theme} {
+      background-color: $color;
+      box-shadow: none;
+      padding: $space-md;
 
-    .ul-card-data-simple__item.line {
-      border-color: $color-dark-hover;
-    }
+      .ul-card-data-simple__item.line {
+        border-color: rgba($color-white, 0.2);
+      }
 
-    .ul-card-data-simple__title,
-    .ul-card-data-simple__rate {
-      color: $color-text-placeholder;
-    }
-
-    .ul-card-data-simple__value {
-      color: $color-white;
-    }
-
-
-    .ul-card-data-simple__item:first-child {
-      background-color: $color-dark-text;
+      .ul-card-data-simple__title,
+      .ul-card-data-simple__rate {
+        color: $color-white;
+      }
 
       .ul-card-data-simple__value {
-        color: $color-dark-base;
+        color: $color-white;
+      }
+
+
+      .ul-card-data-simple__item:first-child {
+        background-color: $color-white;
+
+        .ul-card-data-simple__title,
+        .ul-card-data-simple__rate {
+          color: $color;
+        }
+
+        .ul-card-data-simple__value {
+          color: $color;
+        }
+      }
+
+      // 特殊处理 light 和 gray 主题的文本颜色
+      @if $theme=='light' {
+
+        .ul-card-data-simple__title,
+        .ul-card-data-simple__rate {
+          color: rgba($color-light-text, 0.7);
+        }
+
+        .ul-card-data-simple__value {
+          color: $color-light-text;
+        }
+
+        .ul-card-data-simple__item:first-child {
+          background-color: $color-white;
+
+          .ul-card-data-simple__title,
+          .ul-card-data-simple__rate {
+            color: $color-black;
+          }
+
+          .ul-card-data-simple__value {
+            color: $color-black;
+          }
+        }
+      }
+
+      @else if $theme=='gray' {
+
+        .ul-card-data-simple__title,
+        .ul-card-data-simple__rate {
+          color: rgba($color-gray-text, 0.7);
+        }
+
+        .ul-card-data-simple__value {
+          color: $color-gray-text;
+        }
+
+        .ul-card-data-simple__item:first-child {
+          background-color: $color-white;
+
+          .ul-card-data-simple__title,
+          .ul-card-data-simple__rate {
+            color: $color-black;
+          }
+
+          .ul-card-data-simple__value {
+            color: $color-black;
+          }
+        }
       }
     }
-
   }
 }
