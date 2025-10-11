@@ -1,50 +1,56 @@
 .ul-card-money {
-    padding: 26px;
-    background-color: #1E9FFF;
-    border-radius: 16px;
-    color: #fff;
+    padding: $space-lg;
+    border-radius: $radius-xl;
+    color: $color-white;
+    background-color: $color-primary-base; // 默认主题
 
-    .main {
 
-        .title {
-            font-weight: 600;
-            font-size: 12px;
+    &__main {
+        .ul-card-money__title {
+            font-weight: $font-weight-bold;
+            font-size: $font-size-sm;
         }
 
-        .option {
+        .ul-card-money__option {
             display: flex;
             align-items: flex-end;
             justify-content: flex-start;
-            margin-top: 10px;
+            margin-top: $space-sm;
 
-            .value {
-                font-size: 26px;
-                font-weight: 600;
+            .ul-card-money__value {
+                font-size: 26px; // 无对应变量，暂时保留
+                font-weight: $font-weight-bold;
             }
 
-            .button {
-                margin-left: 16px;
-                padding-bottom: 6px;
+            .ul-card-money__button {
+                margin-left: $space-md;
+                padding-bottom: $space-sm;
             }
         }
-
-
     }
 
-    .footer {
+    &__footer {
         display: flex;
         align-items: center;
         justify-content: space-between;
         text-align: center;
-        margin-top: 18px;
+        margin-top: $space-lg;
 
-        .label {
-            font-size: 12px;
+        .ul-card-money__label {
+            font-size: $font-size-sm;
         }
 
-        .value {
-            margin-top: 8px;
-            font-size: 16px;
+        .ul-card-money__value {
+            margin-top: $space-sm;
+            font-size: $font-size-lg;
+        }
+    }
+
+    // 主题色变体
+    @each $theme, $colors in $theme-color-variants {
+        &.#{$theme} {
+            background-color: map-get($colors, "base");
+            color: map-get($colors, "text");
         }
     }
 }

@@ -3405,42 +3405,74 @@ input:checked ~ .ul-radio__indicator::after {
 }
 
 .ul-card-money {
-  padding: 26px;
-  background-color: #1E9FFF;
-  border-radius: 16px;
-  color: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  color: var(--ul-color-white);
+  background-color: var(--ul-color-primary-base);
 }
-.ul-card-money .main .title {
-  font-weight: 600;
+.ul-card-money__main .ul-card-money__title {
+  font-weight: 700;
   font-size: 12px;
 }
-.ul-card-money .main .option {
+.ul-card-money__main .ul-card-money__option {
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
-  margin-top: 10px;
+  margin-top: 8px;
 }
-.ul-card-money .main .option .value {
+.ul-card-money__main .ul-card-money__option .ul-card-money__value {
   font-size: 26px;
-  font-weight: 600;
+  font-weight: 700;
 }
-.ul-card-money .main .option .button {
+.ul-card-money__main .ul-card-money__option .ul-card-money__button {
   margin-left: 16px;
-  padding-bottom: 6px;
+  padding-bottom: 8px;
 }
-.ul-card-money .footer {
+.ul-card-money__footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   text-align: center;
-  margin-top: 18px;
+  margin-top: 24px;
 }
-.ul-card-money .footer .label {
+.ul-card-money__footer .ul-card-money__label {
   font-size: 12px;
 }
-.ul-card-money .footer .value {
+.ul-card-money__footer .ul-card-money__value {
   margin-top: 8px;
   font-size: 16px;
+}
+.ul-card-money.primary {
+  background-color: var(--ul-color-primary-base);
+  color: var(--ul-color-primary-text);
+}
+.ul-card-money.success {
+  background-color: var(--ul-color-success-base);
+  color: var(--ul-color-success-text);
+}
+.ul-card-money.danger {
+  background-color: var(--ul-color-danger-base);
+  color: var(--ul-color-danger-text);
+}
+.ul-card-money.warning {
+  background-color: var(--ul-color-warning-base);
+  color: var(--ul-color-warning-text);
+}
+.ul-card-money.info {
+  background-color: var(--ul-color-info-base);
+  color: var(--ul-color-info-text);
+}
+.ul-card-money.dark {
+  background-color: var(--ul-color-dark-base);
+  color: var(--ul-color-dark-text);
+}
+.ul-card-money.light {
+  background-color: var(--ul-color-light-base);
+  color: var(--ul-color-light-text);
+}
+.ul-card-money.gray {
+  background-color: var(--ul-color-gray-base);
+  color: var(--ul-color-gray-text);
 }
 
 .ul-card-qrcode {

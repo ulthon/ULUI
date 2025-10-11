@@ -1,29 +1,29 @@
-<div class="ul-card-money">
-    <div class="main">
-        <div class="title">可提现收入</div>
-        <div class="option">
-            <div class="value">5675.05</div>
-            <div class="button">
-                <div class="layui-btn layui-btn-sm layui-btn-warm layui-btn-radius layui-btn-xs">提现</div>
+{volist name='theme_list' id='vo'}
+<div class="ul-section">
+    <div class="ul-card-money {$vo}">
+        <div class="ul-card-money__main">
+            <div class="ul-card-money__title">卡片余额 (元)</div>
+            <div class="ul-card-money__option">
+                <div class="ul-card-money__value">6,688.00</div>
+                <div class="ul-card-money__button">
+                    <div class="ul-btn ul-btn-mini">查看详情</div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="footer">
-        <div class="item">
-            <div class="label">
-                总收入（元）
+        <div class="ul-card-money__footer">
+            <div class="ul-card-money__item">
+                <div class="ul-card-money__label">昨日收益</div>
+                <div class="ul-card-money__value">+12.00</div>
             </div>
-            <div class="value">
-                9788.6
+            <div class="ul-card-money__item">
+                <div class="ul-card-money__label">本月收益</div>
+                <div class="ul-card-money__value">+126.00</div>
             </div>
-        </div>
-        <div class="item">
-            <div class="label">
-                已提现（元）
-            </div>
-            <div class="value">
-                978.6
+            <div class="ul-card-money__item">
+                <div class="ul-card-money__label">累计收益</div>
+                <div class="ul-card-money__value">+1,230.00</div>
             </div>
         </div>
     </div>
 </div>
+{/volist}

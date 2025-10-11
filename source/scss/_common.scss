@@ -67,6 +67,58 @@ $theme-colors: ("primary": $color-primary-base,
   "light": $color-light-base,
   "gray": $color-gray-base);
 
+// 包含所有变体的主题色集合
+$theme-color-variants: (
+  "primary": (
+    "base": $color-primary-base,
+    "hover": $color-primary-hover,
+    "light": $color-primary-light,
+    "text": $color-primary-text
+  ),
+  "success": (
+    "base": $color-success-base,
+    "hover": $color-success-hover,
+    "light": $color-success-light,
+    "text": $color-success-text
+  ),
+  "danger": (
+    "base": $color-danger-base,
+    "hover": $color-danger-hover,
+    "light": $color-danger-light,
+    "text": $color-danger-text
+  ),
+  "warning": (
+    "base": $color-warning-base,
+    "hover": $color-warning-hover,
+    "light": $color-warning-light,
+    "text": $color-warning-text
+  ),
+  "info": (
+    "base": $color-info-base,
+    "hover": $color-info-hover,
+    "light": $color-info-light,
+    "text": $color-info-text
+  ),
+  "dark": (
+    "base": $color-dark-base,
+    "hover": $color-dark-hover,
+    "light": $color-dark-light,
+    "text": $color-dark-text
+  ),
+  "light": (
+    "base": $color-light-base,
+    "hover": $color-light-hover,
+    "light": $color-light-light,
+    "text": $color-light-text
+  ),
+  "gray": (
+    "base": $color-gray-base,
+    "hover": $color-gray-hover,
+    "light": $color-gray-light,
+    "text": $color-gray-text
+  )
+);
+
 
 // 中性色与通用色
 $color-white: var(--ul-color-white);
