@@ -1,96 +1,82 @@
 .ul-card-file {
-    background-color: #fff;
+    box-sizing: border-box;
     width: 240px;
-    color: #000 !important;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+    background-color: $color-white;
     cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    flex-direction: column;
 
-    box-shadow: 0 0 2px #bbb;
+    &:hover {
+        box-shadow: $shadow-base;
+        border-color: $color-primary-base;
+        transform: translateY(-2px);
+    }
 
-    .main {
+
+    &__main {
         display: flex;
+        justify-content: space-between;
         align-items: flex-start;
-        justify-content: space-between;
-        padding: 15px 15px 5px 15px;
-        height: 60px;
-
-        .info {
-
-            .name {
-                overflow: hidden;
-                text-overflow: ellipsis;
-                display: -webkit-box;
-                -webkit-line-clamp: 2;
-                -webkit-box-orient: vertical;
-                width: 160px;
-            }
-
-            .desc {
-                color: #bbb;
-                font-weight: normal;
-                font-size: 12px;
-                margin-top: 5px;
-            }
-        }
-
-
-        .icon {
-            font-size: 40px;
-            color: #999;
-            width: 40px;
-            text-align: center;
-
-            &.file {
-                color: #bbb;
-            }
-
-            &.excel {
-                color: rgb(32, 115, 70);
-            }
-
-            &.zip {
-                color: rgb(139, 87, 42);
-            }
-
-            &.word {
-                color: rgb(44, 86, 154);
-            }
-
-            &.powerpoint {
-                color: rgb(242, 97, 63);
-            }
-
-            &.pdf {
-                color: rgb(250, 81, 81);
-            }
-
-            &.video {
-                color: #7c8eee;
-            }
-
-            &.audio {
-                color: #f16c00;
-            }
-
-            &.image {
-                color: #f6ad00;
-            }
-
-            &.text {
-                color: #8289ad;
-            }
-
-            &.link {
-                color: #4876f9;
-            }
-        }
+        padding: $space-md;
     }
 
-    .footer {
+    &__info {
+        flex: 1;
+        min-width: 0;
+        margin-right: $space-sm;
+    }
+
+    &__name {
+        font-size: $font-size-md;
+        color: $color-text;
+        font-weight: $font-weight-medium;
+        @include text-ellipsis(2);
+        margin-bottom: $space-xs;
+        line-height: $line-height-base;
+        min-height: calc(#{$font-size-md} * #{$line-height-base} * 2);
+    }
+
+    &__desc {
+        font-size: $font-size-sm;
+        color: $color-text-secondary;
+    }
+
+    &__icon {
+        font-size: 48px;
+        flex-shrink: 0;
+        color: $color-text-placeholder;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__footer {
         display: flex;
         justify-content: space-between;
-        font-size: 12px;
-        color: #999;
-        border-top: 1px solid #eee;
-        padding: 5px 15px 5px 15px;
+        padding: $space-sm $space-md;
+        font-size: $font-size-sm;
+        color: $color-text-secondary;
+        border-top: 1px solid $color-border;
     }
+
+    // File type variants
+    &.excel { .ul-card-file__icon { color: #1D6F42; } }
+    &.zipper { .ul-card-file__icon { color: #E8CA0E; } }
+    &.word { .ul-card-file__icon { color: #2A5699; } }
+    &.pdf { .ul-card-file__icon { color: #D93025; } }
+    &.powerpoint { .ul-card-file__icon { color: #D24625; } }
+    &.audio { .ul-card-file__icon { color: #F47C00; } }
+    &.code { .ul-card-file__icon { color: #7E57C2; } }
+    &.image { .ul-card-file__icon { color: #4285F4; } }
+    &.video { .ul-card-file__icon { color: #E53935; } }
+    &.text { .ul-card-file__icon { color: #5F6368; } }
+    &.file { .ul-card-file__icon { color: $color-text-placeholder; } }
+    &.link { .ul-card-file__icon { color: $color-primary-base; } }
 }
