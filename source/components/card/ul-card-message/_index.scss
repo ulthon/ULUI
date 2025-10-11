@@ -1,43 +1,72 @@
 .ul-card-message {
+  background-color: $color-white;
+  border-radius: $radius-md;
+  box-shadow: $shadow-sm;
+  padding: $space-md;
+  border: 1px solid $color-border;
 
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: $space-sm;
+    margin-bottom: $space-sm;
+    border-bottom: 1px solid $color-border;
+  }
 
-    border-radius   : 10px 10px 0 0;
-    background-color: #fff;
+  &__title {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    color: $color-text;
+  }
 
-    .header {
-        padding        : 15px;
-        display        : flex;
-        align-items    : center;
-        justify-content: space-between;
-        font-size      : 14px;
-        font-weight    : 600;
-        border-bottom  : 2px solid #eee;
+  &__status {
+    font-size: $font-size-sm;
+    color: $color-text-secondary;
+  }
+
+  &__body {
+    margin-bottom: $space-md;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: $space-sm;
+    font-size: $font-size-base;
+
+    &:last-child {
+      margin-bottom: 0;
     }
+  }
 
-    .body {
-        padding: 15px;
-        padding-bottom: 0;
-        .item {
-            display        : flex;
-            align-items    : flex-start;
-            justify-content: flex-start;
-            line-height    : 1.8;
-            margin-bottom  : 10px;
+  &__item-title {
+    color: $color-text-secondary;
+    flex-shrink: 0;
+    margin-right: $space-sm;
+    width: 60px;
+  }
 
-            .item-title {
-                width: 90px;
-                color: #999;
-            }
+  &__item-value {
+    color: $color-text;
+    word-break: break-all;
+  }
 
-            .item-value {
-                white-space: normal;
-                width      : calc(100% - 90px);
-            }
-        }
-    }
+  &__footer {
+    @include flex(space-between, center);
+    gap: $space-sm;
+    padding-top: $space-md;
+    border-top: 1px solid $color-border;
+  }
 
-    .footer {
-        text-align: right;
-        padding   : 15px
-    }
+  &__footer-left {
+    font-size: $font-size-sm;
+    color: $color-text-secondary;
+  }
+
+  &__footer-right {
+    @include flex(flex-end, center);
+    gap: $space-sm;
+  }
 }

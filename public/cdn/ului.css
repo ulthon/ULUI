@@ -3337,40 +3337,71 @@ input:checked ~ .ul-radio__indicator::after {
 }
 
 .ul-card-message {
-  border-radius: 10px 10px 0 0;
-  background-color: #fff;
+  background-color: var(--ul-color-white);
+  border-radius: 6px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
+  padding: 16px;
+  border: 1px solid var(--ul-color-border);
 }
-.ul-card-message .header {
-  padding: 15px;
+.ul-card-message__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 14px;
-  font-weight: 600;
-  border-bottom: 2px solid #eee;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--ul-color-border);
 }
-.ul-card-message .body {
-  padding: 15px;
-  padding-bottom: 0;
+.ul-card-message__title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ul-color-text);
 }
-.ul-card-message .body .item {
+.ul-card-message__status {
+  font-size: 12px;
+  color: var(--ul-color-text-secondary);
+}
+.ul-card-message__body {
+  margin-bottom: 16px;
+}
+.ul-card-message__item {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  line-height: 1.8;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  font-size: 14px;
 }
-.ul-card-message .body .item .item-title {
-  width: 90px;
-  color: #999;
+.ul-card-message__item:last-child {
+  margin-bottom: 0;
 }
-.ul-card-message .body .item .item-value {
-  white-space: normal;
-  width: calc(100% - 90px);
+.ul-card-message__item-title {
+  color: var(--ul-color-text-secondary);
+  flex-shrink: 0;
+  margin-right: 8px;
+  width: 60px;
 }
-.ul-card-message .footer {
-  text-align: right;
-  padding: 15px;
+.ul-card-message__item-value {
+  color: var(--ul-color-text);
+  word-break: break-all;
+}
+.ul-card-message__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 8px;
+  padding-top: 16px;
+  border-top: 1px solid var(--ul-color-border);
+}
+.ul-card-message__footer-left {
+  font-size: 12px;
+  color: var(--ul-color-text-secondary);
+}
+.ul-card-message__footer-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  gap: 8px;
 }
 
 .ul-card-money {
