@@ -2,7 +2,7 @@
   display: inline-block;
   height: 38px;
   line-height: 38px;
-  padding: 0 18px;
+  padding: 0 $space-md;
   background-color: $color-white;
   color: $color-text;
   white-space: nowrap;
@@ -22,6 +22,7 @@
   &:hover {
     opacity: 0.8;
   }
+
 
   &.disabled,
   &:disabled {
@@ -58,40 +59,35 @@
   &-mini {
     height: 24px;
     line-height: 24px;
-    padding: 0 8px;
+    padding: 0 $space-sm;
     font-size: $font-size-xs;
   }
 
   &-sm {
     height: 30px;
     line-height: 30px;
-    padding: 0 10px;
+    padding: 0 12px;
     font-size: $font-size-sm;
   }
 
   &-lg {
     height: 44px;
     line-height: 44px;
-    padding: 0 25px;
+    padding: 0 $space-lg;
     font-size: $font-size-lg;
   }
 
   &.fluid {
-    width: 100%;
+    width: calc(100% - #{$space-md} * 2);
     display: block;
+    margin-right: 0;
+    margin-left: 0;
   }
 
-  $colors: (primary: ($color-primary-base, $color-primary-text),
-    success: ($color-success-base, $color-success-text),
-    danger: ($color-danger-base, $color-danger-text),
-    warning: ($color-warning-base, $color-warning-text),
-    info: ($color-info-base, $color-info-text));
-
   @each $name,
-  $value in $colors {
-    $main-color: nth($value, 1);
-    $text-color: nth($value, 2);
-
+  $value in $theme-color-variants {
+    $main-color: map-get($value, "base");
+    $text-color: map-get($value, "text");
 
     &-#{$name} {
       background-color: $main-color;

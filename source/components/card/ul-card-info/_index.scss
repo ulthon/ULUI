@@ -1,0 +1,62 @@
+.ul-card-info {
+    background-color: $color-white;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-base;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+        height: 120px;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__body {
+        padding: $space-md;
+    }
+
+    &__title {
+        font-size: $font-size-xl;
+        font-weight: $font-weight-bold;
+        color: $color-text;
+        text-align: center;
+    }
+
+    &__line {
+        height: 1px;
+        background-color: $color-border;
+        margin: $space-md 0;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: $space-sm;
+    }
+
+    &__info-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: $font-size-base;
+    }
+
+    &__info-title {
+        color: $color-text-secondary;
+    }
+
+    &__info-value {
+        color: $color-text;
+        font-weight: $font-weight-medium;
+    }
+
+    &__footer {
+        padding: 0 $space-md $space-md;
+    }
+}

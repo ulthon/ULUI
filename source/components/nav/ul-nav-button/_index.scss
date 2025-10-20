@@ -17,7 +17,7 @@
         margin-right: $space-sm;
 
         .icon {
-            font-size: 38px; // _common.scss 中没有对应的大尺寸图标变量，暂时保留
+            font-size: $font-size-xxxl;
             color: $color-text-placeholder;
         }
     }
