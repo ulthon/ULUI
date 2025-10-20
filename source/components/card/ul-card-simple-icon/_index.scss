@@ -1,32 +1,86 @@
 .ul-card-simple-icon {
-    display: inline-block;
-    margin-right: 15px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 12px 0 #bbb;
-    border-radius: 4px;
-    border: 1px solid #ebeef5;
-    background-color: #fff;
-    box-sizing: border-box;
-    width: 100px;
-    padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: $space-md;
+  margin: $space-sm;
+  border-radius: $radius-md;
+  background-color: $color-white;
+  box-shadow: $shadow-sm;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  flex-shrink: 0;
 
-    text-align: center;
 
-    .ul-card-simple-icon-image {
-        width: 80px;
-        height: 80px;
-        background-size: cover;
-        background-position: center;
-        display: inline-block;
+  &:hover {
+    box-shadow: $shadow-base;
+    transform: translateY(-2px);
+  }
+
+  &__image {
+    width: 48px;
+    height: 48px;
+    border-radius: $radius-circle;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: $space-sm;
+    background-color: $color-bg;
+  }
+
+  &__title {
+    font-size: $font-size-base;
+    color: $color-text;
+  }
+
+  // 选中状态
+  &.selected {
+    border: 1px solid $color-primary-base;
+    box-shadow: 0 0 0 2px rgba($color-primary-base, 0.2);
+  }
+
+  // 激活状态
+  &.active {
+    background-color: $color-primary-light;
+
+    .ul-card-simple-icon__title {
+      color: $color-primary-base;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  // 禁用状态
+  &.disabled {
+    cursor: not-allowed;
+    background-color: $color-bg;
+    opacity: 0.7;
+
+    &:hover {
+      box-shadow: $shadow-sm;
+      transform: none;
     }
 
-    .ul-card-simple-icon-title {
-        border-top: 2px solid #ebeef5;
-        margin-top: 8px;
-        padding-top: 8px;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
+    .ul-card-simple-icon__title {
+      color: $color-text-disabled;
+    }
+  }
+
+  // 响应式设计
+  @include media-breakpoint-down(md) {
+    width: auto;
+    height: auto;
+    padding: $space-sm;
+    flex: 1 1 calc(33.333% - #{$space-sm});
+    min-width: 90px;
+
+    &__image {
+      width: 40px;
+      height: 40px;
     }
 
+    &__title {
+      font-size: $font-size-sm;
+    }
+  }
 }

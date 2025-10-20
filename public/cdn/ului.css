@@ -3552,32 +3552,75 @@ input:checked ~ .ul-radio__indicator::after {
   }
 }
 .ul-card-simple-icon {
-  display: inline-block;
-  margin-right: 15px;
-  margin-bottom: 15px;
-  box-shadow: 0 2px 12px 0 #bbb;
-  border-radius: 4px;
-  border: 1px solid #ebeef5;
-  background-color: #fff;
-  box-sizing: border-box;
-  width: 100px;
-  padding: 10px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  margin: 8px;
+  border-radius: 6px;
+  background-color: var(--ul-color-white);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  flex-shrink: 0;
 }
-.ul-card-simple-icon .ul-card-simple-icon-image {
-  width: 80px;
-  height: 80px;
+.ul-card-simple-icon:hover {
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+.ul-card-simple-icon__image {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
   background-size: cover;
   background-position: center;
-  display: inline-block;
+  margin-bottom: 8px;
+  background-color: var(--ul-color-bg);
 }
-.ul-card-simple-icon .ul-card-simple-icon-title {
-  border-top: 2px solid #ebeef5;
-  margin-top: 8px;
-  padding-top: 8px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+.ul-card-simple-icon__title {
+  font-size: 14px;
+  color: var(--ul-color-text);
+}
+.ul-card-simple-icon.selected {
+  border: 1px solid var(--ul-color-primary-base);
+  box-shadow: 0 0 0 2px rgba(var(--ul-color-primary-base), 0.2);
+}
+.ul-card-simple-icon.active {
+  background-color: var(--ul-color-primary-light);
+}
+.ul-card-simple-icon.active .ul-card-simple-icon__title {
+  color: var(--ul-color-primary-base);
+  font-weight: 700;
+}
+.ul-card-simple-icon.disabled {
+  cursor: not-allowed;
+  background-color: var(--ul-color-bg);
+  opacity: 0.7;
+}
+.ul-card-simple-icon.disabled:hover {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
+  transform: none;
+}
+.ul-card-simple-icon.disabled .ul-card-simple-icon__title {
+  color: var(--ul-color-text-placeholder);
+}
+@media (max-width: 767.98px) {
+  .ul-card-simple-icon {
+    width: auto;
+    height: auto;
+    padding: 8px;
+    flex: 1 1 calc(33.333% - 8px);
+    min-width: 90px;
+  }
+  .ul-card-simple-icon__image {
+    width: 40px;
+    height: 40px;
+  }
+  .ul-card-simple-icon__title {
+    font-size: 12px;
+  }
 }
 
 .ul-data-card {
