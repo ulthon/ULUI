@@ -1,51 +1,137 @@
-.ul-data-card {
-    margin       : 15px;
-    padding      : 15px;
-    box-shadow   : 0 0 3px #bbb;
-    border-radius: 5px;
+.ul-card-data {
+  background-color: $color-white;
+  border: 1px solid $color-border;
+  border-radius: $radius-base;
+  padding: $space-md;
+  display: flex;
+  flex-direction: column;
+  border-top: 3px solid transparent; // 为状态色预留位置
 
-    .header {
-        display        : flex;
-        align-items    : center;
-        justify-content: space-between;
-        padding-bottom : 10px;
-        border-bottom  : 1px solid #eee;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: $space-sm;
+    border-bottom: 1px solid $color-border;
+    flex-wrap: wrap; // 允许内容换行
+    gap: $space-sm; // 设置元素间距
+  }
 
+  &__tag {
+    font-size: $font-size-sm;
+    padding: 2px $space-xs;
+    border-radius: $radius-sm;
+    line-height: 1.5;
+  }
+
+  &__body {
+    padding: $space-md 0;
+    flex: 1;
+  }
+
+  &__main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); // 固定为两列，更整齐
+    gap: $space-md;
+  }
+
+  &__item {
+    display: flex; // 改回 flex 布局
+    justify-content: flex-start; // 两端对齐
+    align-items: baseline;
+    gap: $space-sm;
+  }
+
+  &__item-title {
+    color: $color-text-secondary;
+    white-space: nowrap; // 防止标题换行
+  }
+
+
+  &__item-value {
+    font-weight: $font-weight-bold;
+    text-align: right; // 值靠右对齐
+  }
+
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: $space-sm;
+    border-top: 1px solid $color-border;
+    flex-wrap: wrap; // 允许内容换行
+    gap: $space-md;
+  }
+  
+
+  &__footer-left,
+  &__footer-right {
+    display: flex;
+    align-items: center;
+    gap: $space-sm;
+    flex-wrap: wrap; // 内部元素也允许换行
+  }
+
+  // 状态变体
+  &.primary {
+    border-top-color: $color-primary-base;
+    .ul-card-data__tag {
+      background-color: $color-primary-light;
+      color: $color-primary-base;
+    }
+  }
+
+  &.success {
+    border-top-color: $color-success-base;
+    .ul-card-data__tag {
+      background-color: $color-success-light;
+      color: $color-success-base;
+    }
+  }
+
+  &.danger {
+    border-top-color: $color-danger-base;
+    .ul-card-data__tag {
+      background-color: $color-danger-light;
+      color: $color-danger-base;
+    }
+  }
+
+  &.warning {
+    border-top-color: $color-warning-base;
+    .ul-card-data__tag {
+      background-color: $color-warning-light;
+      color: $color-warning-base;
+    }
+  }
+
+  &.info {
+    border-top-color: $color-info-base;
+    .ul-card-data__tag {
+      background-color: $color-info-light;
+      color: $color-info-base;
+    }
+  }
+
+  &.dark {
+    border-top-color: $color-dark-base;
+    .ul-card-data__tag {
+      background-color: $color-dark-light;
+      color: $color-dark-base;
+    }
+  }
+
+  // 响应式设计
+  @include media-breakpoint-down(sm) {
+    padding: $space-sm;
+
+    &__main {
+      gap: $space-sm;
     }
 
-    .body {
-        padding: 10px 0;
-
-        .main {
-            display        : flex;
-            align-items    : flex-start;
-            justify-content: flex-start;
-            flex-wrap      : wrap;
-
-            .item {
-                min-width    : 50%;
-                display      : flex;
-                align-items  : center;
-                margin-bottom: 10px;
-
-                .item-title {
-                    font-size  : 14px;
-                    font-weight: 600;
-                }
-
-                .item-value {
-                    font-size: 14px;
-                }
-            }
-        }
-
+    &__item {
+      // 移动端保持 grid 布局，效果依然良好
     }
-
-    .footer {
-        border-top     : 1px solid #eee;
-        padding-top    : 10px;
-        display        : flex;
-        justify-content: space-between;
-        align-items    : center
-    }
+  }
 }
