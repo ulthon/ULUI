@@ -1,63 +1,94 @@
 .ul-card-qrcode {
+    width: 280px;
+    box-shadow: $shadow-base;
+    border-radius: $radius-lg;
+    margin-right: $space-lg;
+    margin-bottom: $space-lg;
+    background-color: $color-white;
+    transition: all .3s ease;
 
-    $borderColor: #eee;
-
-    position: relative;
-    min-height: 100px;
-    display: inline-block;
-    background-color: $borderColor;
-    padding: 10px;
-
-    .header {
-        padding: 20px;
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: $shadow-lg;
     }
 
-    .body {
-        position: relative;
-
-        .main {
-            padding: 36px;
-
-            .img {
-                width: 100%;
-
-            }
-
-        }
-    }
-
+    
     &__main {
-        background-color: #fff;
-        border-radius: 20px;
-        overflow: hidden;
+        position: relative;
     }
 
-    &__point-left {
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        border-radius: 20px;
-        background-color: $borderColor;
-        left: -10px;
-        top: 0;
+    &__header {
+        padding: $space-lg;
+        background-color: $color-bg;
+        border-radius: $radius-lg $radius-lg 0 0;
     }
 
+    &__body {
+        position: relative;
+        padding: $space-lg;
+    }
+
+    &__point-left,
     &__point-right {
         position: absolute;
         width: 20px;
         height: 20px;
-        border-radius: 20px;
-        background-color: $borderColor;
+        background-color: $bg-color-page;
+        border-radius: $radius-circle;
+        top: -10px;
+    }
+
+    &__point-left {
+        left: -10px;
+    }
+
+    &__point-right {
         right: -10px;
-        top: 0;
     }
 
     &__line {
         position: absolute;
+        top: 0;
+        left: $space-lg;
+        right: $space-lg;
+        height: 1px;
+        background-image: linear-gradient(to right, $color-border 0%, $color-border 50%, transparent 50%);
+        background-size: 12px 1px;
+        background-repeat: repeat-x;
+    }
+
+    &__content {
+        text-align: center;
+    }
+
+    &__img {
+        width: 160px;
+        height: 160px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    &__desc {
+        margin-top: $space-md;
+        font-size: $font-size-sm;
+        color: $color-text-secondary;
+    }
+
+    // 状态
+    &.primary {
+        .ul-card-qrcode__header {
+            background-color: $color-primary-light;
+        }
+        .ul-avatar-sidebar-list-item-title {
+            color: $color-primary-base;
+        }
+    }
+}
+
+// 响应式
+@include media-breakpoint-down(sm) {
+    .ul-card-qrcode {
         width: 100%;
-        height: 0;
-        border-bottom: 2px dashed $borderColor;
-        top: 8px;
-        left: 0;
+        margin-right: 0;
     }
 }

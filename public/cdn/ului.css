@@ -3476,56 +3476,81 @@ input:checked ~ .ul-radio__indicator::after {
 }
 
 .ul-card-qrcode {
-  position: relative;
-  min-height: 100px;
-  display: inline-block;
-  background-color: #eee;
-  padding: 10px;
+  width: 280px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-right: 24px;
+  margin-bottom: 24px;
+  background-color: var(--ul-color-white);
+  transition: all 0.3s ease;
 }
-.ul-card-qrcode .header {
-  padding: 20px;
-}
-.ul-card-qrcode .body {
-  position: relative;
-}
-.ul-card-qrcode .body .main {
-  padding: 36px;
-}
-.ul-card-qrcode .body .main .img {
-  width: 100%;
+.ul-card-qrcode:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
 }
 .ul-card-qrcode__main {
-  background-color: #fff;
-  border-radius: 20px;
-  overflow: hidden;
+  position: relative;
+}
+.ul-card-qrcode__header {
+  padding: 24px;
+  background-color: var(--ul-color-bg);
+  border-radius: 8px 8px 0 0;
+}
+.ul-card-qrcode__body {
+  position: relative;
+  padding: 24px;
+}
+.ul-card-qrcode__point-left, .ul-card-qrcode__point-right {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--ul-bg-color-page);
+  border-radius: 50%;
+  top: -10px;
 }
 .ul-card-qrcode__point-left {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  border-radius: 20px;
-  background-color: #eee;
   left: -10px;
-  top: 0;
 }
 .ul-card-qrcode__point-right {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  border-radius: 20px;
-  background-color: #eee;
   right: -10px;
-  top: 0;
 }
 .ul-card-qrcode__line {
   position: absolute;
-  width: 100%;
-  height: 0;
-  border-bottom: 2px dashed #eee;
-  top: 8px;
-  left: 0;
+  top: 0;
+  left: 24px;
+  right: 24px;
+  height: 1px;
+  background-image: linear-gradient(to right, var(--ul-color-border) 0%, var(--ul-color-border) 50%, transparent 50%);
+  background-size: 12px 1px;
+  background-repeat: repeat-x;
+}
+.ul-card-qrcode__content {
+  text-align: center;
+}
+.ul-card-qrcode__img {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto;
+  display: block;
+}
+.ul-card-qrcode__desc {
+  margin-top: 16px;
+  font-size: 12px;
+  color: var(--ul-color-text-secondary);
+}
+.ul-card-qrcode.primary .ul-card-qrcode__header {
+  background-color: var(--ul-color-primary-light);
+}
+.ul-card-qrcode.primary .ul-avatar-sidebar-list-item-title {
+  color: var(--ul-color-primary-base);
 }
 
+@media (max-width: 575.98px) {
+  .ul-card-qrcode {
+    width: 100%;
+    margin-right: 0;
+  }
+}
 .ul-card-simple-icon {
   display: inline-block;
   margin-right: 15px;
