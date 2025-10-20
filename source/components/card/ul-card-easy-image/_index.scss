@@ -1,0 +1,37 @@
+.ul-card-easy-image {
+    box-sizing: border-box;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+    background-color: $color-white;
+    box-shadow: $shadow-sm;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: $shadow-base;
+    }
+
+    &__main {
+        height: 160px;
+        background-color: $color-bg;
+    }
+
+    &__footer {
+        @include flex(space-between, center);
+        padding: $space-sm $space-md;
+    }
+
+    &__title {
+        font-size: $font-size-base;
+        color: $color-text;
+        font-weight: $font-weight-medium;
+        @include text-ellipsis;
+    }
+
+
+    &__option {
+        flex-shrink: 0;
+    }
+}
