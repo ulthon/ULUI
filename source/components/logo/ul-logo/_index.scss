@@ -1,26 +1,51 @@
 .ul-logo {
+  display: inline-flex;
+  cursor: pointer;
+  user-select: none;
 
+  &__main {
+    @include flex(center, center, column);
+    width: 60px;
+    height: 60px;
+    background-color: $color-primary-base;
+    color: $color-white;
+    border-radius: $radius-md;
+    padding: $space-xs;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
 
-  $baseSize: 40px;
-
-  background-color: #1E9FFF;
-
-  border-radius: calc($baseSize / 3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: calc($baseSize * 2);
-  height: calc($baseSize * 2);
-  text-align: center;
-  color: #fff;
-  white-space: nowrap;
-
-  .title {
-    font-size: $baseSize;
+    &:hover {
+      background-color: $color-primary-hover;
+    }
   }
 
-  .plus {
-    font-size: clac($baseSize / 2);
+  // 循环生成主题色
+  @each $name, $variants in $theme-color-variants {
+    &.#{$name} &__main {
+      background-color: map-get($variants, "base");
+      color: map-get($variants, "text");
+
+      &:hover {
+        background-color: map-get($variants, "hover");
+      }
+    }
+  }
+
+  
+  // 圆形修饰符
+  &.circle &__main {
+    border-radius: $radius-circle;
+  }
+
+  &__title {
+    font-size: $font-size-xxl;
+    font-weight: $font-weight-bold;
+    line-height: 1;
+  }
+
+  &__plus {
+    font-size: $font-size-sm;
+    margin-top: 2px;
+    white-space: nowrap;
   }
 }
