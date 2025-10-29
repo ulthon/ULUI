@@ -1,0 +1,35 @@
+.ul-blockquote {
+  box-sizing: border-box;
+  padding: $space-md;
+  margin: 0 $space-md $space-md 0;
+  border-left: 4px solid $color-border;
+  background-color: $color-bg;
+  border-radius: $radius-base;
+  width: 240px; // 示例宽度，确保在 flex 布局中换行
+
+  &__main {
+    color: $color-text-secondary;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+  }
+
+  // 循环生成所有主题色变体
+  @each $name, $color in $theme-colors {
+    &.#{$name} {
+      border-left-color: $color;
+      background-color: map-get(map-get($theme-color-variants, $name), "light");
+
+      // 对于深色主题进行微调
+      @if $name == "dark" {
+        background-color: $color-dark-base;
+        .ul-blockquote__main {
+          color: $color-white;
+        }
+      } @else {
+        .ul-blockquote__main {
+          color: map-get(map-get($theme-color-variants, $name), "base");
+        }
+      }
+    }
+  }
+}

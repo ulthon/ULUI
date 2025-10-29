@@ -2038,10 +2038,76 @@ input:checked ~ .ul-radio__indicator::after {
   margin-left: -4px;
 }
 
-.layui-quote-gray {
-  background-color: #f0f0f0;
-  color: #666;
-  border-left-color: #ddd;
+.ul-blockquote {
+  box-sizing: border-box;
+  padding: 16px;
+  margin: 0 16px 16px 0;
+  border-left: 4px solid var(--ul-color-border);
+  background-color: var(--ul-color-bg);
+  border-radius: 4px;
+  width: 240px;
+}
+.ul-blockquote__main {
+  color: var(--ul-color-text-secondary);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.ul-blockquote.primary {
+  border-left-color: var(--ul-color-primary-base);
+  background-color: var(--ul-color-primary-light);
+}
+.ul-blockquote.primary .ul-blockquote__main {
+  color: var(--ul-color-primary-base);
+}
+.ul-blockquote.success {
+  border-left-color: var(--ul-color-success-base);
+  background-color: var(--ul-color-success-light);
+}
+.ul-blockquote.success .ul-blockquote__main {
+  color: var(--ul-color-success-base);
+}
+.ul-blockquote.danger {
+  border-left-color: var(--ul-color-danger-base);
+  background-color: var(--ul-color-danger-light);
+}
+.ul-blockquote.danger .ul-blockquote__main {
+  color: var(--ul-color-danger-base);
+}
+.ul-blockquote.warning {
+  border-left-color: var(--ul-color-warning-base);
+  background-color: var(--ul-color-warning-light);
+}
+.ul-blockquote.warning .ul-blockquote__main {
+  color: var(--ul-color-warning-base);
+}
+.ul-blockquote.info {
+  border-left-color: var(--ul-color-info-base);
+  background-color: var(--ul-color-info-light);
+}
+.ul-blockquote.info .ul-blockquote__main {
+  color: var(--ul-color-info-base);
+}
+.ul-blockquote.dark {
+  border-left-color: var(--ul-color-dark-base);
+  background-color: var(--ul-color-dark-light);
+  background-color: var(--ul-color-dark-base);
+}
+.ul-blockquote.dark .ul-blockquote__main {
+  color: var(--ul-color-white);
+}
+.ul-blockquote.light {
+  border-left-color: var(--ul-color-light-base);
+  background-color: var(--ul-color-light-light);
+}
+.ul-blockquote.light .ul-blockquote__main {
+  color: var(--ul-color-light-base);
+}
+.ul-blockquote.gray {
+  border-left-color: var(--ul-color-gray-base);
+  background-color: var(--ul-color-gray-light);
+}
+.ul-blockquote.gray .ul-blockquote__main {
+  color: var(--ul-color-gray-base);
 }
 
 .ul-btn {
