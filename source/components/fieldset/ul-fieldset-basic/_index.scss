@@ -1,21 +1,31 @@
 .ul-fieldset-basic {
-  border: 1px solid #e6e6e6;
-  border-radius: 2px;
-  padding: 10px 15px;
-  margin-bottom: 10px;
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+  padding: $space-sm $space-md;
+  margin-bottom: $space-sm;
 
   &__legend {
-    font-size: 14px;
-    font-weight: 400;
-    padding: 0 10px;
-    margin-left: 20px;
+    font-size: $font-size-base;
+    font-weight: $font-weight-normal;
+    padding: 0 $space-sm;
+    margin-left: $space-lg; // 保持视觉间距
     border: none;
     width: auto;
   }
 
   &__body {
-    padding: 10px 0;
-    color: #666;
+    padding: $space-sm 0;
+    color: $color-text-secondary;
+  }
+
+  // 主题色变体
+  @each $name, $color in $theme-colors {
+    &.#{$name} {
+      border-color: $color;
+
+      .ul-fieldset-basic__legend {
+        color: $color;
+      }
+    }
   }
 }
-
