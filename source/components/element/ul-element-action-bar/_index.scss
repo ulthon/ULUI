@@ -1,0 +1,82 @@
+.ul-element-action-bar {
+  position: fixed;
+  right: $space-md;
+  bottom: 60px; // 可根据需要调整
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__icon {
+    @include flex(center, center);
+    width: 42px;
+    height: 42px;
+    padding: $space-xs;
+    background-color: $color-white;
+    border-radius: $radius-circle;
+    box-shadow: $shadow-base;
+    transition: all 0.3s ease;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .layui-icon,
+    .fa {
+      font-size: 24px;
+      color: $color-text-secondary;
+    }
+
+    .layui-icon-login-wechat {
+      color: $color-success-base;
+    }
+
+    .fa-arrow-up {
+      color: $color-primary-base;
+    }
+  }
+
+  &__title {
+    margin-top: $space-xs;
+    padding: 3px $space-xs;
+    background-color: $color-white;
+    color: $color-text-secondary;
+    border-radius: $radius-sm;
+    font-size: $font-size-xs;
+    transition: all 0.3s ease;
+  }
+
+  &__item:hover {
+    .ul-element-action-bar__icon {
+      background-color: $color-primary-light;
+    }
+    .ul-element-action-bar__title {
+      color: $color-primary-base;
+      background-color: $color-primary-light;
+    }
+  }
+
+  // 响应式设计
+  @include media-breakpoint-down(sm) {
+    right: $space-sm;
+    bottom: $space-lg;
+    gap: $space-sm;
+
+    &__icon {
+      width: 40px;
+      height: 40px;
+      .layui-icon,
+      .fa {
+        font-size: 20px;
+      }
+    }
+  }
+}

@@ -4121,36 +4121,79 @@ input:checked ~ .ul-radio__indicator::after {
   margin: 0 8px;
 }
 
-.ul-element-fixed-option {
+.ul-element-action-bar {
   position: fixed;
-  right: 0;
-  bottom: 0;
-  padding: 16px;
-  z-index: 999;
+  right: 16px;
+  bottom: 60px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
-.ul-element-fixed-option .item {
-  text-align: center;
-  margin-bottom: 16px;
+.ul-element-action-bar__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   cursor: pointer;
 }
-.ul-element-fixed-option .item .icon {
-  padding: 6px;
-  box-shadow: 0 0 3px #999;
-  width: calc(30px + 6px);
-  height: calc(30px + 6px);
-  display: inline-flex;
+.ul-element-action-bar__icon {
+  display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 100%;
-  background-color: #fff;
+  flex-direction: row;
+  width: 42px;
+  height: 42px;
+  padding: 4px;
+  background-color: var(--ul-color-white);
+  border-radius: 50%;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
-.ul-element-fixed-option .item .title {
-  margin-top: 6px;
-  background-color: #fff;
-  color: #666;
-  padding: 3px;
-  border-radius: 3px;
-  font-size: 12px;
+.ul-element-action-bar__icon img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.ul-element-action-bar__icon .layui-icon,
+.ul-element-action-bar__icon .fa {
+  font-size: 24px;
+  color: var(--ul-color-text-secondary);
+}
+.ul-element-action-bar__icon .layui-icon-login-wechat {
+  color: var(--ul-color-success-base);
+}
+.ul-element-action-bar__icon .fa-arrow-up {
+  color: var(--ul-color-primary-base);
+}
+.ul-element-action-bar__title {
+  margin-top: 4px;
+  padding: 3px 4px;
+  background-color: var(--ul-color-white);
+  color: var(--ul-color-text-secondary);
+  border-radius: 2px;
+  font-size: 10px;
+  transition: all 0.3s ease;
+}
+.ul-element-action-bar__item:hover .ul-element-action-bar__icon {
+  background-color: var(--ul-color-primary-light);
+}
+.ul-element-action-bar__item:hover .ul-element-action-bar__title {
+  color: var(--ul-color-primary-base);
+  background-color: var(--ul-color-primary-light);
+}
+@media (max-width: 575.98px) {
+  .ul-element-action-bar {
+    right: 8px;
+    bottom: 24px;
+    gap: 8px;
+  }
+  .ul-element-action-bar__icon {
+    width: 40px;
+    height: 40px;
+  }
+  .ul-element-action-bar__icon .layui-icon,
+  .ul-element-action-bar__icon .fa {
+    font-size: 20px;
+  }
 }
 
 .ul-loading-pos {
