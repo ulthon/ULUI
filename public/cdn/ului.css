@@ -4196,25 +4196,32 @@ input:checked ~ .ul-radio__indicator::after {
   }
 }
 
-.ul-loading-pos {
-  background-color: #eee;
-  color: #999;
-  display: inline-block;
+.ul-element-loading-pos {
+  position: relative !important;
+  cursor: wait !important;
+  overflow: hidden !important;
 }
-.ul-loading-pos .main {
-  padding: 15px;
-}
-.ul-loading-pos.lg .main {
-  padding: 25px 35px;
-}
-.ul-loading-pos.screen {
+.ul-element-loading-pos::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  background-image: linear-gradient(90deg, rgba(120, 195, 255, 0) 0, rgba(120, 195, 255, 0.2) 20%, rgba(120, 195, 255, 0.5) 60%, rgba(120, 195, 255, 0));
+  transform: translateX(-100%);
+  animation: ul-loading-shine 2s infinite;
+  z-index: 10;
 }
-.ul-loading-pos.screen .main {
-  padding: 60px 0;
-  text-align: center;
+.ul-element-loading-pos.white::after {
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, 0));
 }
 
+@keyframes ul-loading-shine {
+  100% {
+    transform: translateX(100%);
+  }
+}
 .ul-fieldset-basic {
   border: 1px solid var(--ul-color-border);
   border-radius: 2px;

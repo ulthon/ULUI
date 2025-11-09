@@ -1,0 +1,37 @@
+.ul-element-loading-pos {
+    position: relative !important;
+    cursor: wait !important;
+    overflow: hidden !important;
+
+    
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(90deg,
+            rgba(120, 195, 255, 0) 0,
+            rgba(120, 195, 255, 0.2) 20%,
+            rgba(120, 195, 255, 0.5) 60%,
+            rgba(120, 195, 255, 0));
+        transform: translateX(-100%);
+        animation: ul-loading-shine 2s infinite;
+        z-index: 10;
+    }
+
+    &.white::after {
+        background-image: linear-gradient(90deg,
+            rgba(255, 255, 255, 0) 0,
+            rgba(255, 255, 255, 0.2) 20%,
+            rgba(255, 255, 255, 0.5) 60%,
+            rgba(255, 255, 255, 0));
+    }
+}
+
+@keyframes ul-loading-shine {
+    100% {
+        transform: translateX(100%);
+    }
+}
