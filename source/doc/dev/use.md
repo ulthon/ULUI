@@ -7,6 +7,7 @@
 
 ```scss
 {php}echo file_get_contents(app()->getRootPath().'source/scss/_common.scss');{/php}
+
 ```
 
 ## 关于JS
