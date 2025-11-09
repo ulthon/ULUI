@@ -1,24 +1,40 @@
 .ul-descriptions-info {
-    display        : flex;
-    align-items    : flex-start;
-    justify-content: space-between;
-    flex-wrap      : wrap;
-    flex-shrink    : 1;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 #{-$space-lg / 2}; // 使用负边距技术来抵消子项的内边距
 
     &__item {
-        width          : 50%;
-        line-height    : 2.5;
-        display        : flex;
-        align-items    : center;
-        justify-content: flex-start;
-        color          : #333;
+        display: flex;
+        align-items: start; // 顶部对齐以适应多行内容
+        gap: $space-sm;
+        box-sizing: border-box;
+        width: 50%;
+        padding: #{$space-md / 2} #{$space-lg / 2}; // 通过内边距创建行列间距
 
-        &__name {
-            &::after {
-                content: "：";
-            }
-
-            margin-right: 5px;
+        // 独占一行的修饰符
+        &.block {
+            width: 100%;
         }
+    }
+
+    // 垂直布局状态
+    &.vertical {
+        .ul-descriptions-info__item {
+            flex-direction: column;
+            gap: $space-xs; // 垂直排列时使用较小的间距
+        }
+    }
+
+    
+    &__name {
+        font-size: $font-size-sm;
+        color: $color-text-secondary;
+        white-space: nowrap; // 标签保持单行
+    }
+
+    &__value {
+        font-size: $font-size-sm;
+        color: $color-text;
+        word-break: break-word; // 允许长单词或URL换行
     }
 }

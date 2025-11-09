@@ -4156,24 +4156,33 @@ input:checked ~ .ul-radio__indicator::after {
 
 .ul-descriptions-info {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
   flex-wrap: wrap;
-  flex-shrink: 1;
+  margin: 0 -12px;
 }
 .ul-descriptions-info__item {
-  width: 50%;
-  line-height: 2.5;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  color: #333;
+  align-items: start;
+  gap: 8px;
+  box-sizing: border-box;
+  width: 50%;
+  padding: 8px 12px;
 }
-.ul-descriptions-info__item__name {
-  margin-right: 5px;
+.ul-descriptions-info__item.block {
+  width: 100%;
 }
-.ul-descriptions-info__item__name::after {
-  content: "：";
+.ul-descriptions-info.vertical .ul-descriptions-info__item {
+  flex-direction: column;
+  gap: 4px;
+}
+.ul-descriptions-info__name {
+  font-size: 12px;
+  color: var(--ul-color-text-secondary);
+  white-space: nowrap;
+}
+.ul-descriptions-info__value {
+  font-size: 12px;
+  color: var(--ul-color-text);
+  word-break: break-word;
 }
 
 .ul-descriptions-row {
