@@ -1,37 +1,51 @@
 # ULUI
 
-#### Description
-ulthon扩展的layui样式库.
-如今移动端有很多丰富的ui库,但是pc端好用的ui库有那么少,layui本身也很好用,但是样式库实在是太少.这个库里面会集成很多设计好的样式库,引用样式,复制可用.
+## Introduction
+ULUI is a lightweight, standalone, pure CSS component library that provides a clean and consistent UI solution for your web projects. It has zero dependencies, is easy to integrate, and helps you quickly build beautiful interfaces without being tied to any front-end framework.
 
-#### Software Architecture
-Software architecture description
+## Main Features
 
-#### Installation
+- **Purely Native**: Based on native CSS and HTML, with no dependency on any front-end frameworks (like Vue/React), ensuring it is lightweight and flexible.
+- **Ready-to-Use Code**: The documentation provides HTML, SCSS, CSS, and uniapp code snippets that can be copied with a single click.
+- **Mobile-Friendly**: Most components are mobile-compatible, and you can preview their effects directly in the documentation.
+- **Curated Plugins**: A selection of popular JavaScript plugins is organized and recommended, making it easy for developers to find and integrate them.
+- **Cross-Platform Compatible**: Easily applicable in any CSS-supported environment, including native web development, WebViews, and various template engines.
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+## How to Use
 
-#### Instructions
+Simply include the file:
+```
+//ului.top/cdn/ului.css
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+For example:
+<link rel="stylesheet" href="//ului.top/cdn/ului.css">
+```
 
-#### Contribution
+Full component documentation: http://ului.top/
 
-1.  Fork the repository
-2.  Create Feat_xxx branch
-3.  Commit your code
-4.  Create Pull Request
+## Overall Design Principles
 
+- **Simple, Modern Style**: Maintains a clean and clear visual hierarchy.
+- **Card-Based Design**: Most components use card containers for good content grouping.
+- **Consistent Spacing System**: Uses a unified `padding/margin` specification.
+- **Soft Rounded Corners**: 4-8px rounded corners create a friendly feel.
+- **Subtle Shadows**: Lightweight shadows enhance the sense of depth.
 
-#### Gitee Feature
+## Core Philosophy
 
-1.  You can use Readme\_XXX.md to support different languages, such as Readme\_en.md, Readme\_zh.md
-2.  Gitee blog [blog.gitee.com](https://blog.gitee.com)
-3.  Explore open source project [https://gitee.com/explore](https://gitee.com/explore)
-4.  The most valuable open source project [GVP](https://gitee.com/gvp)
-5.  The manual of Gitee [https://gitee.com/help](https://gitee.com/help)
-6.  The most popular members  [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+- **Back to Basics**: Focuses on UI presentation, separating styles from behavior, allowing developers to freely choose their JavaScript solutions.
+- **Lightweight and Efficient**: Provides only the most core and commonly used components to avoid bloat and ensure performance.
+- **Out of the Box**: No compilation or configuration needed. You can start using it with just one CSS file.
+
+## Browser Compatibility
+
+- The latest versions of modern browsers (Chrome, Firefox, Safari, Edge).
+- Internet Explorer is not supported.
+
+## Contribution Guide
+
+We welcome all forms of contributions! If you have any suggestions or find a bug, please submit it via [Issues](https://github.com/ulthon/ULUI/issues).
+
+## License
+
+This project is licensed under the Mulan Permissive Software License.
