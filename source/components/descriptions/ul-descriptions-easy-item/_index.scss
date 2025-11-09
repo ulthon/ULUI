@@ -1,0 +1,35 @@
+.ul-descriptions-easy-item {
+  display: flex;
+  align-items: flex-start;
+  gap: $space-md;
+  padding: $space-sm 0;
+  font-size: $font-size-sm;
+
+  &__name {
+    color: $color-text-secondary;
+    white-space: nowrap;
+    flex-shrink: 0;
+    line-height: $line-height-base;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $space-sm;
+    color: $color-text;
+    line-height: $line-height-base;
+  }
+
+  &__separator {
+    color: $color-text-placeholder;
+    font-style: normal;
+  }
+
+  // 垂直布局修饰符
+  &.vertical {
+    flex-direction: column;
+    gap: $space-xs;
+    align-items: stretch;
+  }
+}

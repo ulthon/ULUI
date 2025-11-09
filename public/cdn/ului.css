@@ -4190,24 +4190,35 @@ input:checked ~ .ul-radio__indicator::after {
   border-bottom: 1px solid #F2F2F2;
 }
 
-.ul-easy-item {
+.ul-descriptions-easy-item {
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start;
-  padding: 5px 0;
+  gap: 16px;
+  padding: 8px 0;
+  font-size: 12px;
 }
-.ul-easy-item__name {
-  min-width: 50px;
-  color: #333;
+.ul-descriptions-easy-item__name {
+  color: var(--ul-color-text-secondary);
+  white-space: nowrap;
+  flex-shrink: 0;
+  line-height: 1.5;
 }
-.ul-easy-item__desc {
-  color: #777;
+.ul-descriptions-easy-item__content {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-start;
+  gap: 8px;
+  color: var(--ul-color-text);
+  line-height: 1.5;
 }
-.ul-easy-item__desc__item {
-  margin: 0 8px;
+.ul-descriptions-easy-item__separator {
+  color: var(--ul-color-text-placeholder);
+  font-style: normal;
+}
+.ul-descriptions-easy-item.vertical {
+  flex-direction: column;
+  gap: 4px;
+  align-items: stretch;
 }
 
 .ul-element-action-bar {
