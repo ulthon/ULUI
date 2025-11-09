@@ -272,49 +272,7 @@
 
 
                 </div>
-
-                <div class="ul-padding-md">
-                    <div id="gitee-container">
-                        <fieldset class="ul-fieldset-basic  ">
-                            <legend>开源信息</legend>
-                            <div class="ul-field-box">
-                                <script
-                                    src='https://gitee.com/ulthon/ului/widget_preview'
-                                    async
-                                    defer
-                                ></script>
-                                <div id="osc-gitee-widget-tag"></div>
-                                <style>
-                                    .osc_pro_color {
-                                        color: #4183c4 !important;
-                                    }
-
-                                    .osc_panel_color {
-                                        background-color: #ffffff !important;
-                                    }
-
-                                    .osc_background_color {
-                                        background-color: #ffffff !important;
-                                    }
-
-                                    .osc_border_color {
-                                        border-color: #e3e9ed !important;
-                                    }
-
-                                    .osc_desc_color {
-                                        color: #666666 !important;
-                                    }
-
-                                    .osc_link_color * {
-                                        color: #9b9b9b !important;
-                                    }
-                                </style>
-                            </div>
-                        </fieldset>
-
-
-                    </div>
-                </div>
+                {include file='index/_git'/}
             </div>
         </div>
     </div>
@@ -331,7 +289,10 @@
         class="right-tips-container ul-fixed-right-center ul-shadow-xl"
         style="display: none;"
     >
-        <div class="ul-title-section center" style="margin-bottom: 0;">组件导航 </div>
+        <div
+            class="ul-title-section center"
+            style="margin-bottom: 0;"
+        >组件导航 </div>
         <div
             class="ul-nav-min right-tips-nav ghost"
             style="width: 160px;"
@@ -347,6 +308,7 @@
             个人中心
         </a>
     </div>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script>
 
         function renderRepeat(elem) {
@@ -411,7 +373,7 @@
             });
 
             // 观察所有标题元素
-            headers.each(function() {
+            headers.each(function () {
                 observer.observe(this);
             });
 
