@@ -1,12 +1,11 @@
 <?php
 
 return [
-    'type'=>[
-        '',
-        'border'
+    'type' => [
+        ''
     ],
-    'position'=>[
-        '',
-        'space-between',
+    'position' => [
+        'horizontal',
+        'vertical',
     ]
 ];

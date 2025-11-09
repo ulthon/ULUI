@@ -1,122 +1,85 @@
 .ul-descriptions-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: $space-md;
+  border: 1px solid $color-border;
+  border-radius: $radius-base;
+  padding: $space-md;
+  background-color: $color-white;
 
-    width: 100%;
+  &__item {
+    display: flex;
+    gap: $space-sm;
+    padding: $space-sm 0;
+    border-bottom: 1px solid $color-border;
+    align-items: baseline;
 
+    // 占满整行
+    &.full-line {
+      grid-column: 1 / -1;
+    }
+  }
 
-    .item {
-        float: left;
-        width: calc(50% - 20px);
+  &__label {
+    color: $color-text-secondary;
+    font-size: $font-size-base;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
 
+  &__value {
+    color: $color-text;
+    font-size: $font-size-base;
+    word-break: break-all;
+    flex: 1;
+  }
 
+  // 特殊内容样式
+  &__poster-item {
+    max-width: 100px;
+    border-radius: $radius-sm;
+  }
 
-        .label {
-            font-size: 13px;
-            color: #999;
-            padding: 10px;
-        }
+  &__article-item {
+    line-height: $line-height-base * 1.2;
+    color: $color-text-secondary;
+  }
 
-        .value {
-            font-size: 14px;
-            color: #333;
-            padding: 10px;
-        }
+  // 布局变体
+  &.horizontal {
+    .ul-descriptions-form__item {
+      flex-direction: row;
+      align-items: baseline;
+    }
+  }
 
-        &.full-line {
-            width: 100%;
-        }
+  &.vertical {
+    .ul-descriptions-form__item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .ul-descriptions-form__label {
+      font-weight: $font-weight-bold;
+      color: $color-text;
+      margin-bottom: $space-xs;
+    }
+  }
 
-        &.poster {
-            .poster-item {
-                height: 55px;
-            }
-        }
+  // 响应式设计
+  @include media-breakpoint-down(sm) {
+    grid-template-columns: 1fr; // 移动端始终为单列
+    padding: $space-sm;
+    gap: $space-sm;
 
-        .article-item {
-            color: #666;
-
-            // 文本换行
-            white-space: pre-wrap;
-            word-wrap: break-word
-        }
+    &__item {
+      flex-direction: column;
+      align-items: flex-start;
     }
 
-    // 增加边框
-    &.border {
-
-        .item {
-
-            border: 1px solid #e8e8e8;
-            width: 50%;
-            border-top: 0;
-            border-left: 0;
-            margin-top: -1px;
-            margin-left: -1px;
-
-
-            &.full-line {
-                width: 100%;
-            }
-        }
-
-        width: calc(100% - 2px);
-        border: 1px solid #e8e8e8;
-        border-right: 0;
-        border-bottom: 0;
-
+    &__label {
+      font-weight: $font-weight-bold;
+      color: $color-text;
+      margin-bottom: $space-xs;
     }
-
-    // 左右排列
-    &.space-between {
-        .item {
-
-            .label {
-                width: 80px;
-                text-align: right;
-                margin-right: 10px;
-                white-space: nowrap;
-                float: left;
-
-            }
-
-            .value {
-                margin-left: 5px;
-                float: left;
-            }
-
-            &.full-line {
-                .label {
-                    width: calc(100% - 20px);
-                    text-align: center;
-                    margin-right: 0;
-                }
-
-                .value {
-                    margin-left: 0;
-                }
-            }
-        }
-
-    }
-
-    &.space-between.border {
-        .item {
-            .label {
-                border-right: 1px solid #e8e8e8;
-            }
-
-            &.full-line {
-                .label {
-                    border-right: 0;
-                    border-bottom: 1px solid #e8e8e8;
-                }
-
-            }
-        }
-    }
-
-    &::after {
-        content: '';
-        display: block;
-        clear: both;
-    }
+  }
 }
