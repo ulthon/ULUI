@@ -1,0 +1,20 @@
+
+{
+  "name": "ului.css",
+  "version": "0.0.1",
+  "description": "ULUI CSS Framework.",
+  "main": "public/cdn/ului.css",
+  "style": "public/cdn/ului.css",
+  "files": [
+    "public/cdn/ului.css",
+    "public/cdn/img/"
+  ],
+  "keywords": [
+    "css",
+    "ui",
+    "framework",
+    "ului"
+  ],
+  "author": "Ulthon",
+  "license": "Mulan"
+}
