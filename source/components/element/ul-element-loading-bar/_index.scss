@@ -1,0 +1,33 @@
+.ul-element-loading-bar {
+  position: relative;
+  overflow: hidden; // 隐藏超出范围的动画部分
+  
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; // 进度条高度
+    background-color: $color-primary-base; // 默认颜色
+    transform-origin: left;
+    animation: ul-element-loading-bar-anim 1.5s infinite linear;
+  }
+
+  // 使用循环生成颜色变体
+  @each $name, $color in $theme-colors {
+    &.#{$name}::after {
+      background-color: $color;
+    }
+  }
+}
+
+@keyframes ul-element-loading-bar-anim {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
