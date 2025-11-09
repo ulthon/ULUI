@@ -1,16 +1,56 @@
 .ul-descriptions-row {
-    border: 1px solid #F2F2F2;
-    color: #333333;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $space-sm $space-md; // 行间距和列间距
+  padding: $space-sm 0;
+  font-size: $font-size-sm;
 
-    .label {
-        background-color: #FAFAFA;
+  &__label {
+    color: $color-text-secondary;
+    font-weight: $font-weight-medium;
+    white-space: nowrap;
+    padding: $space-xs $space-sm;
+    background-color: $color-bg;
+    border-radius: $radius-sm;
+  }
+
+  &__value {
+    color: $color-text;
+    display: inline-flex;
+    align-items: center;
+    gap: $space-xs;
+
+    .primary {
+      color: $color-primary-base;
+      font-weight: $font-weight-bold;
     }
-
-    .item {
-        padding: 6px 12px;
-
-        &:not(:last-child) {
-            border-bottom: 1px solid #F2F2F2;
-        }
+    .success {
+      color: $color-success-base;
     }
+    .danger {
+      color: $color-danger-base;
+    }
+  }
+
+  // 垂直排列
+  &.vertical {
+    .ul-descriptions-row__label,
+    .ul-descriptions-row__value {
+      flex-basis: 100%;
+    }
+    .ul-descriptions-row__value {
+      padding-left: $space-sm;
+    }
+  }
+
+  // 响应式设计
+  @include media-breakpoint-down(sm) {
+    gap: $space-sm; // 移动端统一间距
+    font-size: $font-size-xs;
+
+    &__label {
+      padding: 2px $space-xs;
+    }
+  }
 }
