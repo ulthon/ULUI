@@ -16,9 +16,8 @@ class Index extends Common
      *
      * @return \think\Response|string
      */
-    public function index($doc_name = '')
+    public function index($doc_name = 'readme')
     {
-
         $list_post = Post::quickSelect();
         if (empty($doc_name)) {
             $model_post = $list_post->first()->post->first();

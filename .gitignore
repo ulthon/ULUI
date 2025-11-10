@@ -9,3 +9,4 @@ public/upload/*
 !/.vscode/settings.json
 /.vscode/sftp.json
 /public/ads.txt
+/.env.dev
