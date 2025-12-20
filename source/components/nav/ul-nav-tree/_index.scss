@@ -49,7 +49,7 @@
     // 水平布局修饰符
     &.row {
         .ul-nav-tree__item {
-            @include flex(flex-start, center);
+            @include ul-flex(flex-start, center);
         }
 
         .ul-nav-tree__item-desc {

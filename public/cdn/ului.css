@@ -4129,30 +4129,6 @@ input:checked ~ .ul-radio__indicator::after {
   color: var(--ul-color-text);
   margin-bottom: 4px;
 }
-.ul-descriptions-form.primary {
-  border-top: 3px solid var(--ul-color-primary-base);
-}
-.ul-descriptions-form.success {
-  border-top: 3px solid var(--ul-color-success-base);
-}
-.ul-descriptions-form.danger {
-  border-top: 3px solid var(--ul-color-danger-base);
-}
-.ul-descriptions-form.warning {
-  border-top: 3px solid var(--ul-color-warning-base);
-}
-.ul-descriptions-form.info {
-  border-top: 3px solid var(--ul-color-info-base);
-}
-.ul-descriptions-form.dark {
-  border-top: 3px solid var(--ul-color-dark-base);
-}
-.ul-descriptions-form.light {
-  border-top: 3px solid var(--ul-color-light-base);
-}
-.ul-descriptions-form.gray {
-  border-top: 3px solid var(--ul-color-gray-base);
-}
 @media (max-width: 575.98px) {
   .ul-descriptions-form {
     grid-template-columns: 1fr;
@@ -4777,19 +4753,6 @@ input:checked ~ .ul-radio__indicator::after {
     transform: translateX(100%);
   }
 }
-.ul-card-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.ul-card-list .ul-card {
-  margin-right: 15px;
-}
-
-.ul-card-list .layui-card:last-child {
-  margin-bottom: 15px;
-}
-
 /* 头部开始 */
 .ul-header {
   background-color: var(--ul-color-white);

@@ -13,7 +13,7 @@
     }
 
     &__item {
-        @include flex(space-between, center);
+        @include ul-flex(space-between, center);
         cursor: pointer;
         padding: $space-xs $space-sm;
         transition: background-color 0.3s ease;
@@ -86,7 +86,7 @@
     }
 
     &__left {
-        @include flex(flex-start, center);
+        @include ul-flex(flex-start, center);
         flex: 1; // 允许左侧行内容占用更多空间
         min-width: 0; // 防止flex子项溢出
     }

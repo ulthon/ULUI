@@ -1,6 +1,6 @@
 .ul-nav-info {
   &__item {
-    @include flex(space-between, center);
+    @include ul-flex(space-between, center);
     padding: $space-lg;
     border-bottom: 1px solid $color-border;
 
@@ -10,7 +10,7 @@
   }
 
   &__main {
-    @include flex(flex-start, center);
+    @include ul-flex(flex-start, center);
     flex: 1;
   }
 
@@ -49,7 +49,7 @@
   }
 
   &__action {
-    @include flex(flex-end, center);
+    @include ul-flex(flex-end, center);
     color: $color-text-secondary;
   }
 

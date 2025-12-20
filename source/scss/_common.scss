@@ -177,7 +177,7 @@ $shadow-xl: 0 12px 24px 0 rgba(0, 0, 0, 0.12);
 // --------------------------------------------------
 
 // Flex 布局
-@mixin flex($justify: flex-start, $align: center, $direction: row) {
+@mixin ul-flex($justify: flex-start, $align: center, $direction: row) {
   display: flex;
   justify-content: $justify;
   align-items: $align;

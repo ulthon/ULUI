@@ -32,13 +32,13 @@
   }
 
   &__options {
-    @include flex(space-between, center);
+    @include ul-flex(space-between, center);
     gap: $space-sm;
     width: 100%;
   }
 
   &__item {
-    @include flex(center, center);
+    @include ul-flex(center, center);
     gap: $space-xs;
 
     &:not(:last-child) {
@@ -48,7 +48,7 @@
 
   // 重新设计图标样式 - 确保完美居中
   &__icon {
-    @include flex(center, center);
+    @include ul-flex(center, center);
     margin-right: $space-md;
     font-size: 1.8rem;
     background: linear-gradient(135deg, $color-primary-hover, $color-primary-base);
@@ -82,7 +82,7 @@
   }
 
   &__main {
-    @include flex(flex-start, center);
+    @include ul-flex(flex-start, center);
     width: 100%;
 
   }
@@ -95,7 +95,7 @@
   }
 
   &__stat-item {
-    @include flex(center, center, column);
+    @include ul-flex(center, center, column);
     padding: $space-lg $space-xl;
     text-align: center;
     color: $color-text-secondary;

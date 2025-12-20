@@ -19,7 +19,7 @@
     }
 
     &__footer {
-        @include flex(space-between, center);
+        @include ul-flex(space-between, center);
         padding: $space-sm $space-md;
     }
 

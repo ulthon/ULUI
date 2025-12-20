@@ -15,7 +15,7 @@
   }
 
   &__icon {
-    @include flex(center, center);
+    @include ul-flex(center, center);
     width: 42px;
     height: 42px;
     padding: $space-xs;

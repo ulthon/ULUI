@@ -6,7 +6,7 @@
   box-shadow: $shadow-sm;
   
   &__main {
-    @include flex(space-between, center);
+    @include ul-flex(space-between, center);
     max-width: map-get($container-max-widths, xl);
     margin: 0 auto;
     padding: $space-md $space-lg;
@@ -19,7 +19,7 @@
   }
   
   &__nav {
-    @include flex(flex-end, center);
+    @include ul-flex(flex-end, center);
     flex-wrap: wrap;
     gap: $space-sm;
   }

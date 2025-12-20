@@ -1,9 +1,22 @@
-> 注意，组件的css使用了页面root的css变量，如果复制组件的话，需要复制以下内容
+
+### 引入css
+
+> 注意，组件的css使用了页面root的css变量，如果复制组件的话，需要复制以下内容。
+> 
+> 如果您打算直接将样式放到css文件或html中，需要复制本段代码。
 
 ```css
-{php}echo file_get_contents(app()->getRootPath().'source/scss/_root.scss');{/php}
+{php}
+
+$scss_compiler = new \ScssPhp\ScssPhp\Compiler();
+echo $scss_compiler->compileString(file_get_contents(app()->getRootPath().'source/scss/_root.scss'))->getCss();
+
+{/php}
 ```
-> 注意，组件的scss使用了大量的基础变量，如果打算复制scss的话，还需要复制以下内容
+
+### 引入基础scss代码
+
+> 注意，组件的scss使用了大量的基础变量，如果打算复制scss的话，还需要复制以下内容。
 
 ```scss
 {php}echo file_get_contents(app()->getRootPath().'source/scss/_common.scss');{/php}
