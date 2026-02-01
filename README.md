@@ -22,6 +22,11 @@ ULUI 是一个独特的纯 CSS 组件库。与大多数提供按钮、菜单等�
 <link rel="stylesheet" href="//ului.top/cdn/ului.css">
 ```
 
+或者使用 npm 安装:
+```
+npm install ului.css
+```
+
 全部组件文档 http://ului.top/
 
 ## 整体设计原则
